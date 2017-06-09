@@ -1,0 +1,28 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout type="relative" cascade_opacity="true" touchdelegate="onclick">
+    <layout name="container" opacity="0" width="match_parent" height="match_parent" cascade_opacity="true" type="relative">
+        <img opacity="0" name="image" atlas="atlas/ui.plist" frame="large_tab_select.png" width="match_parent" height="match_parent" align="center"/>
+        <runaction>
+            <action id="this:image">
+                <fadein time="0.25"/>
+            </action>
+        </runaction>
+        <touchbegan>
+            <action id="this">
+                <fadeto time="0.2" to="255"/>
+            </action>
+        </touchbegan>
+        <touchend>
+            <action id="this">
+                <fadeto time="0.2" to="0"/>
+            </action>
+        </touchend>
+        <touchcancel>
+            <action id="this">
+                <fadeto time="0.2" to="0"/>
+            </action>
+        </touchcancel>
+    </layout>
+</layout>

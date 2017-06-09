@@ -1,0 +1,8 @@
+<layout width="208" height="164" type="relative">
+	<group cascade_opacity="true" scale="1" width="208" height="164" style="xml/game/slot/button.xml" align="center" name="box" touch="false">
+		<changetexture target="this:image" atlas="atlas/slot.plist" frame="hop-close.png"/>
+		<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="hop-open.png"/>
+	</group>
+	<img atlas="atlas/slot.plist" frame="hop-khung-tien.png" align="top_center_horizontal" margin_top="100" name="khung" visible="false"/>
+	<label font="fonts/yellow_font.fnt" scale="0.9" align="top_center_horizontal" margin_top="100" type="nowrap" name="money" visible="false">1000</label>
+</layout>

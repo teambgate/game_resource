@@ -1,0 +1,26 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+    <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="150" align="center"/>
+    <layout width="1062.6" height="611.8" align="center" background="texture/board/bigbg.png" type="relative" cascade_opacity="true">
+        <layout width="wrap_content" height="wrap_content" type="horizontal" align="top_left" margin_top="43" margin_left="32" cascade_opacity="true">
+            <group name="tinhethong" style="xml/ui/active_button.xml" width="332" height="61.5" touch="true" align="top_left" hashkey="the_cao_button" cascade_opacity="true">
+                <layout align="center" type="relative" cascade_opacity="true">
+                    <img atlas="atlas/ui.plist" frame="the_cao.png" align="center" scale="1.6"/>
+                </layout>
+            </group>
+            <group name="tinhethong" style="xml/ui/active_button.xml" width="332" height="61.5" touch="true" align="top_left" hashkey="quydinh_button" cascade_opacity="true">
+                <layout align="center" type="relative" cascade_opacity="true">
+                    <img atlas="atlas/ui.plist" frame="quy_dinh.png" align="center" scale="1.6"/>
+                </layout>
+            </group>
+        </layout>
+        <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="top_center_horizontal" margin_top="280" opacity="230" type="nowrap" hashkey="maintain" visible="false" cascade_opacity="true">Chức năng đang cập nhật!</label>
+        <group style="xml/nhan_thuong/card_collection.xml" width="match_parent" padding_left="70" height="484" margin_top="105" align="top_center_horizontal" hashkey="card_collection" visible="false" cascade_opacity="true"/>
+        <group style="xml/nhan_thuong/quy_dinh.xml" width="match_parent" padding_left="70" height="484" margin_top="105" align="top_center_horizontal" hashkey="quy_dinh" visible="false" cascade_opacity="true"/>
+        <group style="xml/ui/button_style_1.xml" align="top_right"  margin_top="40" margin_right="27" touch="true" bindtouch="onclick=exit" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+    </layout>
+</layout>

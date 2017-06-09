@@ -1,0 +1,4 @@
+<layout width="66" height="66" type="relative">
+	<img atlas="atlas/minipoker.plist" atlas_custom="atlas/minipoker.plist" frame="lightcard.png" align="center" hashkey="effect" scale=".8" opacity="0"/>	
+	<img atlas="atlas/card_game.plist" atlas_custom="atlas/card_game.plist" frame="card_0.png" align="center" hashkey="image" scale=".8"/>		
+</layout>

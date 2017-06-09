@@ -1,0 +1,54 @@
+<touchdelegates>
+        <touchdelegate name="exit"/>
+        <touchdelegate name="vibrate"/>
+        <touchdelegate name="media"/>
+        <touchdelegate name="notification"/>
+</touchdelegates>
+<layout opacity="0" width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+        <runaction>
+                <action id="this">
+                        <sequence>
+                                <delay time="0.05" />
+                                <fadein time="0.15"/>
+                        </sequence>
+                </action>
+        </runaction>
+        <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="200" align="center"/>
+        <layout  width="650" height="687" scale="0.9" align="center" background="texture/new_ui/board_menu.png" type="relative" cascade_opacity="true">
+
+                <img atlas="atlas/new_ui.plist" frame="txt_menu.png" align="top_center_horizontal" margin_top="15"/>
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="10.5" margin_top="10.5" touch="true" bindtouch="onclick=exit">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+
+                <layout width="match_parent" height="match_parent" type="vertical" cascade_opacity="true">
+                        <layout width="match_parent" height="wrap_content" margin_top="200" type="horizontal" cascade_opacity="true">
+                                <layout align="center" margin_left="100" type="relative" cascade_opacity="true">
+                                        <label font="fonts/SF-UI-Text-Medium.otf" size="35" align="left_center_vertical" type="nowrap" cascade_opacity="true">Rung</label>
+                                </layout>
+                                <group style="xml/checkbox.xml" align="center" margin_left="255" width="170" height="72" scale="1.25" touch="true" bindtouch="click=vibrate" hashkey="vibrate_checkbox" cascade_opacity="true">
+                                        <changetexture target="this:image_1" atlas="atlas/new_ui.plist" frame="button_on.png"/>
+                                        <changetexture target="this:image_2" atlas="atlas/new_ui.plist" frame="button_off.png"/>
+                                </group>
+                        </layout>
+                        <layout width="match_parent" height="wrap_content" margin_top="50" type="horizontal" cascade_opacity="true">
+                                <layout align="center" margin_left="100" type="relative" cascade_opacity="true">
+                                        <label font="fonts/SF-UI-Text-Medium.otf" size="35" align="left_center_vertical" type="nowrap" cascade_opacity="true">Âm thanh</label>
+                                </layout>
+                                <group style="xml/checkbox.xml" align="center" margin_left="255" width="170" height="72" scale="1.25" touch="true" bindtouch="click=media" hashkey="media_checkbox" cascade_opacity="true">
+                                        <changetexture target="this:image_1" atlas="atlas/new_ui.plist" frame="button_on.png"/>
+                                        <changetexture target="this:image_2" atlas="atlas/new_ui.plist" frame="button_off.png"/>
+                                </group>
+                        </layout>
+                        <layout width="match_parent" height="wrap_content" margin_top="50" type="horizontal" cascade_opacity="true">
+                                <layout align="center" margin_left="100" type="relative" cascade_opacity="true">
+                                        <label font="fonts/SF-UI-Text-Medium.otf" size="35" align="left_center_vertical" type="nowrap" cascade_opacity="true">Thông báo</label>
+                                </layout>
+                                <group style="xml/checkbox.xml" align="center" margin_left="255" width="170" height="72" scale="1.25" touch="true" bindtouch="click=notification" hashkey="notification_checkbox" cascade_opacity="true">
+                                        <changetexture target="this:image_1" atlas="atlas/new_ui.plist" frame="button_on.png"/>
+                                        <changetexture target="this:image_2" atlas="atlas/new_ui.plist" frame="button_off.png"/>
+                                </group>
+                        </layout>
+                </layout>
+        </layout>
+</layout>

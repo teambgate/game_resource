@@ -1,0 +1,31 @@
+<touchdelegates>
+    <touchdelegate name="hover"/>
+	<touchdelegate name="icon_touch"/>
+<touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative">
+    <layout width="match_parent" height="match_parent" type="absolute" align="center">
+        <layout type="relative" width="130" height="130" x="600" y="340" touch="true" touchdelegate="hover" hashkey="hover" cascade_opacity="true">
+            <img name="image" hashkey="image" atlas="atlas/mini_games.plist" frame="icon-minigame.png" width="match_parent" height="wrap_content" align="center"/>
+			<touchbegan>
+				<action id="this:image">
+					<scaleto time="0.1" x="0.8" y="0.8"/>
+				</action>
+			</touchbegan>	
+			<touchend>
+				<action id="this:image">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+			</touchend>
+			<touchcancel>
+				<action id="this:image">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+			</touchcancel>
+			
+			<layout type="absolute" width="400" height="400" align="center" atlas="atlas/mini_games.plist" local_z="-1" frame="c.png" rotate="-180" cascade_opacity="true" hashkey="buttons_mini_game" scale="1"/>
+			
+			<group style="xml/ui/buttonminigames.xml" x="0" y="0" touch="true" bindtouch="onclick=icon_touch" clonekey="icon_minigames" visible="false"/>
+        </layout>
+    </layout>
+	<group style="xml/loading/loading_circle.xml" align="center" clonekey="loading_circle" visible="false" scale="2"/>
+</layout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BAN</key>
+	<string>BÀN: </string>
+	<key>MONEY</key>
+	<string>MONEY: </string>
+	<key>BET_MIN</key>
+	<string>Bạn chưa đặt cược.</string>
+	<key>BET_MAX</key>
+	<string>Bạn đã đặt quá số tiền cho phép của bàn.</string>
+	<key>LEAVE_ROOM</key>
+	<string>Hãy chờ ván chơi kết thúc.</string>
+</dict>
+</plist>

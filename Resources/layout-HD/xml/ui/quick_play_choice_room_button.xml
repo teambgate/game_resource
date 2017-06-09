@@ -1,0 +1,43 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="154" height="154" type="absolute" touchdelegate="onclick">
+    <img name="image" atlas="atlas/choice_room.plist" frame="bt_bigchip.png" hashkey="image" x="77" y="77" />
+	<img atlas="atlas/choice_room.plist" frame="txt_choingay.png" x="77" y="77"/>
+	
+	<runaction>
+		<action id="this">
+			<repeatforever>
+				<spawn>
+					<sequence>
+						<rotateby time="5.6" r="360"/>
+					</sequence>
+					<sequence>
+						<delay time="2"/>
+						<moveby time="0.4" x="0" y="30"/>
+						<moveby time="0.4" x="0" y="-30"/>
+						<delay time="2"/>
+						<moveby time="0.4" x="0" y="30"/>
+						<moveby time="0.4" x="0" y="-30"/>
+					</sequence>
+				</spawn>
+			</repeatforever>
+		</action>
+	</runaction>
+	
+    <touchbegan>
+		<action id="this">
+			<scaleto time="0.1" x="1.2" y="1.2"/>
+		</action>
+	</touchbegan>	
+	<touchend>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchcancel>
+</layout>

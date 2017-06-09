@@ -1,0 +1,24 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" background="texture/white_2x2.png" color="black" opacity="0">
+    <layout hashkey="main_content" width="948.75" height="546.25" align="center" background="texture/thong_bao/board_thongbao.png" type="relative" cascade_opacity="true" opacity="0">
+        <!-- <img atlas="atlas/ui.plist" frame="thong-bao-icon.png" align="top_left" margin_left="90" margin_top="-40" scale="1.25"/> -->
+        <img src="texture/thong_bao/txt_thongbao.png" align="top_center_horizontal" scale="1.0" margin_top="32"/>
+        <listview width="300" height="400" align="left_bottom" type="vertical" margin_bottom="30" margin_left="60" cascade_opacity="true">
+            <layout width="match_parent" height="wrap_content" type="vertical" hashkey="buttonlist" cascade_opacity="true">
+                <group style="xml/ui/active_button_2.xml" width="300" touch="true" clonekey="button"/>
+            </layout>
+        </listview>
+        <img src="texture/thong_bao/board_thongbao_content.png" width="600" height="400"  align="right_bottom" margin_bottom="35" margin_right="40" cascade_opacity="true"/>
+        <listview width="575" height="387" align="right_bottom" type="vertical" margin_bottom="40" margin_right="40" cascade_opacity="true">
+            <layout width="match_parent" height="wrap_content" type="vertical" cascade_opacity="true">
+                <layout height="20"></layout>
+                <label font="fonts/SF-UI-Text-Regular.otf" size="25" width="match_parent" visible="true" hashkey="content" cascade_opacity="true">info</label>
+            </layout>
+        </listview>
+        <group style="xml/ui/button_style_3.xml" width="47" height="47" align="top_right" margin_top="16" margin_right="15" touch="true" bindtouch="onclick=exit" cascade_opacity="true" scale="1.2">
+            <changetexture target="this:image" src="texture/new_login/bt_close.png"/>
+        </group>
+    </layout>
+</layout>

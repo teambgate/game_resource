@@ -1,0 +1,21 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout type="relative" touchdelegate="onclick" cascade_opacity="true">
+    <img name="image1" atlas="atlas/user_info.plist" frame="tab_thongke_1.png" hashkey="image1" width="match_parent" height="match_parent" align="center" visible="true"/>
+    <touchbegan>
+        <action id="this">
+            <fadeto time="0.1" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this">
+             <fadeto time="0.1" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this">
+             <fadeto time="0.1" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

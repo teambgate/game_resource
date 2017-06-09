@@ -1,0 +1,89 @@
+<touchdelegates>
+	<touchdelegate name="slot_machine"/>
+	<touchdelegate name="poker_three_card"/>
+	<touchdelegate name="xeng"/>
+	<touchdelegate name="roulette"/>
+	<touchdelegate name="blackjack"/>
+	<touchdelegate name="ba_cay"/>
+	<touchdelegate name="ta_la"/>
+	<touchdelegate name="poker"/>
+	<touchdelegate name="xoc_dia"/>
+    <touchdelegate name="mau_binh"/>
+    <touchdelegate name="xi_to"/>
+    <touchdelegate name="lieng"/>
+    <touchdelegate name="tldl"/>
+    <touchdelegate name="sam"/>
+    <touchdelegate name="tlmn"/>
+	<touchdelegate name="tai_xiu"/>
+    <touchdelegate name="tlhk"/>
+	<touchdelegate name="chan"/>
+</touchdelegates>
+<layout type="relative" cascade_opacity="true">
+    <listview type="horizontal" width="match_parent" height="220" align="top_center_horizontal" local_z="2" cascade_opacity="true" bounce="false">
+        <layout width="wrap_content" height="match_parent" type="horizontal" hashkey="button_container" cascade_opacity="true">
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=slot_machine" hashkey="Rules_16">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-slot-machine.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=poker_three_card" hashkey="Rules_14">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-poker-three-card.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=xeng" hashkey="Rules_15">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xeng.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=roulette" hashkey="Rules_17">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-roulette.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=blackjack" hashkey="Rules_18">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-blackjack.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=ba_cay" hashkey="Rules_3">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-bacay.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=ta_la" hashkey="Rules_0">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tala.png" keep_size="true"/>
+            </group>
+		    <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=poker" hashkey="Rules_4">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-poker.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=xoc_dia" hashkey="Rules_11">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xoc-dia.png" keep_size="true"/>
+            </group>
+            <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=mau_binh" hashkey="Rules_8">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-maubinh.png" keep_size="true"/>
+            </group>
+            <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=xi_to" hashkey="Rules_5">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xito.png" keep_size="true"/>
+            </group>
+            <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=lieng" hashkey="Rules_6">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-lieng.png" keep_size="true"/>
+            </group>
+            <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=tldl" hashkey="Rules_2">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tldl.png" keep_size="true"/>
+            </group>
+            <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=sam" hashkey="Rules_7">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-sam.png" keep_size="true"/>
+            </group>
+            <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=tlmn" hashkey="Rules_10">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tlmn.png" keep_size="true"/>
+            </group>
+            <group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=tai_xiu" hashkey="Rules_12">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tai-xiu.png" keep_size="true"/>
+            </group>
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=tlhk" hashkey="Rules_1">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tlhk.png" keep_size="true"/>
+            </group>
+			<!-- chua co game id = 9-->
+			<group style="xml/help/rule_game_item.xml" align="center" bindtouch="onclick=chan" hashkey="Rules_9">
+                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-poker-three-card.png" keep_size="true"/>
+            </group>
+        </layout>
+    </listview>
+    <layout width="match_parent" height="match_parent" padding_top="110" type="relative" align="bottom_center_horizontal" cascade_opacity="true" margin_bottom="-70">
+        <layout width="match_parent" height="match_parent" padding_top="-7" align="center" background="texture/new_ui/textbox_noidung.png" cascade_opacity="true"/>
+        <listview width="match_parent" height="match_parent" type="vertical" hashkey="content_list" cascade_opacity="true">
+            <layout type="vertical" width="match_parent" height="wrap_content" cascade_opacity="true">
+                <label width="match_parent" padding_left="40" margin_top="50" font="fonts/font25.fnt" size="25" hashkey="content" align="center" cascade_opacity="true">Đang tải dữ liệu</label>
+            </layout>
+        </listview>
+    </layout>
+</layout>

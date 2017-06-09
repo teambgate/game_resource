@@ -1,0 +1,43 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+     <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="150" align="center"/>
+    <layout width="1062.6" height="611.8" align="center" background="texture/board/bigbg.png" type="relative" cascade_opacity="true">
+        
+        <img atlas="atlas/ui.plist" frame="nap-tien-icon.png" align="top_left" margin_left="110" margin_top="-20" scale="1.25" />
+        <img atlas="atlas/lobby.plist" frame="small-tab-bg.png" align="top_left" margin_left="240" margin_top="43.5" width="770" height="72.5" scale="0.85" hashkey="button_background"/>
+		<label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_left" margin_left="500" margin_top="55" hashkey="iap_label">IAP</label>
+        <layout width="wrap_content" height="wrap_content" type="horizontal" align="top_left" margin_left="260" margin_top="57" cascade_opacity="true" scale="0.85" hashkey="button_list">
+            <group name="tinhethong" style="xml/ui/active_button.xml" width="220" height="45.5" touch="true" align="top_left" hashkey="the_cao_button" cascade_opacity="true">
+                <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="small-tab-left.png"/>
+                <layout align="center" type="relative" cascade_opacity="true">
+                    <img atlas="atlas/ui.plist" frame="the_cao.png" align="center" scale="1.3"/>
+                </layout>
+            </group>
+            <group name="tinhethong" style="xml/ui/active_button.xml" width="328" height="45.5" touch="true" align="top_left" hashkey="iap_button" cascade_opacity="true">
+                <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="small-tab-center.png"/>
+                <layout align="center" type="relative" cascade_opacity="true">
+                    <img atlas="atlas/ui.plist" frame="iap.png" align="center" scale="1.3"/>
+                </layout>
+            </group>
+            <group name="tinhethong" style="xml/ui/active_button.xml" width="180" height="45.5" touch="true" align="top_left" hashkey="ti_gia_button" cascade_opacity="true">
+                <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="small-tab-right.png"/>
+                <layout align="center" type="relative" cascade_opacity="true">
+                    <img atlas="atlas/ui.plist" frame="ti_gia.png" align="center" scale="1.3"/>
+                </layout>
+            </group>
+        </layout>
+        <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="top_center_horizontal" margin_top="280" opacity="230" type="nowrap" hashkey="maintain" visible="false">Chức năng đang cập nhật!</label>
+        <group style="xml/payment/card_collection_webview.xml" width="match_parent" padding_left="70" height="484" margin_top="105" align="top_center_horizontal" hashkey="card_collection_webview" visible="false" cascade_opacity="true"/>
+        <group style="xml/payment/card_collection.xml" width="match_parent" padding_left="70" height="484" margin_top="105" align="top_center_horizontal" hashkey="card_collection" visible="false" cascade_opacity="true"/>
+        <group style="xml/payment/card_request.xml" width="match_parent" padding_left="70" height="484" margin_top="105" align="top_center_horizontal" hashkey="card_request" visible="false" cascade_opacity="true"/>
+        <group style="xml/payment/iap_collection.xml" width="match_parent" padding_left="70" height="484" margin_top="105" align="top_center_horizontal" hashkey="iap_collection" visible="false" cascade_opacity="true"/>
+        <group style="xml/payment/exchange_table.xml" width="match_parent" padding_left="80" height="470" margin_top="105" align="top_center_horizontal" hashkey="exchange_table" visible="false" cascade_opacity="true"/>
+        <group style="xml/ui/button_style_1.xml" align="top_right"  margin_top="43.5" margin_right="30.5" touch="true" bindtouch="onclick=exit" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+    </layout>
+    <layout width="match_parent" height="match_parent" align="center" touch="true" visible="false" hashkey="touch_prevent">
+    </layout>
+</layout>

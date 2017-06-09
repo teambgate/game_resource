@@ -1,0 +1,29 @@
+<layout width="match_parent" height="match_parent" type="relative">
+<!--    <group style="xml/mail.xml" align="center"/>-->
+<!--    <group style="xml/help/help.xml" align="center"/>-->
+<!--    <group style="xml/user_info.xml" align="center" />-->
+<!--    <group style="xml/choiceroom.xml" align="center"/>-->
+   <!-- <group style="xml/dialog.xml" align="center"/> -->
+<!--    <group style="xml/game/xocdia/xoc_dia.xml" align="center"/>-->
+<!--    <group style="xml/in_game_panel.xml" align="center"/>-->
+<!--    <group style="xml/chat.xml" align="center"/>-->
+<!--    <group style="xml/in_game_panel.xml" align="center" />-->
+<!--    <group style="xml/payment/payment_dialog.xml" align="center"/>-->
+<!--    <group style="xml/nhan_thuong_2/nhan_thuong.xml" align="center"/>-->
+<!--    <group style="xml/trade_history.xml" align="center"/>-->
+<!--    <group style="xml/game/bacay/bacay_sumary.xml" align="center"/>-->
+<!--    <group style="xml/game/taixiu/taixiu_info.xml" align="center"/>-->
+<!--    <group style="xml/change_nick_name_dialog.xml" align="center"/>-->
+<!--    <group style="xml/game/xocdia/xoc_dia.xml" align="center" />-->
+   <!-- <group style="xml/game/bacay/bacay_sumary.xml" align="center"/> -->
+<!--    <group style="xml/change_nick_name_dialog.xml" align="center"/>-->
+	<!-- <group style="xml/rate.xml" align="center"/> -->
+	<!-- <group style="xml/game/tomcuaca/tomcuaca.xml" align="center"/>-->
+	<!-- <group style="xml/new_ui/setting_table.xml" align="center"/> -->
+	<!-- <group style="xml/new_ui/rule.xml" align="center"/> -->
+	<!-- <group style="xml/new_ui/user_info.xml" align="center" /> -->
+	<!-- <group style="xml/new_ui/mail.xml" align="center"/> -->
+	<layout align="top_left" type="relative" margin_top="140" margin_left="40" local_z="9999" visible="false">
+        <label font="fonts/SF-UI-Text-Semibold.otf" size="25" align="left_center_vertical" type="nowrap" color="white" cascade_opacity="true" hashkey="deviceid">Device ID : </label>
+    </layout>
+</layout>

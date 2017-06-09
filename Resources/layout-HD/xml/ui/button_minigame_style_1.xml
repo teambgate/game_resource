@@ -1,0 +1,51 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" touchdelegate="onclick">
+	<img name="image" atlas="atlas/lobby.plist" frame="button_register.png" hashkey="image" align="center" anchor-y="0"/>
+	<label name="label" font="fonts/font20.fnt" size="20" align="center" x="20" y="-10" color="white" type="nowrap" hashkey="bt_label">100K</label>
+    <touchbegan>
+		<action id="this:image">
+			<scaleto time="0.1" x="0.9" y="0.9"/>
+		</action>
+		<action id="this:label">
+			<scaleto time="0.1" x="0.9" y="0.9"/>
+		</action>
+	</touchbegan>	
+	<touchend>
+		<action id="this:image">
+			<scaleto time="0.25" x="1" y="1"/>
+		</action>
+		<action id="this:label">
+			<scaleto time="0.25" x="1" y="1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this:image">
+			<scaleto time="0.25" x="1" y="1"/>
+		</action>
+		<action id="this:label">
+			<scaleto time="0.25" x="1" y="1"/>
+		</action>
+	</touchcancel>
+	<!-- <touchbegan>
+        <action id="this:image">
+            <scaleto time="0.1" x="1" y="0.8"/>
+        </action>
+    </touchbegan>
+    <touchmove>
+        <action id="this:image">
+             <scaleto time="0.1" x="1" y="0.8"/>
+        </action>
+    </touchmove>	
+    <touchend>
+        <action id="this:image">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+    </touchcancel> -->
+</layout>

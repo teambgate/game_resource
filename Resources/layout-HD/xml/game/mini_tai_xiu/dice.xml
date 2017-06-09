@@ -1,0 +1,11 @@
+<layout width="50" height="50" type="relative">
+    <img atlas="atlas/mini_tai_xiu.plist" frame="dice-1.png" align="center" hashkey="dice"
+	frame_atlas_custom="atlas/mini_tai_xiu.plist"
+    frame_1="dice-1.png"
+	frame_2="dice-2.png"
+	frame_3="dice-3.png"
+	frame_4="dice-4.png"
+	frame_5="dice-5.png"
+	frame_6="dice-6.png"
+	/>
+</layout>

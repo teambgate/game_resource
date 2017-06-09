@@ -1,0 +1,37 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+    <touchdelegate name="invite"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" touch="true" cascade_opacity="true">
+    <img atlas="atlas/lobby.plist" frame="white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="200" align="center"/>
+    <layout width="856.5" height="529.5" align="center" type="relative" cascade_opacity="true">
+        <img src="texture/board/dialog_big.png" align="center" width="match_parent" height="match_parent"/>
+        <!-- <img atlas="atlas/ui.plist" frame="moi-choi-icon.png" margin_left="110" margin_top="-30" scale="1.25"/> -->
+        <img atlas="atlas/ui.plist" frame="invite_play.png" align="top_center_horizontal" margin_top="20" scale="0.9"/>
+        <!-- label to show no players-->
+        <label font="fonts/SF-UI-Text-Medium.otf" size="30" type="nowrap" width="100" align="top_center_horizontal" margin_top="150" color="#f2f2f2" opacity="222" hashkey="text" cascade_opacity="true">Không có ai để mời !</label>
+        <!-- list view to show players-->
+        <listview width="match_parent" height="match_parent" padding_left="50" padding_bottom="113" align="top_center_horizontal" margin_top="93" type="vertical" hashkey="player_listview" visible="false" cascade_opacity="true">
+            <layout width="match_parent" height="wrap_content" type="vertical" hashkey="player_list" cascade_opacity="true">
+                <layout width="match_parent" height="85" type="relative" atlas="atlas/mail.plist" frame="lineA.png" opacity="150" margin_top="4" clonekey="player_item" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="left_center_vertical" margin_left="10" width="match_parent" opacity="230" type="nowrap" max_character="15" hashkey="player_title" cascade_opacity="true">name name name</label>
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="left_center_vertical" margin_left="320" width="match_parent" opacity="230" type="nowrap" hashkey="player_money" cascade_opacity="true">500000</label>
+                    <group style="xml/ui/button_style_1.xml" align="right_center_vertical" scale="0.8" touch="true" bindtouch="onclick=invite" hashkey="button" margin_right="40" cascade_opacity="true" cascade_opacity="true">
+                        <changetexture target="this:image" atlas="atlas/ui.plist" frame="ok_invite_button.png"/>
+                    </group>
+                </layout>
+                <layout width="match_parent" height="85" type="relative" atlas="atlas/mail.plist" frame="lineB.png" opacity="150" margin_top="4" clonekey="player_item_2" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="left_center_vertical" margin_left="10" width="match_parent" opacity="230" type="nowrap" max_character="15" hashkey="player_title" cascade_opacity="true">name name name</label>
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="left_center_vertical" margin_left="320" width="match_parent" opacity="230" type="nowrap" hashkey="player_money" cascade_opacity="true">500000</label>
+                    <group style="xml/ui/button_style_1.xml" align="right_center_vertical" scale="0.8" touch="true" bindtouch="onclick=invite" hashkey="button" margin_right="40" cascade_opacity="true" cascade_opacity="true">
+                        <changetexture target="this:image" atlas="atlas/ui.plist" frame="ok_invite_button.png"/>
+                    </group>
+                </layout>
+            </layout>
+        </listview>
+
+        <group style="xml/ui/button_style_3.xml" width="70" height="70" align="top_right"  margin_top="12" margin_right="12" touch="true" bindtouch="onclick=exit" margin_right="-10" margin_top="-10" cascade_opacity="true">
+            <changetexture target="this:image" src="texture/new_login/bt_close.png"/>
+        </group>
+    </layout>
+</layout>

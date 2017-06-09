@@ -1,0 +1,22 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout type="absolute" scale="1.1" width="60" height="60" touchdelegate="onclick">
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="chip1.png" width="60" height="60" x="30" y="30" hashkey="coin"/>
+	<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="18"  color="black" x="30" y="30" hashkey="value">100K</label>
+	<touchbegan>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchbegan>	
+	<touchend>
+		<action id="this">
+			<scaleto time="0.25" x="1.1" y="1.1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this">
+			<scaleto time="0.25" x="1.1" y="1.1"/>
+		</action>
+	</touchcancel>
+</layout>

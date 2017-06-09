@@ -1,0 +1,54 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" align="center" type="relative" cascade_opacity="true" opacity="0">
+    <runaction>
+        <action id="this">
+            <sequence>
+                <delay time="3.0"/>
+                <fadein time="0.25"/>
+				<delay time="3.0"/>
+            </sequence>
+        </action>
+    </runaction>
+    <layout width="867" height="567" align="center" type="relative" cascade_opacity="true" >
+        <img src="texture/board/dialog_big.png" align="center" width="876" height="567" align="center"/>
+        <!-- <img atlas="atlas/ui.plist" frame="bang-tong-ket-icon.png" align="top_left" margin_left="70" margin_top="-40" scale="1.25"/> -->
+        <label font="fonts/SF-UI-Text-Medium.otf" size="30" type="nowrap=" align="top_center_horizontal" margin_top="44" cascade_opacity="true">Bảng tổng kết</label>
+        <img atlas="primitive/primitive.plist" frame="white_2x2.png" opacity="100" width="780" height="4" align="top_center_horizontal" margin_top="120"/>
+        <img atlas="primitive/primitive.plist" frame="white_2x2.png" opacity="100" width="780" height="4" align="top_center_horizontal" margin_top="200"/>
+        <img atlas="primitive/primitive.plist" frame="white_2x2.png" opacity="100" width="780" height="4" align="top_center_horizontal" margin_top="510"/>
+        <img atlas="primitive/primitive.plist" frame="white_2x2.png" opacity="100" width="4" height="394" align="left_bottom" margin_left="40" margin_bottom="53"/>
+        <img atlas="primitive/primitive.plist" frame="white_2x2.png" opacity="100" width="4" height="394" align="left_bottom" margin_left="250" margin_bottom="53"/>
+        <img atlas="primitive/primitive.plist" frame="white_2x2.png" opacity="100" width="4" height="394" align="left_bottom" margin_left="400" margin_bottom="53"/>
+		<img atlas="primitive/primitive.plist" frame="white_2x2.png" opacity="100" width="4" height="394" align="left_bottom" margin_left="823" margin_bottom="53"/>
+        <layout width="867" height="0" align="top_center_horizontal" type="absolute" margin_top="162" cascade_opacity="true">
+            <label font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="142" y="0" cascade_opacity="true" >Người chơi</label>
+            <label font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="323" y="0" cascade_opacity="true" >Tiền</label>
+            <label font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="620" y="0" cascade_opacity="true" >Ghi chú</label>
+        </layout>
+        <layout hashkey="user_1" width="867" height="0" align="top_center_horizontal" type="absolute" margin_top="240" visible="false" cascade_opacity="true" >
+            <label name="label_1" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="142" y="0" cascade_opacity="true" >user name</label>
+            <label name="label_2" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="323" y="0" cascade_opacity="true" >+100</label>
+            <label name="label_3" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="620" y="0" cascade_opacity="true" >note</label>
+        </layout>
+        <layout hashkey="user_2" width="867" height="0" align="top_center_horizontal" type="absolute" margin_top="310" visible="false" cascade_opacity="true" >
+            <label name="label_1" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="142" y="0" cascade_opacity="true" >user name</label>
+            <label name="label_2" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="323" y="0" cascade_opacity="true" >+100</label>
+            <label name="label_3" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="620" y="0" cascade_opacity="true" >note</label>
+        </layout>
+        <layout hashkey="user_3" width="867" height="0" align="top_center_horizontal" type="absolute" margin_top="380" visible="false" cascade_opacity="true" >
+            <label name="label_1" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="142" y="0" cascade_opacity="true" >user name</label>
+            <label name="label_2" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="323" y="0" cascade_opacity="true" >+100</label>
+            <label name="label_3" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="620" y="0" cascade_opacity="true" >note</label>
+        </layout>
+        <layout hashkey="user_4" width="867" height="0" align="top_center_horizontal" type="absolute" margin_top="450" visible="false" cascade_opacity="true" >
+            <label name="label_1" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="142" y="0" cascade_opacity="true" >user name</label>
+            <label name="label_2" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="323" y="0" cascade_opacity="true" >+100</label>
+            <label name="label_3" font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" x="620" y="0" cascade_opacity="true" >note</label>
+        </layout>
+        <group style="xml/ui/button_style_3.xml" width="70" height="70" align="top_right"  margin_top="4" margin_right="0" touch="true" bindtouch="onclick=exit" cascade_opacity="true" >
+            <changetexture target="this:image" src="texture/new_login/bt_close.png"/>
+        </group>
+    </layout>
+</layout>

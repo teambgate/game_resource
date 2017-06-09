@@ -1,0 +1,5 @@
+<layout width="457.5" height="66" type="relative" atlas="atlas/doithuong.plist" frame="tab_card.png" align="center">
+    <label font="fonts/SF-UI-Text-Regular.otf" size="28" type="nowrap" align="left_center_vertical" margin_left="30" color="white">Giá bán</label>
+    <label font="fonts/SF-UI-Text-Regular.otf" size="28" type="nowrap" align="right_center_vertical" margin_right="70" color="yellow" hashkey="price">0</label>
+    <img atlas="atlas/doithuong.plist" frame="large_coin.png" align="right_center_vertical" margin_right="22" scale="1.5"/>
+</layout>

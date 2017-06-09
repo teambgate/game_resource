@@ -1,0 +1,45 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+    <touchdelegate name="exchange_gift"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+    <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="220" align="center"/>
+    <layout width="1138.5" height="655.5" background="texture/board/bigbg.png" align="center" type="vertical" cascade_opacity="true">
+        <layout width="match_parent" height="100" type="horizontal">
+            <layout>
+                <img atlas="atlas/ui.plist" frame="nap-tien-icon.png" x="200" y="-60" scale="1.35" local_z="2"/>
+                <img atlas="atlas/lobby.plist" frame="small-tab-bg.png" x="740" y="-88" scale_x="1.035" scale_y="1.45"/>
+                <group style="xml/ui/button_style_1.xml" x="1076" y="-75" scale="1.25" touch="true" bindtouch="onclick=exit" cascade_opacity="true">
+                    <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+                </group>
+            </layout>
+            <group style="xml/nhan_thuong_2/top_button.xml" touch="true" hashkey="the_cao_button" scale="1.5" margin_left="550" margin_top="70">
+                <changetexture target="this:active:text" atlas="atlas/doithuong.plist" frame="nhan_the.png" />
+                <changetexture target="this:inactive:text" atlas="atlas/doithuong.plist" frame="nhan_the.png" />
+            </group>
+            <group style="xml/nhan_thuong_2/top_button.xml" touch="true" hashkey="quy_dinh_button" scale="1.5" margin_left="75"  margin_top="70">
+                <changetexture target="this:active:bg" atlas="atlas/lobby.plist" frame="small-tab-right.png" keep_size="true"/>
+                <changetexture target="this:inactive:bg" atlas="atlas/lobby.plist" frame="small-tab-right.png" keep_size="true"/>
+                <changetexture target="this:active:text" atlas="atlas/doithuong.plist" frame="Quy_dinh.png" />
+                <changetexture target="this:inactive:text" atlas="atlas/doithuong.plist" frame="Quy_dinh.png" />
+            </group>
+        </layout>
+        
+        <layout width="match_parent" height="match_parent" padding_top="150" type="relative" align="center">
+            <layout width="match_parent" height="wrap_content" type="horizontal" align="top_center_horizontal" margin_top="50" hashkey="present_collection">
+                <layout width="457.5" height="0" type="relative" margin_left="50">
+                    <group style="xml/nhan_thuong_2/select_list.xml" align="top_center_horizontal" name="card_type" local_z="4" hashkey="select_card_type"/>
+                    <group style="xml/nhan_thuong_2/select_list.xml" align="location_below_center" margin_top="20" name="card_value" relative_to="card_type" local_z="3" hashkey="select_card_value"/>
+                    <group style="xml/nhan_thuong_2/current_price.xml" align="location_below_center" name="card_price" relative_to="card_value" margin_top="20" hashkey="card_price"/>
+                    <group style="xml/ui/button_style_1.xml" align="location_below_center" relative_to="card_price" margin_top="40" scale="1.5" touch="true" touchdelegate="exchange_gift" cascade_opacity="true">
+                        <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_ok_up.png"/>
+                    </group>
+                </layout>
+                <layout width="wrap_content" height="wrap_content" type="vertical" margin_left="20">
+                    <group style="xml/nhan_thuong_2/preview_list.xml" align="center" hashkey="preview_list"/>
+                </layout>
+            </layout>
+            <group width="match_parent" padding_left="60" margin_top="35" padding_top="20" height="match_parent" style="xml/nhan_thuong_2/quy_dinh.xml" align="top_center_horizontal" hashkey="quy_dinh" visible="false"/>
+        </layout>
+    </layout>
+</layout>

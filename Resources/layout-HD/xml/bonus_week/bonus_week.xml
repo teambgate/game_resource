@@ -1,0 +1,32 @@
+<touchdelegates>
+        <touchdelegate name="touch_close"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" touch="true">
+        <img src="texture/white_32x32.png" width="match_parent" height="match_parent" color="black" align="center" hashkey="bg"/>
+        <layout width="1224" height="668" type="relative" align="center" scale="0.9" hashkey="center">
+                <img src="texture/bonus_7_day/board_7ngay.png" align="center"/>
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="9.5" margin_top="85.5" touch="true" bindtouch="onclick=touch_close">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+                <layout type="horizontal" width="wrap_content" height="wrap_content" hashkey="content" align="top_center_horizontal" margin_top="250">
+                        <layout type="relative" width="160" height="260" align="center" clonekey="item">
+                                <img atlas="atlas/bonus_7_day.plist" frame="fr_duoc_nhan_thuong.png" align="center" hashkey="board"/>
+                                <label width="match_parent" font="atlas/bonus_7_day_font.fnt" font_atlas="atlas/bonus_7_day.plist" hashkey="day" font_frame="font_vietnamese.png" scale_factor="1" type="nowrap" cascade_opacity="true" align="top_center_horizontal" margin_top="10">Ngày 1</label>
+                                <img atlas="atlas/bonus_7_day.plist" frame="img_day7.png" align="top_center_horizontal" margin_top="65" hashkey="icon"/>
+                                <layout type="relative" align="top_center_horizontal" margin_top="200">
+                                        <layout type="vertical" width="wrap_content" height="wrap_content" align="center">
+                                                <layout type="horizontal" width="wrap_content" height="wrap_content" align="left" hashkey="xu">
+                                                        <img atlas="atlas/bonus_7_day.plist" frame="icon_xu.png" hashkey="xu_icon"/>
+                                                        <label width="200" font="atlas/bonus_7_day_font.fnt" hashkey="xu_text" font_atlas="atlas/bonus_7_day.plist" font_frame="font_vietnamese.png" scale_factor="1" type="nowrap" cascade_opacity="true">200k</label>
+                                                </layout>
+                                                <layout type="horizontal" width="wrap_content" height="wrap_content" align="left" hashkey="chip">
+                                                        <img atlas="atlas/bonus_7_day.plist" frame="icon_chip.png" hashkey="chip_icon"/>
+                                                        <label width="200" font="atlas/bonus_7_day_font.fnt" hashkey="chip_text" font_atlas="atlas/bonus_7_day.plist" font_frame="font_vietnamese.png" scale_factor="1" type="nowrap" cascade_opacity="true">2000k</label>
+                                                </layout>
+                                        </layout>
+                                </layout>
+                                <img atlas="atlas/bonus_7_day.plist" frame="hieuung (1).png" align="center" hashkey="effect"/>
+                        </layout>
+                </layout>
+        </layout>
+</layout>

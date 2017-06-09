@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TA_LA</key>
+	<string>TÁ LẢ</string>
+	<key>TAI_XIU</key>
+	<string>TÀI XỈU</string>
+	<key>POKER</key>
+	<string>POKER</string>
+	<key>TLMN</key>
+	<string>TLMN</string>
+	<key>TLHK</key>
+	<string>TLHK</string>
+	<key>SAM</key>
+	<string>SÂM</string>
+	<key>TLDL</key>
+	<string>TLĐL</string>
+	<key>BACAY</key>
+	<string>BA CÂY</string>
+	<key>LIENG</key>
+	<string>LIÊNG</string>
+	<key>XITO</key>
+	<string>XÌ TỐ</string>
+	<key>MAUBINH</key>
+	<string>MẬU BINH</string>
+	<key>XOCDIA</key>
+	<string>XÓC ĐĨA</string>
+	<key>POKER_THREE_CARD</key>
+	<string>POKER THREE CARD</string>
+	<key>XENG</key>
+	<string>XÈNG</string>
+	<key>SLOT_MACHINE</key>
+	<string>SLOT MACHINE</string>
+	<key>ROULETTE</key>
+	<string>ROULETTE</string>
+	<key>BLACKJACK</key>
+	<string>BLACKJACK</string>
+	<key>BAUCUA</key>
+	<string>BẦU CUA</string>
+	<key>MINIPOKER</key>
+	<string>MINIPOKER</string>
+</dict>
+</plist>

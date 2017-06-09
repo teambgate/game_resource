@@ -1,0 +1,25 @@
+<layout cascade_opacity="true" align="center">
+	<img atlas="atlas/xeng.plist" frame="slot_A.png" align="center" hashkey="normal" scale="1" />
+	<img atlas="atlas/xeng.plist" frame="slot_B.png" align="center" hashkey="mark" visible="false" scale="1" />
+	<img atlas="atlas/xeng.plist" frame="icon_barnho.png" align="center" hashkey="xengItem" scale="1" 
+	atlas_custom="atlas/xeng.plist"
+	frame_14="icon_barnho.png" 
+	frame_15="icon_bar.png" 
+	frame_12="icon_baynho.png" 
+	frame_13="icon_bay.png" 
+	frame_4="icon_chanhnho.png" 
+	frame_5="icon_chanh.png" 
+	frame_2="icon_camnho.png" 
+	frame_3="icon_cam.png" 
+	frame_6="icon_chuongnho.png"  
+	frame_7="icon_chuong.png" 
+	frame_8="icon_duanho.png" 
+	frame_9="icon_dua.png" 
+	frame_10="icon_saonho.png" 
+	frame_11="icon_sao.png" 
+	frame_0="icon_taonho.png" 
+	frame_1="icon_tao.png" 
+	/>
+	<!--<label font="fonts/red_font.fnt" size="30" x="0" y="-20" type="nowrap" visible="false" name="label" scale="0.3">x2</label>-->	
+	<label font="fonts/white_font.fnt" anchor-x="1" x="30" y="-14" scale="0.9" type="nowrap" visible="false" name="label">x2</label>
+</layout>

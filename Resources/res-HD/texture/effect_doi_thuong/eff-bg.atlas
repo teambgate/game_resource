@@ -1,0 +1,13 @@
+
+eff-bg.png
+size: 1104,175
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lighttt
+  rotate: false
+  xy: 2, 2
+  size: 1100, 171
+  orig: 1100, 171
+  offset: 0, 0
+  index: -1

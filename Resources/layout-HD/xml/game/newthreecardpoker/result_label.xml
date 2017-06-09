@@ -1,0 +1,4 @@
+<layout width="wrap_content" height="wrap_content" type="relative">
+	<img atlas="atlas/newthreecardpoker.plist" frame="result_frame.png" align="center"/>
+	<label hashkey="label" font="fonts/font20.fnt" size="20" type="nowrap" align="center" color="yellow" local_z="2">STRAIGHT FLUSH</label>		
+</layout>

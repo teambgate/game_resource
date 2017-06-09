@@ -1,0 +1,35 @@
+<touchdelegates>
+    <touchdelegate name="slot_hover"/>
+<touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative">
+    <layout width="match_parent" height="match_parent" type="absolute" align="center">
+        <layout type="absolute" width="407" height="187"  x="300" y="340" align="center" touch="true" touchdelegate="slot_hover" hashkey="hover" cascade_opacity="true" >
+            <img name="image" src="texture/scene/icon_slot.png" x="203.5" y="93.5" width="match_parent" height="wrap_content"/>
+			<img src="texture/scene/tien-hu-sao.png" x="300" y="140" opacity="180"/>
+			<img src="texture/scene/dong-chip.png" x="240" y="140" scale="0.6"/>
+			<img src="texture/scene/tien-hu-sao.png" x="300" y="90" opacity="180"/>
+			<img src="texture/scene/dong-chip.png" x="230" y="90" scale="0.8"/>
+			<img src="texture/scene/tien-hu-sao.png" x="300" y="40" opacity="180"/>
+			<img src="texture/scene/dong-chip.png" x="220" y="40" />
+			<label font="fonts/yellow_font.fnt" scale="0.67" anchor-x="1" x="360" y="140" type="nowrap" hashkey="moneyJackpot1">0</label>
+			<label font="fonts/yellow_font.fnt" scale="0.77" anchor-x="1" x="360" y="90" type="nowrap" hashkey="moneyJackpot2">10</label>
+			<label font="fonts/yellow_font.fnt" scale="0.87" anchor-x="1" x="360" y="40" type="nowrap" hashkey="moneyJackpot3">100</label>
+        
+            <touchbegan>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchbegan>
+            <touchend>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchend>
+            <touchcancel>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchcancel>
+        </layout>
+    </layout>
+</layout>

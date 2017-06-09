@@ -1,0 +1,140 @@
+<touchdelegates>
+    <touchdelegate name="touch_taixiu"/>
+    <touchdelegate name="touch_poker"/>
+    <touchdelegate name="touch_tlmn"/>
+	<touchdelegate name="touch_tlhk"/>
+    <touchdelegate name="touch_sam"/>
+    <touchdelegate name="touch_tldl"/>
+    <touchdelegate name="touch_bacay"/>
+    <touchdelegate name="touch_tala"/>
+    <touchdelegate name="touch_lieng"/>
+    <touchdelegate name="touch_xito"/>
+    <touchdelegate name="touch_maubinh"/>
+    <touchdelegate name="touch_xocdia"/>
+
+	<touchdelegate name="touch_poker_three_card"/>
+	<touchdelegate name="touch_xeng"/>
+	<touchdelegate name="touch_slot_machine"/>
+	<touchdelegate name="touch_roulette"/>
+	<touchdelegate name="touch_blackjack"/>
+
+    <touchdelegate name="touch_exit"/>
+    <touchdelegate name="advertise_click"/>
+    <touchdelegate name="mail_click"/>
+    <touchdelegate name="help_click"/>
+    <touchdelegate name="facebook_click"/>
+    <touchdelegate name="log_out_touch" />
+    <touchdelegate name="exit_touch" />
+    <touchdelegate name="close_touch" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+    <group style="xml/game_background.xml" align="center"/>
+    <layout name="top" width="wrap_content" height="100" align="top_center_horizontal" margin_top="20" type="horizontal">
+        <group style="xml/ui/button_style_1.xml" scale="1.2" touch="true" bindtouch="onclick=touch_exit" visible="false">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="exit_button_up.png"/>
+        </group>
+
+        <group style="xml/mail_hint.xml" margin_left="0" scale="1.2" touch="true" bindtouch="onclick=mail_click" hashkey="mail_button" visible="false">
+            <!--            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="mail_button_up.png"/>-->
+        </group>
+        <group style="xml/ui/button_style_1.xml" margin_left="20" scale="1.2" touch="true" bindtouch="onclick=facebook_click" hashkey="facebook_button" visible="false">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="facebook_button.png"/>
+        </group>
+        <group style="xml/ui/button_style_1.xml" margin_left="20" scale="1.2" touch="true" bindtouch="onclick=help_click" hashkey="help_button" visible="false">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="help_button_up.png"/>
+        </group>
+    </layout>
+
+	<layout width="1000" height="43" background="texture/border_white_32x32.png" cap_left="5" cap_right="5" cap_top="5" cap_bottom="5" color="black" opacity="150" align="location_below_center" relative_to="top" type="relative" margin_top="-3" touch="true" touchdelegate="advertise_click">
+		<layout width="940" height="59" clip="true" type="relative" align="left_center_vertical" margin_left="60" hashkey="advertise_container" visible="false">
+			<label name="ad" y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" hashkey="advertise_text" from_margin="0" offset_margin="490" visible="false" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+			<label y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="location_right_of_center" margin_left="490" relative_to="ad" hashkey="advertise_text_2" visible="false" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+		</layout>
+		<img atlas="atlas/lobby.plist" frame="icon_loa.png" align="left_center_vertical"/>
+	</layout>
+
+	<layout hashkey="effect_hu" width="wrap_content" height="100" align="top_center_horizontal" margin_top="50" type="relative" visible="false">
+        <layout width="800" height="55" atlas="atlas/lobby.plist" frame="nennohu.png" align="center" margin_left="0" type="relative" margin_top="10">
+            <layout width="650" height="59" clip="true" type="relative" align="left_center_vertical" margin_left="140" hashkey="nohu_container" visible="true">
+                <label name="ad" y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" hashkey="nohu_text" from_margin="0" offset_margin="150" visible="false" color="yellow" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+                <label y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="location_right_of_center" margin_left="150" relative_to="ad" hashkey="nohu_text_2" visible="false" color="yellow" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+            </layout>
+	           <img name="logo" height="160" width="wrap_content" atlas="atlas/lobby.plist" frame="chuongthongbao.png" align="top_left" margin_left="-80" margin_top="-50"/>
+        </layout>
+    </layout>
+
+    <img name="logo" height="160" width="wrap_content" src="texture/scene/logo_game.png" align="top_center_horizontal" margin_top="100" visible="false"/>
+    <label font="fonts/font30.fnt" size="30" scale_factor="1.0" type="nowrap" align="center" hashkey="loading_game_view" >Đang tải danh sách trò chơi...</label>
+
+
+    <layout align="location_below_center" relative_to="top" width="match_parent" height="match_parent" padding_top="200" type="relative">
+        <layout align="left_center_vertical" margin_left="50">
+            <img atlas="atlas/lobby.plist" frame="arrow_1.png" y="20" scale="1.25" hashkey="left_arrow" visible="false"/>
+        </layout>
+        <layout align="right_center_vertical" margin_right="50">
+            <img atlas="atlas/lobby.plist" frame="arrow_1.png" flip_x="true" y="20" scale="1.25" hashkey="right_arrow" visible="false"/>
+        </layout>
+        <listview type="horizontal" align="center" width="1000" height="400" hashkey="lobby_list_view_game" padding_left="0" clip="false">
+            <layout width="wrap_content" height="400" weight_sum="2" type="vertical" align="center">
+                <layout width="wrap_content" height="250" weight="1" type="horizontal">
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_tala" hashkey="tala"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tala.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_lieng" hashkey="lieng"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-lieng.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_xito" hashkey="xito" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xito.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_maubinh" hashkey="maubinh" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-maubinh.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_xocdia" hashkey="xocdia" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xoc-dia.png"/>
+                    </group>
+					<group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_tlhk" hashkey="tlhk" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tlhk.png"/>
+                    </group>
+					<group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_poker_three_card" hashkey="poker_three_card" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-poker-three-card.png"/>
+                    </group>
+					<group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_xeng" hashkey="xeng" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xeng.png"/>
+                    </group>
+					<group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_slot_machine" hashkey="slot_machine" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-slot-machine.png"/>
+                    </group>
+		    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_roulette" hashkey="roulette" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-roulette.png"/>
+                    </group>
+                </layout>
+                <layout width="wrap_content" height="250" weight="1" type="horizontal">
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_taixiu" hashkey="taixiu"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tai-xiu.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_poker" hashkey="poker"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-poker.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_tlmn" hashkey="tlmn"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tlmn.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_sam" hashkey="sam"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-sam.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_tldl" hashkey="tldl"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tldl.png"/>
+                    </group>
+                    <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_bacay" hashkey="bacay"  align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-bacay.png"/>
+                    </group>
+					<group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=touch_blackjack" hashkey="blackjack" align="center">
+                        <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-blackjack.png"/>
+                    </group>
+                </layout>
+            </layout>
+        </listview>
+    </layout>
+    <group style="xml/lobbybottombar.xml" align="bottom_center_horizontal" hashkey="lobbybottombar" bindtouch="mail_click=mail_click"/>
+    <!-- <group style="xml/back_lobby_panel.xml" align="center" hashkey="back_panel" bindtouch="log_out_touch=log_out_touch;exit_touch=exit_touch;close_touch=close_touch"/> -->
+    <group style="xml/back_lobby_panel.xml" align="center" hashkey="back_panel"/>
+</layout>

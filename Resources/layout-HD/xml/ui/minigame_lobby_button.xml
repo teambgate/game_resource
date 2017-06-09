@@ -1,0 +1,22 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="140" height="140" type="vertical" touchdelegate="onclick">
+    <img name="image" atlas="atlas/mini_games.plist" frame="icon-bau-cua-ca.png" hashkey="image" align="center" width="match_parent" height="match_parent" />
+
+    <touchbegan>
+		<action id="this">
+			<scaleto time="0.1" x="0.9" y="0.9"/>
+		</action>
+	</touchbegan>	
+	<touchend>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchcancel>
+</layout>

@@ -1,0 +1,21 @@
+<layout type="horizontal" width="205" height="105" atlas="atlas/xocdia.plist" frame="frame-3.png" normal_frame="frame-3.png" red_frame="small.png" frame_atlas="atlas/xocdia.plist" cap_left="15" cap_top="15" cap_right="15" cap_bottom="15">
+    <layout name="top" type="vertical" width="wrap_content" height="wrap_content" align="center" margin_left="5">
+        <img name="1" atlas="atlas/xocdia.plist" frame="dark-elip-nho.png" width="23.5" height="wrap_content" scale="0.9"/>
+        <img name="2" atlas="atlas/xocdia.plist" frame="dark-elip-nho.png" width="23.5" height="wrap_content" scale="0.9"/>
+        <img name="3" atlas="atlas/xocdia.plist" frame="dark-elip-nho.png" width="23.5" height="wrap_content" scale="0.9"/>
+        <img name="4" atlas="atlas/xocdia.plist" frame="dark-elip-nho.png" width="23.5" height="wrap_content" scale="0.9"/>
+    </layout>
+    <layout margin_left="18" name="middle" type="vertical" width="wrap_content" height="wrap_content" align="center">
+        <layout atlas="atlas/xocdia.plist" frame="frame-4.png" width="100" height="30" type="relative">
+            <label font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="23" scale="0.7666667" align="center" type="nowrap" color="yellow" hashkey="tong">0</label>
+        </layout>
+        <label name="rate" align="center" type="nowrap" font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="25" scale_factor="0.8333333">1 : 15</label>
+        <layout atlas="atlas/xocdia.plist" frame="frame-4.png" width="100" height="30" type="relative">
+            <label font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="30" scale="0.7666667" align="center" type="nowrap" color="yellow" hashkey="dat">0</label>
+        </layout>
+    </layout>
+    <layout margin_left="0.2" type="vertical" width="wrap_content" height="wrap_content" align="center">
+        <label align="center" type="nowrap" font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="20" scale_factor="0.6666667">Tổng</label>
+        <label align="center" type="nowrap" font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="20" scale_factor="0.6666667" margin_top="35">Đặt</label>
+    </layout>
+</layout>

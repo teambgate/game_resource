@@ -1,0 +1,11 @@
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+	<layout hashkey="effect_hu" width="wrap_content" height="100" align="top_center_horizontal" margin_top="200" type="relative" visible="false">
+        <layout width="600" height="55" atlas="atlas/lobby.plist" frame="nennohu.png" align="center" margin_left="0" type="relative" margin_top="10">
+            <layout width="450" height="59" clip="true" type="relative" align="left_center_vertical" margin_left="60" hashkey="nohu_container" visible="true">
+                <label name="ad" y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" hashkey="nohu_text" from_margin="0" offset_margin="150" visible="false" color="yellow" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+                <label y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="location_right_of_center" margin_left="150" relative_to="ad" hashkey="nohu_text_2" visible="false" color="yellow" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+            </layout>
+			<img name="logo" height="160" width="wrap_content" atlas="atlas/lobby.plist" frame="chuongthongbao.png" align="top_left" margin_left="-80" margin_top="-50" visible="false"/>
+        </layout>
+    </layout>
+ </layout>

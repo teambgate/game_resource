@@ -1,0 +1,24 @@
+<layout width="556.5" height="54" type="relative">
+    <layout width="556.5" height="wrap_content" type="vertical" align="center">
+        <layout width="556.5" height="54" type="relative" atlas="atlas/doithuong.plist" frame="price_bar.png" align="center">
+            <label font="fonts/SF-UI-Text-Regular.otf" size="28" type="nowrap" align="left_center_vertical"  margin_left="20" color="white">Mệnh giá</label>
+            <label font="fonts/SF-UI-Text-Regular.otf" size="28" type="nowrap" align="right_center_vertical"  margin_right="20" color="white">Giá bán</label>
+        </layout>
+        <layout width="556.5" height="0" type="vertical">
+            <listview width="556.5" height="300" align="center" clip="false" touch="false" visible="false" hashkey="listview">
+                <layout width="556.5" height="wrap_content" type="vertical" atlas="atlas/doithuong.plist" frame="price_tap2.png" opacity="150" hashkey="container">
+                    <layout width="556.5" height="50" type="relative" clonekey="list_item">
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="25" type="nowrap" align="left_center_vertical" margin_left="30" hashkey="left">50,000</label>
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="25" type="nowrap" align="right_center_vertical" margin_right="40" hashkey="right">50,000</label>
+                        <img atlas="atlas/doithuong.plist" frame="large_coin.png" align="right_center_vertical" margin_right="5"/>
+                    </layout>
+                    <layout width="556.5" height="50" type="relative" atlas="atlas/doithuong.plist" frame="price_tap2.png" clonekey="list_item_2">
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="25" type="nowrap" align="left_center_vertical" margin_left="30" hashkey="left">50,000</label>
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="25" type="nowrap" align="right_center_vertical" margin_right="40" hashkey="right">50,000</label>
+                        <img atlas="atlas/doithuong.plist" frame="large_coin.png" align="right_center_vertical" margin_right="5"/>
+                    </layout>
+                </layout>
+            </listview>
+        </layout>
+    </layout>
+</layout>

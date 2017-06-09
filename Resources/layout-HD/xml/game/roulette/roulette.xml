@@ -1,0 +1,341 @@
+<touchdelegates>
+    <touchdelegate name="seat_touch"/>
+    <touchdelegate name="select_coin_1"/>
+    <touchdelegate name="select_coin_2"/>
+    <touchdelegate name="select_coin_3"/>
+    <touchdelegate name="select_coin_4"/>
+    <touchdelegate name="select_coin_5"/>
+    <touchdelegate name="dat_lai"/>
+    <touchdelegate name="dk_lam_cai"/>
+    <touchdelegate name="huy_lam_cai"/>
+	<touchdelegate name="bet"/>
+	<touchdelegate name="back_to_table"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+    <group style="xml/gamerl_background.xml" align="center"/>
+	<group style="xml/gamerl_background.xml" x="-600"/>
+    <label font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="30" type="nowrap" align="left_bottom" margin_left="40" margin_bottom="20" color="white" opacity="150" hashkey="viewing">Đang xem</label>
+    <layout type="absolute" align="center" hashkey="game_center">
+	
+		 <img atlas="atlas/roulette.plist" frame="dealer_roulette.png" x="-20" y="265" scale="1.3"/>
+		 <img atlas="atlas/roulette.plist" frame="bt_D.png" x="-310" y="-193.5" scale="1.35" hashkey="dealer" visible="false"/>
+         <img atlas="atlas/roulette.plist" frame="banroulettle.png" width="950" height="480" scale="1.05"/>
+
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="-310" y="-265" scale="1.0" rotate="-180" touch="true" hashkey="seat_1" bindtouch="onclick=seat_touch"/>
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="-500" y="-140" scale="1.0" rotate="-90" touch="true" hashkey="seat_2" bindtouch="onclick=seat_touch"/>
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="-500" y="0" scale="1.0" rotate="-90" touch="true" hashkey="seat_3" bindtouch="onclick=seat_touch"/>
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="-500" y="140" scale="1.0" rotate="-90" touch="true" hashkey="seat_4" bindtouch="onclick=seat_touch" />
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="-250" y="265" scale="1.0" rotate="0" touch="true" hashkey="seat_5" bindtouch="onclick=seat_touch" />
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="-110" y="265" scale="1.0" rotate="0" touch="true" hashkey="seat_6" bindtouch="onclick=seat_touch" />
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="110" y="265" scale="1.0" rotate="0" touch="true" hashkey="seat_7" bindtouch="onclick=seat_touch" />
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="250" y="265" scale="1.0" rotate="0" touch="true" hashkey="seat_8" bindtouch="onclick=seat_touch" />
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="500" y="140" scale="1.0" rotate="90" touch="true" hashkey="seat_9" bindtouch="onclick=seat_touch" />
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="500" y="0" scale="1.0" rotate="90" touch="true" hashkey="seat_10" bindtouch="onclick=seat_touch" />
+         <group style="xml/game/roulette/roulette_game_seat.xml" x="500" y="-140" scale="1.0" rotate="90" touch="true" hashkey="seat_11" bindtouch="onclick=seat_touch" />
+         
+         
+
+         <group style="xml/game/roulette/roulette_player.xml" x="-310" y="-270" local_z="5" hashkey="player_1" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_1.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="500" y="-140" local_z="5" hashkey="player_2" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_2.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="500" y="0" local_z="5" hashkey="player_3" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_3.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="500" y="140" local_z="5" hashkey="player_4" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_4.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="250" y="270" local_z="5" hashkey="player_5" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_5.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="110" y="270" local_z="5" hashkey="player_6" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_6.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="-110" y="270" local_z="5" hashkey="player_7" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_7.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="-250" y="270" local_z="5" hashkey="player_8" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_8.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="-500" y="140" local_z="5" hashkey="player_9" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_9.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="-500" y="0" local_z="5" hashkey="player_10" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_10.png"/>
+         </group>
+         <group style="xml/game/roulette/roulette_player.xml" x="-500" y="-140" local_z="5" hashkey="player_11" visible="false">
+             <changepreserve target="this:avatar_container:avatar" atlas="atlas/xocdia.plist" frame="avatar_11.png"/>
+         </group>
+		
+		 <img atlas="atlas/roulette.plist" frame="table.png" scale="0.8" hashkey="tableNumbers"/>
+		 
+         <layout type="horizontal" width="wrap_content" height="wrap_content" x="-250" y="-380" anchor-x="0" anchor-y="0.5" hashkey="user_play_buttons" local_z="1001" visible="false">
+            <group style="xml/game/roulette/coin_button.xml" align="center" touch="true" touchdelegate="select_coin_1" hashkey="coin_button_1">
+                <changetexture target="this:image" atlas="atlas/xocdia.plist" frame="x100.png" keep_size="true"/>
+            </group>
+            <group style="xml/game/roulette/coin_button.xml" align="center" touch="true" touchdelegate="select_coin_2" hashkey="coin_button_2">
+                <changetexture target="this:image" atlas="atlas/xocdia.plist" frame="x500.png" keep_size="true"/>
+            </group>
+            <group style="xml/game/roulette/coin_button.xml" align="center" touch="true" touchdelegate="select_coin_3" hashkey="coin_button_3">
+                <changetexture target="this:image" atlas="atlas/xocdia.plist" frame="x1000.png" keep_size="true"/>
+            </group>
+            <group style="xml/game/roulette/coin_button.xml" align="center" touch="true" touchdelegate="select_coin_4" hashkey="coin_button_4">
+                <changetexture target="this:image" atlas="atlas/xocdia.plist" frame="x5000.png" keep_size="true"/>
+            </group>
+            <group style="xml/game/roulette/coin_button.xml" align="center" touch="true" touchdelegate="select_coin_5" hashkey="coin_button_5">
+                <changetexture target="this:image" atlas="atlas/xocdia.plist" frame="x10000.png" keep_size="true"/>
+            </group>
+            <group style="xml/ui/button_style_1.xml" align="center" scale="1.35" margin_left="20" touch="true" touchdelegate="dat_lai">
+                <changetexture  target="this:image" atlas="atlas/xocdia.plist" frame="datlai-btn.png"/>
+            </group>
+        </layout>
+		
+		<layout width="1200" height="800" atlas="atlas/roulette.plist" frame="bg.png" touch="false" hashkey="player_bet" visible="false" local_z="1000">
+			<img atlas="atlas/roulette.plist" frame="circle.png" width="844" height="139" x="600" y="582" visible="true"/>
+			<group style="xml/ui/button_style_1.xml" x="100" y="50" scale="1" hashkey="back_to_table" touch="true" bindtouch="onclick=back_to_table">
+             <changetexture target="this:image" atlas="atlas/roulette.plist" frame="bt_veban.png" />
+			</group>
+        </layout>
+		
+		<layout width="1200" height="800" hashkey="bet_layout" touch="true" touchdelegate="bet">
+			<group style="xml/ui/button_style_1.xml" x="600" y="580" scale="1" hashkey="dklamcai" touch="true" bindtouch="onclick=dk_lam_cai" visible="false">
+             <changetexture target="this:image" atlas="atlas/roulette.plist" frame="bt_dangkylamcai.png" />
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="600" y="580" scale="1" hashkey="huydangky" touch="true" bindtouch="onclick=huy_lam_cai" visible="false">
+             <changetexture target="this:image" atlas="atlas/roulette.plist" frame="bt_huydangky.png" />
+			</group>
+		</layout>
+		
+        <group style="xml/toast.xml" anchor-x="0.5" anchor-y="0.5" y="-160" local_z="200" hashkey="toast">
+            <changetext target="this:container:content">Nhà cái cân tất!</changetext>
+        </group>
+        
+        <!-- use to generate coin in game -->
+        <img atlas="atlas/xocdia.plist" frame="coin-1.png" x="-375" y="-48" width="40" height="40" visible="false" clonekey="coin"/>
+
+        <bundle id="11"> <!-- game bundle-->
+            <key id="0"> <!-- chan_coin_key-->
+                <point x="-279" y="92" scale="1.0" rotate="0" local_z="10" offset_y="3" copy="30"/>
+            </key>
+            <key id="1"> <!-- le_coin_key-->
+                <point x="120" y="92" scale="1.0" rotate="0" local_z="10" offset_y="3" copy="30"/>
+            </key>
+            <key id="2"> <!-- 1x15_1_coin_key-->
+                <point x="-375" y="-44" scale="1.0" rotate="0" local_z="10" offset_y="3" copy="30"/>
+            </key>
+            <key id="3"> <!-- 1x15_2_coin_key-->
+                <point x="-160" y="-44" scale="1.0" rotate="0" local_z="10" offset_y="3" copy="30"/>
+            </key>
+            <key id="4"> <!-- 1x3.5_1_coin_key-->
+                <point x="55" y="-44" scale="1.0" rotate="0" local_z="10" offset_y="3" copy="30"/>
+            </key>
+            <key id="5"> <!-- 1x3.5_2_coin_key-->
+                <point x="270" y="-44" scale="1.0" rotate="0" local_z="10" offset_y="3" copy="30"/>
+            </key>
+            <key id="6"> <!-- number -->
+                <point x="-3" y="55" scale="1.4" local_z="50"/>
+            </key>
+            <key id="7"> <!-- bowl position -->
+                <point x="0" y="50" scale="1.35" local_z="0"/>
+            </key>
+            <key id="8"> <!-- bowl open position -->
+                <point x="-70" y="140" scale="1.35" local_z="0"/>
+            </key>
+            <key id="9"> <!-- hat position style 1-->
+                <point x="-20" y="70" scale="1.35"/>
+                <point x="10" y="60" scale="1.35"/>
+                <point x="20" y="30" scale="1.35"/>
+                <point x="-20" y="30" scale="1.35"/>
+            </key>
+            <key id="10"> <!-- hat position style 2-->
+                <point x="0" y="80" scale="1.35"/>
+                <point x="20" y="60" scale="1.35"/>
+                <point x="20" y="30" scale="1.35"/>
+                <point x="-25" y="30" scale="1.35"/>
+            </key>
+            <key id="11"> <!-- hat position style 3-->
+                <point x="-15" y="85" scale="1.35"/>
+                <point x="0" y="60" scale="1.35"/>
+                <point x="20" y="30" scale="1.35"/>
+                <point x="-28" y="35" scale="1.35"/>
+            </key>
+        </bundle>
+        <bundle id="12"> <!-- game coin effect bundle-->
+            <key id="0"> <!-- chan_coin_key-->
+                <point x="-279" y="92" scale="1.0" rotate="0" local_z="10"/>
+            </key>
+            <key id="1"> <!-- le_coin_key-->
+                <point x="120" y="92" scale="1.0" rotate="0" local_z="10"/>
+            </key>
+            <key id="2"> <!-- 1x15_1_coin_key-->
+                <point x="-375" y="-44" scale="1.0" rotate="0" local_z="10"/>
+            </key>
+            <key id="3"> <!-- 1x15_2_coin_key-->
+                <point x="-160" y="-44" scale="1.0" rotate="0" local_z="10"/>
+            </key>
+            <key id="4"> <!-- 1x3.5_1_coin_key-->
+                <point x="55" y="-44" scale="1.0" rotate="0" local_z="10"/>
+            </key>
+            <key id="5"> <!-- 1x3.5_2_coin_key-->
+                <point x="270" y="-44" scale="1.0" rotate="0" local_z="10"/>
+            </key>
+        </bundle>
+        
+         <bundle id="0"> <!-- seat 0 bundle -->
+             <key id="0"> <!-- player view key -->
+                 <point x="-310" y="-270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="-310" y="-270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="-310" y="-265" scale="1.0" rotate="-180" local_z="4"/>
+             </key>
+             <key id="4"> <!-- dealer key-->
+                 <point x="-310" y="-193.5" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="10"> <!-- seat 1 bundle -->
+             <key id="0"> <!-- player view key -->
+                 <point x="-500" y="-140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="-500" y="-140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="-500" y="-140" scale="1.0" rotate="-90" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="-431" y="-140" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="9"> <!-- seat 2 bundle  -->
+             <key id="0"> <!-- player view key -->
+                 <point x="-500" y="0" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="-500" y="0" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="-500" y="0" scale="1.0" rotate="-90" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="-431" y="0" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="8"> <!-- seat 3 bundle  -->
+             <key id="0"> <!-- player view key -->
+                 <point x="-500" y="140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="-500" y="140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="-500" y="140" scale="1.0" rotate="-90" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="-431" y="140" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="7"> <!-- seat 4 bundle  -->
+             <key id="0"> <!-- player view key -->
+                 <point x="-250" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="-250" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="-250" y="265" scale="1.0" rotate="0" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="-250" y="185" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="6"> <!-- seat 5 bundle  -->
+             <key id="0"> <!-- player view key -->
+                 <point x="-110" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="-110" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="-110" y="265" scale="1.0" rotate="0" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="-110" y="185" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="5"> <!-- seat 6 bundle -->
+             <key id="0"> <!-- player view key -->
+                 <point x="110" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="110" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="110" y="265" scale="1.0" rotate="0" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="110" y="185" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="4"> <!-- seat 7 bundle  -->
+             <key id="0"> <!-- player view key -->
+                 <point x="250" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="250" y="270" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="250" y="265" scale="1.0" rotate="0" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="250" y="185" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="3"> <!-- seat 8 bundle  -->
+             <key id="0"> <!-- player view key -->
+                 <point x="500" y="140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                  <point x="500" y="140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="500" y="140" scale="1.0" rotate="90" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="431" y="140" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="2"> <!-- seat 9 bundle  -->
+             <key id="0"> <!-- player view key -->
+                 <point x="500" y="0" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key -->
+                 <point x="500" y="0" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key -->
+                 <point x="500" y="0" scale="1.0" rotate="90" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="431" y="0" scale="1.35" />
+             </key>
+         </bundle>
+         <bundle id="1"> <!-- seat 10 bundle  -->
+             <key id="0"> <!-- player view key-->
+                 <point x="500" y="-140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="1"> <!-- player play key-->
+                 <point x="500" y="-140" scale="1.0" rotate="0" local_z="5" copy="1"/>
+             </key>
+             <key id="3"> <!-- seat key-->
+                 <point x="500" y="-140" scale="1.0" rotate="90" local_z="4"/>
+             </key>
+             <key id="4">
+                 <point x="431" y="-140" scale="1.35" />
+             </key>
+         </bundle>
+    </layout>
+</layout>

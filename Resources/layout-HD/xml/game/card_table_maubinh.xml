@@ -1,0 +1,377 @@
+
+<touchdelegates>
+    <touchdelegate name="usertouch"/>
+    <touchdelegate name="wholetouch"/>
+	<touchdelegate name="touch_sortagain"/>
+	<touchdelegate name="seat_touch"/>
+	<touchdelegate name="doichi_touch"/>
+	<touchdelegate name="xong_touch"/>
+	<touchdelegate name="tudong_touch"/>
+	<touchdelegate name="bao_touch"/>
+
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" touch="true" touchdelegate="wholetouch">
+    <group style="xml/game_play_background.xml" align="center"/>
+    <label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" type="nowrap" width="1000" align="left_bottom" margin_left="40" margin_bottom="20" color="white" opacity="150" hashkey="viewing" local_z="2">Đang xem</label>
+
+	<layout type="absolute" align="center" hashkey="game_center">
+			<img src="texture/scene/table-style1.png" align="center" y="0" scale="0.9"/>
+
+			<group style="xml/game/game_seat.xml" x="0" y="-270" scale="1.0" rotate="-180" touchdelegate="seat_touch" touch="true" hashkey="seat_1" />
+			<group style="xml/game/game_seat.xml" x="500" y="0" scale="1.0" rotate="90" touchdelegate="seat_touch" touch="true" hashkey="seat_2" />
+			<group style="xml/game/game_seat.xml" x="0" y="270" scale="1.0" touchdelegate="seat_touch" touch="true" hashkey="seat_3" />
+			<group style="xml/game/game_seat.xml" x="-500" y="0" scale="1.0" rotate="-90" touchdelegate="seat_touch" touch="true" hashkey="seat_4" />
+
+            <group style="xml/game/card_table_player.xml" x="0" y="-245" hashkey="player_1" visible="false">
+                <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_1.png"/>
+            </group>
+            <group style="xml/game/card_table_player.xml" x="480" y="0" hashkey="player_2" visible="false">
+                <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_2.png"/>
+            </group>
+            <group style="xml/game/card_table_player.xml" x="0" y="245" hashkey="player_3" visible="false">
+                <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_3.png"/>
+            </group>
+            <group style="xml/game/card_table_player.xml" x="-480" y="0" hashkey="player_4" visible="false">
+                <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_4.png"/>
+            </group>
+
+
+	</layout>
+
+	<layout type="relative" width="match_parent" height="match_parent" align="center" hashkey="layout_dark_background" visible="false">
+		<img atlas="atlas/card_game.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" align="center" opacity="180" color="#000000" cap_top="10" cap_left="10" cap_right="10" cap_bottom="10" />
+	</layout>
+
+	<layout type="absolute" align="center" hashkey="layout_cards" >
+		<img atlas="atlas/ui.plist" frame="watting_text.png"  x="0" y="-90" hashkey="waiting_text" scale="1.0" visible="false"/>
+		<!-- <img atlas="atlas/ui.plist" frame="begin_text.png"  x="0" y="-100" hashkey="begin_text" scale="1.5" visible="false"/> -->
+                <img atlas="atlas/ui.plist" frame="begin_text.png" align="center" y="-90" scale="1.0" hashkey="begin_text" visible="false"/>
+		<group style="xml/game/playingcards.xml" hashkey="playingcards" visible="false"/>
+		<group style="xml/game/card.xml" x="0" y="0" clonekey="card" visible="false" scale="0.9"/>
+		<bundle id="4"> <!-- center key-->
+				<key id="0"> <!-- remain card key -->
+					<point x="0" y="0" scale="0.75" rotate="0" local_z="5" copy="52"/>
+				</key>
+		</bundle>
+
+		<bundle id="0"> <!-- seat 0 - 6h bundle -->
+
+				<key id="0"> <!-- player view key-->
+					<point x="0" y="-245" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="1"> <!-- player play key-->
+					<point x="100" y="-245" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="2"> <!-- user play key-->
+					<point x="-520" y="-180" scale="1.0" rotate="-180" local_z="5"/>
+				</key>
+
+				<key id="31"> <!-- _user_play_compare_key -->
+					<point x="-520" y="-245" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="3"> <!-- seat key-->
+					<point x="0" y="-245" scale="1.0" rotate="-180.0" local_z="0"/>
+				</key>
+
+				<key id="4"> <!-- on hand card key -->
+					<point x="0" y="-245" scale="1.0" rotate="0" copy="15" local_z="10"/>
+				</key>
+
+				<key id="15"> <!-- five card show -->
+					<point x="-123" y="-135" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="60"/>
+				</key>
+
+				<key id="14"> <!-- three card show -->
+					<point x="-53" y="-135" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="60"/>
+				</key>
+
+				<key id="23"> <!--three card type show -->
+					<point x="0" y="-50" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="30"> <!-- five card type show -->
+					<point x="0" y="-50" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+
+				<key id="5"> <!-- card show branch 1 -->
+					<point x="-83" y="-140" scale="0.8" rotate="0" local_z="20" copy="5" offset_local_z="1" offset_x="40"/>
+				</key>
+				<key id="6"> <!-- card show branch 2 -->
+					<point x="-83" y="-100" scale="0.8" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="40"/>
+				</key>
+				<key id="7"> <!-- card show branch 3 -->
+					<point x="-35" y="-60" scale="0.8" rotate="0" local_z="10" copy="3" offset_local_z="1" offset_x="40"/>
+				</key>
+
+				<key id="8"> <!-- card  user sorting branch 1 -->
+					<point x="-265" y="-185" scale="1.4" rotate="0" local_z="10" copy="5"  offset_x="135"/>
+				</key>
+
+				<key id="9"> <!-- card user sorting branch 2 -->
+					<point x="-265" y="-35" scale="1.4" rotate="0" local_z="10" copy="5"  offset_x="135"/>
+				</key>
+
+				<key id="10"> <!-- card user sorting branch 3 -->
+					<point x="-135" y="120" scale="1.4" rotate="0" local_z="10" copy="3"  offset_x="135"/>
+				</key>
+
+
+				<key id="11"> <!-- card  user play branch 1 -->
+					<point x="-370" y="-245" scale="1.0" rotate="0" local_z="10" copy="5"  offset_x="70" offset_local_z="1"/>
+				</key>
+
+				<key id="12"> <!-- card  user play branch 2 -->
+					<point x="20" y="-245" scale="1.0" rotate="0" local_z="10" copy="5"  offset_x="70" offset_local_z="1"/>
+				</key>
+
+				<key id="13"> <!-- card  user play branch 3 -->
+					<point x="420" y="-245" scale="1.0" rotate="0" local_z="10" copy="5"  offset_x="70" offset_local_z="1"/>
+				</key>
+
+				<key id="17"> <!-- card type branch 1 sorting -->
+					<point x="350" y="-185" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="18"> <!-- card type branch 2 sorting -->
+					<point x="350" y="-35" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="19"> <!-- card type branch 3 sorting -->
+					<point x="350" y="120" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+
+				<key id="20"> <!-- card type branch 1 sortdone -->
+					<point x="-230" y="-170" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="21"> <!-- card type branch 2 sortdone -->
+					<point x="160" y="-170" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="22"> <!-- card type branch 3 sortdone -->
+					<point x="490" y="-170" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="24"> <!-- _effect_money_change_key -->
+					<point  x="140" y="-245" scale="1.0" rotate="5" local_z="5" />
+				</key>
+
+				<key id="25"> <!-- _effect_result_key -->
+					<point  x="0" y="-245" scale="1.0" rotate="0" local_z="5" />
+				</key>
+
+				<key id="26"> <!-- _effect_number_chi_key -->
+					<point x="-140" y="-245" scale="1.0" rotate="1" local_z="5" />
+				</key>
+				<key id="27"> <!-- _effect_user_money_change_key -->
+					<point x="-520" y="-160" scale="1.0" rotate="0" local_z="5" />
+				</key>
+					<key id="28"> <!-- _effect_user_result_key -->
+					<point x="-520" y="-245" scale="1.0" rotate="0" local_z="5" />
+				</key>
+					<key id="29"> <!-- _effect_user_number_chi_key -->
+					<point x="-430" y="-245" scale="1.0" rotate="5" local_z="5" />
+				</key>
+
+			</bundle>
+
+		<bundle id="1"> <!-- seat 1 - 3h bundle -->
+
+				<key id="0"> <!-- player view key-->
+					<point x="480" y="0" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="1"> <!-- player play key-->
+					<point x="520" y="0" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="3"> <!-- seat key-->
+					<point x="500" y="0" scale="1.0" rotate="90.0" local_z="0"/>
+				</key>
+
+				<key id="4"> <!-- on hand card key -->
+					<point x="420" y="0" scale="1.0" rotate="0" local_z="10" copy="15"/>
+				</key>
+
+				<key id="15"> <!-- five card show -->
+					<point x="380" y="0" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="-1" offset_x="-40"/>
+				</key>
+					<key id="23"> <!-- _three_card_type_show -->
+					<point x="340" y="80" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="30"> <!-- _five_card_type_show -->
+					<point x="300" y="80" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="14"> <!-- three card show -->
+					<point x="400" y="0" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="-1" offset_x="-60"/>
+				</key>
+
+				<key id="5"> <!-- card show branch 1 -->
+					<point x="383" y="-40" scale="0.8" rotate="0" local_z="30" copy="5" offset_local_z="-1" offset_x="-40"/>
+				</key>
+				<key id="6"> <!-- card show branch 2 -->
+					<point x="383" y="0" scale="0.8" rotate="0" local_z="20" copy="5" offset_local_z="-1" offset_x="-40"/>
+				</key>
+				<key id="7"> <!-- card show branch 3 -->
+					<point x="335" y="40" scale="0.8" rotate="0" local_z="10" copy="3" offset_local_z="-1" offset_x="-40"/>
+				</key>
+
+				<key id="24"> <!-- _effect_money_change_key -->
+					<point  x="480" y="100" scale="1.0" rotate="3" local_z="5" />
+				</key>
+
+				<key id="25"> <!-- _effect_result_key -->
+					<point  x="480" y="0" scale="1.0" rotate="0" local_z="5" />
+				</key>
+
+				<key id="26"> <!-- _effect_number_chi_key -->
+					<point x="480" y="-100" scale="1.0" rotate="7" local_z="5" />
+				</key>
+			</bundle>
+
+		<bundle id="2"> <!-- seat 2 - 12h bundle -->
+
+				<key id="0"> <!-- player view key-->
+					<point x="0" y="245" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="1"> <!-- player play key-->
+					<point x="100" y="245" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="3"> <!-- seat key-->
+					<point x="0" y="270" scale="1.0" rotate="0" local_z="0"/>
+				</key>
+
+				<key id="4"> <!-- on hand card key -->
+					<point x="0" y="245" scale="1.0" rotate="0" local_z="10" copy="15"/>
+				</key>
+
+				<key id="15"> <!-- five card show -->
+					<point x="-123" y="135" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="60"/>
+				</key>
+
+				<key id="14"> <!-- three card show -->
+					<point x="-53" y="135" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="60"/>
+				</key>
+
+				<key id="23"> <!--three card type show -->
+					<point x="0" y="50" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="30"> <!-- five card type show -->
+					<point x="0" y="50" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="5"> <!-- card show branch 1 -->
+					<point x="-83" y="140" scale="0.8" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="40"/>
+				</key>
+				<key id="6"> <!-- card show branch 2 -->
+					<point x="-83" y="100" scale="0.8" rotate="0" local_z="20" copy="5" offset_local_z="1" offset_x="40"/>
+				</key>
+				<key id="7"> <!-- card show branch 3 -->
+					<point x="-35" y="60" scale="0.8" rotate="0" local_z="30" copy="3" offset_local_z="1" offset_x="40"/>
+				</key>
+
+				<key id="24"> <!-- _effect_money_change_key -->
+					<point  x="140" y="245" scale="1.0" rotate="5" local_z="5" />
+				</key>
+
+				<key id="25"> <!-- _effect_result_key -->
+					<point  x="0" y="245" scale="1.0" rotate="0" local_z="5" />
+				</key>
+
+				<key id="26"> <!-- _effect_number_chi_key -->
+					<point x="-140" y="245" scale="1.0" rotate="1" local_z="5" />
+				</key>
+			</bundle>
+
+		<bundle id="3"> <!-- seat 3 - 9h bundle -->
+
+				<key id="0"> <!-- player view key-->
+					<point x="-480" y="0" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="1"> <!-- player play key-->
+					<point x="-520" y="0" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="3"> <!-- seat key-->
+					<point x="-500" y="0" scale="1.0" rotate="-90.0" local_z="0" />
+				</key>
+
+				<key id="4"> <!-- on hand card key -->
+					<point x="-420" y="0" scale="1.0" rotate="0" local_z="10" copy="15"/>
+				</key>
+
+				<key id="15"> <!-- five card show -->
+					<point x="-380" y="0" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="40"/>
+				</key>
+
+				<key id="23"> <!-- _three_card_type_show -->
+					<point x="-340" y="80" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="30"> <!-- _five_card_type_show -->
+					<point x="-300" y="80" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+
+				<key id="14"> <!-- three card show -->
+					<point x="-400" y="0" scale="1.0" rotate="0" local_z="10" copy="5" offset_local_z="1" offset_x="60"/>
+				</key>
+
+				<key id="5"> <!-- card show branch 1 -->
+					<point x="-383" y="-40" scale="0.8" rotate="0" local_z="30" copy="5" offset_local_z="1" offset_x="40"/>
+				</key>
+				<key id="6"> <!-- card show branch 2 -->
+					<point x="-383" y="0" scale="0.8" rotate="0" local_z="20" copy="5" offset_local_z="1" offset_x="40"/>
+				</key>
+				<key id="7"> <!-- card show branch 3 -->
+					<point x="-335" y="40" scale="0.8" rotate="0" local_z="10" copy="3" offset_local_z="1" offset_x="40"/>
+				</key>
+
+				<key id="24"> <!-- _effect_money_change_key -->
+					<point  x="-480" y="100" scale="1.0" rotate="3" local_z="5" />
+				</key>
+
+				<key id="25"> <!-- _effect_result_key -->
+					<point  x="-480" y="0" scale="1.0" rotate="0" local_z="5" />
+				</key>
+
+				<key id="26"> <!-- _effect_number_chi_key -->
+					<point x="-480" y="-100" scale="1.0" rotate="7" local_z="5" />
+				</key>
+			</bundle>
+	</layout>
+
+	<layout type="absolute" align="center" hashkey="layout_effects" >
+
+	</layout>
+
+
+	<layout width="match_parent" height="80" align="bottom_center_horizontal" margin_bottom="-10" type="horizontal" hashkey="layout_btn" define_margin_bottom="-10" visible="false">
+
+		 <group style="xml/game/tala_game_button.xml" width="300" height="80" hashkey="doichi_button" touch="true" bindtouch="onclick=doichi_touch"/>
+
+		 <group style="xml/game/tala_game_button.xml" width="300" height="80" hashkey="tudong_button" touch="true" bindtouch="onclick=tudong_touch"/>
+
+		  <group style="xml/game/tala_game_button.xml" width="300" height="80" hashkey="xong_button" touch="true" bindtouch="onclick=xong_touch"/>
+
+		  <group style="xml/game/tala_game_button.xml" width="300" height="80" hashkey="bao_button" touch="true" />
+	</layout>
+
+	<layout width="186" height="96" type="relative" touch="true" align="right_bottom" margin_right="62"  margin_bottom="50" hashkey="btn_bao" visible="false" touchdelegate="bao_touch">
+		<img name="image" atlas="atlas/card_game.plist" frame="BTN_Bao_MB.png" width="match_parent" height="match_parent" align="center"/>
+	</layout>
+
+	<layout width="140" height="80" type="relative" touch="true" align="left_bottom" margin_left="5"  margin_bottom="-5" hashkey="sortagain_button" visible="false" touchdelegate="touch_sortagain">
+		<img name="image" atlas="atlas/card_game.plist" frame="button_bacay.png" width="match_parent" height="match_parent" align="center"/>
+		<label  width="match_parent" font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="top_center_horizontal" margin_top="10" >Binh lại</label>
+	</layout>
+
+
+</layout>

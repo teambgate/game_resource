@@ -1,0 +1,45 @@
+<touchdelegates>
+        <touchdelegate name="register"/>
+        <touchdelegate name="cancel"/>
+        <touchdelegate name="privacy"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" align="center" background="texture/white_2x2.png" color="black" opacity="150">
+        <layout background="texture/new_login/fr_login.png" width="944" type="relative" height="524" align="center" hashkey="main_board">
+                <!-- <img src="texture/new_login/logo_bigo69.png" align="top_left" margin_top="0" margin_left="170" scale="0.65"/> -->
+                <img src="texture/new_login/logo_bigo69.png" align="top_left" margin_top="0" margin_left="345" scale="0.65"/>
+                <!-- <img src="texture/new_login/txt_gamebaidoithuong.png" align="top_right" margin_top="90" margin_right="145"  scale="0.65"/> -->
+
+                <layout name="username" width="470" height="50" align="top_center_horizontal" margin_top="210" type="relative">
+                        <img src="texture/new_login/textbox.png" width="match_parent" height="match_parent" align="center"/>
+                        <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Tên đăng nhập" placeholdercolor="#f2f2f2" hashkey="username" inputflag="sentence" inputmode="singleline"/>
+                </layout>
+                <layout name="password" width="470" height="50" align="location_below_center" relative_to="username" margin_top="10" type="relative">
+                        <img src="texture/new_login/textbox.png" width="match_parent" height="match_parent" align="center"/>
+                        <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Mật khẩu" placeholdercolor="#f2f2f2" hashkey="password" inputflag="password" inputmode="singleline"/>
+                </layout>
+                <layout name="repassword" width="470" height="50" align="location_below_center" relative_to="password" margin_top="10" type="relative">
+                        <img src="texture/new_login/textbox.png" width="match_parent" height="match_parent" align="center"/>
+                        <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Xác nhận mật khẩu" placeholdercolor="#f2f2f2" hashkey="repassword" inputflag="password" inputmode="singleline"/>
+                </layout>
+                <group name="login" style="xml/ui/button_minigame_style_2.xml" align="location_below_right" relative_to="repassword" margin_right="-10" margin_top="30" touch="true" hashkey="login" bindtouch="onclick=register" scale="1.5" anchor-x="1.0" anchor-y="0.5">
+                        <changetexture target="this:image" src="texture/new_login/bt_dangky.png"/>
+                </group>
+                <group name="cancel" style="xml/ui/button_minigame_style_2.xml" align="location_below_left" relative_to="repassword" margin_left="-10" margin_top="30" touch="true" hashkey="cancel" bindtouch="onclick=cancel" scale="1.5" anchor-x="0.0" anchor-y="0.5">
+                        <changetexture target="this:image" src="texture/new_login/bt_huy.png"/>
+                </group>
+                <layout width="match_parent" height="match_parent" align="center" hashkey="connecting" type="relative" visible="false" touch="true">
+                        <layout align="center" type="absolute">
+                                <group style="xml/loading/connecting.xml" y="29" align="center"/>
+                        </layout>
+                </layout>
+                <layout align="top_left" type="relative" margin_top="40" margin_left="40" cascade_opacity="true" visible="false">
+                        <label font="fonts/SF-UI-Text-Semibold.otf" size="25" align="left_center_vertical" type="nowrap" color="orange" cascade_opacity="true" hashkey="version">Phiên bản 1.0</label>
+                </layout>
+                <group style="xml/ui/button_style_1.xml" align="top_right" margin_right="10" margin_top="10" scale="1.2" touch="true" bindtouch="onclick=privacy" hashkey="privacy_button" visible="false">
+                        <changetexture target="this:image" atlas="atlas/lobby.plist" frame="help_button_up.png"/>
+                </group>
+                <layout align="top_right" type="relative" margin_top="40" margin_right="90" cascade_opacity="true" visible="false">
+                        <label font="fonts/SF-UI-Text-Semibold.otf" size="25" align="right_center_vertical" type="nowrap" color="white" cascade_opacity="true" hashkey="privacy_label">Privacy Policy</label>
+                </layout>
+        </layout>
+</layout>

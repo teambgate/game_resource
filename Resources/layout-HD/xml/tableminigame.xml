@@ -1,0 +1,30 @@
+<touchdelegates>
+    <touchdelegate name="touch_item"/>
+</touchdelegates>
+<layout width="173" height="96" cascade_opacity="true" hashkey="item" touchdelegate="touch_item" touch="true">
+	<img atlas="atlas/choice_room_2.plist" frame="tbcoin.png" align="center" visible="false" hashkey="tbcoin"/>
+	<img atlas="atlas/choice_room_2.plist" frame="tbchip.png" align="center" visible="false" hashkey="tbchip"/>
+	<img atlas="atlas/choice_room_2.plist" frame="tbchip-gray.png" atlas_disable="atlas/choice_room_2.plist" frame_disable_coin="tbcoin-gray.png" align="center" visible="false" hashkey="img_disable"/>
+	<label font="fonts/font16.fnt" size="16" color="#E24500" align="top_center_horizontal" margin_top="20" type="nowrap" hashkey="title_chip" cascade_opacity="true">1-100</label>
+	<label font="fonts/font16.fnt" size="16" color="#F5B400" align="top_center_horizontal" margin_top="20" type="nowrap" hashkey="title_coin" cascade_opacity="true">1-100</label>
+	<touchbegan>
+		<action id="this">
+			<scaleto time="0.1" x="0.95" y="0.95"/>
+		</action>
+	</touchbegan>
+	<touchmove>
+		<action id="this">
+			<scaleto time="0.1" x="0.95" y="0.95"/>
+		</action>
+	</touchmove>	
+	<touchend>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchcancel>
+</layout>

@@ -1,0 +1,20 @@
+
+light-slot.png
+size: 759,510
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+light
+  rotate: true
+  xy: 2, 2
+  size: 506, 596
+  orig: 506, 596
+  offset: 0, 0
+  index: -1
+shadow_light
+  rotate: true
+  xy: 600, 10
+  size: 498, 157
+  orig: 498, 157
+  offset: 0, 0
+  index: -1

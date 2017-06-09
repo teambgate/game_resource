@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FOLD</key>
+	<string>Fold</string>
+	<key>CHECK</key>
+	<string>Check</string>
+	<key>CALL</key>
+	<string>Call</string>
+	<key>RAISE</key>
+	<string>Raise</string>
+	<key>ALL_IN</key>
+	<string>All in</string>
+	<key>FOLDCHECK</key>
+	<string>Check/Fold</string>
+	<key>CALL_ANY</key>
+	<string>Call Any</string>
+	
+	<key>HIGH_CARD</key>
+	<string>High card</string>
+	<key>ONE_PAIR</key>
+	<string>One pair</string>
+	<key>TWO_PAIR</key>
+	<string>Two pair</string>
+	<key>THREE_OF_KIND</key>
+	<string>Three of a Kind</string>
+	<key>STRAIGHT</key>
+	<string>Straight</string>
+	<key>FLUSH</key>
+	<string>Flush</string>
+	<key>FULL_HOUSE</key>
+	<string>Full House</string>
+	<key>FOUR_OF_KIND</key>
+	<string>Four of a Kind</string>
+	<key>STRAIGHT_FLUSH</key>
+	<string>Straight Flush</string>
+	<key>ROYAL_FLUSH</key>
+	<string>Royal Flush</string>
+	
+	<key>NOT_ENOUGHT_MONEY_EXCHANGE</key>
+	<string>Bạn không đủ tiền để thay đổi</string>
+	<key>NOT_ENOUGHT_MONEY_PLAY</key>
+	<string>Bạn không đủ tiền để tiếp tục chơi</string>
+	<key>CONNECT_NOT_SAVE</key>
+	<string>Bạn bị đẩy ra khỏi bàn chơi vì kết nối mạng không ổn định!</string>
+	<key>SEAT_START_GAME</key>
+	<string>Bạn hãy ngồi xuống để bắt đầu chơi game</string>
+	<key>FULL_TABLE</key>
+	<string>Bàn chơi đã đầy</string>
+</dict>
+</plist>

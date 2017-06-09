@@ -1,0 +1,13 @@
+<layout type="relative" width="166" height="232" >
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="frame_a.png" width="match_parent" height="match_parent" align="center"/>
+	<layout type="absolute" align="center">
+		<layout type="absolute" align="center" hashkey="content">
+			<img atlas="atlas/tomcuaca.plist" frame="caidia.png" />
+			<group style="xml/game/tomcuaca/dice.xml" x="-28" y="-28" rotate="20" scale="0.9" hashkey="dice_0"></group>
+			<group style="xml/game/tomcuaca/dice.xml" x="-16" y="30" rotate="4" scale="0.9" hashkey="dice_1">
+			</group>
+			<group style="xml/game/tomcuaca/dice.xml" x="36" y="-13" rotate="-30" scale="0.9" hashkey="dice_2"></group>
+			<img atlas="atlas/tomcuaca.plist" frame="caibat.png" hashkey="bowl"/>
+		</layout>
+	</layout>
+</layout>

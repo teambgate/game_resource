@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EMPTY_OLD</key>
+	<string>Chưa nhập mật khẩu cũ !</string>
+	<key>EMPTY_NEW</key>
+	<string>Chưa nhập mật khẩu mới !</string>
+	<key>EMPTY_RENEW</key>
+	<string>Chưa xác nhận mật khẩu mới !</string>
+	<key>WRONG_COMPARE</key>
+	<string>Xác nhận mật khẩu mới không chính xác !</string>
+	<key>SUCCESS</key>
+	<string>Đổi mật khẩu thành công</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WRONG_ACCOUNT</key>
+	<string>Tài khoản không hợp lệ</string>
+	<key>WRONG_PASSWORD</key>
+	<string>Mật khẩu không hợp lệ</string>
+	<key>EMPTY_ALL</key>
+	<string>Chưa nhập tài khoản và mật khẩu</string>
+	<key>WRONG_ALL</key>
+	<string>Tài khoản và mật khẩu không hợp lệ</string>
+	<key>LOGIN_FAILED</key>
+	<string>Đăng nhập thất bại</string>
+</dict>
+</plist>

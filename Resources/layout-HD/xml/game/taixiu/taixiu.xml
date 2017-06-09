@@ -1,0 +1,152 @@
+<touchdelegates>
+  <touchdelegate name="close_taixiu"/>
+  <touchdelegate name="datTai_Touch"/>
+  <touchdelegate name="datXiu_Touch"/>
+  <touchdelegate name="info_touch"/>
+  <touchdelegate name="question_touch"/>
+  <touchdelegate name="numberDifferent_touch"/>
+  <touchdelegate name="Ok_touch"/>
+  <touchdelegate name="Cancel_touch"/>
+  
+  <touchdelegate name="Green5_touch"/>
+  <touchdelegate name="Green1K_touch"/>
+  <touchdelegate name="Green5K_touch"/>
+  <touchdelegate name="Green10K_touch"/>
+  
+  <touchdelegate name="Blue50K_touch"/>
+  <touchdelegate name="Blue100K_touch"/>
+  <touchdelegate name="Blue500K_touch"/>
+  <touchdelegate name="Blue1M_touch"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+	<group style="xml/game_background.xml" align="center"/>
+	 <layout width="match_parent" height="match_parent" scale="0.9" align="center" type="relative" cascade_opacity="true" >
+		<img atlas="atlas/mini_tai_xiu.plist" frame="bg-taixiu.png" align="center" width="match_parent" height="match_parent"/>
+		<group style="xml/ui/button_style_1.xml" align="top_right" scale="1.5" margin_top="42" margin_right="43" touch="true" bindtouch="onclick=close_taixiu" cascade_opacity="true" >
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+	</layout>
+	 <layout type="absolute" align="center" hashkey="game_center">
+		<img atlas="atlas/mini_tai_xiu.plist" frame="title-taixiu.png" x="0" y="290" scale="1.5"/>
+		<img atlas="atlas/mini_tai_xiu.plist" frame="elip.png" x="0" y="78" scale="1.3" hashkey="elip"/>
+	 	<img atlas="atlas/mini_tai_xiu.plist" frame="black-frame.png" x="0" y="220" scale="1.5"/>
+		<img atlas="atlas/mini_tai_xiu.plist" frame="co-icon.png" x="-90" y="220" scale="1.5"/>
+		
+		<img atlas="atlas/mini_tai_xiu.plist" frame="tai.png" x="-300" y="190" scale="1.5" hashkey="cuaTai"/>
+		<img atlas="atlas/mini_tai_xiu.plist" frame="xiu.png" x="300" y="190" scale="1.5" hashkey="cuaXiu"/>
+		
+		<img atlas="atlas/mini_tai_xiu.plist" frame="left-frame.png" x="-450" y="120" scale="1.5"/>
+		<img atlas="atlas/mini_tai_xiu.plist" frame="right-frame.png" x="450" y="120" scale="1.5"/>
+		
+		<img atlas="atlas/mini_tai_xiu.plist" frame="member-icon.png" x="-490" y="122" scale="1.5"/>
+		<img atlas="atlas/mini_tai_xiu.plist" frame="member-icon.png" x="490" y="122" scale="1.5"/>
+		
+		<img atlas="atlas/mini_tai_xiu.plist" frame="plate.png" x="0" y="78" scale="1.3" visible="false" hashkey="plate"/>
+		<img atlas="atlas/mini_tai_xiu.plist" frame="bowl.png" x="8" y="73" scale="1.3" visible="false" hashkey="bowl"/>
+		
+		<layout hashkey="YellowElip" width="58" height="58" x="120" y="160" visible="false" type="relative" >
+			<img atlas="atlas/mini_tai_xiu.plist" frame="yellow-elip.png" scale="1.3" align="center" visible="true"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" name="totalThreeDice" type="nowrap" size="50" align="center" color="black">0</label>
+		</layout>
+		
+		<layout hashkey="IM_TaiXiu" y="220" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="IM" type="nowrap" size="30" align="center" color="white">#120393</label>
+		</layout>
+		<!-- Number player -->
+		<layout hashkey="numberPlayerLeft_TaiXiu" x="-445" y="120" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="numberPlayerLeft" type="nowrap" size="30" align="center" color="white">0</label>
+		</layout>
+		<layout hashkey="numberPlayerRight_TaiXiu" x="445" y="120" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="numberPlayerRight" type="nowrap" size="30" align="center" color="white">0</label>
+		</layout>
+		<!-- Total bet money user -->
+		<layout hashkey="TotalBetTai_TaiXiu" x="-300" y="120" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="TotalBetTai" type="nowrap" size="32" align="center" color="yellow">0</label>
+		</layout>
+		<layout hashkey="TotalBetXiu_TaiXiu" x="300" y="120" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="TotalBetXiu" type="nowrap" size="32" align="center" color="yellow">0</label>
+		</layout>
+		<!-- Player Bet money -->
+		<layout hashkey="PlayerBetTai_TaiXiu" x="-300" y="10" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="PlayerBetTai" type="nowrap" size="32" align="center" color="white">0</label>
+		</layout>
+		<layout hashkey="PlayerBetXiu_TaiXiu" x="300" y="10" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="PlayerBetXiu" type="nowrap" size="32" align="center" color="white">0</label>
+		</layout>
+		
+		<layout hashkey="datTai_TaiXiu" width="145" height="42" x="-300" y="60" type="relative" touch="true" touchdelegate="datTai_Touch">
+			<img atlas="atlas/mini_tai_xiu.plist" frame="frame-2.png" scale="1.5"/>
+			 <textfield name="datTai" touch="false" width="145" height="42" align="center" color="#ffffff" fontsize="30" fontcolor="#ffffff" opacity="230" placeholder="Đặt tài" placeholdercolor="#ffffff" hashkey="datTai" inputflag="sentence" inputmode="numeric"/>
+		</layout>
+		<layout hashkey="datXiu_TaiXiu" width="145" height="42" x="300" y="60" type="relative" touch="true" touchdelegate="datXiu_Touch">
+			<img atlas="atlas/mini_tai_xiu.plist" frame="frame-2.png" scale="1.5"/>
+			<textfield name="datXiu" touch="false" width="145" height="42" align="center" color="#ffffff" fontsize="30" fontcolor="#ffffff" opacity="230" placeholder="Đặt xỉu" placeholdercolor="#ffffff" hashkey="datXiu" inputflag="sentence" inputmode="numeric"/>
+		</layout>
+		<!-- Money User -->
+		<layout hashkey="PlayerMoney" x="0" y="-120" type="relative" >
+			<label font="fonts/SF-UI-Text-Regular.otf" name="PlayerMoneyLabel" type="nowrap" size="32" align="center" color="yellow">0</label>
+		</layout>
+		<!-- Button info question -->
+		<group style="xml/ui/button_style_1.xml" x="-52" y="-190" scale="1.5" touch="true" hashkey="info_button" bindtouch="onclick=info_touch">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="info-icon.png"/>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="52" y="-190" scale="1.5" touch="true" hashkey="question_button" bindtouch="onclick=question_touch">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="question-icon.png"/>
+        </group>
+		
+		<group style="xml/game/taixiu/dice.xml" clonekey="dice" visible="false" scale="1.3"/>
+		
+		<!-- Button bet -->
+		<group style="xml/ui/button_style_1.xml" x="-210" y="-265" scale="1.3" touch="true" hashkey="numberDifferent_button" visible="false" bindtouch="onclick=numberDifferent_touch">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="button_sokhac.png"/>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="0" y="-265" scale="1.3" touch="true" hashkey="Ok_button" visible="false" bindtouch="onclick=Ok_touch">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="button_dongy.png"/>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="210" y="-265" scale="1.3" touch="true" hashkey="Cancel_button" visible="false" bindtouch="onclick=Cancel_touch">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="button_huy.png"/>	
+        </group>
+		
+		<group style="xml/ui/button_style_1.xml" x="-400" y="-130" scale="1.3" touch="true" hashkey="buttonBet_0" bindtouch="onclick=Green5_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-green.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">5</label>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="-250" y="-130" scale="1.3" touch="true" hashkey="buttonBet_1" bindtouch="onclick=Green1K_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-green.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">1K</label>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="-400" y="-190" scale="1.3" touch="true" hashkey="buttonBet_2" bindtouch="onclick=Green5K_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-green.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">5K</label>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="-250" y="-190" scale="1.3" touch="true" hashkey="buttonBet_3" bindtouch="onclick=Green10K_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-green.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">10K</label>
+        </group>
+		
+		<group style="xml/ui/button_style_1.xml" x="250" y="-130" scale="1.3" touch="true" hashkey="buttonBet_4" bindtouch="onclick=Blue50K_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-blue.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">50K</label>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="400" y="-130" scale="1.3" touch="true" hashkey="buttonBet_5" bindtouch="onclick=Blue100K_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-blue.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">100K</label>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="250" y="-190" scale="1.3" touch="true" hashkey="buttonBet_6" bindtouch="onclick=Blue500K_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-blue.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">500K</label>
+        </group>
+		<group style="xml/ui/button_style_1.xml" x="400" y="-190" scale="1.3" touch="true" hashkey="buttonBet_7" bindtouch="onclick=Blue1M_touch" visible="false">
+            <changetexture target="this:image" atlas="atlas/mini_tai_xiu.plist" frame="btn-blue.png"/>
+			<label font="fonts/SF-UI-Text-Regular.otf" x="52" y="26" size="24" color="white">1M</label>
+        </group>
+		
+	 </layout>
+	 <layout type="absolute" align="center" hashkey="history">
+		<img atlas="atlas/mini_tai_xiu.plist" frame="frame.png" x="match_parent" y="-50" scale="1.5"/>
+		<group style="xml/game/taixiu/icon.xml" clonekey="icon" visible="false" scale="1.5"/>
+	</layout>
+	<layout type="absolute" align="center" hashkey="game_effect">
+	</layout>
+	
+</layout>

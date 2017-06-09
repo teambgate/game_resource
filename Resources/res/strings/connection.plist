@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NO_NETWORK</key>
+	<string>Máy không có kết nối mạng !</string>
+	<key>NETWORK_ERROR</key>
+	<string>Đã có lỗi xảy ra, vui lòng kiểm tra kết nối mạng và thử lại !</string>
+	<key>CONNECTION_LOST</key>
+	<string>Game bị mất kết nối, vui lòng kiểm tra kết nối mạng hoặc liên hệ CSKH để biết thêm chi tiết</string>
+	<key>MAIN_TAIN</key>
+	<string>Máy chủ đang được bảo trì, vui lòng quay trở lại sau !</string>
+	<key>FACEBOOK_ERROR</key>
+	<string>Không thể đăng nhập vào facebook. Vui lòng kiểm tra lại mạng và thử lại !</string>
+</dict>
+</plist>

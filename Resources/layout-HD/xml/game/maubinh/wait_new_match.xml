@@ -1,0 +1,3 @@
+<layout type="relative" align="center">
+	<img atlas="atlas/ui.plist" frame="begin_text.png" width="wrap_content" height="wrap_content" align="center" />
+</layout>

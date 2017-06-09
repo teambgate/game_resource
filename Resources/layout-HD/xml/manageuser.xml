@@ -1,0 +1,300 @@
+<touchdelegates>
+        <touchdelegate name="register"/>
+        <touchdelegate name="login"/>
+        <touchdelegate name="guest"/>
+        <touchdelegate name="facebook"/>
+        <touchdelegate name="privacy"/>
+        <touchdelegate name="open_manage_user"/>
+        <touchdelegate name="close_manage"/>
+</touchdelegates>
+
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+        <group style="xml/game_background.xml" align="center"/>
+        <layout name="top" width="wrap_content" height="100" align="top_center_horizontal" margin_top="20" type="horizontal">
+                <group style="xml/ui/button_style_1.xml" scale="1.2" touch="true" bindtouch="onclick=open_manage_user" visible="false">
+                        <changetexture target="this:image" atlas="atlas/lobby.plist" frame="exit_button_up.png"/>
+                </group>
+
+                <group style="xml/mail_hint.xml" margin_left="0" scale="1.2" touch="true" bindtouch="onclick=open_manage_user" hashkey="mail_button" visible="false">
+                        <!--            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="mail_button_up.png"/>-->
+                </group>
+                <group style="xml/ui/button_style_1.xml" margin_left="20" scale="1.2" touch="true" bindtouch="onclick=open_manage_user" hashkey="facebook_button" visible="false">
+                        <changetexture target="this:image" atlas="atlas/lobby.plist" frame="facebook_button.png"/>
+                </group>
+                <group style="xml/ui/button_style_1.xml" margin_left="20" scale="1.2" touch="true" bindtouch="onclick=open_manage_user" hashkey="help_button" visible="false">
+                        <changetexture target="this:image" atlas="atlas/lobby.plist" frame="help_button_up.png"/>
+                </group>
+        </layout>
+
+        <layout width="1000" height="43" background="texture/border_white_32x32.png" cap_left="5" cap_right="5" cap_top="5" cap_bottom="5" color="black" opacity="150" align="location_below_center" relative_to="top" type="relative" margin_top="-3" touch="true">
+                <layout width="940" height="59" clip="true" type="relative" align="left_center_vertical" margin_left="60" hashkey="advertise_container" visible="false">
+                        <label name="ad" y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" hashkey="advertise_text" from_margin="0" offset_margin="490" visible="false" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+                        <label y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="location_right_of_center" margin_left="490" relative_to="ad" hashkey="advertise_text_2" visible="false" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+                </layout>
+                <img atlas="atlas/lobby.plist" frame="icon_loa.png" align="left_center_vertical"/>
+        </layout>
+
+        <layout hashkey="effect_hu" width="wrap_content" height="100" align="top_center_horizontal" margin_top="50" type="relative" visible="false">
+                <layout width="800" height="55" atlas="atlas/lobby.plist" frame="nennohu.png" align="center" margin_left="0" type="relative" margin_top="10">
+                        <layout width="650" height="59" clip="true" type="relative" align="left_center_vertical" margin_left="140" hashkey="nohu_container" visible="true">
+                                <label name="ad" y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" hashkey="nohu_text" from_margin="0" offset_margin="150" visible="false" color="yellow" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+                                <label y="25" font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="location_right_of_center" margin_left="150" relative_to="ad" hashkey="nohu_text_2" visible="false" color="yellow" cascade_opacity="true">advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment advertisment</label>
+                        </layout>
+                        <img name="logo" height="160" width="wrap_content" atlas="atlas/lobby.plist" frame="chuongthongbao.png" align="top_left" margin_left="-80" margin_top="-50"/>
+                </layout>
+        </layout>
+
+        <img name="logo" height="160" width="wrap_content" src="texture/scene/logo_game.png" align="top_center_horizontal" margin_top="100" visible="false"/>
+        <label font="fonts/font30.fnt" size="30" scale_factor="1.0" type="nowrap" align="center" hashkey="loading_game_view" visible="false">Đang tải danh sách trò chơi...</label>
+
+
+        <layout align="location_below_center" relative_to="top" width="match_parent" height="match_parent" padding_top="200" type="relative">
+                <listview type="horizontal" align="center" width="1000" height="400" hashkey="lobby_list_view_game" padding_left="0" clip="false">
+                        <layout width="wrap_content" height="400" weight_sum="2" type="vertical" align="center">
+                                <layout width="wrap_content" height="250" weight="1" type="horizontal">
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="tala"  align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tala.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="lieng"  align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-lieng.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="xito" align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xito.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="maubinh" align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-maubinh.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="xocdia" align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-xoc-dia.png"/>
+                                        </group>
+                                </layout>
+                                <layout width="wrap_content" height="250" weight="1" type="horizontal">
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="poker"  align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-poker.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="tlmn"  align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-tlmn.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="sam"  align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-sam.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="tldl"  align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-slot-machine.png"/>
+                                        </group>
+                                        <group style="xml/ui/lobbygamebutton.xml" touch="true" bindtouch="onclick=open_manage_user" hashkey="bacay"  align="center" opacity="255">
+                                                <changetexture target="this:image" atlas="atlas/lobbyicon.plist" frame="icon-bacay.png"/>
+                                        </group>
+                                </layout>
+                        </layout>
+                </listview>
+        </layout>
+
+        <layout width="match_parent" height="match_parent" type="relative">
+        	<layout width="match_parent" height="110" type="relative" align="top_center_horizontal" touch="true">
+        		<img atlas="atlas/choice_room.plist" frame="bottom_bar.png" align="bottom_center_horizontal" width="match_parent" height="match_parent"/>
+
+
+        		<img atlas="atlas/choice_room.plist" frame="logo.png" align="left_center_vertical" width="wrap_content" height="match_parent" hashkey="logo_icon"/>
+
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90" scale="0.85" align="left_center_vertical" margin_left="180" touch="true" bindtouch="onclick=guest">
+                                <changetexture target="this:image" src="texture/new_login/bt_choingay.png"/>
+                                <spine json="texture/effect_doi_thuong/eff-button.json"
+                                        atlas="texture/effect_doi_thuong/eff-button.atlas"
+                                        visible="false"
+                                        spine-scale="1.0" anim="eff-button" loop="true" cascade_opacity="true" delay="2.0" align="center"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90"  scale="0.85" align="left_center_vertical" margin_left="420" touch="true" bindtouch="onclick=register">
+                                <changetexture target="this:image" src="texture/new_login/bt_dangky.png"/>
+                                <spine json="texture/effect_doi_thuong/eff-button.json"
+                                        atlas="texture/effect_doi_thuong/eff-button.atlas"
+                                        visible="false"
+                                        spine-scale="1.0" anim="eff-button" loop="true" cascade_opacity="true" delay="2.0" align="center"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90"  scale="0.85" align="left_center_vertical" margin_left="660" touch="true" bindtouch="onclick=login">
+                                <changetexture target="this:image" src="texture/new_login/bt_dangnhap.png"/>
+                                <spine json="texture/effect_doi_thuong/eff-button.json"
+                                        atlas="texture/effect_doi_thuong/eff-button.atlas"
+                                        visible="false"
+                                        spine-scale="1.0" anim="eff-button" loop="true" cascade_opacity="true" delay="2.0" align="center"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90"  scale="0.85" align="left_center_vertical" margin_left="900" touch="true" bindtouch="onclick=facebook">
+                                <changetexture target="this:image" src="texture/new_login/bt_facebook.png"/>
+                                <spine json="texture/effect_doi_thuong/eff-button.json"
+                                        atlas="texture/effect_doi_thuong/eff-button.atlas"
+                                        visible="false"
+                                        spine-scale="1.0" anim="eff-button" loop="true" cascade_opacity="true" delay="2.0" align="center"/>
+                        </group>
+
+        	</layout>
+
+        	<layout width="match_parent" height="110" type="relative" align="bottom_center_horizontal" touch="true">
+        		<img atlas="atlas/choice_room.plist" frame="bottom_bar.png" align="bottom_center_horizontal" width="match_parent" height="match_parent"/>
+
+        		<!-- <group style="xml/ui/button_style_1.xml" align="right_center_vertical" scale="1.0" touch="true" bindtouch="onclick=open_manage_user" hashkey="add_coin_button">
+        			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="add_coins.png"/>
+        		</group> -->
+                        <layout type="relative" width="243" height="90"  align="right_center_vertical" scale="1.0" touch="true" touchdelegate="open_manage_user" visible="false" hashkey="add_coin_button" cascade_opacity="true">
+                                <spine json="texture/effect_doi_thuong/eff-cuahang.json"
+                                        atlas="texture/effect_doi_thuong/eff-cuahang.atlas"
+                                        spine-scale="1.0" anim="eff-cuahang" loop="true" align="center" />
+                                        <touchbegan>
+                                                <action id="this">
+                                                        <scaleto time="0.1" x="0.9" y="0.9"/>
+                                                </action>
+                                        </touchbegan>
+                                        <touchend>
+                                                <action id="this">
+                                                        <scaleto time="0.2" x="1.0" y="1.0"/>
+                                                </action>
+                                        </touchend>
+                                        <touchcancel>
+                                                <action id="this">
+                                                        <scaleto time="0.2" x="1.0" y="1.0"/>
+                                                </action>
+                                        </touchcancel>
+                        </layout>
+        		<group style="xml/ui/button_style_1.xml" align="left_center_vertical" scale="1.0" margin_left="260" touch="true" hashkey="rank_button">
+        			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_xephang.png"/>
+        		</group>
+        		<group style="xml/ui/button_style_1.xml" align="left_center_vertical" scale="1.0" margin_left="380" touch="true" bindtouch="onclick=open_manage_user" hashkey="mail_button">
+        			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_tinnhan.png"/>
+        		</group>
+
+        		<group style="xml/ui/button_style_1.xml" align="right_center_vertical" scale="1.0" margin_right="260" touch="true" hashkey="vip_button">
+        			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_vip.png"/>
+        		</group>
+        		<group style="xml/ui/button_style_1.xml" align="right_center_vertical" scale="1.0" margin_right="380" touch="true" hashkey="event_button">
+        			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_events.png"/>
+        		</group>
+
+        		<!-- <group style="xml/ui/button_style_1.xml" align="left_center_vertical" scale="1.0" touch="true" bindtouch="onclick=open_manage_user" hashkey="doi_thuong_button">
+        				<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="doi_thuong.png"/>
+        		</group> -->
+                        <layout type="relative" width="243" height="90"  align="left_center_vertical" scale="1.0" touch="true" touchdelegate="open_manage_user" visible="false" hashkey="doi_thuong_button" cascade_opacity="true">
+                                <spine json="texture/effect_doi_thuong/eff-doithuong.json"
+                                        atlas="texture/effect_doi_thuong/eff-doithuong.atlas"
+                                        spine-scale="1.0" anim="eff-doithuong" loop="true" align="center" />
+                                        <touchbegan>
+                                                <action id="this">
+                                                        <scaleto time="0.1" x="0.9" y="0.9"/>
+                                                </action>
+                                        </touchbegan>
+                                        <touchend>
+                                                <action id="this">
+                                                        <scaleto time="0.2" x="1.0" y="1.0"/>
+                                                </action>
+                                        </touchend>
+                                        <touchcancel>
+                                                <action id="this">
+                                                        <scaleto time="0.2" x="1.0" y="1.0"/>
+                                                </action>
+                                        </touchcancel>
+                        </layout>
+
+        		<layout width="wrap_content" height="100" type="horizontal" align="right_center_vertical" margin_right="100" anchor-x="1" anchor-y="0.5" scale="1.3" visible="false">
+        			<group style="xml/ui/button_style_1.xml" align="center" scale="1.0" touch="true" bindtouch="onclick=open_manage_user" hashkey="doi_thuong_download_payment" visible="true">
+        					<changetexture target="this:image" atlas="atlas/lobby.plist" frame="button_taibandoithuong_newstyle.png"/>
+        			</group>
+        		</layout>
+
+        		<layout type="absolute" align="bottom_center_horizontal" margin_bottom="30" scale="0" hashkey="mini_game_board">
+        			<img atlas="atlas/mini_games.plist" frame="c.png" scale="2.75" touch="true"/>
+        			<layout anchor-x="0" anchor-y="0" width="175" height="0" type="absolute" rotate="-35" hashkey="bau_cua_arm">
+        				<group style="xml/ui/minigame_lobby_button.xml" x="175" y="0" scale="1.0" touch="true" bindtouch="onclick=open_manage_user" visible="true" rotate="35" hashkey="bau_cua_icon">
+        					<changetexture target="this:image" atlas="atlas/mini_games.plist" frame="icon-bau-cua-ca.png"/>
+        				</group>
+        			</layout>
+
+        			<layout anchor-x="0" anchor-y="0" width="175" height="0" type="absolute" rotate="-90" hashkey="tai_xiu_arm">
+        				<group style="xml/ui/minigame_lobby_button.xml" x="175" y="0" scale="1.0" touch="true" bindtouch="onclick=open_manage_user" visible="true" rotate="90" hashkey="tai_xiu_icon">
+        					<changetexture target="this:image" atlas="atlas/mini_games.plist" frame="icon-tai-xiu.png"/>
+        				</group>
+        			</layout>
+
+        			<layout anchor-x="0" anchor-y="0" width="175" height="0" type="absolute" rotate="-145" hashkey="mini_poker_arm">
+        				<group style="xml/ui/minigame_lobby_button.xml" x="175" y="0" scale="1.0" touch="true" bindtouch="onclick=open_manage_user" visible="true" rotate="145" hashkey="mini_poker_icon">
+        					<changetexture target="this:image" atlas="atlas/mini_games.plist" frame="icon_minipoker.png"/>
+        				</group>
+        			</layout>
+        		</layout>
+        		<!-- <group style="xml/ui/button_style_1.xml" align="bottom_center_horizontal" scale="0.9" touch="true" bindtouch="onclick=open_manage_user" hashkey="mini_game_button" margin_bottom="-75">
+        			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="icon_minigamelobby.png"/>
+        		</group> -->
+                        <layout type="relative" width="210" height="210"  align="bottom_center_horizontal" scale="0.9" touch="true" touchdelegate="open_manage_user" hashkey="mini_game_button" margin_bottom="-75" cascade_opacity="true">
+                                <spine json="texture/effect_doi_thuong/eff-minigame.json"
+                                        atlas="texture/effect_doi_thuong/eff-minigame.atlas"
+                                        spine-scale="1.0" anim="eff-minigame" loop="true" align="center" />
+                                        <touchbegan>
+                                                <action id="this">
+                                                        <scaleto time="0.1" x="0.8" y="0.8"/>
+                                                </action>
+                                        </touchbegan>
+                                        <touchend>
+                                                <action id="this">
+                                                        <scaleto time="0.2" x="0.9" y="0.9"/>
+                                                </action>
+                                        </touchend>
+                                        <touchcancel>
+                                                <action id="this">
+                                                        <scaleto time="0.2" x="0.9" y="0.9"/>
+                                                </action>
+                                        </touchcancel>
+                        </layout>
+
+        	</layout>
+        </layout>
+
+        <group style="xml/back_lobby_panel.xml" align="center" hashkey="back_panel" bindtouch="log_out_touch=log_out_touch;exit_touch=exit_touch;close_touch=close_touch"/>
+
+        <layout align="top_left" type="relative" margin_top="40" margin_left="40" cascade_opacity="true" opacity="0">
+                <label font="fonts/SF-UI-Text-Semibold.otf" size="25" align="left_center_vertical" type="nowrap" color="orange" cascade_opacity="true" hashkey="version" visible="false">Phiên bản 1.0</label>
+                <runaction>
+                        <action id="this">
+                                <fadein time="0.35"/>
+                        </action>
+                </runaction>
+        </layout>
+        <group style="xml/ui/button_style_1.xml" align="top_right" margin_right="10" margin_top="10" scale="1.2" touch="true" bindtouch="onclick=privacy" hashkey="privacy_button" visible="false">
+                <changetexture target="this:image" atlas="atlas/lobby.plist" frame="help_button_up.png"/>
+        </group>
+        <layout align="top_right" type="relative" margin_top="40" margin_right="90" cascade_opacity="true">
+                <label font="fonts/SF-UI-Text-Semibold.otf" size="25" align="right_center_vertical" type="nowrap" color="white" cascade_opacity="true" hashkey="privacy_label" visible="false">Privacy Policy</label>
+        </layout>
+
+        <layout width="match_parent" height="match_parent" type="relative" align="center" touch="true" background="texture/white_2x2.png" color="black" opacity="150" hashkey="manage_board_background" visible="false">
+                <layout background="texture/new_login/fr_login.png" width="944" type="relative" height="524" align="center" hashkey="manage_board">
+                        <img src="texture/new_login/logo_bigo69.png" align="top_left" margin_top="50" margin_left="345"/>
+                        <!-- <img src="texture/new_login/txt_gamebaidoithuong.png" align="top_right" margin_top="140" margin_right="90" /> -->
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90" align="top_left" margin_left="210" margin_top="300" touch="true" bindtouch="onclick=login">
+                                <changetexture target="this:image" src="texture/new_login/bt_dangnhap.png"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90" align="top_right" margin_right="210" margin_top="300" touch="true" bindtouch="onclick=register">
+                                <changetexture target="this:image" src="texture/new_login/bt_dangky.png"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90" align="top_left" margin_left="210" margin_top="400" touch="true" bindtouch="onclick=guest">
+                                <changetexture target="this:image" src="texture/new_login/bt_choingay.png"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="243" height="90" align="top_right" margin_right="210" margin_top="400" touch="true" bindtouch="onclick=facebook">
+                                <changetexture target="this:image" src="texture/new_login/bt_facebook.png"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="71" height="71" align="top_right"  margin_top="6.5" margin_right="6.5" touch="true" bindtouch="onclick=close_manage">
+                            <changetexture target="this:image" atlas="atlas/top_dai_gia.plist" frame="bt_close2.png"/>
+                        </group>
+                </layout>
+        </layout>
+
+        <layout width="match_parent" height="match_parent" align="center" hashkey="connecting" type="relative" visible="false" touch="true">
+                <layout align="center" type="absolute">
+                        <group style="xml/loading/connecting.xml" y="0" align="center"/>
+                </layout>
+        </layout>
+        <img name="black_fg" src="texture/white_32x32.png" width="match_parent" height="match_parent" color="black" align="center"/>
+        <runaction>
+            <action id="this:black_fg">
+                <sequence>
+                    <delay time="0.75" />
+                    <fadeout time="0.6"/>
+                </sequence>
+            </action>
+        </runaction>
+</layout>

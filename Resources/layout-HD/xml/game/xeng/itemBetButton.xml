@@ -1,0 +1,15 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" touchdelegate="onclick" type="relative">
+	<img atlas="atlas/xeng.plist" frame="bt_a1.png" align="center" hashkey="background" scale="1"
+	atlas_custom="atlas/xeng.plist"
+	frame_1a="bt_a1.png" frame_1b="bt_a2.png" 
+	frame_2a="bt_b1.png" frame_2b="bt_b2.png" 
+	frame_3a="bt_c1.png" frame_3b="bt_c2.png" 
+	frame_4a="bt_d1.png" frame_4b="bt_d2.png" 
+	frame_5a="bt_e1.png" frame_5b="bt_e2.png" 
+	frame_6a="bt_f1.png" frame_6b="bt_f2.png" 
+	frame_7a="bt_g1.png" frame_7b="bt_g2.png" 
+	frame_8a="bt_h1.png" frame_8b="bt_h2.png" />
+</layout>

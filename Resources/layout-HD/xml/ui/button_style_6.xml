@@ -1,0 +1,31 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout type="relative" width="match_parent" touch="true" touchdelegate="onclick" cascade_opacity="true">
+    <img name="icon" atlas="atlas/ui.plist" frame="dunglen-icon.png" width="30" height="30" align="left_center_vertical" margin_left="30" scale="1.5"/>
+    <label name="label" font="fonts/font30.fnt" size="30" scale_factor="0.93333" type="nowrap" align="left_center_vertical" margin_left="75" hashkey="label">button</label>
+    <touchbegan>
+        <action id="this:label">
+            <fadeto time="0.2" to="150"/>
+        </action>
+        <action id="this:icon">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:label">
+            <fadeto time="0.2" to="255"/>
+        </action>
+        <action id="this:icon">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:label">
+            <fadeto time="0.2" to="255"/>
+        </action>
+        <action id="this:icon">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

@@ -1,0 +1,61 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+    <touchdelegate name="touch_rich"/>
+    <touchdelegate name="touch_xu"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" touch="true">
+    <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" hashkey="shadow" opacity="50" align="center"/>
+    <layout width="1150" height="650" background="texture/top_dai_gia/board_bxh.png" align="center" hashkey="main_center" type="relative">
+        <img width="1157" height="71" atlas="atlas/top_dai_gia.plist" frame="topbar.png" align="top_center_horizontal" margin_top="6.5"/>
+        <img atlas="atlas/top_dai_gia.plist" frame="txt_bxh.png" align="top_center_horizontal" margin_top="10" />
+        <img atlas="atlas/top_dai_gia.plist" frame="icon_bxh.png" align="top_left" margin_top="10" margin_left="25"/>
+        <label font="fonts/SF-UI-Text-Regular.otf" size="28" align="top_center_horizontal" margin_top="300" opacity="230" type="nowrap" hashkey="loading">Đang tải dữ liệu ...</label>
+        <img src="texture/top_dai_gia/fr_bxh.png" width="1150" height="495" align="bottom_center_horizontal" margin_bottom="1"/>
+        <layout width="wrap_content" height="wrap_content" align="top_center_horizontal" margin_top="71" type="horizontal">
+                <layout width="376" height="86.5" type="relative" touch="true" touchdelegate="touch_rich" hashkey="button_rich">
+                        <img name="inactive" atlas="atlas/top_dai_gia.plist" frame="bt_B.png" visible="false" width="match_parent" height="match_parent" align="center"/>
+                        <img name="active" atlas="atlas/top_dai_gia.plist" frame="bt_A.png" visible="true" width="match_parent" height="match_parent" align="center"/>
+                        <img name="tex-active" atlas="atlas/top_dai_gia.plist" frame="txt_topdaigiaA.png" visible="true" align="center"/>
+                        <img name="tex-inactive" atlas="atlas/top_dai_gia.plist" frame="txt_topdaigiaB.png" visible="false" align="center"/>
+                </layout>
+                <layout width="376" height="86.5" type="relative" touch="true" touchdelegate="touch_xu" hashkey="button_xu">
+                        <img name="inactive" atlas="atlas/top_dai_gia.plist" frame="bt_B.png" width="match_parent" visible="true" height="match_parent" align="center"/>
+                        <img name="active" atlas="atlas/top_dai_gia.plist" frame="bt_A.png" width="match_parent" visible="false" height="match_parent" align="center"/>
+                        <img name="tex-inactive" atlas="atlas/top_dai_gia.plist" frame="txt_topxuB.png" align="center" visible="true"/>
+                        <img name="tex-active" atlas="atlas/top_dai_gia.plist" frame="txt_topxuA.png" align="center" visible="false"/>
+                </layout>
+        </layout>
+        <listview width="match_parent" height="match_parent" padding_top="180" padding_left="38" margin_top="162" align="top_center_horizontal" type="vertical" hashkey="rich_list_view" visible="true">
+            <layout width="match_parent" height="wrap_content" type="vertical" hashkey="rich_container">
+                <layout width="1150" height="100" atlas="atlas/top_dai_gia.plist" frame="rankline_user1.png" clonekey="rich_person" type="horizontal" cascade_opacity="true">
+                        <layout width="118" height="72" type="relative" align="center" margin_left="35">
+                                  <img atlas="atlas/ui.plist" frame="top1.png" align="center" scale="1.0" hashkey="medal"/>
+                                  <label font="fonts/font_rank.fnt" width="118" type="nowrap"  align="bottom_center_horizontal" margin_bottom="-10" visible="false" hashkey="medal_low">200</label>
+                        </layout>
+                    <layout width="83" height="83" clip="false" margin_left="40" align="center" type="relative" cascade_opacity="true">
+                        <img src="texture/scene/avatar_default.png" align="center" clip_circle="true" width="83" height="83" hashkey="avatar" preserve_atlas="atlas/top_dai_gia.plist" preserve_frame="avatar_1.png" custom_preserve_atlas="atlas/top_dai_gia.plist" custom_preserve_frame_prefix="avatar_" custom_preserve_frame_posfix=".png"/>
+                        <img atlas="atlas/top_dai_gia.plist" frame="avatar_bolder.png" align="center" width="95" height="95"/>
+                    </layout>
+                    <layout align="center" margin_left="27.5" type="relative" cascade_opacity="true">
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="26" type="nowrap" align="left_center_vertical" hashkey="name" max_characters="18" cascade_opacity="true">user name</label>
+                    </layout>
+                    <layout align="center" margin_left="505" type="relative" cascade_opacity="true">
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="26" type="nowrap" align="center" color="yellow" hashkey="money" cascade_opacity="true">200,000,000</label>
+                    </layout>
+                    <layout align="center" margin_left="130" type="relative" cascade_opacity="true">
+                        <img atlas="atlas/top_dai_gia.plist" frame="icon_xu.png" align="center" hashkey="money_xu"/>
+                        <img atlas="atlas/top_dai_gia.plist" frame="icon_chip.png" align="center" hashkey="money_chip"/>
+                    </layout>
+                </layout>
+            </layout>
+        </listview>
+        <listview width="match_parent" height="match_parent" padding_top="180" padding_left="38" margin_top="162" align="top_center_horizontal" type="vertical" hashkey="xu_list_view" visible="false">
+            <layout width="match_parent" height="wrap_content" type="vertical" hashkey="xu_container">
+
+            </layout>
+        </listview>
+        <group style="xml/ui/button_style_3.xml" width="71" height="71" align="top_right"  margin_top="6.5" margin_right="6.5" touch="true" bindtouch="onclick=exit">
+            <changetexture target="this:image" atlas="atlas/top_dai_gia.plist" frame="bt_close2.png"/>
+        </group>
+    </layout>
+</layout>

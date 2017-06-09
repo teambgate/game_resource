@@ -1,0 +1,34 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout type="relative" width="109" height="109" touchdelegate="onclick" cascade_opacity="true">
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="frame_b.png" width="match_parent" height="match_parent" align="center"/>
+	<img name="light" atlas="atlas/tomcuaca.plist" frame="effect_light.png" width="match_parent" height="match_parent" align="center" hashkey="light" visible="false"/>
+    <img name="item" atlas="atlas/tomcuaca.plist" frame="f_bau.png" width="match_parent" height="match_parent" align="center" hashkey="item"/>
+	<img name="border" atlas="atlas/tomcuaca.plist" frame="border_c.png" width="match_parent" height="match_parent" align="center" hashkey="border" visible="false"/>
+	<img name="x2" atlas="atlas/tomcuaca.plist" frame="x2.png" width="80" height="80" align="center" hashkey="x2" visible="false"/>
+	<img name="x3" atlas="atlas/tomcuaca.plist" frame="x3.png" width="80" height="80" align="center" hashkey="x3" visible="false"/>
+
+	<layout type="relative" width="71" height="25" atlas="atlas/tomcuaca.plist" frame="frame_datcuoc.png" align="bottom_center_horizontal" margin_bottom="15">
+		<label font="fonts/SF-UI-Text-Regular.otf" name="text" type="nowrap" size="17"  color="yellow" align="center" hashkey="user_money">123.456</label>
+	</layout>
+	<layout type="relative" width="85" height="22" atlas="atlas/tomcuaca.plist" frame="frame_tongtiencuoc.png" align="bottom_center_horizontal" margin_bottom="-8">
+		<label font="fonts/SF-UI-Text-Regular.otf" name="text" type="nowrap" size="17"  color="black" align="top_center_horizontal" hashkey="total_money">12.123.456</label>
+	</layout>
+
+	<touchbegan>
+		<action id="this:item">
+			<scaleto time="0.1" x="0.8" y="0.8"/>
+		</action>
+	</touchbegan>	
+	<touchend>
+		<action id="this:item">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this:item">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchcancel>
+</layout>

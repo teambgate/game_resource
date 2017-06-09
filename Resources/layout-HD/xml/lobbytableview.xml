@@ -1,0 +1,42 @@
+<touchdelegates>
+    <touchdelegate name="touch_item"/>
+    <touchdelegate name="touch_filter_1"/>
+    <touchdelegate name="touch_filter_2"/>
+    <touchdelegate name="touch_refresh"/>
+    <touchdelegate name="touch_quick_play"/>
+    <touchdelegate name="touch_filter_money"/>
+    <touchdelegate name="touch_filter_state"/>
+</touchdelegates>
+<layout width="800" height="match_parent" padding_top="220" type="relative">
+    <img src="texture/board/choiceroom_board.png" width="match_parent" height="match_parent" padding_top="70" margin_top="70" align="top_center_horizontal" />
+    <layout name="top" width="match_parent" height="70" type="relative" align="top_center_horizontal" margin_top="79">
+        <img src="texture/board/choiceroom_menutop.png" width="match_parent" height="match_parent" align="center"/>
+        <label font="fonts/font30.fnt" color="white" size="25" scale_factor="0.83333" align="left_center_vertical" margin_left="20" type="nowrap">BÀN</label>
+        <layout align="left_center_vertical" margin_left="200" margin_top="8" type="relative">
+            <group style="xml/ui/button_style_2.xml" align="center" hashkey="bet" touch="true" bindtouch="onclick=touch_filter_1"/>
+        </layout>
+        <layout align="left_center_vertical" margin_left="435" margin_top="8" type="relative">
+            <group style="xml/ui/button_style_2.xml" align="center" hashkey="min" touch="true" bindtouch="onclick=touch_filter_2"/>
+        </layout>
+        <layout align="left_center_vertical" margin_left="665" margin_top="8" type="relative">
+            <group style="xml/ui/button_style_2.xml" align="center" hashkey="players" touch="true" bindtouch="onclick=touch_refresh">
+                <changetexture target="this:text_container:image" atlas="atlas/choice_room.plist" frame="icon_refresh.png" keep_size="true"/>
+            </group>
+        </layout>
+    </layout>
+    <listview width="match_parent" padding_left="14" height="match_parent" padding_top="160" align="location_below_right" relative_to="top" margin_top="-1.5" type="vertical" hashkey="item_list_view">
+        <layout width="match_parent" height="wrap_content" type="vertical" hashkey="itemlist">
+           <group style="xml/ui/lobbygamelistitem.xml" clonekey="item" touchdelegate="touch_item" touch="true"/>
+		   <group style="xml/ui/lobbygamelistitem_2.xml" clonekey="item2" touchdelegate="touch_item" touch="true"/>
+        </layout>
+    </listview>
+    <layout width="250" height="300" type="relative" align="top_left" margin_left="85" margin_top="145" hashkey="filter_money_group" visible="false" cascade_opacity="true">
+        <img src="texture/board/choiceroom_fr_chonmuccuoc.png" width="250" height="300"  align="center"/>
+        <listview width="250" height="300" align="center" clip="true" type="vertical" cascade_opacity="true">
+            <layout width="250" height="wrap_content" type="vertical" align="center" hashkey="filter_money_layout" cascade_opacity="true">
+                <group style="xml/lobby/lobby_filter_money_item.xml" align="center" clonekey="filter_money_item"/>
+            </layout>
+        </listview>
+        
+    </layout>
+</layout>

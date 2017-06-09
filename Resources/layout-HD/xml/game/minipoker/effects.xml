@@ -1,0 +1,4 @@
+<layout width="552" height="312" align="center" hashkey="root">
+	<img atlas="atlas/minipoker.plist" frame="light.png" align="center" width="wrap_content" height="wrap_content" anchor-x=".5" anchor-y=".5" x="275" y="100" hashkey="light" opacity="0" />
+	<img atlas="atlas/minipoker.plist" frame="txt_fullhouse.png" align="center" width="wrap_content" height="wrap_content" anchor-x=".5" anchor-y=".5" x="275" y="100" hashkey="txt" opacity="0" />	
+</layout>

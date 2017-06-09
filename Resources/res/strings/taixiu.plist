@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>YOU_WON</key>
+	<string>Bạn thắng</string>
+	<key>YOU_LOSE</key>
+	<string>Bạn thua</string>
+	<key>YOU_DRAW</key>
+	<string>Bạn được hoàn lại</string>
+	<key>VE_TAI</key>
+	<string>Ván cược tài xỉu về tài</string>
+	<key>VE_XIU</key>
+	<string>Ván cược tài xỉu về xỉu</string>
+</dict>
+</plist>

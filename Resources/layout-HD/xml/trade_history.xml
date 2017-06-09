@@ -1,0 +1,64 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" background="texture/white_2x2.png" color="black" opacity="150">
+    <layout width="858" height="526.5" align="center" background="texture/board/exchange_board.png" type="relative">
+        
+        <img atlas="atlas/ui.plist" frame="bang-tong-ket-icon.png" margin_left="110" margin_top="-30" scale="1.25"/>
+        <layout type="relative" width="500" height="72.5" align="top_left" margin_top="29" margin_left="310" scale="0.85">
+            <img atlas="atlas/lobby.plist" frame="small-tab-bg.png" align="center" width="505" height="69"/>
+            <group name="purchase" style="xml/ui/active_button.xml" width="240" margin_left="10" height="42.5" touch="true" align="left_center_vertical" hashkey="purchase_button" >
+                <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="small-tab-left.png"/>
+                <layout align="center" type="relative">
+                    <img atlas="atlas/ui.plist" frame="nap_tien_text.png" align="center" scale="1.3"/>
+                </layout>
+            </group>
+            <!-- button to show user message -->
+            <group style="xml/ui/active_button.xml" width="240" margin_right="10" height="42.5" touch="true" align="right_center_vertical" hashkey="gif_button">
+                <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="small-tab-right.png"/>
+                <layout align="center" type="relative">
+                    <img atlas="atlas/ui.plist" frame="nhan_the.png" align="center" scale="1.3"/>
+                </layout>
+            </group>
+        </layout>
+        
+<!--        <!-- button to show purchase -->-->
+<!--        <group name="purchase" style="xml/ui/active_button.xml" width="270" height="62" touch="true" align="top_left" margin_top="32" margin_left="22" hashkey="purchase_button">-->
+<!--            <layout align="center" type="relative">-->
+<!--                <img atlas="atlas/ui.plist" frame="nap_tien_text.png" align="center" scale="1.6"/>-->
+<!--            </layout>-->
+<!--        </group>-->
+<!--        <!-- button to show gif-->-->
+<!--        <group style="xml/ui/active_button.xml" width="300" height="62" touch="true" align="location_right_of_center" relative_to="purchase" hashkey="gif_button">-->
+<!--            <layout align="center" type="relative">-->
+<!--                <img atlas="atlas/ui.plist" frame="nhan_the.png" align="bottom_center_horizontal" scale="1.75" margin_bottom="-15"/>-->
+<!--            </layout>-->
+<!--        </group>-->
+        <layout name="content_header" width="match_parent" height="60" padding_left="15" align="top_center_horizontal" margin_top="106" type="horizontal" background="texture/white_2x2.png" color="#0f0f0f" opacity="100">
+            <label font="fonts/SF-UI-Text-Regular.otf" size="27" margin_left="30" type="nowrap" align="center" opacity="240">Thời gian</label>
+            <label font="fonts/SF-UI-Text-Regular.otf" size="27" margin_left="120" type="nowrap" align="center" opacity="240">Loại</label>
+            <label font="fonts/SF-UI-Text-Regular.otf" size="27" margin_left="150" type="nowrap" align="center" opacity="240">Chi tiết</label>
+        </layout>
+        <layout width="match_parent" height="3" padding_left="15" align="location_below_center" relative_to="content_header" background="texture/white_2x2.png" color="#0f0f0f" opacity="200"/>
+        <label font="fonts/SF-UI-Text-Regular.otf" size="28" align="top_center_horizontal" margin_top="300" opacity="230" type="nowrap" hashkey="loading">Đang tải dữ liệu ...</label>
+
+        <listview width="match_parent" height="match_parent" padding_left="50" padding_bottom="180" align="top_center_horizontal" margin_top="170" type="vertical" hashkey="content_listview" visible="false">
+            <layout width="match_parent" height="wrap_content" type="vertical" hashkey="content_list">
+                <layout width="match_parent" height="50" type="horizontal" clonekey="content_item" cascade_opacity="true">
+                    <layout align="center" margin_left="26" type="relative" cascade_opacity="true">
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="27" type="nowrap" align="left_center_vertical" opacity="240" hashkey="time" cascade_opacity="true">time</label>
+                    </layout>
+                    <layout align="center" margin_left="230" type="relative" cascade_opacity="true">
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="27" type="nowrap" align="left_center_vertical" opacity="240" hashkey="type" cascade_opacity="true">time</label>
+                    </layout>
+                    <layout align="center" margin_left="203" type="relative" cascade_opacity="true">
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="27" type="nowrap" align="left_center_vertical" opacity="240" hashkey="detail" cascade_opacity="true">time</label>
+                    </layout>
+                </layout>
+            </layout>
+        </listview>
+        <group style="xml/ui/button_style_1.xml" align="top_right"  margin_top="28" margin_right="3" touch="true" bindtouch="onclick=exit">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+    </layout>
+</layout>

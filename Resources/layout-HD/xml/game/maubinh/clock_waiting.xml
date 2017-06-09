@@ -1,0 +1,12 @@
+<layout type="relative" width="match_parent" height="match_parent" align="center">
+<layout type="absolute" align="center" >
+		<layout type="relative" x="0" y="0" width="400" height="120"  sortdone_x="0" sortdone_y="0" sorting_x="0" sorting_y="260" hashkey="root">
+			<img atlas="atlas/card_game.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" align="center" opacity="200" color="#0f0f0f" cap_top="8" cap_left="8" cap_right="8" cap_bottom="8"/>
+			
+			<label width="match_parent" font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="26" scale_factor="0.866667" align="top_center_horizontal" margin_top="20" hashkey="time_title" type="nowrap" max_character="10">Thời gian xếp còn 40 giây</label>
+				
+			<img atlas="atlas/card_game.plist" frame="nentime.png" width="wrap_content" height="wrap_content" hashkey="time_background" align="bottom_center_horizontal" margin_bottom="20"/>
+			<img atlas="atlas/card_game.plist" frame="time.png" width="wrap_content" height="wrap_content" hashkey="time_patch" align="bottom_center_horizontal" margin_bottom="25" />
+		</layout>
+</layout>
+</layout>

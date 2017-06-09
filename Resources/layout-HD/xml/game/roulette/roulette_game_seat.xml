@@ -1,0 +1,22 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="90" height="90" type="absolute" touch="true" touchdelegate="onclick" cascade_opacity="true">
+    <img atlas="atlas/roulette.plist" frame="chair.png" x="45" y="54" rotate="180" scale="1.2" hashkey="chair"/>
+    <img name="image" atlas="atlas/xocdia.plist" frame="seatdown.png" width="match_parent" x="45" y="45" scale="0.85" height="match_parent" hashkey="seat"/>
+    <touchbegan>
+        <action id="this:image">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

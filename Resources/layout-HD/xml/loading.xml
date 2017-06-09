@@ -1,0 +1,5 @@
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+    <group style="xml/game_background.xml" align="center"/>
+    <img src="texture/new_login/logo_bigo69.png" scale="1.2" align="center"/>
+    <img src="texture/white_32x32.png" width="match_parent" local_z="2" height="match_parent" hashkey="over" color="black" align="center"/>
+</layout>

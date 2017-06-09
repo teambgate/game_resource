@@ -1,0 +1,19 @@
+<layout width="86" height="106" type="relative">
+    <img atlas="atlas/card_game.plist" frame="coin_1.png" align="center" hashkey="coinImage"
+	frame_atlas_custom="atlas/card_game.plist"
+	frame_1="coin_1.png"
+	frame_2="coin_2.png"
+	frame_5="coin_5.png"
+	frame_10="coin_10.png"
+	frame_20="coin_20.png"
+	frame_50="coin_50.png"
+	frame_100="coin_100.png"
+	frame_200="coin_200.png"
+	frame_500="coin_500.png"
+	frame_1000="coin_1000.png"
+	frame_2000="coin_2000.png"
+	frame_5000="coin_5000.png"
+	frame_10000="coin_10000.png"
+	frame_50000="coin_50000.png"
+	frame_100000="coin_100000.png"/>
+</layout>

@@ -1,0 +1,176 @@
+<touchdelegates>
+  <touchdelegate name="close"/>
+  <touchdelegate name="change_type"/>
+
+  <touchdelegate name="xacnhan"/>
+  <touchdelegate name="doicau"/>
+  <touchdelegate name="top"/>
+  <touchdelegate name="ask"/>
+  <touchdelegate name="history"/>
+  <touchdelegate name="close_info"/>
+  <touchdelegate name="close_guide"/>
+  <touchdelegate name="move_board"/>
+
+  <touchdelegate name="xacnhan_free"/>
+  <touchdelegate name="doicau_free"/>
+  <touchdelegate name="top_free"/>
+  <touchdelegate name="ask_free"/>
+  <touchdelegate name="history_free"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+	<layout width="802" height="437" type="relative" align="center" hashkey="mini_main" scale_big="1.1" scale_mini="0.8" scale="0.8" touch="true" touchdelegate="move_board">
+		<layout type="absolute" align="center" hashkey="game_center">
+			<img src="texture/scene/board_baucuaca.png" width="700" height="437" scale="1.2"/>
+			<img atlas="atlas/tomcuaca.plist" frame="tittle_baucuaca.png" width="294" height="68" scale="1.00" y="215"/>
+			<group style="xml/ui/button_style_1.xml" x="260" y="165" scale="1" touch="true" hashkey="xacnhan_button" bindtouch="onclick=close" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_x.png"/>
+			</group>
+			<layout type="absolute" x="-200" y="166">
+                                <layout touch="true" touchdelegate="change_type" width="203" height="60"/>
+				<img atlas="atlas/tomcuaca.plist" frame="frame_tien.png" width="203" height="60" scale="1.00" />
+				<img atlas="atlas/tomcuaca.plist" frame="select_coin.png" width="60" height="60" scale="1.00" x="-71"/>
+				<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="23"  color="yellow" x="15" hashkey="user_money">123.123</label>
+			</layout>
+			<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="26"  color="white" y="165" x="172" hashkey="order">#12345</label>
+			<group style="xml/ui/button_style_1.xml" x="-335" y="100" touch="true" hashkey="xacnhan_button" bindtouch="onclick=top" visible="false">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_bangxephang.png"/>
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="-335" y="60" touch="true" hashkey="xacnhan_button" bindtouch="onclick=ask" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_huongdan.png"/>
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="-335" y="-10" touch="true" hashkey="xacnhan_button" bindtouch="onclick=history" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_lichsu.png"/>
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="-210" y="-118" scale="0.95" touch="true" hashkey="xacnhan_button" bindtouch="onclick=doicau" visible="true">
+				<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_doicau.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="-60" y="83" hashkey="item_0" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_bau.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="60" y="83" hashkey="item_1" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_tom.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="180" y="83" hashkey="item_2" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_cua.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="-60" y="-36" hashkey="item_3" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_ca.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="60" y="-36" hashkey="item_4" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_ga.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="180" y="-36" hashkey="item_5" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_nai.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/history_1.xml" x="-210" y="25" hashkey="history_1">
+			</group>
+			<group style="xml/game/tomcuaca/history_2.xml" x="-210" y="25" hashkey="history_2" visible="false">
+			</group>
+			<group style="xml/game/tomcuaca/bowl.xml" x="-210" y="25" hashkey="bowl" visible="false">
+			</group>
+			<group style="xml/game/tomcuaca/status.xml" x="60" y="-125" hashkey="status">
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="200" y="-188" scale="1" touch="true" hashkey="xacnhan_button" bindtouch="onclick=xacnhan" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_xacnhan.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/time.xml" y="163.5" hashkey="time">
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-200" y="-188" hashkey="coin_button_0" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip1.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-140" y="-188" hashkey="coin_button_1" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip2.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-80" y="-188" hashkey="coin_button_2" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip3.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-20" y="-188" hashkey="coin_button_3" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip4.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="40" y="-188" hashkey="coin_button_4" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip5.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="100" y="-188" hashkey="coin_button_5" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip6.png"/>
+			</group>
+		</layout>
+
+                <layout type="absolute" align="center" hashkey="game_center_free" visible="false">
+			<img src="texture/scene/board_baucuaca.png" width="700" height="437" scale="1.2"/>
+			<img atlas="atlas/tomcuaca.plist" frame="tittle_baucuaca.png" width="294" height="68" scale="1.00" y="215"/>
+			<group style="xml/ui/button_style_1.xml" x="260" y="165" scale="1" touch="true" bindtouch="onclick=close" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_x.png"/>
+			</group>
+			<layout type="absolute" x="-200" y="166">
+                                <layout touch="true" touchdelegate="change_type" width="203" height="60"/>
+				<img atlas="atlas/tomcuaca.plist"  frame="frame_tien.png" width="203" height="60" scale="1.00" />
+				<img atlas="atlas/tomcuaca.plist"  frame="select_chip.png" width="60" height="60" scale="1.00" x="-71"/>
+				<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="23"  color="yellow" x="15" hashkey="user_money_free">123.123</label>
+			</layout>
+			<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="26"  color="white" y="165" x="172" hashkey="order_free">#12345</label>
+			<group style="xml/ui/button_style_1.xml" x="-335" y="100" touch="true" bindtouch="onclick=top_free" visible="false">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_bangxephang.png"/>
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="-335" y="60" touch="true" bindtouch="onclick=ask_free" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_huongdan.png"/>
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="-335" y="-10" touch="true" bindtouch="onclick=history_free" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_lichsu.png"/>
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="-210" y="-118" scale="0.95" touch="true" visible="true" bindtouch="onclick=doicau_free">
+				<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_doicau.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="-60" y="83" hashkey="item_0_free" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_bau.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="60" y="83" hashkey="item_1_free" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_tom.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="180" y="83" hashkey="item_2_free" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_cua.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="-60" y="-36" hashkey="item_3_free" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_ca.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="60" y="-36" hashkey="item_4_free" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_ga.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/item.xml" x="180" y="-36" hashkey="item_5_free" touch="true">
+				<changetexture target="this:item" atlas="atlas/tomcuaca.plist" frame="f_nai.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/history_1.xml" x="-210" y="25" hashkey="history_1_free" visible="true">
+			</group>
+			<group style="xml/game/tomcuaca/history_2.xml" x="-210" y="25" hashkey="history_2_free" visible="false">
+			</group>
+			<group style="xml/game/tomcuaca/bowl.xml" x="-210" y="25" hashkey="bowl_free" visible="false">
+			</group>
+			<group style="xml/game/tomcuaca/status.xml" x="60" y="-125" hashkey="status_free">
+			</group>
+			<group style="xml/ui/button_style_1.xml" x="200" y="-188" scale="1" touch="true" hashkey="xacnhan_button_free" bindtouch="onclick=xacnhan_free" visible="true">
+					<changetexture target="this:image" atlas="atlas/tomcuaca.plist" frame="bt_xacnhan.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/time.xml" y="163.5" hashkey="time_free">
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-200" y="-188" hashkey="coin_button_0_free" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip1.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-140" y="-188" hashkey="coin_button_1_free" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip2.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-80" y="-188" hashkey="coin_button_2_free" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip3.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="-20" y="-188" hashkey="coin_button_3_free" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip4.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="40" y="-188" hashkey="coin_button_4_free" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip5.png"/>
+			</group>
+			<group style="xml/game/tomcuaca/coin_button.xml" x="100" y="-188" hashkey="coin_button_5_free" touch="true">
+				<changetexture target="this:bg" atlas="atlas/tomcuaca.plist" frame="chip6.png"/>
+			</group>
+		</layout>
+	</layout>
+        <group style="xml/game/tomcuaca/info.xml" align="center" hashkey="table_info" visible="false" bindtouch="exit=close_info"/>
+        <group style="xml/game/tomcuaca/luatchoi.xml" align="center" hashkey="table_guide" visible="false" bindtouch="touch_close=close_guide"/>
+</layout>

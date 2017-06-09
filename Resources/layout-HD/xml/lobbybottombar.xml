@@ -1,0 +1,174 @@
+<touchdelegates>
+    <touchdelegate name="user_click"/>
+    <touchdelegate name="setting_click"/>
+    <touchdelegate name="payment_click"/>
+    <touchdelegate name="touch_quick_play"/>
+    <touchdelegate name="touch_xep_hang"/>
+	<!-- <touchdelegate name="iap_click"/> -->
+	<touchdelegate name="download_payment"/>
+    <touchdelegate name="present_click"/>
+	<touchdelegate name="mail_click"/>
+	<touchdelegate name="back_click"/>
+        <touchdelegate name="event_click"/>
+        <touchdelegate name="vip_click"/>
+	<touchdelegate name="mini_game_bau_cua_click"/>
+	<touchdelegate name="mini_game_tai_xiu_click"/>
+	<touchdelegate name="mini_game_mini_poker_click"/>
+	<touchdelegate name="mini_game_click"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative">
+	<layout width="match_parent" height="110" type="relative" align="top_center_horizontal" touch="true">
+		<img atlas="atlas/choice_room.plist" frame="bottom_bar.png" align="bottom_center_horizontal" width="match_parent" height="match_parent"/>
+
+
+		<img atlas="atlas/choice_room.plist" frame="logo.png" align="left_center_vertical" width="wrap_content" height="match_parent" hashkey="logo_icon"/>
+
+		<group style="xml/ui/button_style_1.xml" align="left_center_vertical" scale="0.9" touch="true" margin_left="20" bindtouch="onclick=back_click" hashkey="back_button">
+				<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_backtolobby.png"/>
+		</group>
+
+
+		<layout width="100" height="100" align="left_bottom" margin_left="170" margin_bottom="5" touch="true" touchdelegate="user_click" type="relative">
+			<layout width="85" height="85" align="center" type="relative">
+				<img width="fill_parent" height="fill_parent" src="texture/scene/avatar_default.png" align="center" hashkey="avatar" clip_circle="true" preserve_atlas="atlas/user.plist" preserve_frame="avatar_preserve.png"/>
+			</layout>
+			<img width="100" height="100" atlas="atlas/user.plist" frame="avatar_bound.png" align="center"/>
+			<img width="wrap_content" height="35" atlas="atlas/user.plist" frame="avatar_name.png" align="bottom_center_horizontal" margin_bottom="-10"/>
+
+			<label font="fonts/font30.fnt" size="30" scale_factor="0.5" align="bottom_center_horizontal" width="match_parent" type="nowrap" hashkey="username" margin_bottom="-2" max_characters="7" color="black">user name</label>
+		</layout>
+
+		<img width="wrap_content" height="45" atlas="atlas/choice_room.plist" frame="fr_chip.png" align="left_bottom" margin_left="300" margin_bottom="10"/>
+		<img width="wrap_content" height="45" atlas="atlas/choice_room.plist" frame="icon_xu.png" align="left_bottom" margin_left="300" margin_bottom="10"/>
+		<label font="fonts/font30.fnt" size="25" scale_factor="0.9" align="left_bottom" width="match_parent" type="nowrap" margin_left="355" margin_bottom="16" color="white" hashkey="money">--</label>
+
+		<img width="250" height="45" atlas="atlas/choice_room.plist" frame="fr_xu.png" align="left_bottom" margin_left="560" margin_bottom="10" cap_left="40" cap_right="40" cap_top="10" cap_bottom="10"/>
+		<img width="wrap_content" height="45" atlas="atlas/choice_room.plist" frame="icon_chip.png" align="left_bottom" margin_left="560" margin_bottom="10"/>
+		<label font="fonts/font30.fnt" size="25" scale_factor="0.9" align="left_bottom" width="match_parent" type="nowrap" margin_left="615" margin_bottom="16" color="white" hashkey="free_chip_money">--</label>
+
+		<layout align="right_center_vertical" margin_right="40" type="relative">
+			<group style="xml/ui/button_style_1.xml" align="center" scale="1.0" touch="true" bindtouch="onclick=setting_click">
+				<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_menu.png"/>
+			</group>
+		</layout>
+	</layout>
+
+	<layout width="match_parent" height="110" type="relative" align="bottom_center_horizontal" touch="true">
+		<img atlas="atlas/choice_room.plist" frame="bottom_bar.png" align="bottom_center_horizontal" width="match_parent" height="match_parent"/>
+
+                <layout type="relative" width="243" height="90"  align="right_center_vertical" scale="1.0" touch="true" touchdelegate="payment_click" hashkey="add_coin_button" cascade_opacity="true" visible="false">
+                        <spine json="texture/effect_doi_thuong/eff-cuahang.json"
+                                atlas="texture/effect_doi_thuong/eff-cuahang.atlas"
+                                spine-scale="1.0" anim="eff-cuahang" loop="true" align="center" />
+                                <touchbegan>
+                                        <action id="this">
+                                                <scaleto time="0.1" x="0.9" y="0.9"/>
+                                        </action>
+                                </touchbegan>
+                                <touchend>
+                                        <action id="this">
+                                                <scaleto time="0.2" x="1.0" y="1.0"/>
+                                        </action>
+                                </touchend>
+                                <touchcancel>
+                                        <action id="this">
+                                                <scaleto time="0.2" x="1.0" y="1.0"/>
+                                        </action>
+                                </touchcancel>
+                </layout>
+
+		<group style="xml/ui/button_style_1.xml" align="left_center_vertical" scale="1.0" margin_left="260" touch="true" bindtouch="onclick=touch_xep_hang" hashkey="rank_button">
+			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_xephang.png"/>
+		</group>
+		<group style="xml/mail_hint.xml" align="left_center_vertical" scale="1.0" margin_left="380" touch="true" bindtouch="onclick=mail_click" hashkey="mail_button">
+			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_tinnhan.png"/>
+		</group>
+
+		<group style="xml/ui/button_style_1.xml" align="right_center_vertical" scale="1.0" margin_right="260" touch="true" hashkey="vip_button" bindtouch="onclick=vip_click">
+			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_vip.png"/>
+		</group>
+		<group style="xml/ui/button_style_1.xml" align="right_center_vertical" scale="1.0" margin_right="380" touch="true" hashkey="event_button" bindtouch="onclick=event_click">
+			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="bt_events.png"/>
+		</group>
+
+		<layout width="200" height="150" type="absolute" align="bottom_center_horizontal" margin_bottom="15" clip="true" hashkey="layout_quickplay">
+			<layout type="absolute" x="100" y="20">
+				<group style="xml/ui/quick_play_choice_room_button.xml" touch="true" bindtouch="onclick=touch_quick_play">
+				</group>
+			</layout>
+		</layout>
+		<img atlas="atlas/choice_room.plist" frame="whiteline.png" align="bottom_center_horizontal" margin_bottom="5" hashkey="layout_quickplay_line"/>
+
+                <layout type="relative" width="243" height="90"  align="left_center_vertical" scale="1.0" touch="true" touchdelegate="present_click" hashkey="doi_thuong_button" cascade_opacity="true" visible="false">
+                        <spine json="texture/effect_doi_thuong/eff-doithuong.json"
+                                atlas="texture/effect_doi_thuong/eff-doithuong.atlas"
+                                spine-scale="1.0" anim="eff-doithuong" loop="true" align="center" />
+                                <touchbegan>
+                                        <action id="this">
+                                                <scaleto time="0.1" x="0.9" y="0.9"/>
+                                        </action>
+                                </touchbegan>
+                                <touchend>
+                                        <action id="this">
+                                                <scaleto time="0.2" x="1.0" y="1.0"/>
+                                        </action>
+                                </touchend>
+                                <touchcancel>
+                                        <action id="this">
+                                                <scaleto time="0.2" x="1.0" y="1.0"/>
+                                        </action>
+                                </touchcancel>
+                </layout>
+
+		<layout width="wrap_content" height="100" type="horizontal" align="right_center_vertical" margin_right="100" anchor-x="1" anchor-y="0.5" scale="1.3" visible="false">
+			<group style="xml/ui/button_style_1.xml" align="center" scale="1.0" touch="true" bindtouch="onclick=download_payment" hashkey="doi_thuong_download_payment" visible="true">
+					<changetexture target="this:image" atlas="atlas/lobby.plist" frame="button_taibandoithuong_newstyle.png"/>
+			</group>
+		</layout>
+
+		<layout type="absolute" align="bottom_center_horizontal" margin_bottom="30" scale="0" hashkey="mini_game_board">
+			<img atlas="atlas/mini_games.plist" frame="c.png" scale="2.75" touch="true"/>
+			<layout anchor-x="0" anchor-y="0" width="175" height="0" type="absolute" rotate="-35" hashkey="bau_cua_arm">
+				<group style="xml/ui/minigame_lobby_button.xml" x="175" y="0" scale="1.0" touch="true" bindtouch="onclick=mini_game_bau_cua_click" visible="true" rotate="35" hashkey="bau_cua_icon">
+					<changetexture target="this:image" atlas="atlas/mini_games.plist" frame="icon-bau-cua-ca.png"/>
+				</group>
+			</layout>
+
+			<layout anchor-x="0" anchor-y="0" width="175" height="0" type="absolute" rotate="-90" hashkey="tai_xiu_arm">
+				<group style="xml/ui/minigame_lobby_button.xml" x="175" y="0" scale="1.0" touch="true" bindtouch="onclick=mini_game_tai_xiu_click" visible="true" rotate="90" hashkey="tai_xiu_icon">
+					<changetexture target="this:image" atlas="atlas/mini_games.plist" frame="icon-tai-xiu.png"/>
+				</group>
+			</layout>
+
+			<layout anchor-x="0" anchor-y="0" width="175" height="0" type="absolute" rotate="-145" hashkey="mini_poker_arm">
+				<group style="xml/ui/minigame_lobby_button.xml" x="175" y="0" scale="1.0" touch="true" bindtouch="onclick=mini_game_mini_poker_click" visible="true" rotate="145" hashkey="mini_poker_icon">
+					<changetexture target="this:image" atlas="atlas/mini_games.plist" frame="icon_minipoker.png"/>
+				</group>
+			</layout>
+		</layout>
+		<!-- <group style="xml/ui/button_style_1.xml" align="bottom_center_horizontal" scale="0.9" touch="true" bindtouch="onclick=mini_game_click" hashkey="mini_game_button" margin_bottom="-75">
+			<changetexture target="this:image" atlas="atlas/choice_room.plist" frame="icon_minigamelobby.png"/>
+		</group> -->
+                <layout type="relative" width="210" height="210"  align="bottom_center_horizontal" scale="0.9" touch="true" touchdelegate="mini_game_click" hashkey="mini_game_button" margin_bottom="-75" cascade_opacity="true">
+                        <spine json="texture/effect_doi_thuong/eff-minigame.json"
+                                atlas="texture/effect_doi_thuong/eff-minigame.atlas"
+                                spine-scale="1.0" anim="eff-minigame" loop="true" align="center" />
+                                <touchbegan>
+                                        <action id="this">
+                                                <scaleto time="0.1" x="0.8" y="0.8"/>
+                                        </action>
+                                </touchbegan>
+                                <touchend>
+                                        <action id="this">
+                                                <scaleto time="0.2" x="0.9" y="0.9"/>
+                                        </action>
+                                </touchend>
+                                <touchcancel>
+                                        <action id="this">
+                                                <scaleto time="0.2" x="0.9" y="0.9"/>
+                                        </action>
+                                </touchcancel>
+                </layout>
+
+	</layout>
+</layout>

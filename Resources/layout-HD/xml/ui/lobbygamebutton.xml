@@ -1,0 +1,27 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="match_parent" touchdelegate="onclick" type="vertical" touch="true" cascade_opacity="true" opacity="0" scale="1.0">
+    <img width="wrap_content" height="match_parent" name="image" atlas="atlas/lobbyicon.plist" frame="icon-tala.png" hashkey="image" align="center" scale="1.06"/>
+    <layout>
+            <spine json="texture/effect_doi_thuong/eff-icon.json"
+                    atlas="texture/effect_doi_thuong/eff-icon.atlas"
+                    visible="false"
+                    spine-scale="1.0" anim="eff-icon" loop="true" cascade_opacity="true" delay="8.0" hashkey="effect_light" align="center" x="120" y="80"/>
+    </layout>
+    <touchbegan>
+        <action id="this:image">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

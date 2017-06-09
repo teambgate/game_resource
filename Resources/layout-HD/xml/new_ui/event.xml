@@ -1,0 +1,17 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout type="relative" width="match_parent" height="match_parent" touch="true">
+        <img src="texture/white_2x2.png" width="match_parent" height="match_parent" hashkey="shadow" color="black" opacity="150" align="center"/>
+        <layout width="1224" height="687" type="relative" align="center" hashkey="main_center" scale="0.9">
+                <img src="texture/new_ui/board_luatchoi.png" align="center"/>
+                <!-- <img atlas="atlas/new_ui.plist" frame="txt_privacypolicy.png" align="top_center_horizontal" margin_top="20"/> -->
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="10.5" margin_top="10.5" touch="true" bindtouch="onclick=exit">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+                <layout type="absolute" width="1200" height="585" align="top_center_horizontal" margin_top="90" hashkey="webview" cascade_opacity="true">
+                </layout>
+        </layout>
+        <layout width="match_parent" height="match_parent" align="center" touch="true" visible="false" hashkey="touch_prevent">
+        </layout>
+</layout>

@@ -1,0 +1,26 @@
+<touchdelegates>
+    <touchdelegate name="xeng_hover"/>
+<touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative">
+    <layout width="match_parent" height="match_parent" type="absolute" align="center">
+        <layout type="absolute" width="180" height="160"  x="800" y="340" type="relative" align="center" touch="true" touchdelegate="xeng_hover" hashkey="hover" cascade_opacity="true" >
+            <img name="image" src="texture/scene/icon_xeng.png" align="center" width="match_parent" height="match_parent"/>
+			
+            <touchbegan>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchbegan>
+            <touchend>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchend>
+            <touchcancel>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchcancel>
+        </layout>
+    </layout>
+</layout>

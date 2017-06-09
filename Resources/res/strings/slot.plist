@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>wild</key>
+	<string>Wild có thể thay thế bất kỳ biểu tượng nào trừ scatter và bonus</string>
+	<key>bonus</key>
+	<string>3 hoặc nhiều Bonus trở lên sẽ được thưởng bonus</string>
+	<key>scatter</key>
+	<string>3 hoặc nhiều Scatter trở lên sẽ được thưởng lượt quay</string>
+	<key>fail_money</key>
+	<string>Bạn không đủ tiền để tiếp tục chơi</string>
+	<key>win_jackpot</key>
+	<string>nổ hũ</string>
+	<key>congratulate_win_jackpot</key>
+	<string>Chúc mừng người chơi: </string>
+	<key>jp</key>
+	<string> nổ hũ (mức cược </string>
+	<key>money_jp</key>
+	<string> trị giá </string>
+	<key>MUC_CUOC</key>
+	<string></string>
+	<key>FREE</key>
+	<string></string>
+</dict>
+</plist>

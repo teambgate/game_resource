@@ -1,0 +1,21 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" touchdelegate="onclick" type="vertical" touch="true" cascade_opacity="true" scale="1">
+    <img name="image" atlas="atlas/mini_games.plist" frame="icon-mini777.png" hashkey="image" align="center" scale="0.8"/>
+    <touchbegan>
+        <action id="this:image">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

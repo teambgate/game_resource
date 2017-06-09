@@ -1,0 +1,34 @@
+<touchdelegates>
+    <touchdelegate name="ok"/>
+    <touchdelegate name="no"/>
+    <touchdelegate name="check_box"/>
+</touchdelegates>
+<layout opacity="0" width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+    <runaction>
+        <action id="this">
+            <sequence>
+                <delay time="0.05" />
+                <fadein time="0.15"/>
+            </sequence>
+        </action>
+    </runaction>
+    <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="150" align="center"/>
+    <layout width="567" height="378" align="center" background="texture/board/dialog_big.png" type="relative" cascade_opacity="true" hashkey="box">
+        <layout name="message" width="match_parent" padding_left="100" height="200" align="top_center_horizontal" margin_top="20" type="relative" cascade_opacity="true">
+            <label width="match_parent" font="fonts/SF-UI-Text-Regular.otf" size="30" align="center" hashkey="content" cascade_opacity="true">Người chơi Murlock mời bạn chơi TÁ LẢ(Bàn 1:1$)</label>
+        </layout>
+        <layout width="wrap_content" height="wrap_content" type="horizontal" align="location_below_center" relative_to="message" margin_top="5" cascade_opacity="true" hashkey="checkbox_container">
+            <group style="xml/checkbox.xml" align="center" width="30" height="30" touch="true" bindtouch="click=check_box" hashkey="checkbox" cascade_opacity="true">
+                <changetexture target="this:image_1" atlas="atlas/ui.plist" frame="checkbox_down.png"/>
+                <changetexture target="this:image_2" atlas="atlas/ui.plist" frame="checkbox_up.png"/>
+            </group>
+            <label font="fonts/SF-UI-Text-Medium.otf" size="27" type="nowrap" align="center" opacity="240" margin_left="10" cascade_opacity="true">Không hiện thông báo này nữa</label>
+        </layout>
+        <group style="xml/ui/button_style_1.xml" align="right_bottom" margin_bottom="30" margin_right="30" scale="0.9" touch="true" bindtouch="onclick=ok" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_ok_up.png"/>
+        </group>
+        <group style="xml/ui/button_style_1.xml" align="left_bottom" margin_bottom="30" margin_left="30" scale="0.9" touch="true" bindtouch="onclick=no" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_no_up.png"/>
+        </group>
+    </layout>
+</layout>

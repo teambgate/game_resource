@@ -1,0 +1,104 @@
+
+eff-doithuong.png
+size: 473,109
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bong
+  rotate: false
+  xy: 247, 23
+  size: 68, 84
+  orig: 68, 84
+  offset: 0, 0
+  index: -1
+bt_doithuong
+  rotate: false
+  xy: 2, 17
+  size: 243, 90
+  orig: 243, 90
+  offset: 0, 0
+  index: -1
+chips
+  rotate: false
+  xy: 387, 5
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+hop
+  rotate: false
+  xy: 317, 23
+  size: 68, 84
+  orig: 68, 84
+  offset: 0, 0
+  index: -1
+manhvun_0000_Layer-8
+  rotate: false
+  xy: 167, 6
+  size: 23, 9
+  orig: 23, 9
+  offset: 0, 0
+  index: -1
+manhvun_0001_Layer-7
+  rotate: true
+  xy: 192, 5
+  size: 10, 17
+  orig: 10, 17
+  offset: 0, 0
+  index: -1
+manhvun_0002_Layer-6
+  rotate: false
+  xy: 247, 2
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+manhvun_0003_Layer-5
+  rotate: true
+  xy: 269, 4
+  size: 17, 14
+  orig: 17, 14
+  offset: 0, 0
+  index: -1
+manhvun_0004_Layer-4
+  rotate: false
+  xy: 145, 4
+  size: 20, 11
+  orig: 20, 11
+  offset: 0, 0
+  index: -1
+manhvun_0005_Layer-3
+  rotate: false
+  xy: 211, 7
+  size: 18, 8
+  orig: 18, 8
+  offset: 0, 0
+  index: -1
+manhvun_0006_Layer-2
+  rotate: true
+  xy: 231, 2
+  size: 13, 9
+  orig: 13, 9
+  offset: 0, 0
+  index: -1
+ruybang
+  rotate: true
+  xy: 387, 39
+  size: 68, 84
+  orig: 68, 84
+  offset: 0, 0
+  index: -1
+sangsang
+  rotate: false
+  xy: 2, 7
+  size: 141, 8
+  orig: 141, 8
+  offset: 0, 0
+  index: -1
+saosao
+  rotate: false
+  xy: 421, 8
+  size: 23, 29
+  orig: 23, 29
+  offset: 0, 0
+  index: -1

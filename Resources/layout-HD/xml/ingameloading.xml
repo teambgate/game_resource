@@ -1,0 +1,12 @@
+<layout width="match_parent" height="match_parent" type="relative" touch="true" align="center">
+<!--    <img atlas="atlas/lobby.plist" frame="loading.png" align="center"/>-->
+<!--    <img atlas="atlas/lobby.plist" frame="rotating.png" align="location_left_of_center">-->
+<!--        <runaction>-->
+<!--            <action>-->
+<!--                <repeatforever id="this">-->
+<!--                    <rotateby time="10.0" r="360"/>-->
+<!--                </repeatforever>-->
+<!--            </action>-->
+<!--        </runaction>-->
+<!--    </img>-->
+</layout>

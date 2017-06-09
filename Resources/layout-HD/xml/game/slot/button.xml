@@ -1,0 +1,7 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="87" height="72" cascade_opacity="true" touch="true" touchdelegate="onclick" scale="1.5" type="relative">
+	<img atlas="atlas/slot.plist" name="image" frame="bt_spin1.png" align="center" hashkey="image"/>
+	<img atlas="atlas/slot.plist" name="image_began" frame="bt_spin1.png" align="center" hashkey="image_began" visible="false"/>
+</layout>

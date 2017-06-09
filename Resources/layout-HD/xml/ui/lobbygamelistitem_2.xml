@@ -1,0 +1,34 @@
+<layout width="match_parent" padding_left="-10" margin_left="-12" height="60" type="relative" cascade_opacity="true">
+    <img atlas="atlas/choice_room.plist" frame="choice_room_tab_select.png" width="match_parent" height="match_parent" padding_left="14" align="center"/>
+    <layout align="left_center_vertical" margin_left="35" type="relative" cascade_opacity="true">
+        <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" align="center" type="nowrap" hashkey="title" cascade_opacity="true">1</label>
+    </layout>
+    <img atlas="atlas/choice_room.plist" frame="lockroom.png" align="left_center_vertical" margin_left="120" hashkey="lock" scale="1.35" visible="false"/>
+    <layout align="left_center_vertical" margin_left="200" type="relative" cascade_opacity="true">
+        <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" align="center" type="nowrap" hashkey="bet" cascade_opacity="true">10K</label>
+    </layout>
+    <layout align="left_center_vertical" margin_left="435" type="relative" cascade_opacity="true">
+        <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" align="center" type="nowrap" hashkey="min" cascade_opacity="true">200K</label>
+    </layout>
+    <layout align="left_center_vertical" margin_left="615" type="relative" cascade_opacity="true">
+        <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" align="right_center_vertical" type="nowrap" hashkey="players" cascade_opacity="true">8 / 8</label>
+    </layout>
+    <img atlas="atlas/choice_room.plist" frame="choice_room_state_bg.png" width="125" height="26" align="left_center_vertical" margin_left="630"/>
+    <img atlas="atlas/choice_room.plist" frame="foreground_room_state.png" cap_top="4" cap_left="60" cap_right="60" cap_bottom="4" width="110" height="22" align="left_center_vertical" margin_left="632" hashkey="foreground" anchor-x="0" anchor-y="0.5"/>
+
+	<touchbegan>
+        <action id="this">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

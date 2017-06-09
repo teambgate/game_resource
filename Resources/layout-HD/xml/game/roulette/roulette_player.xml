@@ -1,0 +1,12 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="100" height="125" type="relative" touch="true" touchdelegate="onclick" cascade_opacity="true" rotation_around_scale="1.1">
+    <img atlas="atlas/xocdia.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" opacity="200" color="#0f0f0f" cap_top="8" cap_left="8" cap_right="8" cap_bottom="8" align="center" cascade_opacity="true"/>
+    <layout name="avatar_container" align="center" width="100" height="75" type="relative" cascade_opacity="true">
+        <img name="avatar" atlas="atlas/xocdia.plist" frame="avatar_default.png" preserve_atlas="atlas/xocdia.plist" preserve_frame="avatar_1.png" align="center" width="fill_parent" height="fill_parent" hashkey="avatar" cascade_opacity="true"/>
+    </layout>
+    <label width="match_parent" font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="30" align="top_center_horizontal" hashkey="name" type="nowrap" max_character="7" cascade_opacity="true" margin_top="-7" scale="0.533333">tukiki...</label>
+    <label width="match_parent" font="atlas/xocdiafont.fnt" font_atlas="atlas/xocdia.plist" font_frame="font30.png" size="30" align="bottom_center_horizontal" color="yellow" hashkey="money" type="nowrap" cascade_opacity="true" margin_bottom="-6" scale="0.6666667">200</label>
+	 <img atlas="atlas/xocdia.plist" frame="home.png" align="left_bottom" width="wrap_content" height="wrap_content" margin_bottom="20" hashkey="host_flag" visible="false" scale="1.5" cascade_opacity="true"/>
+</layout>

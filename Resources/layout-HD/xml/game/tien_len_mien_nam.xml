@@ -1,0 +1,258 @@
+<touchdelegates>
+    <touchdelegate name="usertouch"/>
+	<touchdelegate name="seat_touch"/>
+	<touchdelegate name="card_touch"/>
+	<touchdelegate name="bo_luot_touch"/>
+	<touchdelegate name="danh_touch"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+    <group style="xml/game_play_background.xml" align="center"/>
+    <label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" type="nowrap" width="1000" align="left_bottom" margin_left="40" margin_bottom="20" color="white" opacity="150" hashkey="viewing" local_z="2">Đang xem...</label>
+    <layout type="absolute" align="center" hashkey="game_center">
+        <img src="texture/scene/table-style1.png" align="center" y="0" scale="0.9"/>
+		<img atlas="atlas/card_game.plist" frame="button_bacay.png" width="240" height="75" x="0" y="-300" hashkey="bg_control_1" visible="false"/>
+		<img atlas="atlas/card_game.plist" frame="button_bacay.png" width="240" height="75" x="240" y="-300" hashkey="bg_control_2" visible="false"/>
+		<img atlas="atlas/card_game.plist" frame="button_bacay.png" width="240" height="75" x="-240" y="-300" hashkey="bg_control_3" visible="false"/>
+
+		<img atlas="atlas/ui.plist" frame="begin_text.png" x="0" y="-90" scale="1.0" hashkey="begin_text" visible="false"/>
+		<!-- button bỏ lượt -->
+		<layout type="relative" align="center" width="240" height="75" x="-480" y="-300" visible="false" hashkey="bg_control_4" touch="true" touchdelegate="bo_luot_touch">
+			<img atlas="atlas/card_game.plist" frame="button_bacay.png" width="match_parent" height="match_parent" name="image" align="center"/>
+			<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" type="nowrap" name="label" color="white" hashkey="button_boluot">Bỏ lượt</label>
+			<touchbegan>
+				<action id="this:image">
+					<scaleto time="0.1" x="0.9" y="0.9"/>
+				</action>
+				<action id="this:label">
+					<scaleto time="0.1" x="0.9" y="0.9"/>
+				</action>
+			</touchbegan>
+			<touchend>
+				<action id="this:image">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+				<action id="this:label">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+			</touchend>
+			<touchcancel>
+				<action id="this:image">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+				<action id="this:label">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+			</touchcancel>
+		</layout>
+		<!-- button đánh  -->
+		<layout type="relative" align="center" width="240" height="75" x="480" y="-300" visible="false" hashkey="bg_control_5" touch="true" touchdelegate="danh_touch">
+			<img atlas="atlas/card_game.plist" frame="button_bacay.png" width="match_parent" height="match_parent" name="image" align="center"/>
+			<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" name="label" type="nowrap" color="white" hashkey="button_danh">Đánh</label>
+			<touchbegan>
+				<action id="this:image">
+					<scaleto time="0.1" x="0.9" y="0.9"/>
+				</action>
+				<action id="this:label">
+					<scaleto time="0.1" x="0.9" y="0.9"/>
+				</action>
+			</touchbegan>
+			<touchend>
+				<action id="this:image">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+				<action id="this:label">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+			</touchend>
+			<touchcancel>
+				<action id="this:image">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+				<action id="this:label">
+					<scaleto time="0.25" x="1" y="1"/>
+				</action>
+			</touchcancel>
+		</layout>
+		<!-- Gợi ý bỏ lượt arrow -->
+		<layout type="relative" align="center" x="-480" y="-250" local_z="20">
+        <img name="arrow" atlas="atlas/card_game.plist" frame="arrow.png" hashkey="arrow" visible="false" scale="1.5" anchor-x="0.5" anchor-y="0.0"/>
+        <runaction>
+            <action id="this:arrow">
+                <repeatforever>
+                    <sequence>
+                        <moveby time="0.2" y="20"/>
+                        <moveby time="0.2" y="-20"/>
+                    </sequence>
+                </repeatforever>
+            </action>
+        </runaction>
+		</layout>
+
+		<!-- 4 button seat -->
+        <group style="xml/game/game_seat.xml" x="0" y="-270" scale="1.0" touch="true" touchdelegate="seat_touch" hashkey="seat_1" visible="false" />
+        <group style="xml/game/game_seat.xml" x="500" y="0" scale="1.0" touch="true" touchdelegate="seat_touch" hashkey="seat_2" visible="false" />
+        <group style="xml/game/game_seat.xml" x="0" y="270" scale="1.0" touch="true" touchdelegate="seat_touch" hashkey="seat_3" visible="false" />
+        <group style="xml/game/game_seat.xml" x="-500" y="0" scale="1.0" touchdelegate="seat_touch" touch="true" hashkey="seat_4" visible="false" />
+        <!-- 4 player -->
+        <group style="xml/game/card_table_player.xml" x="0" y="-260" hashkey="player_1" visible="false">
+            <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_1.png"/>
+        </group>
+        <group style="xml/game/card_table_player.xml" x="480" y="0" hashkey="player_2" visible="false">
+            <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_2.png"/>
+        </group>
+        <group style="xml/game/card_table_player.xml" x="0" y="260" hashkey="player_3" visible="false">
+            <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_3.png"/>
+        </group>
+        <group style="xml/game/card_table_player.xml" x="-480" y="0" hashkey="player_4" visible="false">
+            <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_4.png"/>
+        </group>
+
+        <group style="xml/game/card.xml" x="-200" y="0" clonekey="card" visible="false" scale="0.9" local_z="1" touch="true" touchdelegate="card_touch">
+		</group>
+
+		<group style="xml/game/fakecard.xml" clonekey="fakecard_0" scale="1.5" visible="false"/>
+		<group style="xml/game/fakecard.xml" clonekey="fakecard_1" scale="1.5" visible="false"/>
+		<group style="xml/game/fakecard.xml" clonekey="fakecard_2" scale="1.5" visible="false"/>
+		<group style="xml/game/fakecard.xml" clonekey="fakecard_3" scale="1.5" visible="false"/>
+
+        <bundle id="4"> <!-- center key-->
+            <key id="0"> <!-- remain card key -->
+                <point x="0" y="0" scale="0.75" rotate="0" local_z="5"/>
+            </key>
+			<key id="100"> <!-- show delta money of me -->
+                <point x="-520" y="-120" scale="2.0" rotate="0" local_z="1000"/>
+            </key>
+			 <key id="1"> <!--Tu quy ok-->
+				<point x="-72" y="-50" scale="1.5" rotate="0" local_z="1" copy="13" offset_x="48" offset_local_z="1"/>
+			</key>
+			<key id="2"> <!--5 doi thong ok-->
+				<point x="-216" y="-50" scale="1.5" rotate="0" local_z="1" copy="13" offset_x="48" offset_local_z="1"/>
+			</key>
+			<key id="3"> <!--6 doi thong-->
+				<point x="-264" y="-50" scale="1.5" rotate="0" local_z="1" copy="13" offset_x="48" offset_local_z="1"/>
+			</key>
+			<key id="4"> <!--3 doi thong-->
+				<point x="-120" y="-50" scale="1.5" rotate="0" local_z="1" copy="13" offset_x="48" offset_local_z="1"/>
+			</key>
+        </bundle>
+		<bundle id="0"> <!-- seat 0 bundle -->
+			<key id="0"> <!-- player view key-->
+				<point x="0" y="-240" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="1"> <!-- player play key-->
+				<point x="100" y="-240" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="2"> <!-- player user play key-->
+				<point x="-520" y="-180" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="3"> <!-- seat key-->
+				<point x="0" y="-250" scale="1.0" rotate="-180.0" local_z="-1"/>
+			</key>
+			<key id="4"> <!-- card remain key-->
+				<point x="0" y="-240" scale="0.9" rotate="0" local_z="4" copy="13"/>
+			</key>
+			<key id="5"> <!-- card on hand key-->
+				<point x="-400" y="-180" scale="1.5" rotate="0" local_z="14" copy="13" offset_x="70" offset_local_z="1"/>
+			</key>
+			<key id="6"> <!-- fight card key-->
+				<point x="-50" y="-70" scale="0.9" rotate="0" local_z="0" copy="13" offset_x="30" offset_local_z="1"/>
+			</key>
+			<key id="7"> <!-- show delta money-->
+				<point x="100" y="-160" scale="2.0" rotate="0" local_z="3"/>
+			</key>
+			<key id="8"> <!--show card remain finish-->
+				<point x="100" y="-240" scale="0.9" local_z="13" copy="13" offset_x="-30" offset_local_z="-1"/>
+			</key>
+			<key id="9"> <!--show number leaf-->
+				<point x="0" y="-200" local_z="13"/>
+			</key>
+		</bundle>
+		<bundle id="1"> <!-- seat 1 bundle -->
+			<key id="0"> <!-- player view key-->
+				<point x="480" y="0" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="1"> <!-- player play key-->
+				<point x="480" y="0" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="2"> <!-- player user play key-->
+				<point x="-520" y="-200" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="3"> <!-- seat key-->
+				<point x="500" y="0" scale="1.0" rotate="90.0" local_z="-1"/>
+			</key>
+			<key id="4"> <!-- card remain key-->
+				<point x="380" y="0" scale="0.9" rotate="0" local_z="4" copy="13"/>
+			</key>
+			<key id="6"> <!-- fight card key-->
+				<point x="50" y="0" scale="0.9" rotate="0" local_z="0" copy="13" offset_x="30" offset_local_z="1"/>
+			</key>
+			<key id="7"> <!-- show delta money-->
+				<point x="480" y="80" scale="2.0" rotate="0" local_z="3"/>
+			</key>
+			<key id="8"> <!-- show card remain finish-->
+				<point x="400" y="150" scale="0.9" local_z="1" copy="13" offset_y="-30" offset_local_z="1"/>
+			</key>
+			<key id="9"> <!--show number leaf-->
+				<point x="400" y="190" local_z="13"/>
+			</key>
+		</bundle>
+		<bundle id="2"> <!-- seat 2 bundle -->
+			<key id="0"> <!-- player view key-->
+				<point x="0" y="260" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="1"> <!-- player play key-->
+				<point x="100" y="260" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="2"> <!-- player user play key-->
+				<point x="-520" y="-200" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="3"> <!-- seat key-->
+				<point x="0" y="270" scale="1.0" rotate="0" local_z="-1"/>
+			</key>
+			<key id="4"> <!-- card remain key-->
+				<point x="0" y="260" scale="0.9" rotate="0" local_z="4" copy="13"/>
+			</key>
+			<key id="6"> <!-- fight card key-->
+				<point x="-50" y="100" scale="0.9" rotate="0" local_z="0" copy="13" offset_x="30" offset_local_z="1"/>
+			</key>
+			<key id="7"> <!-- show delta money-->
+				<point x="100" y="180" scale="2.0" rotate="0" local_z="3"/>
+			</key>
+			<key id="8"> <!-- show card remain finish-->
+				<point x="100" y="260" scale="0.9" local_z="13" copy="13" offset_x="-30" offset_local_z="-1"/>
+			</key>
+			<key id="9"> <!--show number leaf-->
+				<point x="0" y="300" local_z="13"/>
+			</key>
+		</bundle>
+		<bundle id="3"> <!-- seat 3 bundle -->
+			<key id="0"> <!-- player view key-->
+				<point x="-480" y="0" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="1"> <!-- player play key-->
+				<point x="-480" y="0" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="2"> <!-- player user play key-->
+				<point x="-520" y="-200" scale="1.0" rotate="0" local_z="5"/>
+			</key>
+			<key id="3"> <!-- seat key-->
+				<point x="-500" y="0" scale="1.0" rotate="-90.0" local_z="-1"/>
+			</key>
+			<key id="4"> <!-- card remain key-->
+				<point x="-380" y="0" scale="0.9" rotate="0" local_z="4" copy="13"/>
+			</key>
+			<key id="6"> <!-- fight card key-->
+				<point x="-250" y="0" scale="0.9" rotate="0" local_z="0" copy="13" offset_x="30" offset_local_z="1"/>
+			</key>
+			<key id="7"> <!-- show delta money-->
+				<point x="-480" y="80" scale="2.0" rotate="0" local_z="3"/>
+			</key>
+			<key id="8"> <!-- show card remain finish-->
+				<point x="-400" y="150" scale="0.9" local_z="1" copy="13" offset_y="-30" offset_local_z="1"/>
+			</key>
+			<key id="9"> <!--show number leaf-->
+				<point x="-400" y="190" local_z="13"/>
+			</key>
+		</bundle>
+    </layout>
+</layout>

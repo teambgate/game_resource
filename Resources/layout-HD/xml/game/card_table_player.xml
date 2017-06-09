@@ -1,0 +1,15 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="125" height="125" type="relative" touch="true" touchdelegate="onclick" cascade_opacity="true" rotation_around_scale="1.0">
+    <img atlas="atlas/card_game.plist" frame="avatar_countdown_bg.png" scale="1.14" align="center" cascade_opacity="true" local_z="2"/>
+    <layout name="avatar_container" align="center" local_z="2" width="100" height="100" type="relative" cascade_opacity="true">
+        <img name="avatar" src="texture/scene/avatar_default.png" preserve_atlas="atlas/card_game.plist" preserve_frame="avatar_1.png" align="center" clip_circle="true" width="fill_parent" height="fill_parent" hashkey="avatar" cascade_opacity="true"/>
+        <img name="bound" atlas="atlas/card_game.plist" frame="avatar_bolder_big.png" width="125" height="125" align="center" cascade_opacity="true"/>
+    </layout>
+    <img atlas="atlas/card_game.plist" local_z="2" frame="avatar_frame_money.png" align="bottom_center_horizontal" cascade_opacity="true" margin_bottom="-35"/>
+    <label width="match_parent" font="fonts/font30.fnt" local_z="2" size="30" align="bottom_center_horizontal" color="yellow" hashkey="money" type="nowrap" cascade_opacity="true" margin_bottom="-30" scale="0.6666667">200</label>
+    <img atlas="atlas/card_game.plist" local_z="2" frame="avatar_name_big.png" align="bottom_center_horizontal" cascade_opacity="true" margin_bottom="-2"/>
+    <label width="match_parent" font="fonts/font30.fnt"  local_z="2" size="30" align="bottom_center_horizontal" hashkey="name" type="nowrap" max_character="7" cascade_opacity="true" margin_bottom="-2" scale="0.533333" color="black">tukiki...</label>
+    <img atlas="atlas/card_game.plist"  local_z="2" frame="home.png" align="left_bottom" width="wrap_content" height="wrap_content" margin_bottom="20" hashkey="host_flag" visible="false" scale="1.5" cascade_opacity="true"/>
+</layout>

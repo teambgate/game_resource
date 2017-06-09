@@ -1,0 +1,3 @@
+<layout width="match_parent" height="match_parent" type="relative">
+    <label font="fonts/SF-UI-Text-Medium.otf" size="60" align="center" color="yellow" width="match_parent" padding_left="100" hashkey="content" visible="false">Bảo trì server</label>
+</layout>

@@ -1,0 +1,219 @@
+<touchdelegates>
+  <touchdelegate name="bet_item"/>
+  <touchdelegate name="bet_small"/>
+  <touchdelegate name="bet_big"/>
+  <touchdelegate name="touch_play"/>
+  <touchdelegate name="touch_auto"/>
+  <touchdelegate name="clear_bet"/>
+  <touchdelegate name="exit"/>
+  <touchdelegate name="add_all_bet"/>
+  <touchdelegate name="change_type"/>
+  <touchdelegate name="choice_bet"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" background="texture/white_2x2.png" color="black" opacity="130" touch="true">
+	<layout width="953" height="666" type="relative" align="center">
+		<img atlas="atlas/xeng.plist" frame="text_xenghoaqua.png" align="top_center_horizontal" margin_top="-5" local_z="2"/>
+		<layout type="absolute" align="center" hashkey="game_center" scale="1">
+			<img src="texture/scene/board_xeng.png"/>	
+			<layout hashkey="animation-layout" width="590" height="330" x="0" y="30">		
+				<group style="xml/game/xeng/xengItem.xml" clonekey="item" visible="false"/>
+				<label font="fonts/white_font.fnt" size="30" visible="false" clonekey="money-win">x2</label>
+				<group style="xml/game/xeng/infoBetItem.xml" clonekey="infobet" visible="false" scale="1"/>	
+			</layout>
+			<img atlas="atlas/xeng.plist" frame="effect.png" x="0" y="0" scale="1.5" hashkey="light" visible="false"/>
+			
+			<img atlas="atlas/xeng.plist" frame="o_ketqua.png" x="0" y="50" scale="1"/>
+			<group style="xml/game/xeng/dotEffect.xml" hashkey="doteffect" x="0" y="50"/>
+			<group style="xml/game/xeng/xengItem.xml" hashkey="resultItem" visible="true" scale="1" x="0" y="50"/>
+			<img atlas="atlas/xeng.plist" frame="o_digitalbig.png" x="0" y="-30" scale="1"/>
+			<label font="fonts/DS-DIGIB.TTF" size="45" type="nowrap" hashkey="double-result" x="0" y="-30">0</label>
+			<img atlas="atlas/xeng.plist" frame="text_bigwin.png" x="0" y="136" scale="1" hashkey="bigwin" visible="false"/>		
+			
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_1" bindtouch="onclick=bet_item" touch="true"/>
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_2" bindtouch="onclick=bet_item" touch="true"/>
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_3" bindtouch="onclick=bet_item" touch="true"/>
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_4" bindtouch="onclick=bet_item" touch="true"/>
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_5" bindtouch="onclick=bet_item" touch="true"/>
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_6" bindtouch="onclick=bet_item" touch="true"/>
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_7" bindtouch="onclick=bet_item" touch="true"/>
+			<group style="xml/game/xeng/itemBetButton.xml" width="70" height="98" scale="1" hashkey="betitem_8" bindtouch="onclick=bet_item" touch="true"/>
+			<layout x="-140" y="-30" type="relative">
+				<group style="xml/game/xeng/button.xml" align="center" width="87" height="44" scale="1" visible="true" touch="true" local_z="5" hashkey="betSmall" bindtouch="onclick=bet_small">
+					<changetexture target="this:image" atlas="atlas/xeng.plist" frame="big_small1.png"/>
+					<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="big_small2.png"/>	
+				</group>
+				<label font="fonts/white_font.fnt" scale="1" type="nowrap" local_z="5" hashkey="number_min" align="center">1-6</label>
+			</layout>	
+			<layout x="140" y="-30" type="relative">
+				<group style="xml/game/xeng/button.xml" width="87" height="44" scale="1" align="center" visible="true" touch="true" local_z="5"  hashkey="betBig" bindtouch="onclick=bet_big">
+					<changetexture target="this:image" atlas="atlas/xeng.plist" frame="big_small1.png"/>
+					<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="big_small2.png"/>
+				</group>
+				<label font="fonts/white_font.fnt" scale="1" type="nowrap" local_z="5" hashkey="number_max" align="center">7-12</label> 
+			</layout>
+			<group style="xml/game/xeng/button.xml" x="385" y="-90" scale="1" width="132" height="181" visible="true" touch="true" local_z="5"  hashkey="playButton" bindtouch="onclick=touch_play">
+				<changetexture target="this:image" atlas="atlas/xeng.plist" frame="bt_spin1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="bt_spin2.png"/>
+			</group>
+			<group style="xml/game/xeng/button.xml" x="385" y="70" width="132" height="112" scale="1" visible="true" touch="true" local_z="5"  hashkey="autoButton" bindtouch="onclick=touch_auto">
+				<changetexture target="this:image" atlas="atlas/xeng.plist" frame="bt_autospin1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="bt_autospin2.png"/>
+			</group>
+			<group style="xml/game/xeng/button.xml" x="385" y="180" width="130" height="63" scale="1" touch="true" local_z="10" hashkey="exit" bindtouch="onclick=exit">
+				<changetexture target="this:image" atlas="atlas/xeng.plist" frame="bt_exit1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="bt_exit2.png"/>
+			</group>
+			
+			<group style="xml/game/xeng/button.xml" width="70" height="98" scale="1" x="-360" y="-250" touch="true" hashkey="clear_bet" bindtouch="onclick=clear_bet">
+				<changetexture target="this:image" atlas="atlas/xeng.plist" frame="bt_clearall1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="bt_clearall2.png"/>
+			</group>
+			<group style="xml/game/xeng/button.xml" width="70" height="98" scale="1" x="360" y="-250" touch="true" hashkey="add_all" bindtouch="onclick=add_all_bet">
+				<changetexture target="this:image" atlas="atlas/xeng.plist" frame="bt_allplusone1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="bt_allplusone2.png"/>
+			</group>
+			
+			<group style="xml/game/xeng/button.xml" width="130" height="63" scale="1" x="-385" y="180" touch="true" hashkey="change_type" bindtouch="onclick=change_type">
+				<changetexture target="this:image" atlas="atlas/xeng.plist" frame="changemoney1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/xeng.plist" frame="changemoney2.png"/>
+			</group>
+			<listview width="130" height="300" x="-385" y="-15" local_z="5" type="vertical" bounce="false" hashkey="list_bet">
+				<layout width="130" height="70" type="relative" align="center" clonekey="room-item" touch="true" touchdelegate="choice_bet">
+					<img atlas="atlas/xeng.plist" frame="room-on.png" name="room_on" align="center"/>
+					<img atlas="atlas/xeng.plist" frame="room-off.png" name="room_off" align="center"/>
+					<label font="fonts/yellow_font.fnt" align="center" name="lbbet" color="BLACK">0</label>
+				</layout>
+			</listview>
+
+			<label font="fonts/DS-DIGIB.TTF" size="40" color="GREEN" scale="1" anchor-x="1" visible="true" type="nowrap" hashkey="money-credit" x="100" y="255">0</label>
+			<label font="fonts/DS-DIGIB.TTF" size="40" color="GREEN" scale="1" anchor-x="1" visible="true" type="nowrap" hashkey="money-bonus" x="390" y="255">0</label>
+			<label font="fonts/DS-DIGIB.TTF" size="40" color="GREEN" scale="1" anchor-x="1" visible="true" type="nowrap" hashkey="money-user" x="-180" y="255">0</label>
+			<img atlas="atlas/xeng.plist" frame="dong-chip.png" hashkey="chip_1" x="130" y="255"/>
+			<img atlas="atlas/xeng.plist" frame="dong-chip.png" hashkey="chip_2" x="420" y="255"/>
+			<img atlas="atlas/xeng.plist" frame="dong-chip.png" hashkey="chip_3" x="-150" y="255"/>
+			<img atlas="atlas/xeng.plist" frame="dong-coin.png" hashkey="coin_1" x="130" y="255"/>
+			<img atlas="atlas/xeng.plist" frame="dong-coin.png" hashkey="coin_2" x="420" y="255"/>
+			<img atlas="atlas/xeng.plist" frame="dong-coin.png" hashkey="coin_3" x="-150" y="255"/>
+			
+			<img atlas="atlas/xeng.plist" frame="dong-chip.png" visible="false" clonekey="chip_effect" x="420" y="255"/>
+			<img atlas="atlas/xeng.plist" frame="dong-coin.png" visible="false" clonekey="coin_effect" x="420" y="255"/>
+			
+			<layout type="relative" align="center" hashkey="item_bet">
+			</layout>	
+			<img atlas="atlas/xeng.plist" frame="oso.png" clonekey="oso" visible="false"/>
+			<bundle id="0"> <!-- bet 0 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="-252" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="-252" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="-260" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="-542" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+			<bundle id="1"> <!-- bet 1 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="-180" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="-180" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="-180" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="-433" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+			
+			<bundle id="2"> <!-- bet 2 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="-108" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="-108" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="-108" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="-328" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+			<bundle id="3"> <!-- bet 3 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="-36" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="-36" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="-36" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="-218" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+			<bundle id="4"> <!-- bet 4 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="36" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="36" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="36" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="-126" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+			<bundle id="5"> <!-- bet 5 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="108" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="108" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="108" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="-16" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+			<bundle id="6"> <!-- bet 6 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="180" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="180" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="180" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="200" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+			<bundle id="7"> <!-- bet 7 bundle -->
+				<key id="0"> <!-- button-bet-->
+					<point x="252" y="-250" scale="1.0" rotate="0" local_z="2"/>
+				</key>
+				<key id="1"> <!-- info-bet-->
+					<point x="252" y="-165" scale="1.0" rotate="0" local_z="5"/>
+				</key>
+				<key id="3"> <!-- money-win-->
+					<point x="252" y="-265" scale="1.0" rotate="0" local_z="3"/>
+				</key>
+				<key id="2"> <!-- clear-bet-->
+					<point x="205" y="-304" scale="1.5" rotate="0" local_z="3"/>
+				</key>
+			</bundle>
+		</layout>
+	</layout>
+</layout>

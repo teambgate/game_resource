@@ -1,0 +1,8 @@
+<layout type="vertical">
+    <listview type="vertical" width="match_parent" height="match_parent">
+        <layout width="match_parent" height="wrap_content" type="vertical">
+            <layout height="20"></layout>
+            <label width="match_parent" padding_left="40" font="fonts/SF-UI-Text-Regular.otf" size="25" hashkey="content" align="center">content </label>
+        </layout>
+    </listview>
+</layout>

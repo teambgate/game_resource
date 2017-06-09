@@ -1,0 +1,7 @@
+<touchdelegates>
+    <touchdelegate name="click"/>
+</touchdelegates>
+<layout width="100" height="100" type="relative" touchdelegate="click">
+    <img name="image_1" width="match_parent" height="match_parent" align="center" hashkey="first" local_z="1"/>
+    <img name="image_2" width="match_parent" height="match_parent" align="center" hashkey="second" local_z="1"/>
+</layout>

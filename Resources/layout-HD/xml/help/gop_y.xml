@@ -1,0 +1,16 @@
+<touchdelegates>
+    <touchdelegate name="ok"/>
+</touchdelegates>
+<layout type="vertical">
+    <layout name="username" width="match_parent" padding_left="20" height="60" align="center" type="relative">
+        <img atlas="primitive/primitive.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" color="#000000" opacity="100" align="center" cap_top="10" cap_left="10" cap_right="10" cap_bottom="10"/>
+        <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Chủ đề" placeholdercolor="#afafaf" hashkey="title" inputflag="sentence" inputmode="singleline"/>
+    </layout>
+    <layout name="username" width="match_parent" padding_left="20" margin_top="10" height="match_parent" padding_top="160" align="center" type="relative">
+        <img atlas="primitive/primitive.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" color="#000000" opacity="100" align="center" cap_top="10" cap_left="10" cap_right="10" cap_bottom="10"/>
+        <textfield name="box" width="match_parent" height="match_parent" padding_top="20" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Nội dung" placeholdercolor="#afafaf" hashkey="content" inputflag="sentence" inputmode="any"/>
+    </layout>
+    <group style="xml/ui/button_style_1.xml" align="center" margin_top="25" scale="1.2" touch="true" bindtouch="onclick=ok">
+        <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_ok_up.png"/>
+    </group>
+</layout>

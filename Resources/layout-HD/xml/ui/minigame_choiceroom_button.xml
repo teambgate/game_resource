@@ -1,0 +1,22 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="260" height="wrap_content" type="vertical" touchdelegate="onclick">
+    <img name="image" src="texture/minigame_choiceroom/icon_baucua_long.png" hashkey="image" align="center" width="260" height="wrap_content" />
+
+    <touchbegan>
+		<action id="this">
+			<scaleto time="0.1" x="0.9" y="0.9"/>
+		</action>
+	</touchbegan>	
+	<touchend>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this">
+			<scaleto time="0.1" x="1" y="1"/>
+		</action>
+	</touchcancel>
+</layout>

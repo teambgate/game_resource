@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SUCCESS</key>
+	<string>Bạn đã nạp tiền thành công : </string>
+	<key>TOTAL</key>
+	<string>Tổng số tiền hiện tại của bạn là :</string>
+</dict>
+</plist>

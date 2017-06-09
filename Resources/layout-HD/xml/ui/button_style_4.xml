@@ -1,0 +1,21 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" type="horizontal" touchdelegate="onclick" cascade_opacity="true">
+    <label name="label" font="fonts/SF-UI-Display-Regular.otf" size="30" color="white" type="nowrap" align="center" hashkey="label" cascade_opacity="true">button</label>
+    <touchbegan>
+        <action id="this:label">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:label">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:label">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

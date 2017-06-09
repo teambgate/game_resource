@@ -1,0 +1,43 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true">
+	<img src="texture/white_2x2.png" color="black" opacity="150" width="1200" height="800" scale="1.5" align="center"/>
+    <layout width="909" height="650" align="center" type="relative">
+                <img src="texture/scene/lich_su_hu_sao/khung.png" width="909" height="560" align="top_center_horizontal" margin_top="85"/>
+		<img src="texture/scene/lich_su_hu_sao/bang.png" align="top_center_horizontal" margin_top="200"/>
+		<img src="texture/scene/lich_su_hu_sao/txt_lichsuhusao.png" align="top_center_horizontal" margin_top="10"/>
+		<layout width="match_parent" height="match_parent" align="center" type="relative" hashkey="history_layout">
+			<layout width="match_parent" height="match_parent" type="relative" align="top_center_horizontal" margin_top="10">
+				<layout width="985" height="62" type="relative" align="top_center_horizontal" margin_top="190" scale="1.435">
+					<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="17"  color="white" align="left_center_vertical" margin_left="260">Thời gian</label>
+					<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="17"  color="white" align="left_center_vertical" margin_left="410">Tài khoản</label>
+					<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="17"  color="white" align="left_center_vertical" margin_left="533">Mức cược</label>
+					<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="17"  color="white" align="left_center_vertical" margin_left="647">Thắng hũ sao</label>
+				</layout>
+					<!--list view-->
+				<listview width="985" height="320" align="top_center_horizontal" margin_top="260" type="vertical">
+					<layout width="985" height="wrap_content" type="vertical" hashkey="history_list">
+						<layout width="985" height="240" type="relative" clonekey="loading_data" align="center">
+							<label font="fonts/SF-UI-Text-Regular.otf" size="32" opacity="230" align="center">Đang tải dữ liệu...</label>
+						</layout>
+
+						<layout width="985" height="49" type="relative" align="center" clonekey="history_item">
+							<layout width="689" height="49" type="absolute"
+							align="center">
+								<label font="fonts/SF-UI-Text-Regular.otf" size="22" x="64" y="25" opacity="230" color="white" hashkey="thoi_gian">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="22" x="283" y="25" opacity="230" color="white" hashkey="taikhoan" max_characters="15">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="22" x="460" y="25" opacity="230" color="white" hashkey="bet">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="22" x="640" y="25" opacity="230" color="white" hashkey="thanghusao">x</label>
+							</layout>
+						</layout>
+					</layout>
+				</listview>
+			</layout>
+		</layout>
+
+        <group style="xml/ui/button_style_1.xml" align="top_right"  margin_top="115" margin_right="25"  touch="true" bindtouch="onclick=exit">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+    </layout>
+</layout>

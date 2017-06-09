@@ -1,0 +1,4 @@
+ <layout width="wrap_content" height="wrap_content" type="relative">
+	<img hashkey="effect_blackjack" name="effect_blackjack" atlas="atlas/blackjack.plist" frame="effect_blackjack.png" align="center"/>
+	<img hashkey="text_blackjack" name="text_blackjack" atlas="atlas/blackjack.plist" frame="text_blackjack.png" align="center"/>
+</layout>

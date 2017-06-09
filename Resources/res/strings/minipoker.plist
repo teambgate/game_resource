@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GAME_FREE</key>
+	<string>Chế độ chơi miễn phí</string>
+    <key>GAME_MONEY</key>
+	<string>Chế độ chơi thật</string>
+    <key>TYPE_0</key>
+	<string>HIGH_CARD_OR_PAIR_J_LOWER</string>
+    <key>TYPE_1</key>
+	<string>Pair J+</string>
+    <key>TYPE_2</key>
+	<string>TWO PAIR</string>
+    <key>TYPE_3</key>
+	<string>THREE OF A KIND</string>
+    <key>TYPE_4</key>
+	<string>STRAIGHT</string>
+    <key>TYPE_5</key>
+	<string>FLUSH</string>
+    <key>TYPE_6</key>
+	<string>FULL HOUSE</string>
+    <key>TYPE_7</key>
+	<string>FOUR OF A KIND</string>
+    <key>TYPE_8</key>
+	<string>STRAIGHT FLUSH</string>
+    <key>TYPE_9</key>
+	<string>ROYAL FLUSH</string>
+    <key>NOT_ENOUGH_MONEY</key>
+	<string>Bạn không đủ tiền để thực hiện thao tác này</string>
+	<key>SPINNING</key>
+	<string>Thao tác không hợp lệ</string>
+	<key>RULE_CONTENT</key>
+	<string>HƯỚNG DẪN GAME MINI POKER\n\n\nMini Poker là trò chơi kết hợp giữa slotmachine và poker 5 lá.\n\nCách chơi mini Poker vô cùng đơn giản, người chơi chỉ cần thực hiện các bước sau:\nBước 1: Chọn icon chơi tiền thật hoặc tiền miễn phí\nBước 2: Chọn mức cược\nBước 3: Gạt cần và chờ đợi kết quả quay.\nChú ý: Với mỗi mệnh giá tiền thật sẽ có một quỹ thưởng khác nhau. Người chơi sẽ giành được quỹ thưởng này nếu quay được vào bộ bài “THÙNG PHÁ SẢNH J”.</string>
+	<key>message_win_jackpot_1</key>
+	<string>Chúc mừng người chơi</string>
+	<key>message_win_jackpot_2</key>
+	<string>nổ hũ game Minipoker trị giá</string>
+</dict>
+</plist>

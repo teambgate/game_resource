@@ -1,0 +1,48 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" background="texture/white_2x2.png" color="black" opacity="150">
+    <layout width="1010" height="580" align="center" background="texture/new_ui/board_luatchoi.png" type="relative">
+        <img src="texture/scene/txt_lichsudatcuoc.png" align="top_center_horizontal" margin_top="13" scale="1.0"/>
+                <img src="texture/scene/fr_lichsudatcuoc_baucua.png" width="980" height="480" align="top_center_horizontal" margin_top="80"/>
+		<layout width="match_parent" height="match_parent" align="center" type="relative" hashkey="history_layout">
+			<!-- <img atlas="atlas/mini_tai_xiu.plist" frame="lich-su.png" align="top_center_horizontal" margin_top="35" scale="1.6"/> -->
+			<layout width="match_parent" height="match_parent" type="relative" align="top_center_horizontal" margin_top="50">
+				<!-- <layout width="985" height="62" type="relative" align="top_center_horizontal" margin_top="60" scale="1.435">
+					<img atlas="atlas/mini_tai_xiu.plist" frame="result-title.png" align="center"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="phien.png" align="left_center_vertical" margin_left="162"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="thoi-gian.png" align="left_center_vertical" margin_left="290"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="ket-qua.png" align="left_center_vertical" margin_left="470"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="dat.png" align="left_center_vertical" margin_left="620"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="nhan.png" align="left_center_vertical" margin_left="730"/>
+				</layout> -->
+					<!--list view-->
+				<listview width="985" height="410" align="top_center_horizontal" margin_top="94" type="vertical">
+					<layout width="985" height="wrap_content" type="vertical" hashkey="history_list">
+						<layout width="985" height="300" type="relative" clonekey="loading_data" align="center">
+							<label font="fonts/SF-UI-Text-Regular.otf" size="32" opacity="230" align="center">Đang tải dữ liệu...</label>
+						</layout>
+
+						<layout width="985" height="69" type="relative" align="center" clonekey="history_item">
+							<!-- <img atlas="atlas/mini_tai_xiu.plist" frame="result-tab.png" width="985" height="69" align="center"/> -->
+							<layout width="689" height="69" type="absolute"
+							align="center">
+								<label font="fonts/SF-UI-Text-Regular.otf" size="24" x="-90" y="35" opacity="230" hashkey="phien">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="24" x="120" y="35" opacity="230" hashkey="thoi_gian">x</label>
+								<group style="xml/game/tomcuaca/dice.xml" x="300" y="35" scale="0.9" hashkey="dice_0"/>
+								<group style="xml/game/tomcuaca/dice.xml" x="360" y="35" scale="0.9" hashkey="dice_1"/>
+								<group style="xml/game/tomcuaca/dice.xml" x="420" y="35" scale="0.9" hashkey="dice_2"/>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="24" x="558" y="35" opacity="230" hashkey="dat">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="24" x="730" y="35" opacity="230" hashkey="nhan">x</label>
+							</layout>
+						</layout>
+					</layout>
+				</listview>
+			</layout>
+		</layout>
+
+        <group style="xml/ui/button_style_3.xml" width="70" height="70" align="top_right"  margin_top="4" margin_right="4"  touch="true" bindtouch="onclick=exit">
+            <changetexture target="this:image" src="texture/new_login/bt_close.png"/>
+        </group>
+    </layout>
+</layout>

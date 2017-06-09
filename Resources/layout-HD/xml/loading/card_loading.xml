@@ -1,0 +1,169 @@
+<layout width="match_parent" height="match_parent" type="relative" align="center" cascade_opacity="true">
+    <layout align="center" type="absolute" cascade_opacity="true">
+        <group style="xml/loading/card_loading_item.xml" rotate="144" local_z="10">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <rotateby time="1.0" r="360"/>
+                            <delay time="1.5"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="180" local_z="9" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.1"/>
+                            <show/>
+                            <delay time="1.2" />
+                            <rotateby time="0.9" r="324"/>
+                            <hide />
+                            <rotateto time="0" r="180"/>
+                            <delay time="0.3"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="216" local_z="8" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.2"/>
+                            <show/>
+                            <delay time="1.1" />
+                            <rotateby time="0.8" r="288"/>
+                            <hide />
+                            <rotateto time="0" r="216"/>
+                            <delay time="0.4"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="252" local_z="7" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.3"/>
+                            <show/>
+                            <delay time="1.0" />
+                            <rotateby time="0.7" r="252"/>
+                            <hide />
+                            <rotateto time="0" r="252"/>
+                            <delay time="0.5"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="288" local_z="6" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.4"/>
+                            <show/>
+                            <delay time="0.9" />
+                            <rotateby time="0.6" r="216"/>
+                            <hide />
+                            <rotateto time="0" r="288"/>
+                            <delay time="0.6"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="324" local_z="5" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.5"/>
+                            <show/>
+                            <delay time="0.8" />
+                            <rotateby time="0.5" r="180"/>
+                            <hide />
+                            <rotateto time="0" r="324"/>
+                            <delay time="0.7"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="360" local_z="4" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.6"/>
+                            <show/>
+                            <delay time="0.7" />
+                            <rotateby time="0.4" r="144"/>
+                            <hide />
+                            <rotateto time="0" r="360"/>
+                            <delay time="0.8"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="36" local_z="3" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.7"/>
+                            <show/>
+                            <delay time="0.6" />
+                            <rotateby time="0.3" r="108"/>
+                            <hide />
+                            <rotateto time="0" r="36"/>
+                            <delay time="0.9"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="72" local_z="2" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.8"/>
+                            <show/>
+                            <delay time="0.5" />
+                            <rotateby time="0.2" r="72"/>
+                            <hide />
+                            <rotateto time="0" r="72"/>
+                            <delay time="1.0"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+        <group style="xml/loading/card_loading_item.xml" rotate="108" local_z="1" visible="false">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <sequence>
+                            <delay time="0.9"/>
+                            <show/>
+                            <delay time="0.4" />
+                            <rotateby time="0.1" r="36"/>
+                            <hide />
+                            <rotateto time="0" r="108"/>
+                            <delay time="1.1"/>
+                        </sequence>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </group>
+    </layout>
+</layout>

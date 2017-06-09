@@ -1,0 +1,6 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" touchdelegate="onclick" cascade_opacity="true">
+    <img name="image" atlas="atlas/lobby.plist" frame="button_register.png" hashkey="image"/>
+</layout>

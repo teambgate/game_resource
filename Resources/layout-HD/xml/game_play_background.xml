@@ -1,0 +1,3 @@
+<layout width="match_parent" height="match_parent" align="center" type="relative">
+    <img src="texture/scene/bg2.png" align="center" width="fill_parent" height="fill_parent" blend="disable"/>
+</layout>

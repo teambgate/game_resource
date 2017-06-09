@@ -1,0 +1,10 @@
+<layout type="relative" cascade_opacity="true">
+    <listview width="match_parent" height="match_parent" type="vertical" align="center" cascade_opacity="true">
+        <layout width="wrap_content" height="wrap_content" type="horizontal" align="center" hashkey="container" cascade_opacity="true">
+            <layout width="wrap_content" height="wrap_content" type="vertical" margin_top="30" margin_left="25" margin_right="25" clonekey="col" cascade_opacity="true">
+                <group style="xml/nhan_thuong/card_collection_item.xml" margin_bottom="40" align="center" clonekey="item">
+                </group>
+            </layout>
+        </layout>
+    </listview>
+</layout>

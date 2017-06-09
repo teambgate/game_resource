@@ -1,0 +1,9 @@
+<layout width="wrap_content" height="wrap_content" type="relative">
+    <img atlas="atlas/newthreecardpoker.plist" frame="x100.png" align="center" hashkey="coinImage"
+	frame_atlas_custom="atlas/newthreecardpoker.plist"
+	frame_1="x100.png"
+	frame_2="x500.png"
+	frame_3="x1000.png"
+	frame_4="x5000.png"
+	frame_5="x10000.png" scale="1"/>
+</layout>

@@ -1,0 +1,26 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" type="vertical" touch="true" touchdelegate="onclick" cascade_opacity="true">
+    <layout name="container" width="wrap_content" height="170" type="horizontal" align="center" cascade_opacity="true">
+        <img name="image" atlas="atlas/lobby.plist" frame="present_default.png" height="match_parent" width="wrap_content" hashkey="image"/>
+    </layout>
+    <layout atlas="atlas/lobby.plist" frame="present_board_down.png" width="250" height="50" type="relative" align="center" cascade_opacity="true">
+            <label name="label" font="fonts/SF-UI-Text-Medium.otf" size="28" align="center" type="nowrap" hashkey="label" cascade_opacity="true">...</label>
+    </layout>
+    <touchbegan>
+        <action id="this:container:image">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:container:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:container:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

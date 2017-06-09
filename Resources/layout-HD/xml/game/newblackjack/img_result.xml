@@ -1,0 +1,3 @@
+ <layout width="wrap_content" height="wrap_content" type="relative">
+	<img hashkey="result" name="result" atlas="atlas/blackjack.plist" frame="win.png" align="center"/>
+</layout>

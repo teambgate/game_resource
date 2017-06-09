@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BET_TOP_ALL</key>
+	<string>TẤT CẢ</string>
+	<key>BET_BOTTOM</key>
+	<string>Cược min</string>
+	<key>MIN_TOP_ALL</key>
+	<string>TẤT CẢ</string>
+	<key>MIN_TOP_PLAYING</key>
+	<string>ĐANG CHƠI</string>
+	<key>MIN_BOTTOM</key>
+	<string>Cược max</string>
+	<key>PLAYERS_TOP</key>
+	<string>CẬP NHẬT</string>
+	<key>PLAYERS_BOTTOM</key>
+	<string>Số người chơi</string>
+	<key>PLAYER</key>
+	<string>Người chơi</string>
+	<key>INVITE_YOU</key>
+	<string>mời bạn chơi</string>
+	<key>TABLE</key>
+	<string>Bàn</string>
+	<key>TABLE_NOT_FOUND</key>
+	<string>Không tìm thấy bàn phù hợp !</string>
+</dict>
+</plist>

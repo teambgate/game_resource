@@ -1,0 +1,24 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout type="relative" touchdelegate="onclick">
+	<img name="image" atlas="atlas/card_game.plist" frame="button_bacay.png" width="match_parent" height="match_parent" align="center" hashkey="image"/>
+	<layout type="relative" width="match_parent" height="match_parent">
+		<label name="label" font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="28" scale_factor="0.93333" type="nowrap" color="white" align="center">Fold</label>
+	</layout>
+    <touchbegan>
+        <action id="this">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

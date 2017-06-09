@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EMPTY</key>
+	<string>Bạn chưa nhập mật khẩu !</string>
+	<key>NOT_ENOUGH</key>
+	<string>Mật khẩu phải có ít nhất 3 ký tự !</string>
+	<key>REMOVE</key>
+	<string>Đã xoá mật khẩu của bàn chơi !</string>
+	<key>SUCCESS</key>
+	<string>Đặt mật khẩu bàn chơi thành công !</string>
+	<key>WRONG</key>
+	<string>Mật khẩu không hợp lệ !</string>
+</dict>
+</plist>

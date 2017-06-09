@@ -1,0 +1,14 @@
+<layout type="relative" touch="true" align="center" scale="1.5">
+    <img name="loading" atlas="atlas/lobby.plist" frame="loading.png" align="center"/>
+    <layout align="location_left_of_center" relative_to="loading" type="absolute">
+        <img atlas="atlas/lobby.plist" frame="rotating.png"  x="29">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <rotateby time="1.25" r="360"/>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </img>
+    </layout>
+</layout>

@@ -1,0 +1,63 @@
+<touchdelegates>
+        <touchdelegate name="touchback"/>
+        <touchdelegate name="mail_touch"/>
+        <touchdelegate name="help_click"/>
+        <touchdelegate name="quick_play"/>
+        <touchdelegate name="facebook_click"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+        <group style="xml/slot_machine_choice_room_background.xml" align="center"/>
+
+        <layout type="absolute" align="center">
+                <!-- <img src="texture/slot_machine/light.png"/>
+                <img src="texture/slot_machine/shadow_light.png" y="-200"/> -->
+                <spine json="texture/effect_doi_thuong/light-slot.json"
+                        atlas="texture/effect_doi_thuong/light-slot.atlas"
+                        spine-scale="1.0" anim="animation" loop="true" y="-20"/>
+        </layout>
+        <layout width="1140" height="500" type="horizontal" align="center" scale="0.88" clip="false">
+                <layout width="360"/>
+                <pageview type="horizontal" width="450" height="500" threshold="80" hashkey="slot_layout" clip="false">
+
+                </pageview>
+                <layout visible="false">
+                        <layout width="450" height="466" type="relative" align="center" anchor-x="0" anchor-y="0" touch="true" cascade_opacity="true" clonekey="slotmachine_item_mega">
+                                <layout width="450" height="466" type="relative" align="center" anchor-x="0.5" anchor-y="0" hashkey="main_machine" cascade_opacity="true">
+                                        <img src="texture/slot_machine/slots_big.png" hashkey="image" align="center"/>
+                                        <layout align="top_left" margin_left="209" margin_top="220" type="relative" cascade_color="true">
+                                                <label font="fonts/font_slot.fnt" size="25" hashkey="money" type="nowrap" align="center" cascade_opacity="true"  cascade_color="true">999.999.999</label>
+                                        </layout>
+                                        <label font="fonts/font_slot.fnt" size="27" hashkey="bet" type="nowrap" align="left_bottom" margin_left="238" margin_bottom="-4" cascade_opacity="true">mức cược 1000</label>
+                                </layout>
+                        </layout>
+                        <layout width="450" height="466" type="relative" align="center" anchor-x="0" anchor-y="0" clonekey="slotmachine_item_super" touch="true" cascade_opacity="true">
+                                <layout width="450" height="466" type="relative" align="center" anchor-x="0.5" anchor-y="0" hashkey="main_machine" cascade_opacity="true">
+                                        <img src="texture/slot_machine/slots_normal.png" hashkey="image" align="center"/>
+                                        <layout align="top_left" margin_left="212" margin_top="232" type="relative"  cascade_color="true">
+                                                <label font="fonts/font_slot.fnt" size="25" hashkey="money" type="nowrap" align="center" cascade_opacity="true"  cascade_color="true">999.999.999</label>
+                                        </layout>
+                                        <label font="fonts/font_slot.fnt" size="27" hashkey="bet" type="nowrap" align="left_bottom" margin_left="263" margin_bottom="-9" cascade_opacity="true">mức cược 1000</label>
+                                </layout>
+                        </layout>
+                        <layout width="450" height="466" type="relative" align="center" anchor-x="0" anchor-y="0" clonekey="slotmachine_item_big" touch="true" cascade_opacity="true">
+                                <layout width="450" height="466" type="relative" align="center" anchor-x="0.5" anchor-y="0" hashkey="main_machine" cascade_opacity="true">
+                                        <img src="texture/slot_machine/slots_small.png" hashkey="image" align="center"/>
+                                        <layout align="top_left" margin_left="212" margin_top="242" type="relative"  cascade_color="true">
+                                                <label font="fonts/font_slot.fnt" size="25" hashkey="money" type="nowrap" align="center" cascade_opacity="true" cascade_color="true">999.999.999</label>
+                                        </layout>
+                                        <label font="fonts/font_slot.fnt" size="27" hashkey="bet" type="nowrap" align="left_bottom" margin_left="263" margin_bottom="-9" cascade_opacity="true">mức cược 1000</label>
+                                </layout>
+                        </layout>
+                        <layout width="450" height="466" type="relative" align="center" anchor-x="0" anchor-y="0" clonekey="slotmachine_item_free" touch="true" cascade_opacity="true">
+                                <layout width="450" height="466" type="relative" align="center" anchor-x="0.5" anchor-y="0" hashkey="main_machine" cascade_opacity="true">
+                                        <img src="texture/slot_machine/slots_free.png" hashkey="image" align="center"/>
+                                        <label font="fonts/font_slot.fnt" size="25" visible="false" hashkey="money" type="nowrap" align="top_left" margin_left="188" margin_top="108" color="yellow" cascade_opacity="true">999.999.999</label>
+                                        <label font="fonts/SF-UI-Text-Medium.otf" size="27" hashkey="bet" type="nowrap" align="bottom_center_horizontal" visible="false" margin_bottom="23" color="black" cascade_opacity="true">miễn phí</label>
+                                </layout>
+                        </layout>
+                </layout>
+                <layout width="380"/>
+        </layout>
+
+        <group style="xml/lobbybottombar.xml" align="bottom_center_horizontal" hashkey="lobbybottombar" bindtouch="mail_click=mail_touch;back_click=touchback;touch_quick_play=quick_play"/>
+</layout>

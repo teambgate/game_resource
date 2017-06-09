@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>THANG</key>
+	<string>Thắng</string>
+	<key>CON</key>
+	<string>Còn </string>
+	<key>THOI</key>
+	<string>, thối </string>
+	<key>TU_QUY</key>
+	<string> tứ quý</string>
+	<key>THOI_3B</key>
+	<string>, thối 3 bích</string>
+	<key>DOI_THONG</key>
+	<string> đôi thông</string>
+	<key>LA</key>
+	<string> lá</string>
+	<key>HEO</key>
+	<string> heo</string>
+	<key>CHAM</key>
+	<string>. </string>
+	<key>NGOI_XUONG_DE_BAT_DAU</key>
+	<string>Bạn hãy ngồi xuống để bắt đầu chơi game</string>
+	<key>BAN_CHOI_DA_DAY</key>
+	<string>Bàn chơi đã đầy!</string>
+	<key>KHONG_THAO_TAC</key>
+	<string>Bạn rời bàn do không thao tác</string>
+	<key>KHONG_DU_TIEN</key>
+	<string>Bạn không đủ tiền để tiếp tục chơi</string>
+	<key>BI_DAY_KHOI_BAN_KET_NOI_YEU</key>
+	<string>Bạn bị đẩy ra khỏi bàn chơi vì kết nối mạng không ổn định!</string>
+	<key>DANH_BAI_KHONG_HOP_LE</key>
+	<string>Đánh bài không hợp lệ!</string>
+	<key>REQUEST_LEAVE</key>
+	<string>Bạn đã đăng ký rời bàn chơi sau khi hết ván!</string>
+	<key>CHUA_CHON_BAI</key>
+	<string>Bạn chưa chọn quân bài để đánh</string>
+	<key>SKIP</key>
+	<string>Bỏ lượt</string>
+	<key>NHAT</key>
+	<string>NHẤT</string>
+	<key>NHI</key>
+	<string>NHÌ</string>
+	<key>BA</key>
+	<string>Ba</string>
+	<key>BET</key>
+	<string>BÉT</string>
+	<key>THUA_CONG</key>
+	<string>Thua cóng</string>
+	<key>BAO_SAM</key>
+	<string>Báo sâm</string>
+	<key>HUY_SAM</key>
+	<string>Hủy sâm</string>
+	<key>THOI_2_CUOI</key>
+	<string>Thối 2 cuối</string>
+	<key>HOA</key>
+	<string>Hòa</string>
+	<key>THANG_SAM</key>
+	<string>Thắng sâm</string>
+	<key>PHAT_SAM</key>
+	<string>Phạt sâm</string>
+	<key>BAO_1</key>
+	<string>Báo 1</string>
+	<key>DAT_TAI</key>
+	<string>Đặt tài</string>
+	<key>DAT_XIU</key>
+	<string>Đặt xỉu</string>
+	<key>TAI</key>
+	<string>tài</string>
+	<key>XIU</key>
+	<string>xỉu</string>
+	<key>TLHK_FAILED_FIRST_FIGHT</key>
+	<string>Lượt đánh đầu phải có lá bài </string>
+	<key>TLHK_CO</key>
+	<string>cơ</string>
+	<key>TLHK_RO</key>
+	<string>rô</string>
+	<key>TLHK_TEP</key>
+	<string>tép</string>
+	<key>TLHK_BICH</key>
+	<string>bích</string>
+	<key>TLHK_AT</key>
+	<string>Át</string>
+</dict>
+</plist>

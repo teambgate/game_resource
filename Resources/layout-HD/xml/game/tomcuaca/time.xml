@@ -1,0 +1,4 @@
+<layout type="relative">
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="frame_thoigian.png" width="169" align="center" height="33"/>
+	<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="20"  color="green" align="center" hashkey="time">01:00</label>
+</layout>

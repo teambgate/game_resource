@@ -1,0 +1,21 @@
+<touchdelegates>
+        <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout type="relative" touchdelegate="onclick" cascade_opacity="true">
+        <img name="image" atlas="atlas/lobby.plist" frame="button_register.png" hashkey="image" width="match_parent" height="match_parent" align="center"/>
+        <touchbegan>
+                <action id="this">
+                        <fadeto time="0.2" to="150"/>
+                </action>
+        </touchbegan>
+        <touchend>
+                <action id="this">
+                        <fadeto time="0.2" to="255"/>
+                </action>
+        </touchend>
+        <touchcancel>
+                <action id="this">
+                        <fadeto time="0.2" to="255"/>
+                </action>
+        </touchcancel>
+</layout>

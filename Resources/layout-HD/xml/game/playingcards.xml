@@ -1,0 +1,17 @@
+<layout width="77.4" height="95.4" type="relative">
+    <img atlas="atlas/card_game.plist" frame="card_52.png" width="match_parent" height="match_parent" align="center"/>
+    <label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" width="match_parent" align="top_center_horizontal" margin_top="25" hashkey="label">52</label>
+    <layout align="top_center_horizontal" type="absolute">
+        <img name="arrow" atlas="atlas/card_game.plist" frame="arrow.png" hashkey="arrow" visible="false" scale="1.5" anchor-x="0.5" anchor-y="0.0"/>
+        <runaction>
+            <action id="this:arrow">
+                <repeatforever>
+                    <sequence>
+                        <moveby time="0.2" y="20"/>
+                        <moveby time="0.2" y="-20"/>
+                    </sequence>
+                </repeatforever>
+            </action>
+        </runaction>
+    </layout>
+</layout>

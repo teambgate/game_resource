@@ -1,0 +1,41 @@
+<touchdelegates>
+	<touchdelegate name="close" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" background="texture/white_2x2.png" color="black" opacity="150" touch="true">
+	<layout width="600" height="370" type="relative" align="center" scale="1.4">
+		<img atlas="atlas/minipoker.plist" frame="board.png" align="center" width="wrap_content" height="wrap_content" />
+			<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="top_center_horizontal" scale_factor=".8" margin_top="26" color="white">LỊCH SỬ NỔ HŨ</label>
+		<group style="xml/ui/button_style_1.xml" align="top_right" touch="true" bindtouch="onclick=close" scale=".8" margin_top="16">
+			<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="x_button.png" />
+		</group>
+		
+		<layout width="match_parent" height="100" type="relative" align="center" hashkey="txt_loading">
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".8" color="white">Đang tải dữ liệu...</label>
+		</layout>
+
+		<layout width="540" height="264" type="relative" align="bottom_center_horizontal" margin_bottom="20" hashkey="loaded_content" visible="false">
+			<img atlas="atlas/minipoker.plist" frame="column_bxh.png" align="center" width="wrap_content" height="wrap_content" />
+			<layout width="540" height="32" type="horizontal" align="top_center_horizontal">
+					<layout width="134" height="match_parent" type="relative">
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".6" color="white">Thời gian</label>
+					</layout>
+					<layout width="158" height="match_parent" type="relative">
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".6" color="white">Người chơi</label>
+					</layout>
+					<layout width="112" height="match_parent" type="horizontal">
+							<img atlas="atlas/minipoker.plist" frame="coin.png" align="center" width="wrap_content" height="wrap_content" scale=".6" margin_left="16" padding_right="10"/>
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".5" color="white" hashkey="bet1">Đặt</label>
+					</layout>
+
+					<layout width="130" height="match_parent" type="horizontal">
+							<img atlas="atlas/minipoker.plist" frame="coin.png" align="center" width="wrap_content" height="wrap_content" scale=".6" margin_left="16" padding_right="10"/>
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".5" color="white" hashkey="bet1">Nổ hũ</label>
+					</layout>					
+			</layout>
+
+			<listview width="match_parent" height="230" align="bottom_center_horizontal" type="vertical" hashkey="list_item">
+					
+			</listview>
+		</layout>
+	</layout>
+</layout>

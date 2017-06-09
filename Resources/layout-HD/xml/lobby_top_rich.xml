@@ -1,0 +1,21 @@
+<layout width="380" height="match_parent" padding_top="200" type="relative">
+    <img atlas="atlas/choice_room.plist" frame="lobby_top_rich_top.png" width="match_parent" height="60" align="top_center_horizontal" margin_top="4"/>
+    <img atlas="atlas/choice_room.plist" frame="lobby_top_rich_content.png" width="match_parent" height="match_parent" padding_top="63" margin_top="63" align="top_center_horizontal"/>
+    <img atlas="atlas/choice_room.plist" frame="xu-mien-phi-icon.png" align="top_left" margin_top="10" scale="1" margin_left="15"/>
+    <img atlas="atlas/choice_room.plist" frame="lobby_top_rich_text.png" align="top_center_horizontal" margin_top="27" scale="1.35"/>
+    <img atlas="atlas/choice_room.plist" frame="lobby_top_rich_arrow.png" align="top_right" margin_top="30" margin_right="32" scale="1.35"/>
+    <listview width="match_parent" height="match_parent" padding_top="81" margin_top="64.5" align="top_center_horizontal" type="vertical" hashkey="rich_list_view" visible="false">
+        <layout width="match_parent" height="wrap_content" type="vertical" hashkey="rich_container">
+            <layout width="match_parent" height="80" margin_left="0.25" atlas="atlas/choice_room.plist" frame="lobby_top_rich_line.png" clonekey="rich_person" type="horizontal" cascade_opacity="true">
+                <layout width="60" height="60" clip="false" margin_left="10" align="center" type="relative" cascade_opacity="true">
+                    <img atlas="atlas/choice_room.plist" frame="avatar_default.png" align="center" width="match_parent" height="match_parent" hashkey="avatar" custom_preserve_atlas="atlas/choice_room.plist" custom_preserve_frame_prefix="avatar_" custom_preserve_frame_posfix=".png"/>
+                </layout>
+                <layout align="center" type="vertical" height="wrap_content" margin_left="10" cascade_opacity="true">
+                   <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" type="nowrap" align="left_center_vertical" hashkey="name" max_characters="18" cascade_opacity="true">user name</label>
+                   <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" type="nowrap" align="left_center_vertical" hashkey="money" max_characters="18" cascade_opacity="true" color="yellow">120K</label>
+                </layout>
+                <img atlas="atlas/choice_room.plist" frame="lobby_top_rich_availabe_dots.png" align="center" scale="1.2" margin_left="244" hashkey="dot"/>
+            </layout>
+        </layout>
+    </listview>
+</layout>

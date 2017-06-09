@@ -1,0 +1,6 @@
+<layout width="match_parent" height="match_parent" align="center" type="relative">
+    <img src="texture/scene/background.png" align="center" width="fill_parent" height="fill_parent" blend="disable"/>
+    <spine json="texture/effect_doi_thuong/eff-bg.json"
+            atlas="texture/effect_doi_thuong/eff-bg.atlas"
+            spine-scale="1.0" anim="animation" loop="true" delay="5.0" align="center"/>
+</layout>

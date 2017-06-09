@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ERROR_SIZE</key>
+	<string>Tên hiển thị bạn nhập không đúng yêu cầu (tối thiểu 4 ký tự và tối đa 20 ký tự)</string>
+	<key>SUCCESS</key>
+	<string>Thay đổi tên hiển thị thành công !</string>
+</dict>
+</plist>

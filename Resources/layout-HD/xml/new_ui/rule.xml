@@ -1,0 +1,15 @@
+<touchdelegates>
+        <touchdelegate name="touch_close"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+        <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="150" align="center"/>
+        <layout width="1224" height="687" align="center" type="relative" cascade_opacity="true" scale="0.9">
+                <img src="texture/new_ui/board_luatchoi.png" align="center"/>
+                <img atlas="atlas/new_ui.plist" frame="txt_luatchoi.png" align="top_center_horizontal" margin_top="20"/>
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="10.5" margin_top="10.5" touch="true" bindtouch="onclick=touch_close">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+
+                <group style="xml/help/rule.xml" width="match_parent" padding_left="30" height="484" margin_top="105" align="top_center_horizontal" hashkey="luat" cascade_opacity="true"/>
+        </layout>
+</layout>

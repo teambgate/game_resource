@@ -1,0 +1,8 @@
+<layout width="wrap_content" height="wrap_content" align="center">
+	<img atlas="atlas/xeng.plist" frame="vongsang2.png" align="center" hashkey="image" scale="1" 
+	atlas_custom="atlas/xeng.plist"
+	frame_0="vongsang2.png" 
+	frame_1="vongsang3.png" 
+	frame_2="vongsang1.png" 
+	/>
+</layout>

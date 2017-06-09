@@ -1,0 +1,134 @@
+<touchdelegates>
+    <touchdelegate name="touch_item"/>
+	<touchdelegate name="touch_choose_coin_active"/>
+	<touchdelegate name="touch_choose_chip_active"/>
+</touchdelegates>
+<layout width="800" height="470" align="center" type="relative">
+   <img atlas="atlas/choice_room.plist" frame="choice_room_table_content.png" width="match_parent" height="420" align="top_center_horizontal" margin_top="50"/>
+   <layout name="top" width="match_parent" height="match_parent" type="relative" align="top_center_horizontal">
+		<layout type="relative" cascade_opacity="true" align="top_left" margin_left="10" margin_top="-10" width="290" height="80" touchdelegate="touch_choose_coin_active" touch="true">
+			<img atlas="atlas/choice_room_2.plist" frame="tab-active.png" width="match_parent" height="match_parent" align="center" hashkey="choose_coin_2" visible="true"/>
+			<label font="fonts/font26.fnt" size="26" align="top_center_horizontal" margin_top="20" type="nowrap" hashkey="title_choose_coin" cascade_opacity="true">BÀN CHƠI XU</label>
+			<img atlas="atlas/choice_room_2.plist" frame="tab.png" width="match_parent" height="match_parent" align="center" hashkey="choose_coin_1" visible="false"/>
+		</layout>
+		<layout type="relative" cascade_opacity="true" align="top_left" margin_left="310" margin_top="-10" width="290" height="80" touchdelegate="touch_choose_chip_active" touch="true">
+			<img atlas="atlas/choice_room_2.plist" frame="tab-active.png" width="match_parent" height="match_parent" align="center" hashkey="choose_chip_2" visible="false"/>
+			<label font="fonts/font26.fnt" size="26" align="top_center_horizontal" margin_top="20" type="nowrap" hashkey="title_choose_chip" cascade_opacity="true">BÀN CHƠI CHIP</label>
+			<img atlas="atlas/choice_room_2.plist" frame="tab.png" width="match_parent" height="match_parent" align="center" hashkey="choose_chip_1" visible="true"/>
+		</layout>
+    </layout>
+    <listview width="800" height="380" align="top_center_horizontal" margin_top="75" type="vertical" hashkey="item_list_view">
+		<layout width="match_parent" height="wrap_content" type="vertical" hashkey="itemlist">
+		   <layout width="match_parent" height="100" clonekey="4item" type="relative" cascade_opacity="true">
+				<layout width="173" height="96" align="left_center_vertical" margin_left="15" type="relative" cascade_opacity="true" hashkey="item_1" touchdelegate="touch_item" touch="true" visible="false" opacity="0">
+					<img atlas="atlas/choice_room_2.plist" frame="tbcoin.png" align="center" visible="false" hashkey="tbcoin_1"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip.png" align="center" visible="false" hashkey="tbchip_1"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip-gray.png" atlas_disable="atlas/choice_room_2.plist" frame_disable_coin="tbcoin-gray.png" align="center" visible="false" hashkey="img_disable_1"/>
+					<label font="fonts/font16.fnt" scale="1.25" color="#FECD0B" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_chip_1" cascade_opacity="true">1-100</label>
+					<label font="fonts/font16.fnt" scale="1.25" color="YELLOW" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_coin_1" cascade_opacity="true">1-100</label>
+					<touchbegan>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchbegan>
+					<touchmove>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchmove>	
+					<touchend>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchend>
+					<touchcancel>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchcancel>
+				</layout>
+				<layout width="173" height="96" align="left_center_vertical" margin_left="215" type="relative" cascade_opacity="true" hashkey="item_2" touchdelegate="touch_item" touch="true" visible="false" opacity="0">
+					<img atlas="atlas/choice_room_2.plist" frame="tbcoin.png" align="center" visible="false" hashkey="tbcoin_2"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip.png" align="center" visible="false" hashkey="tbchip_2"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip-gray.png" atlas_disable="atlas/choice_room_2.plist" frame_disable_coin="tbcoin-gray.png" align="center" visible="false" hashkey="img_disable_2"/>
+					<label font="fonts/font16.fnt" scale="1.25" color="#FECD0B" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_chip_2" cascade_opacity="true">1-100</label>
+					<label font="fonts/font16.fnt" scale="1.25" color="YELLOW" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_coin_2" cascade_opacity="true">1-100</label>
+					<touchbegan>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchbegan>
+					<touchmove>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchmove>	
+					<touchend>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchend>
+					<touchcancel>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchcancel>
+				</layout>
+				<layout width="173" height="96" align="left_center_vertical" margin_left="415" type="relative" cascade_opacity="true" hashkey="item_3" touchdelegate="touch_item" touch="true" visible="false" opacity="0">
+					<img atlas="atlas/choice_room_2.plist" frame="tbcoin.png" align="center" visible="false" hashkey="tbcoin_3"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip.png" align="center" visible="false" hashkey="tbchip_3"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip-gray.png" atlas_disable="atlas/choice_room_2.plist" frame_disable_coin="tbcoin-gray.png" align="center" visible="false" hashkey="img_disable_3"/>
+					<label font="fonts/font16.fnt" scale="1.25" color="#FECD0B" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_chip_3" cascade_opacity="true">1-100</label>
+					<label font="fonts/font16.fnt" scale="1.25" color="YELLOW" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_coin_3" cascade_opacity="true">1-100</label>
+					<touchbegan>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchbegan>
+					<touchmove>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchmove>	
+					<touchend>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchend>
+					<touchcancel>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchcancel>
+				</layout>
+				<layout width="173" height="96" align="left_center_vertical" margin_left="615" type="relative" cascade_opacity="true" hashkey="item_4" touchdelegate="touch_item" touch="true" visible="false" opacity="0">
+					<img atlas="atlas/choice_room_2.plist" frame="tbcoin.png" align="center" visible="false" hashkey="tbcoin_4"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip.png" align="center" visible="false" hashkey="tbchip_4"/>
+					<img atlas="atlas/choice_room_2.plist" frame="tbchip-gray.png" atlas_disable="atlas/choice_room_2.plist" frame_disable_coin="tbcoin-gray.png" align="center" visible="false" hashkey="img_disable_4"/>
+					<label font="fonts/font16.fnt" scale="1.25" color="#FECD0B" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_chip_4" cascade_opacity="true">1-100</label>
+					<label font="fonts/font16.fnt" scale="1.25" color="YELLOW" align="top_center_horizontal" margin_left="10" margin_top="37" type="nowrap" hashkey="title_coin_4" cascade_opacity="true">1-100</label>
+					<touchbegan>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchbegan>
+					<touchmove>
+						<action id="this">
+							<scaleto time="0.1" x="0.95" y="0.95"/>
+						</action>
+					</touchmove>	
+					<touchend>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchend>
+					<touchcancel>
+						<action id="this">
+							<scaleto time="0.1" x="1" y="1"/>
+						</action>
+					</touchcancel>
+				</layout>
+			</layout>
+        </layout>
+    </listview>
+</layout>

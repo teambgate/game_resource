@@ -1,0 +1,4 @@
+<layout type="relative" width="40" height="40" >
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="ovuongnho.png" width="match_parent" height="match_parent" align="center"/>
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="o_bau.png" width="match_parent" height="match_parent" align="center" hashkey="label"/>
+</layout>

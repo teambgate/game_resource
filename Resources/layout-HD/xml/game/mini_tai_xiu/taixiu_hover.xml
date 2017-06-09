@@ -1,0 +1,25 @@
+<touchdelegates>
+    <touchdelegate name="hover"/>
+<touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative">
+    <layout width="match_parent" height="match_parent" type="absolute" align="center">
+        <layout type="vertical" width="150" height="150"  x="600" y="340" touch="true" touchdelegate="hover" hashkey="hover" cascade_opacity="true" >
+            <img name="image" src="texture/scene/hover.png" width="match_parent" height="wrap_content" />
+            <touchbegan>
+                <action id="this:image">
+                    <fadeto time="0.2" to="150"/>
+                </action>
+            </touchbegan>
+            <touchend>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchend>
+            <touchcancel>
+                <action id="this:image">
+                    <fadeto time="0.2" to="255"/>
+                </action>
+            </touchcancel>
+        </layout>
+    </layout>
+</layout>

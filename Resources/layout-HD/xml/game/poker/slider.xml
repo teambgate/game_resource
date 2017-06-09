@@ -1,0 +1,10 @@
+<touchdelegates>
+    <touchdelegate name="usertouch"/>	
+</touchdelegates>
+<layout type="absolute">
+    <layout atlas="atlas/card_game.plist" frame="hprogressbar_background.png" cap_left="20" cap_top="0" cap_right="20" cap_bottom="0" align="center" name="bgSlider" width="match_parent" height="match_parent">
+	</layout>
+	<layout atlas="atlas/card_game.plist" frame="online.png" cap_left="6" cap_top="0" cap_right="6" cap_bottom="0" align="center" y="3" name="progress">
+	</layout>
+    <img atlas="atlas/card_game.plist" frame="join_board_slider_knob.png" align="center" y="10" name="knob" scale="1" width="69" height="160"/>
+</layout>

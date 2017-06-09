@@ -1,0 +1,20 @@
+<touchdelegates>
+    <touchdelegate name="ok"/>
+    <touchdelegate name="no"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" touch="true" align="center" type="relative" atlas="primitive/primitive.plist" frame="white_2x2.png" color="black" opacity="150">
+    <layout width="567" height="378" align="center" type="relative">
+        <img src="texture/board/choiceroom_board.png" align="center" scale_x="0.7" scale_y="0.8"/>
+        <label name="title" font="fonts/SF-UI-Text-Regular.otf" size="30" width="match_parent" padding_left="80" align="top_center_horizontal" margin_top="35" hashkey="message">content</label>
+        <layout name="username" width="500" height="60" align="location_below_center" relative_to="title" type="relative" margin_top="30">
+            <img atlas="atlas/lobby.plist" frame="edittext.png" width="match_parent" height="match_parent" align="center"/>
+            <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Tên đăng nhập" placeholdercolor="#42d9ff" hashkey="input" inputflag="sentence" inputmode="singleline"/>
+        </layout>
+        <group style="xml/ui/button_style_1.xml" align="right_bottom" margin_bottom="35" margin_right="80" scale="1.5" touch="true" bindtouch="onclick=ok" cascade_opacity="true">
+            <changetexture target="this:image" src="texture/new_login/bt_dongy.png"/>
+        </group>
+        <group style="xml/ui/button_style_1.xml" align="left_bottom" margin_bottom="35" margin_left="80" scale="1.5" touch="true" bindtouch="onclick=no" cascade_opacity="true">
+            <changetexture target="this:image" src="texture/new_login/bt_khong.png"/>
+        </group>
+    </layout>
+</layout>

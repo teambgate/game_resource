@@ -1,0 +1,57 @@
+<touchdelegates>
+    <touchdelegate name="touch_item"/>
+    <touchdelegate name="touch_filter_1"/>
+    <touchdelegate name="touch_filter_2"/>
+    <touchdelegate name="touch_refresh"/>
+    <touchdelegate name="touch_quick_play"/>
+    <touchdelegate name="touch_filter_money"/>
+    <touchdelegate name="touch_filter_state"/>
+	<touchdelegate name="touch_choose_coin_active"/>
+	<touchdelegate name="touch_choose_chip_active"/>
+</touchdelegates>
+<layout width="800" height="425" padding_top="200" type="relative">
+	
+	<layout width="wrap_content" height="wrap_content" type="relative" align="top_left" local_z="2" margin_top="-45">
+		<layout type="relative" cascade_opacity="true" align="top_left" margin_left="7" margin_top="-10" width="290" height="80" touchdelegate="touch_choose_coin_active" touch="true">
+			<img atlas="atlas/blackjack.plist" frame="tab-active.png" width="match_parent" height="match_parent" align="center" hashkey="choose_coin_2" visible="true"/>
+			<label font="fonts/font26.fnt" size="26" align="center" type="nowrap" hashkey="title_choose_coin" cascade_opacity="true">BÀN CHƠI XU</label>
+			<img atlas="atlas/blackjack.plist" frame="tab.png" width="match_parent" height="match_parent" align="center" hashkey="choose_coin_1" visible="false"/>
+		</layout>
+		<layout type="relative" cascade_opacity="true" align="top_left" margin_left="292" margin_top="-10" width="290" height="80" touchdelegate="touch_choose_chip_active" touch="true">
+			<img atlas="atlas/blackjack.plist" frame="tab-active.png" width="match_parent" height="match_parent" align="center" hashkey="choose_chip_2" visible="false"/>
+			<label font="fonts/font26.fnt" size="26" align="center" type="nowrap" hashkey="title_choose_chip" cascade_opacity="true">BÀN CHƠI CHIP</label>
+			<img atlas="atlas/blackjack.plist" frame="tab.png" width="match_parent" height="match_parent" align="center" hashkey="choose_chip_1" visible="true"/>
+		</layout>
+	</layout>
+
+    <img atlas="atlas/choice_room.plist" frame="choice_room_table_content.png" width="match_parent" height="match_parent" padding_top="70" margin_top="70" align="top_center_horizontal" />
+	<layout name="top" width="match_parent" height="70" type="relative" align="top_center_horizontal">	
+        <img atlas="atlas/choice_room.plist" frame="choice_room_table_top.png" width="match_parent" height="match_parent" align="center"/>
+        <label font="fonts/font30.fnt" size="25" scale_factor="0.83333" align="left_center_vertical" margin_left="20" type="nowrap">BÀN</label>
+        <layout align="left_center_vertical" margin_left="200" margin_top="8" type="relative">
+            <group style="xml/ui/button_style_2.xml" align="center" hashkey="bet" touch="true" bindtouch="onclick=touch_filter_1"/>
+        </layout>
+        <layout align="left_center_vertical" margin_left="435" margin_top="8" type="relative">
+            <group style="xml/ui/button_style_2.xml" align="center" hashkey="min" touch="true" bindtouch="onclick=touch_filter_2"/>
+        </layout>
+        <layout align="left_center_vertical" margin_left="665" margin_top="8" type="relative">
+            <group style="xml/ui/button_style_2.xml" align="center" hashkey="players" touch="true" bindtouch="onclick=touch_refresh">
+                <changetexture target="this:image" atlas="atlas/choice_room.plist" frame="refresh.png" keep_size="true"/>
+            </group>
+        </layout>
+    </layout>
+    <listview width="match_parent" padding_left="14" height="match_parent" padding_top="90" align="location_below_right" relative_to="top" margin_top="-1.5" type="vertical" hashkey="item_list_view">
+        <layout width="match_parent" height="wrap_content" type="vertical" hashkey="itemlist">
+           <group style="xml/ui/lobbygamelistitem.xml" clonekey="item" touchdelegate="touch_item" touch="true"/>
+        </layout>
+    </listview>
+    <layout width="250" height="300" type="relative" align="top_left" margin_left="158" margin_top="85" clip="true" clip_src="texture/border_white_32x32.png" clip_width="250" clip_height="300" clip_cap_left="10" clip_cap_top="10" clip_cap_right="10" clip_cap_bottom="10" clip_alpha="0.5" hashkey="filter_money_group" visible="false" cascade_opacity="true">
+        <img atlas="atlas/lobby.plist" frame="room_type_top_up.png" width="250" height="300" align="center"/>
+        <listview width="250" height="300" align="center" clip="false" type="vertical" cascade_opacity="true">
+            <layout width="250" height="wrap_content" type="vertical" align="center" hashkey="filter_money_layout" cascade_opacity="true">
+                <group style="xml/lobby/lobby_filter_money_item.xml" align="center" clonekey="filter_money_item"/>
+            </layout>
+        </listview>
+        
+    </layout>
+</layout>

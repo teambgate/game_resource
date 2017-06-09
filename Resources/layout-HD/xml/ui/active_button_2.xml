@@ -1,0 +1,6 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout height="120" type="relative" touchdelegate="onclick" background="texture/thong_bao/tab_on.png" opacity="100" up_opacity="100" down_opacity="255">
+    <label font="fonts/SF-UI-Display-Medium.otf" size="22" width="match_parent" padding_left="90" margin_left="20" align="center" hashkey="label" cascade_opacity="true" align="left_center_vertical">Thông báo</label>
+</layout>

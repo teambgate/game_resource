@@ -1,0 +1,435 @@
+<touchdelegates>
+	<touchdelegate name="seat_touch"/>
+	<touchdelegate name="bt_bet_min_touch"/>
+	<touchdelegate name="bt_bet_max_touch"/>
+	<touchdelegate name="bt_bet_touch"/>
+	<touchdelegate name="bt_rebet_touch"/>
+	
+	<touchdelegate name="bt_split_touch"/>
+	<touchdelegate name="bt_stand_touch"/>
+	<touchdelegate name="bt_hit_touch"/>
+	<touchdelegate name="bt_doubledown_touch"/>
+	
+	<touchdelegate name="bt_khong_touch"/>
+	<touchdelegate name="bt_co_touch"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" cascade_opacity="true" opacity="0">
+     <runaction>
+        <action id="this">
+            <sequence>
+                <fadein time="0.25"/>
+            </sequence>
+        </action>
+    </runaction>
+	<!-- Background -->
+	<group style="xml/game_background.xml" align="center" local_z="-2"/>
+		
+	<layout type="absolute" align="center" hashkey="game_center" cascade_opacity="true">
+		<!-- table -->
+		<img atlas="atlas/blackjack.plist" frame="table_big.png" x="0" y="-50" scale="0.86" local_z="-1"/>
+		<img atlas="atlas/blackjack.plist" frame="rule_dealer.png" x="0" y="50" scale="0.7" visible="true"/>
+		
+		<img atlas="atlas/newthreecardpoker.plist" frame="dealer.png" x="0" y="260" local_z="1"/>
+	
+		<img atlas="atlas/blackjack.plist" frame="cornor-left.png" align="top_left" x="-431" y="220"/>
+		<img atlas="atlas/blackjack.plist" frame="cornor-right.png" align="top_right" x="417" y="190"/>
+		<img atlas="atlas/card_game.plist" frame="card_52.png" rotate="-73" x="400" y="168" local_z="2" scale="0.6" hashkey="card_effect"/>
+
+		<!-- 3 player -->
+       <group style="xml/game/card_table_player.xml" x="0" y="-270" hashkey="player_0" visible="false">
+            <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_1.png"/>
+        </group>
+        <group style="xml/game/card_table_player.xml" x="480" y="-150" hashkey="player_1" visible="false">
+            <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_2.png"/>
+        </group>
+        <group style="xml/game/card_table_player.xml" x="-480" y="-150" hashkey="player_2" visible="false">
+            <changepreserve target="this:avatar_container:avatar" atlas="atlas/card_game.plist" frame="avatar_3.png"/>
+        </group>
+				  
+		<!-- 3 button seat -->
+		<group style="xml/game/newthreecardpoker/seat.xml" x="0" y="-270" touch="true" touchdelegate="seat_touch" hashkey="seat_0" visible="true"/>
+		<group style="xml/game/newthreecardpoker/seat.xml" x="480" y="-150" touch="true" touchdelegate="seat_touch" hashkey="seat_1" visible="true"/>
+		<group style="xml/game/newthreecardpoker/seat.xml" x="-480" y="-150" touch="true" touchdelegate="seat_touch" hashkey="seat_2" visible="true"/>
+		
+		<group style="xml/game/newthreecardpoker/coin.xml" x="0" y="0" clonekey="coin" visible="false" local_z="100"/>
+		<group style="xml/game/card.xml" x="0" y="0" clonekey="card" visible="false" scale="1" local_z="1"/>
+		<label clonekey="label_number_money_win" x="0" y="0" scale="0.4" font="fonts/coin_font.fnt" type="nowrap" align="center" local_z="100" visible="false">+100</label>
+		<group style="xml/game/newblackjack/score.xml" x="0" y="0" clonekey="score" visible="false" scale="1" local_z="100"/>
+		
+		<group style="xml/game/newblackjack/img_result.xml" x="0" y="0" clonekey="img_result" visible="false" scale="1" local_z="100"/>		
+	
+		<group style="xml/game/newblackjack/img_blackjack.xml" x="0" y="0" clonekey="img_blackjack" visible="false" scale="1" local_z="100"/>		
+		<label clonekey="label_number_money_win" x="0" y="0" scale="0.4" font="fonts/coin_font.fnt" type="nowrap" local_z="100" visible="false">+100</label>
+	
+		<group style="xml/game/newthreecardpoker/label_money_bet.xml" x="0" y="0" clonekey="label_money_bet" visible="false" scale="1" local_z="1"/>
+		
+		<img atlas="atlas/blackjack.plist" frame="arrow.png" x="-70" y="-20" hashkey="arrow" visible="false" local_z="150"/>
+		
+		<img atlas="atlas/blackjack.plist" frame="area_sidebet.png" x="0" y="-120"/>
+		<img atlas="atlas/blackjack.plist" frame="area_sidebet.png" x="-300" y="-100"/>
+		<img atlas="atlas/blackjack.plist" frame="area_sidebet.png" x="300" y="-100"/>
+		
+		<img atlas="atlas/blackjack.plist" frame="text_insurance.png" x="0" y="50" visible="false" hashkey="text_insurance"/>
+		
+		<bundle id="0"> <!-- seat 0 bundle -->
+			<key id="0"> <!-- __PLAYER_VIEW_KEY__ -->
+				<point x="0" y="-270" scale="1.0" local_z="1"/>
+			</key>
+			<key id="1"> <!-- __PLAYER_PLAY_KEY__ -->
+				<point x="0" y="-270" scale="1.0" local_z="1"/>
+			</key>
+			<key id="2"> <!-- __PLAYER_USER_PLAY_KEY__ -->
+				<point x="0" y="-270" scale="1.0" local_z="1"/>
+			</key>
+			<key id="3"> <!--__SEAT_KEY__-->
+				<point x="0" y="-270" scale="1.0" local_z="1"/>
+			</key>
+			<!-- bai 1 -->
+			<key id="4"> <!--Coin on seat key-->
+				<point x="0" y="-270" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="5"> <!--Coin bet key-->
+				<point x="0" y="-140" scale="1.0" local_z="100" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="6"> <!--coin insuarance-->
+				<point x="0" y="-5" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="7"> <!--return Coin bet key-->
+				<point x="-40" y="-140" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="8"> <!--return coin insuarance-->
+				<point x="-40" y="-5" local_z="55"/>
+			</key>
+			<key id="9"> <!--Card on hand-->
+				<point x="-35" y="-80" scale="0.8" local_z="1" copy="20" offset_x="25" offset_local_z="1"/>
+			</key>
+			<key id="10"> <!--SCORE x="-40" y="+20" -->
+				<point x="-90" y="-85" local_z="100" copy="20"/>
+			</key>
+			<key id="11"> <!--img result-->
+				<point x="-90" y="-20" local_z="200"/>
+			</key>
+			<key id="12"> <!--blackjack-->
+				<point x="-35" y="-100" local_z="100"/>
+			</key>
+			<key id="13"> <!--label money bet-->
+				<point x="15" y="-170" scale="1.0" local_z="150"/>
+			</key>
+			<key id="14"> <!--label money bet insuarance-->
+				<point x="15" y="-30" scale="1.0" local_z="150"/>
+			</key>
+			<key id="15"> <!--label money bet return-->
+				<point x="-55" y="-170" scale="1.0" local_z="150"/>
+			</key>
+			<key id="16"> <!--label money bet return insuarance-->
+				<point x="-55" y="-30" scale="1.0" local_z="150"/>
+			</key>
+			<key id="17"> <!--arraw-->
+				<point x="-35" y="-20" scale="1.0" local_z="150"/>
+			</key>
+			<!-- bai 2 -->
+			<key id="25"> <!--Coin bet key-->
+				<point x="35" y="-30" scale="1.0" local_z="100" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="26"> <!--coin insuarance-->
+				<point x="35" y="115" local_z="55"/>
+			</key>
+			<key id="27"> <!--return Coin bet key-->
+				<point x="-5" y="-30" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="28"> <!--return coin insuarance-->
+				<point x="-5" y="115" local_z="55"/>
+			</key>
+			<key id="29"> <!--Card on hand-->
+				<point x="0" y="30" scale="0.8" local_z="1" copy="20" offset_x="25" offset_local_z="1"/>
+			</key>
+			<key id="30"> <!--SCORE-->
+				<point x="-55" y="25" local_z="100" copy="20"/>
+			</key>
+			<key id="31"> <!--img result-->
+				<point x="-55" y="90" local_z="200"/>
+			</key>
+			<key id="32"> <!--blackjack-->
+				<point x="0" y="10" local_z="100"/>
+			</key>
+			<key id="33"> <!--label money bet-->
+				<point x="50" y="-60" scale="1.0" local_z="150"/>
+			</key>
+			<key id="34"> <!--label money bet insuarance-->
+				<point x="50" y="80" scale="1.0" local_z="150"/>
+			</key>
+			<key id="35"> <!--label money bet return-->
+				<point x="-15" y="-60" scale="1.0" local_z="150"/>
+			</key>
+			<key id="36"> <!--label money bet return insuarance-->
+				<point x="-15" y="80" scale="1.0" local_z="150"/>
+			</key>
+			<key id="37"> <!--arraw-->
+				<point x="0" y="90" scale="1.0" local_z="150"/>
+			</key>
+		</bundle>
+		<bundle id="1"> <!-- seat 1 bundle - user right -->
+			<key id="0"> <!-- __PLAYER_VIEW_KEY__ -->
+				<point x="480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<key id="1"> <!-- __PLAYER_PLAY_KEY__ -->
+				<point x="480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<key id="2"> <!-- __PLAYER_USER_PLAY_KEY__ -->
+				<point x="480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<key id="3"> <!-- SEAT KEY -->
+				<point x="480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<!-- bai 1 -->
+			<key id="4"> <!--Coin on seat key-->
+				<point x="480" y="-150" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="5"> <!--Coin bet key-->
+				<point x="300" y="-120" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="6"> <!--coin bet insuarance-->
+				<point x="300" y="15" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="7"> <!--return Coin bet key-->
+				<point x="255" y="-120" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="8"> <!--retutn coin insuarance-->
+				<point x="255" y="15" local_z="55"/>
+			</key>
+			<key id="9"> <!--Card on hand-->
+				<point x="265" y="-60" scale="0.8" rotate="0" local_z="1" copy="20" offset_x="25" offset_local_z="1"/>
+			</key>
+			<key id="10"> <!--SCORE-->
+				<point x="210" y="-65" local_z="100" copy="20"/>
+			</key>
+			<key id="11"> <!--img result-->
+				<point x="210" y="0" local_z="200"/>
+			</key>
+			<key id="12"> <!--blackjack-->
+				<point x="265" y="-80" local_z="100"/>
+			</key>
+			<key id="13"> <!--label money bet-->
+				<point x="315" y="-150" scale="1.0" local_z="150"/>
+			</key>
+			<key id="14"> <!--label money bet insuarance-->
+				<point x="315" y="-10" scale="1.0" local_z="150"/>
+			</key>
+			<key id="15"> <!--label money bet return-->
+				<point x="245" y="-150" scale="1.0" local_z="150"/>
+			</key>
+			<key id="16"> <!--label money bet return insuarance-->
+				<point x="245" y="-10" scale="1.0" local_z="150"/>
+			</key>
+			<key id="17"> <!--arraw-->
+				<point x="265" y="0" scale="1.0" local_z="150"/>
+			</key>
+			<!-- bai 2 -->
+			
+			<key id="25"> <!--Coin bet key-->
+				<point x="335" y="-10" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="26"> <!--coin bet insuarance-->
+				<point x="335" y="125" local_z="55"/>
+			</key>
+			<key id="27"> <!--return Coin bet key-->
+				<point x="290" y="-10" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="28"> <!--retutn coin insuarance-->
+				<point x="290" y="125" local_z="55"/>
+			</key>
+			<key id="29"> <!--Card on hand-->
+				<point x="260" y="70" scale="0.8" rotate="0" local_z="1" copy="20" offset_x="25" offset_local_z="1"/>
+			</key>
+			<key id="30"> <!--SCORE-->
+				<point x="285" y="45" local_z="100" copy="20"/>
+			</key>
+			<key id="31"> <!--img result-->
+				<point x="245" y="110" local_z="200"/>
+			</key>
+			<key id="32"> <!--blackjack-->
+				<point x="300" y="30" local_z="100"/>
+			</key>
+			<key id="33"> <!--label money bet-->
+				<point x="350" y="-40" scale="1.0" local_z="150"/>
+			</key>
+			<key id="34"> <!--label money bet insuarance-->
+				<point x="350" y="100" scale="1.0" local_z="150"/>
+			</key>
+			<key id="35"> <!--label money bet return-->
+				<point x="280" y="-40" scale="1.0" local_z="150"/>
+			</key>
+			<key id="36"> <!--label money bet return insuarance-->
+				<point x="280" y="100" scale="1.0" local_z="150"/>
+			</key>
+			<key id="37"> <!--arraw-->
+				<point x="300" y="110" scale="1.0" local_z="150"/>
+			</key>
+		</bundle>
+		<bundle id="2"> <!-- seat 2 bundle - user left-->
+			<key id="0"> <!-- __PLAYER_VIEW_KEY__ -->
+				<point x="-480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<key id="1"> <!-- __PLAYER_PLAY_KEY__ -->
+				<point x="-480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<key id="2"> <!-- __PLAYER_USER_PLAY_KEY__ -->
+				<point x="-480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<key id="3"> <!-- SEAT KEY -->
+				<point x="-480" y="-150" scale="1.0" local_z="1"/>
+			</key>
+			<!-- bai 1 -->
+			<key id="4"> <!--Coin on seat key-->
+				<point x="-480" y="-150" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="5"> <!--Coin bet key-->
+				<point x="-300" y="-120" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="6"> <!--coin bet insuarance-->
+				<point x="-300" y="15" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="7"> <!--return Coin bet key-->
+				<point x="-340" y="-120" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="8"> <!--return coin insuarance-->
+				<point x="-340" y="15" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="9"> <!--Card on hand-->
+				<point x="-335" y="-60" scale="0.8" rotate="0" local_z="1" copy="20" offset_x="25" offset_local_z="1"/>
+			</key>
+			<key id="10"> <!--SCORE-->
+				<point x="-390" y="-65" local_z="100" copy="20"/>
+			</key>
+			<key id="11"> <!--img result-->
+				<point x="-390" y="0" local_z="200"/>
+			</key>
+			<key id="12"> <!--blackjack-->
+				<point x="-335" y="-80" local_z="100"/>
+			</key>
+			<key id="13"> <!--label money bet-->
+				<point x="-285" y="-150" scale="1.0" local_z="150"/>
+			</key>
+			<key id="14"> <!--label money bet insuarance-->
+				<point x="-285" y="-10" scale="1.0" local_z="150"/>
+			</key>
+			<key id="15"> <!--label money bet return-->
+				<point x="-355" y="-150" scale="1.0" local_z="150"/>
+			</key>
+			<key id="16"> <!--label money bet return insuarance-->
+				<point x="-355" y="-10" scale="1.0" local_z="150"/>
+			</key>
+			<key id="17"> <!--arraw-->
+				<point x="-335" y="0" scale="1.0" local_z="150"/>
+			</key>
+			
+			<!-- bai 2 -->
+			<key id="25"> <!--Coin bet key-->
+				<point x="-265" y="-10" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="26"> <!--coin bet insuarance-->
+				<point x="-265" y="-40" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="27"> <!--return Coin bet key-->
+				<point x="-305" y="-10" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="28"> <!--return coin insuarance-->
+				<point x="-305" y="125" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="29"> <!--Card on hand-->
+				<point x="-300" y="50" scale="0.8" rotate="0" local_z="1" copy="20" offset_x="25" offset_local_z="1"/>
+			</key>
+			<key id="30"> <!--SCORE-->
+				<point x="-355" y="45" local_z="100" copy="20"/>
+			</key>
+			<key id="31"> <!--img result-->
+				<point x="-355" y="110" local_z="200"/>
+			</key>
+			<key id="32"> <!--blackjack-->
+				<point x="-300" y="30" local_z="100"/>
+			</key>
+			<key id="33"> <!--label money bet-->
+				<point x="-250" y="-40" scale="1.0" local_z="150"/>
+			</key>
+			<key id="34"> <!--label money bet insuarance-->
+				<point x="-250" y="100" scale="1.0" local_z="150"/>
+			</key>
+			<key id="35"> <!--label money bet return-->
+				<point x="-320" y="-40" scale="1.0" local_z="150"/>
+			</key>
+			<key id="36"> <!--label money bet return insuarance-->
+				<point x="-320" y="100" scale="1.0" local_z="150"/>
+			</key>
+			<key id="37"> <!--arraw-->
+				<point x="-300" y="110" scale="1.0" local_z="150"/>
+			</key>
+		</bundle>
+		<bundle id="3"> <!-- seat 2 bundle -->
+			<key id="1"> <!-- __PLAYER_PLAY_KEY__ -->
+				<point x="0" y="310" scale="1.0" copy="100" local_z="1"/>
+			</key>
+			<key id="4"> <!--Coin on seat key-->
+				<point x="0" y="180" scale="1.0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="6"> <!--coin bet insuarance key-->
+				<point x="0" y="90" scale="1.0" rotate="0" local_z="55" copy="100" offset_y="3" offset_local_z="1"/>
+			</key>
+			<key id="9"> <!--Card on hand-->
+				<point x="-35" y="130" scale="0.8" local_z="1" copy="20" offset_x="35" offset_local_z="1"/>
+			</key>
+			<key id="10"> <!--SCORE-->
+				<point x="-85" y="125" local_z="100" copy="20"/>
+			</key>
+			<key id="11"> <!--img result-->
+				<point x="-90" y="185" local_z="200"/>
+			</key>
+			<key id="12"> <!--blackjack-->
+				<point x="-35" y="110" local_z="100"/>
+			</key>
+			
+			<key id="30"> <!--SCORE-->
+				<point x="-85" y="125" local_z="100" copy="20"/>
+			</key>
+			<key id="31"> <!--img result-->
+				<point x="-90" y="185" local_z="200"/>
+			</key>
+			<key id="32"> <!--blackjack-->
+				<point x="-35" y="110" local_z="100"/>
+			</key>
+		</bundle>
+		<bundle id="4"> <!-- GAME-POINT -->
+			<key id="0"> <!-- diem bat dau chia card -->
+				<point x="390" y="158" scale="0.6" rotate="-73" copy="100" local_z="1"/>
+			</key>
+			
+			<key id="2"> <!-- diem bat dau chia card -->
+				<point x="390" y="158" scale="0.6" rotate="-73" copy="100" local_z="1"/>
+			</key>
+		</bundle>
+	
+		<layout width="wrap_content" height="wrap_content" x="0" y="-300" type="horizontal" hashkey="bottom_control_bet" visible="false">
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_bet_min" touch="true" bindtouch="onclick=bt_bet_min_touch" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_bet_max" touch="true" bindtouch="onclick=bt_bet_max_touch" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="200" height="80" hashkey="button_temp2" visible="false" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_bet" touch="true" bindtouch="onclick=bt_bet_touch" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_rebet" touch="true" bindtouch="onclick=bt_rebet_touch" opacity="0"/>		
+		</layout>
+		<layout width="wrap_content" height="wrap_content" x="0" y="-300" type="horizontal" hashkey="bottom_control_play" visible="false">
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_split" touch="true" bindtouch="onclick=bt_split_touch" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_stand" touch="true" bindtouch="onclick=bt_stand_touch" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="200" height="80" hashkey="button_temp1" visible="false"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_hit" touch="true" bindtouch="onclick=bt_hit_touch" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_doubledown" touch="true" bindtouch="onclick=bt_doubledown_touch" opacity="0"/>	
+		</layout>
+		<layout width="wrap_content" height="wrap_content" x="0" y="-300" type="horizontal" hashkey="bottom_control_insurance" visible="false">
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_khong" touch="true" bindtouch="onclick=bt_khong_touch" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="button_temp3" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="200" height="80" hashkey="button_temp4" visible="false"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="button_temp5" opacity="0"/>
+			<group style="xml/game/newblackjack/button_control.xml" width="240" height="80" hashkey="bt_co" touch="true" bindtouch="onclick=bt_co_touch" opacity="0"/>	
+		</layout>
+	</layout>
+	<!-- <img atlas="atlas/newthreecardpoker.plist" frame="dealer.png" align="top_center_horizontal" margin_top="-10"/> -->
+	
+	<label font="fonts/font30.fnt" size="30" type="nowrap" align="left_bottom" margin_left="40" margin_bottom="20" color="white" opacity="150" hashkey="viewing" local_z="2">Đang xem...</label>	
+</layout>

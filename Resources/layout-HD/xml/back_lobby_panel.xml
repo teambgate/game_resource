@@ -1,0 +1,21 @@
+<touchdelegates>
+    <touchdelegate name="log_out_touch" />
+    <touchdelegate name="exit_touch" />
+    <touchdelegate name="close_touch" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative">
+    <layout width="320" height="309" background="texture/board/back_options.png" align="top_left" margin_left="30" margin_top="80" anchor-x="0" anchor-y="1" type="vertical" scale="1.0" hashkey="button_bar" target_scale="1.0" touch="true" cascade_opacity="true" weight_sum="3" opacity="0" visible="false">
+        <group style="xml/ui/button_style_6.xml" align="center" touch="true" bindtouch="onclick=log_out_touch" hashkey="stand_button" cascade_opacity="true" weight="1">
+            <changetexture target="this:icon" atlas="atlas/ui.plist" frame="rakhoiban-icon.png"/>
+            <changetext target="this:label">ĐĂNG XUẤT</changetext>
+        </group>
+        <group style="xml/ui/button_style_6.xml" align="center" touch="true" bindtouch="onclick=exit_touch" hashkey="leave_button" cascade_opacity="true" weight="1">
+            <changetexture target="this:icon" atlas="atlas/ui.plist" frame="dangxuat-icon.png"/>
+            <changetext target="this:label">THOÁT GAME</changetext>
+        </group>
+        <group style="xml/ui/button_style_6.xml" align="center" touch="true" bindtouch="onclick=close_touch" hashkey="close_button" cascade_opacity="true" weight="0.8">
+            <changetexture target="this:icon" atlas="atlas/ui.plist" frame="dong-icon.png"/>
+            <changetext target="this:label">ĐÓNG</changetext>
+        </group>
+    </layout>
+</layout>

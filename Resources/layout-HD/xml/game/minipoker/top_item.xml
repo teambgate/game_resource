@@ -1,0 +1,18 @@
+<layout type="relative" width="540" height="28">
+	<layout width="540" height="26" align="top_center_horizontal" type="horizontal">
+		<layout width="134" height="match_parent" type="relative">
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".4" color="white" hashkey="time">00 : 00 01/01/2017</label>
+		</layout>
+		<layout width="158" height="match_parent" type="relative">
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".6" color="white" hashkey="username">Minipoker Vip</label>
+		</layout>
+		<layout width="112" height="match_parent" type="relative">				
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".5" color="white" hashkey="bet">1.000</label>
+		</layout>
+
+		<layout width="130" height="match_parent" type="relative">				
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".5" color="white" hashkey="jackpot">1.000.000</label>
+		</layout>		
+	</layout>
+	<img atlas="atlas/minipoker.plist" frame="line.png" align="bottom_center_horizontal" width="wrap_content" height="wrap_content" />
+</layout>

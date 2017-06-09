@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OPEN_CARD</key>
+	<string>Mở bài</string>
+	<key>BET</key>
+	<string>Đặt cược</string>
+	
+	<key>SAP</key>
+	<string>SÁP</string>
+	<key>POINT</key>
+	<string> điểm</string>
+	
+	<key>TIME_BET</key>
+	<string>Thời gian đặt cược còn </string>
+	<key>TIME_OPEN_CARD</key>
+	<string>Thời gian nặn bài còn </string>
+	<key>UNIT_TIME</key>
+	<string> giây</string>
+	
+	<key>WIN</key>
+	<string>Thắng</string>
+	<key>DRAW</key>
+	<string>Hòa</string>
+	<key>LOSE</key>
+	<string>Thua</string>
+	
+	<key>WIN_HOST</key>
+	<string>Thắng chương</string>
+	<key>DRAW_HOST</key>
+	<string>Hòa chương</string>
+	<key>LOSE_HOST</key>
+	<string>Thua chương</string>
+	
+	<key>CUOP_CHUONG</key>
+	<string>Cướp chương</string>
+	
+	<key>NOT_ENOUGHT_MONEY_PLAY</key>
+	<string>Bạn không đủ tiền để tiếp tục chơi</string>
+	<key>CONNECT_NOT_SAVE</key>
+	<string>Bạn bị đẩy ra khỏi bàn chơi vì kết nối mạng không ổn định!</string>
+	<key>SEAT_START_GAME</key>
+	<string>Bạn hãy ngồi xuống để bắt đầu chơi game</string>
+	<key>FULL_TABLE</key>
+	<string>Bàn chơi đã đầy</string>
+</dict>
+</plist>

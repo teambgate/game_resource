@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HAVE_A_SEAT</key>
+	<string>Bạn hãy ngồi xuống để bắt đầu chơi game</string>
+	<key>DOI_BAN_CUA</key>
+	<string>Chờ nhà cái bán cửa !</string>
+	<key>DAT_CUA</key>
+	<string>Đặt cửa !</string>
+	<key>ASK_BAN_CHAN</key>
+	<string>Bạn có muốn bán cửa chẵn không ?</string>
+	<key>ASK_BAN_LE</key>
+	<string>Bạn có muốn bán cửa lẻ không ?</string>
+	<key>ASK_BAN_SMALL</key>
+	<string>Bạn có muốn bán cửa này không ?</string>
+	<key>ASK_CAN_HET</key>
+	<string>Bạn có muốn cân hết không ?</string>
+	<key>SUCCESS_CAI</key>
+	<string>Đăng ký làm cái thành công !</string>
+	<key>FULL</key>
+	<string>Bàn chơi đã đầy !</string>
+	<key>CAN_NOT_LEAVE_WHEN_BAN_CUA</key>
+	<string>Bạn không thể thoát trong thời gian nhà cái bán cửa</string>
+</dict>
+</plist>

@@ -1,0 +1,79 @@
+<touchdelegates>
+        <touchdelegate name="touch_close"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" touch="true" align="center" type="relative">
+        <img src="texture/white_32x32.png" width="match_parent" height="match_parent" color="black" align="center" hashkey="bg"/>
+        <layout name="center" type="absolute" align="center">
+                <layout name="big_wheel" type="absolute" scale="0" hashkey="big_wheel">
+                        <img src="texture/lucky_wheel/vongtronmathuat_removecolor.png"/>
+                        <img name="light_1" src="texture/lucky_wheel/vongtronngoai1.png" visible="true"/>
+                        <img name="light_2" src="texture/lucky_wheel/vongtronngoai2.png" visible="false"/>
+                        <layout type="absolute" hashkey="frags">
+                                <layout anchor-x="0" anchor-y="0" type="absolute" clonekey="wheel_frag">
+                                        <img atlas="atlas/lucky_wheel.plist" frame="manh1.png" anchor-x="0" anchor-y="0" hashkey="wheel_frag_bg"/>
+                                        <layout anchor-x="0" anchor-y="0" type="absolute" rotate="15">
+                                                <img atlas="atlas/lucky_wheel.plist" frame="icon_xu_plus.png" y="130" hashkey="wheel_frag_icon"/>
+                                                <label width="match_parent" font="atlas/lucky_wheel_number_font.fnt" hashkey="wheel_frag_text" font_atlas="atlas/lucky_wheel.plist" font_frame="font.png" scale_factor="1" type="nowrap" y="190" cascade_opacity="true">200K</label>
+                                        </layout>
+                                </layout>
+                        </layout>
+                </layout>
+                <layout name="knob" type="absolute" scale="0" hashkey="knob">
+                        <img atlas="atlas/lucky_wheel.plist" frame="muitenketqua.png" hashkey="arrow"/>
+                        <img name="loading" atlas="atlas/lucky_wheel.plist" frame="loading.png" y="-21" hashkey="load_wheel" visible="false"/>
+                        <img name="loading" atlas="atlas/lucky_wheel.plist" frame="load1.png" y="-21" hashkey="load_result" visible="false"/>
+                        <img name="loading" atlas="atlas/lucky_wheel.plist" frame="muiten.png" y="64" hashkey="load_arrow" visible="false"/>
+                </layout>
+                <img src="texture/lucky_wheel/board_thongbaoketqua.png" x="300" hashkey="noti_board" visible="false"/>
+                <label width="match_parent" max_width="280" x="300" font="atlas/lucky_wheel_full_font.fnt" visible="false" hashkey="noti_text" font_atlas="atlas/lucky_wheel.plist" font_frame="font_vietnamese.png" scale_factor="1.25" y="60" cascade_opacity="true">Chúc mừng bạn đã nhận được</label>
+                <layout x="300" y="-30" type="horizontal" width="wrap_content" height="wrap_content">
+                        <label width="match_parent" align="center" type="nowrap" color="yellow" font="atlas/lucky_wheel_full_font.fnt" visible="false" hashkey="noti_money" font_atlas="atlas/lucky_wheel.plist" font_frame="font_vietnamese.png" scale_factor="1.25" cascade_opacity="true">200K xu</label>
+                        <img atlas="atlas/lucky_wheel.plist" frame="icon_xu_plus.png" align="center" margin_left="20" visible="false" hashkey="noti_money_icon"/>
+                </layout>
+                <group style="xml/ui/button_style_3.xml" width="243" height="90" x="300" y="-250" touch="true" bindtouch="onclick=touch_close" visible="false" hashkey="noti_button">
+                        <changetexture target="this:image" atlas="atlas/lucky_wheel.plist" frame="bt_dongy.png"/>
+                </group>
+        </layout>
+        <runaction>
+                <!-- <action id="this:center:big_wheel">
+                        <sequence>
+                                <delay time="0.1"/>
+                                <scaleto time="0.65" x="1" y="1" ease="backout"/>
+                        </sequence>
+                </action>
+                <action id="this:center:knob">
+                        <sequence>
+                                <delay time="0.2"/>
+                                <scaleto time="0.65" x="1" y="1" ease="backout"/>
+                        </sequence>
+                </action>
+                <action id="this:center:knob:loading">
+                        <repeatforever>
+                                <sequence>
+                                        <rotateby time="0.0" r="15"/>
+                                        <delay time="0.075"/>
+                                </sequence>
+                        </repeatforever>
+                </action> -->
+                <action id="this:center:big_wheel:light_1">
+                        <repeatforever>
+                                <sequence>
+                                        <delay time="0.25"/>
+                                        <show/>
+                                        <delay time="0.25" />
+                                        <hide />
+                                </sequence>
+                        </repeatforever>
+                </action>
+                <action id="this:center:big_wheel:light_2">
+                        <repeatforever>
+                                <sequence>
+                                        <delay time="0.25"/>
+                                        <hide/>
+                                        <delay time="0.25" />
+                                        <show />
+                                </sequence>
+                        </repeatforever>
+                </action>
+        </runaction>
+</layout>

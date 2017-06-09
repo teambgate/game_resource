@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DOI_CHI</key>
+	<string>Đổi chi</string>
+	<key>TU_DONG_BINH</key>
+	<string>Tự động binh</string>
+	<key>XONG</key>
+	<string>Xong</string>
+	<key>BAO</key>
+	<string></string>
+	<key>SORT_DONE</key>
+	<string>Xếp xong</string>
+	<key>SORT_AGAIN</key>
+	<string>Xếp lại</string>
+	<key>SORTING</key>
+	<string>Đang xếp</string>
+	
+	<key>COUNT_TIME_TITLE</key>
+	<string>Thời gian xếp còn %d giây</string>
+	
+	<key>SPECIAL_RONG_CUON</key>
+	<string> Mậu binh rồng cuốn x 78 </string>
+	<key>SPECIAL_SANH_RONG</key>
+	<string> Mậu binh sảnh rồng x 39 </string>
+	<key>SPECIAL_5_DOI_1_SAM</key>
+	<string> Mậu binh 5 đôi 1 xám x 8 </string>
+	<key>SPECIAL_LUC_PHE_BON</key>
+	<string> Mậu binh lục phé bôn x 6 </string>
+	<key>SPECIAL_BA_THUNG</key>
+	<string> Mậu binh 3 thùng x 6  </string>
+	<key>SPECIAL_BA_SANH</key>
+	<string> Mậu binh 3 sảnh x 6 </string>
+	<key>SPECIAL_MUOI_HAI_DO</key>
+	<string> Mậu binh 12 lá đỏ x 18 </string>
+	<key>SPECIAL_MUOI_HAI_DEN</key>
+	<string> Mậu binh 12 lá đen x 18 </string>
+	<key>SPECIAL_MUOI_BA_DO</key>
+	<string> Mậu binh 13 lá đỏ x 26 </string>
+	<key>SPECIAL_MUOI_BA_DEN</key>
+	<string> Mậu binh 13 lá đen x 26 </string>
+	<key>SPECIAL_XAM_CO</key>
+	<string> Mậu binh xám cô duy nhất x 12 </string>
+	<key>SPECIAL_5_DOI_THONG</key>
+	<string> Mậu binh 5 đôi thông x 6 </string>
+	<key>SET_SPECIAL_TUQUYCHI1</key>
+	<string> Tứ quý chi cuối x 4 </string>
+	<key>SET_SPECIAL_THUNGPHASANHCHI1</key>
+	<string> Thùng phá sảnh chi cuối x 5 </string>
+	<key>SET_SPECIAL_CULUCHI2</key>
+	<string> Cù lũ chi giữa x 2 </string>
+	<key>SET_SPECIAL_THUNGPHASANHCHI2</key>
+	<string> Thùng phá sảnh chi giữa x 10 </string>
+	<key>SET_SPECIAL_TUQUYCHI2</key>
+	<string> Tứ quý chi giữa x 8  </string>
+	<key>SET_SPECIAL_SAMCHI3</key>
+	<string> Xám chi đầu x 3 </string>
+	<key>SET_SPECIAL_THUNGPHASANHTHUONGCHI1</key>
+	<string> Thùng phá sảnh thượng chi cuối x 10 </string>
+	<key>SET_SPECIAL_THUNGPHASANHTHUONGCHI2</key>
+	<string> Thùng phá sảnh thượng chi giữa x 20 </string>
+	<key>SET_SPECIAL_THUNGPHASANHHACHI1</key>
+	<string> Thùng phá sảnh hạ chi cuối x 7 </string>
+	<key>SET_SPECIAL_THUNGPHASANHHACHI2</key>
+	<string> Thùng phá sảnh hạ chi giữa x 14 </string>
+	<key>SET_SPECIAL_SAMATCHI3</key>
+	<string> Xám chi A x 9 </string>
+	<key>SET_SPECIAL_TUQUYATCHI1</key>
+	<string> Tứ quý A chi cuối x 16 </string>
+	<key>SET_SPECIAL_TUQUYATCHI2</key>
+	<string> Tứ quý A chi giữa x 32 </string>
+	
+	<key>BINH_LUNG</key>
+	<string>Binh lủng</string>
+	<key>MAU_THAU</key>
+	<string>Mậu thầu</string>
+	<key>DOI</key>
+	<string>Đôi</string>
+	<key>THU</key>
+	<string>Thú</string>
+	<key>XAM_CHI</key>
+	<string>Xám chi</string>
+	<key>SANH</key>
+	<string>Sảnh</string>
+	<key>THUNG</key>
+	<string>Thùng</string>
+	<key>CU_LU</key>
+	<string>Cù lũ</string>
+	<key>TU_QUY</key>
+	<string>Tứ quý</string>
+	<key>THUNG_PHA_SANH</key>
+	<string>Thùng phá sảnh</string>	
+	<key>THUNG_PHA_SANH_HA</key>
+	<string>Thùng phá sảnh hạ</string>	
+	<key>THUNG_PHA_SANH_THUONG</key>
+	<string>Thùng phá sảnh thượng</string>	
+	<key>SANH_HA</key>
+	<string>Sảnh hạ</string>	
+	<key>SANH_THUONG</key>
+	<string>Sảnh thượng</string>	
+	
+	<key>ROOM_FULL_MESSAGE</key>
+	<string>Bàn chơi đã đầy</string>	
+	<key>ROOM_NOT_FULL_MESSAGE</key>
+	<string>Bạn hãy ngồi xuống để bắt đầu chơi game</string>	
+	
+	<key>LEAVE_REASON_TIME_OUT</key>
+	<string>Bạn đã bị đá khỏi phòng vì thời gian time out quá lâu</string>
+	<key>LEAVE_REASON_NETWORK_SLOW</key>
+	<string>Bạn bị đẩy ra khỏi bàn chơi vì kết nối mạng không ổn định!</string>
+	<key>LEAVE_REASON_NOT_ENOUGH_MONEY</key>
+	<string>Bạn không đủ tiền để tiếp tục chơi!</string>
+	<key>LEAVE_REASON_KICKED</key>
+	<string>Bạn bị kích bởi chủ bàn vì không sẵn sàng!</string>
+	<key>BACK_MESSAGE</key>
+	<string>Bạn sẽ bị tính sập hầm khi đứng lên hoặc thoát ra vào thời điểm này!</string>
+</dict>
+</plist>

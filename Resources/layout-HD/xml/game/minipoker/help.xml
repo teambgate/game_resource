@@ -1,0 +1,52 @@
+<touchdelegates>
+	<touchdelegate name="close" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" background="texture/white_2x2.png" color="black" opacity="150" touch="true">
+	<layout width="600" height="370" type="relative" align="center" scale="1.4">
+		<img atlas="atlas/minipoker.plist" frame="board.png" align="center" width="wrap_content" height="wrap_content" />
+		<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="top_center_horizontal" scale_factor=".8" margin_top="26" color="white">HƯỚNG DẪN</label>
+		<group style="xml/ui/button_style_1.xml" align="top_right" touch="true" bindtouch="onclick=close" scale=".8" margin_top="16">
+			<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="x_button.png" />
+		</group>
+
+		<listview width="match_parent" height="300" align="bottom_center_horizontal" type="vertical">
+			<layout width="544" height="270" align="center" type="relative">
+				<img atlas="atlas/minipoker.plist" frame="luatchoi_board.png" align="center" width="wrap_content" height="wrap_content" />
+				<layout width="match_parent" height="match_parent" type="relative">
+					<layout type="horizontal" width="match_parent" height="33" align="top_center_horizontal">
+						<layout width="118" height="match_parent" type="relative">
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".6" color="white">Bộ Bài</label>
+						</layout>
+						<layout width="125" height="match_parent" type="relative">
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".6" color="white">Minh Họa</label>
+						</layout>
+						<layout width="85" height="match_parent" type="horizontal">
+							<img atlas="atlas/minipoker.plist" frame="chip.png" align="center" width="wrap_content" height="wrap_content" scale=".6" margin_left="16" padding_right="10"/>
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".5" color="white" hashkey="bet1">100</label>
+						</layout>
+						<layout width="96" height="match_parent" type="horizontal">
+						<img atlas="atlas/minipoker.plist" frame="chip.png" align="center" width="wrap_content" height="wrap_content" scale=".6" margin_left="16" padding_right="10"/>
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".5" color="white" hashkey="bet2">500</label>
+						</layout>
+						<layout width="114" height="match_parent" type="horizontal">
+						<img atlas="atlas/minipoker.plist" frame="chip.png" align="center" width="wrap_content" height="wrap_content" scale=".6" margin_left="16" padding_right="10"/>
+							<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".5" color="white" hashkey="bet3">1.000</label>
+						</layout>
+					</layout>
+
+					<layout type="vertical" width="match_parent" height="237" hashkey="list_item" align="bottom_center_horizontal">
+
+					</layout>
+				</layout>
+			</layout>
+			<layout width="match_parent" height="30"></layout>
+			<layout width="540" height="wrap_content" type="vertical" align="center" >
+				<label font="fonts/SF-UI-Text-Regular.otf" size="20" align="left" width="540"  opacity="230" hashkey="help_content">Đang tải dữ liệu...</label>
+			</layout>
+			<layout width="match_parent" height="40"></layout>
+			<img atlas="atlas/minipoker.plist" frame="help.png" align="center" width="wrap_content" height="wrap_content" scale=".8"/>
+			<layout width="match_parent" height="40"></layout>
+		</listview>
+
+	</layout>
+</layout>

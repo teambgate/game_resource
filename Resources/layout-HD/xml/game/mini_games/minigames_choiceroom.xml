@@ -1,0 +1,25 @@
+<touchdelegates>
+        <touchdelegate name="touch_baucua"/>
+        <touchdelegate name="touch_taixiu"/>
+        <touchdelegate name="touch_minipoker"/>
+        <touchdelegate name="touch_comming_soon"/>
+</touchdelegates>
+<layout width="381" height="match_parent" padding_top="230" type="relative" align="center">
+        <img height="match_parent" width="316" src="texture/minigame_choiceroom/fr_minigame.png" align="left_bottom" margin_bottom="-5" margin_left="5"  anchor-x="0" scale_x="1.2"/>
+        <listview width="match_parent" height="match_parent" padding_top="85" align="left_bottom" margin_bottom="10" type="vertical" hashkey="item_list_view">
+                <layout width="match_parent" height="wrap_content" type="vertical" hashkey="itemlist">
+                        <group style="xml/ui/minigame_choiceroom_button.xml" align="center" margin_bottom="8" margin_top="8" hashkey="bau_cua" touch="true" bindtouch="onclick=touch_baucua">
+                                <changetexture target="this:image" src="texture/minigame_choiceroom/icon_baucua_long.png" keep_size="true"/>
+                        </group>
+                        <group style="xml/ui/minigame_choiceroom_button.xml" align="center" margin_bottom="8" margin_top="8" touch="true" hashkey="tai_xiu" bindtouch="onclick=touch_taixiu">
+                                <changetexture target="this:image" src="texture/minigame_choiceroom/icon_taixiu_long.png" keep_size="true"/>
+                        </group>
+                        <group style="xml/ui/minigame_choiceroom_button.xml" align="center" margin_bottom="8" margin_top="8" touch="true" hashkey="mini_poker" bindtouch="onclick=touch_minipoker">
+                                <changetexture target="this:image" src="texture/minigame_choiceroom/icon_minipoker_long.png" keep_size="true"/>
+                        </group>
+                        <group style="xml/ui/minigame_choiceroom_button.xml" align="center" margin_bottom="8" margin_top="8" touch="true" bindtouch="onclick=touch_comming_soon">
+                                <changetexture target="this:image" src="texture/minigame_choiceroom/icon_comingsoon_long.png" keep_size="true"/>
+                        </group>
+                </layout>
+        </listview>
+</layout>

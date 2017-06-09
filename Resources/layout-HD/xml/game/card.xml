@@ -1,0 +1,74 @@
+<layout width="86" height="106" type="relative">
+    <img atlas="atlas/card_game.plist" frame="card_0.png" align="center" hashkey="cardImage"
+	frame_atlas_custom="atlas/card_game.plist"
+    frame_0="card_0.png"
+	frame_1="card_1.png"
+	frame_2="card_2.png"
+	frame_3="card_3.png"
+	frame_4="card_4.png"
+	frame_5="card_5.png"
+	frame_6="card_6.png"
+	frame_7="card_7.png"
+	frame_8="card_8.png"
+	frame_9="card_9.png"
+	frame_10="card_10.png"
+	frame_11="card_11.png"
+	frame_12="card_12.png"
+	frame_13="card_13.png"
+	frame_14="card_14.png"
+	frame_15="card_15.png"
+	frame_16="card_16.png"
+	frame_17="card_17.png"
+	frame_18="card_18.png"
+	frame_19="card_19.png"
+	frame_20="card_20.png"
+	frame_21="card_21.png"
+	frame_22="card_22.png"
+	frame_23="card_23.png"
+	frame_24="card_24.png"
+	frame_25="card_25.png"
+	frame_26="card_26.png"
+	frame_27="card_27.png"
+	frame_28="card_28.png"
+	frame_29="card_29.png"
+	frame_30="card_30.png"
+	frame_31="card_31.png"
+	frame_32="card_32.png"
+	frame_33="card_33.png"
+	frame_34="card_34.png"
+	frame_35="card_35.png"
+	frame_36="card_36.png"
+	frame_37="card_37.png"
+	frame_38="card_38.png"
+	frame_39="card_39.png"
+	frame_40="card_40.png"
+	frame_41="card_41.png"
+	frame_42="card_42.png"
+	frame_43="card_43.png"
+	frame_44="card_44.png"
+	frame_45="card_45.png"
+	frame_46="card_46.png"
+	frame_47="card_47.png"
+	frame_48="card_48.png"
+	frame_49="card_49.png"
+	frame_50="card_50.png"
+	frame_51="card_51.png"
+	frame_52="card_52.png" />
+    <img atlas="atlas/card_game.plist" frame="card_mark.png" align="center" hashkey="mark" visible="false"/>
+    <img atlas="atlas/card_game.plist" frame="card_52.png" align="center" hashkey="downFlop" visible="false"/>
+    <img atlas="atlas/card_game.plist" frame="stroke_card.png" align="center" hashkey="stroke" visible="false"/>
+	<layout atlas="atlas/card_game.plist" frame="border_white_32x32.png" width="76" height="98" cap_left="4" cap_top="4" cap_right="4" cap_bottom="4" color="black" opacity="150" align="center" y="8" hashkey="blackLayout" visible="false"/>
+    <layout align="top_center_horizontal" type="absolute">
+        <img name="arrow" atlas="atlas/card_game.plist" frame="arrow.png" hashkey="arrow" visible="false" scale="1.5" anchor-x="0.5" anchor-y="0.0"/>
+        <runaction>
+            <action id="this:arrow">
+                <repeatforever>
+                    <sequence>
+                        <moveby time="0.2" y="20"/>
+                        <moveby time="0.2" y="-20"/>
+                    </sequence>
+                </repeatforever>
+            </action>
+        </runaction>
+    </layout>
+</layout>

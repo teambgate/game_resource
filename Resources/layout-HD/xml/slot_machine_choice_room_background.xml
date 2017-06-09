@@ -1,0 +1,3 @@
+<layout width="match_parent" height="match_parent" align="center" type="relative">
+    <img src="texture/slot_machine/bg_new_slot.png" align="center" width="wrap_content" height="match_parent" blend="disable"/>
+</layout>

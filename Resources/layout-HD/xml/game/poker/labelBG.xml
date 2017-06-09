@@ -1,0 +1,5 @@
+<touchdelegates>
+</touchdelegates>
+<layout width="200" height="45" atlas="atlas/card_game.plist" frame="border_white_32x32.png"  cap_left="8" cap_top="8" cap_right="8" cap_bottom="8" color="black" opacity="150" type="relative">
+	<label name="label" font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="25" scale_factor="0.833333" type="nowrap" align="center" >100</label>
+</layout>

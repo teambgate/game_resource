@@ -1,0 +1,58 @@
+<touchdelegates>
+    <touchdelegate name="touch_close"/>
+    <touchdelegate name="touch_caidat"/>
+    <touchdelegate name="touch_luatchoi"/>
+    <touchdelegate name="touch_dieukhoan"/>
+    <touchdelegate name="touch_gopy"/>
+    <touchdelegate name="touch_privacy"/>
+    <touchdelegate name="touch_dangxuat"/>
+    <touchdelegate name="touch_thoatgame"/>
+</touchdelegates>
+<layout type="relative" width="match_parent" height="match_parent" touch="true">
+        <img src="texture/white_2x2.png" width="match_parent" height="match_parent" hashkey="shadow" color="black" opacity="150" align="center"/>
+        <layout width="650" height="687" type="relative" align="center" hashkey="main_center" scale="0.9">
+                <img src="texture/new_ui/board_menu.png" align="center"/>
+                <img atlas="atlas/new_ui.plist" frame="txt_menu.png" align="top_center_horizontal" margin_top="22"/>
+                <img atlas="atlas/new_ui.plist" frame="bt_menu.png" align="top_left" margin_top="20" margin_left="27"/>
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="10.5" margin_top="10.5" touch="true" bindtouch="onclick=touch_close">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+                <layout type="vertical" width="628.5" height="wrap_content" align="top_center_horizontal" margin_top="90">
+                        <group style="xml/ui/button_style_3.xml" width="match_parent" height="83.5" align="center" touch="true" bindtouch="onclick=touch_caidat">
+                                <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_select.png"/>
+                                <label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_center_horizontal" margin_top="18" cascade_opacity="true">Cài đặt</label>
+                                <img atlas="atlas/new_ui.plist" frame="ion_caidat.png" align="left_center_vertical" margin_left="15"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="match_parent" height="83.5" align="center" touch="true" bindtouch="onclick=touch_luatchoi">
+                                <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_select.png"/>
+                                <label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_center_horizontal" margin_top="18" cascade_opacity="true">Luật chơi</label>
+                                <img atlas="atlas/new_ui.plist" frame="ion_luatchoi.png" align="left_center_vertical" margin_left="15"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="match_parent" height="83.5" align="center" touch="true" bindtouch="onclick=touch_dieukhoan">
+                                <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_select.png"/>
+                                <label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_center_horizontal" margin_top="18" cascade_opacity="true">Điều khoản sử dụng</label>
+                                <img atlas="atlas/new_ui.plist" frame="ion_dieukhoansudung.png" align="left_center_vertical" margin_left="15"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="match_parent" height="83.5" align="center" touch="true" bindtouch="onclick=touch_gopy">
+                                <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_select.png"/>
+                                <label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_center_horizontal" margin_top="18" cascade_opacity="true">Góp ý</label>
+                                <img atlas="atlas/new_ui.plist" frame="ion_gopy.png" align="left_center_vertical" margin_left="15"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="match_parent" height="83.5" align="center" touch="true" bindtouch="onclick=touch_privacy">
+                                <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_select.png"/>
+                                <label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_center_horizontal" margin_top="18" cascade_opacity="true">Privacy policy</label>
+                                <img atlas="atlas/new_ui.plist" frame="ion_privacypolicy.png" align="left_center_vertical" margin_left="15"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="match_parent" height="83.5" align="center" touch="true" bindtouch="onclick=touch_dangxuat">
+                                <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_select.png"/>
+                                <label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_center_horizontal" margin_top="18" cascade_opacity="true">Đăng xuất</label>
+                                <img atlas="atlas/new_ui.plist" frame="ion_dangxuat.png" align="left_center_vertical" margin_left="15"/>
+                        </group>
+                        <group style="xml/ui/button_style_3.xml" width="match_parent" height="83.5" align="center" touch="true" bindtouch="onclick=touch_thoatgame">
+                                <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_select.png"/>
+                                <label font="fonts/SF-UI-Text-Medium.otf" size="40" type="nowrap" align="top_center_horizontal" margin_top="18" cascade_opacity="true">Thoát game</label>
+                                <img atlas="atlas/new_ui.plist" frame="ion_thoatgame.png" align="left_center_vertical" margin_left="15"/>
+                        </group>
+                </layout>
+        </layout>
+</layout>

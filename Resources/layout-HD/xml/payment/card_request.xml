@@ -1,0 +1,27 @@
+<touchdelegates>
+    <touchdelegate name="no"/>
+    <touchdelegate name="yes"/>
+</touchdelegates>
+<layout type="vertical">
+    <layout width="wrap_content" height="wrap_content" type="horizontal" align="center" margin_top="50">
+        <group style="xml/payment/card_collection_item.xml" align="top" hashkey="logo"/>
+        <layout width="wrap_content" height="wrap_content" type="vertical" align="top" margin_top="10" margin_left="30">
+            <layout width="600" height="60" type="relative" align="center">
+                <img atlas="primitive/primitive.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" color="#000000" opacity="100" align="center" cap_top="10" cap_left="10" cap_right="10" cap_bottom="10"/>
+                <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Mã số thẻ" placeholdercolor="#afafaf" hashkey="code" inputflag="sentence" inputmode="singleline"/>
+            </layout>
+            <layout width="600" height="60" type="relative" align="center" margin_top="50">
+                <img atlas="primitive/primitive.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" color="#000000" opacity="100" align="center" cap_top="10" cap_left="10" cap_right="10" cap_bottom="10"/>
+                <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Số seri" placeholdercolor="#afafaf" hashkey="seri" inputflag="sentence" inputmode="singleline"/>
+            </layout>
+            <layout width="600" height="100" margin_top="60" type="relative">
+                <group style="xml/ui/button_style_1.xml" align="left_center_vertical" anchor-x="0" anchor-y="0.5" scale="1.5" touch="true" bindtouch="onclick=no">
+                    <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_no_up.png"/>
+                </group>
+                <group style="xml/ui/button_style_1.xml" align="right_center_vertical" anchor-x="1.0" anchor-y="0.5" scale="1.5" touch="true" bindtouch="onclick=yes">
+                    <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_ok_up.png"/>
+                </group>
+            </layout>
+        </layout>
+    </layout>
+</layout>

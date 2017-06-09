@@ -1,0 +1,33 @@
+<touchdelegates>
+    <touchdelegate name="viettel"/>
+    <touchdelegate name="vinaphone"/>
+    <touchdelegate name="mobifone"/>
+    <touchdelegate name="hope_pay"/>
+    <touchdelegate name="gift_code"/>
+</touchdelegates>
+<layout type="vertical" cascade_opacity="true">
+    <layout width="wrap_content" height="wrap_content" type="horizontal" margin_top="30" align="center" cascade_opacity="true">
+        <group style="xml/payment/card_collection_item.xml" bindtouch="onclick=viettel" cascade_opacity="true">
+            <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="card_viettel.png" />
+            <changetext target="this:label">Viettel</changetext>
+        </group>
+        <group style="xml/payment/card_collection_item.xml" margin_left="80" bindtouch="onclick=vinaphone" cascade_opacity="true">
+            <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="card_vinaphone.png" />
+            <changetext target="this:label">Vinaphone</changetext>
+        </group>
+        <group style="xml/payment/card_collection_item.xml" margin_left="80" bindtouch="onclick=mobifone" cascade_opacity="true">
+            <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="card_mobifone.png" />
+            <changetext target="this:label">Mobifone</changetext>
+        </group>
+    </layout>
+    <layout width="wrap_content" height="wrap_content" type="horizontal" margin_top="30" align="center" cascade_opacity="true">
+        <group style="xml/payment/card_collection_item.xml" bindtouch="onclick=hope_pay" cascade_opacity="true">
+            <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="card_hopepay.png" />
+            <changetext target="this:label">Hope Pay</changetext>
+        </group>
+        <group style="xml/payment/card_collection_item.xml" margin_left="80" bindtouch="onclick=gift_code" cascade_opacity="true">
+            <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="card_giftcode.png" />
+            <changetext target="this:label">Gift code</changetext>
+        </group>
+    </layout>
+</layout>

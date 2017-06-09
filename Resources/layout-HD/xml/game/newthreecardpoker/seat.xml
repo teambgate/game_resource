@@ -1,0 +1,21 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" touch="true" touchdelegate="onclick" cascade_opacity="true">
+    <img name="image" atlas="atlas/blackjack.plist" frame="bt_join.png" hashkey="seat"/>
+	<touchbegan>
+        <action id="this:image">
+            <scaleto time="0.1" x="0.95" y="0.95"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+    </touchcancel>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EMPTY_GIFT_CODE</key>
+	<string>Bạn chưa nhập gift code !</string>
+	<key>EMPTY_CARD_CODE</key>
+	<string>Bạn chưa nhập mã số thẻ !</string>
+	<key>EMPTY_SERIAL</key>
+	<string>Bạn chưa nhập số serial !</string>
+	<key>WAIT_SYSTEM_RESPONSE</key>
+	<string>Yêu cầu đã được gửi. Vui lòng chờ hệ thống xử lý !</string>
+	<key>SUCCESS</key>
+	<string>Nạp tiền thành công</string>
+	<key>SUCCESS_VIP</key>
+	<string>bạn đã trở thành VIP và được cộng </string>
+	<key>SUCCESS_NORMAL</key>
+	<string>bạn đã được cộng</string>
+	<key>REMAIN</key>
+	<string>vào tài khoản. Số tiền hiện tại của bạn là</string>
+	<key>FAILED</key>
+	<string>Nạp giftcode không thành công!</string>
+	<key>P_DO_YOU</key>
+	<string>Bạn có muốn nạp thẻ</string>
+	<key>P_PRICE</key>
+	<string>mệnh giá</string>
+	<key>P_CODE</key>
+	<string>mã thẻ</string>
+	<key>P_SERIAL</key>
+	<string>serial</string>
+	<key>P_ASK</key>
+	<string>vào game không ?</string>
+</dict>
+</plist>

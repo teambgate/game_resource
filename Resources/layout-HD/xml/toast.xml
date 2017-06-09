@@ -1,0 +1,7 @@
+<layout width="match_parent" height="match_parent" type="relative" align="center" visible="false">
+    <layout name="container" width="wrap_content" height="wrap_content" type="vertical" padding_left="-40" atlas="primitive/primitive.plist" frame="border_white_32x32.png" cap_left="10" cap_top="10" cap_right="10" cap_bottom="10" align="bottom_center_horizontal" margin_bottom="50" color="black" opacity="200" hashkey="container" target_opacity="200">
+        <layout height="10"/>
+        <label name="content" font="fonts/SF-UI-Text-Medium.otf" size="30" max_width="1000" hashkey="content" align="center" cascade_opacity="true">toast toast toast toast toast toast toast toast toast toast toast toast toast toast toast toast toast toast</label>
+        <layout height="10"/>
+    </layout>
+</layout>

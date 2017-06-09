@@ -1,0 +1,60 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" background="texture/white_2x2.png" color="black" opacity="150">
+    <layout width="1088" height="561" align="center" background="texture/new_ui/board_luatchoi.png" type="relative">
+        <!-- <img atlas="atlas/ui.plist" frame="bang-tong-ket-icon.png" margin_left="150" margin_top="-30" scale="1.25"/> -->
+		<layout width="match_parent" height="match_parent" align="center" type="relative" hashkey="history_layout" visible="false">
+			<img atlas="atlas/mini_tai_xiu.plist" frame="lich-su.png" align="top_center_horizontal" margin_top="15" scale="0.9"/>
+			<layout width="match_parent" height="match_parent" type="relative" align="top_center_horizontal" margin_top="50">
+				<layout width="985" height="62" type="relative" align="top_center_horizontal" margin_top="20" scale="1.435">
+					<img src="texture/tai_xiu/result-title.png" scale="0.65" align="center"/>
+					<!-- <img atlas="atlas/mini_tai_xiu.plist" frame="phien.png" align="left_center_vertical" margin_left="162"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="thoi-gian.png" align="left_center_vertical" margin_left="242"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="cua-dat.png" align="left_center_vertical" margin_left="352"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="ket-qua.png" align="left_center_vertical" margin_left="457"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="dat.png" align="left_center_vertical" margin_left="577"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="tra-lai.png" align="left_center_vertical" margin_left="662"/>
+					<img atlas="atlas/mini_tai_xiu.plist" frame="nhan.png" align="left_center_vertical" margin_left="760"/> -->
+				</layout>
+					<!--list view-->
+				<listview width="1072" height="420" align="top_center_horizontal" margin_top="85" type="vertical">
+					<layout width="match_parent" height="wrap_content" type="vertical" hashkey="history_list">
+						<layout width="match_parent" height="300" type="relative" clonekey="loading_data" align="center">
+							<label font="fonts/SF-UI-Text-Regular.otf" size="32" opacity="230" align="center">Đang tải dữ liệu...</label>
+						</layout>
+
+						<layout width="match_parent" height="69" type="relative" align="center" clonekey="history_item">
+							<img src="texture/tai_xiu/result-tab1.png" width="match_parent" height="69" align="center"/>
+							<layout width="match_parent" height="69" type="absolute" align="left" margin_left="200">
+								<label font="fonts/SF-UI-Text-Regular.otf" size="26" x="-137" y="35" opacity="230" hashkey="phien">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="25" x="10" y="35" opacity="230" hashkey="thoi_gian">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="28" x="169" y="35" opacity="230" hashkey="cua_dat">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="28" x="334" y="35" opacity="230" hashkey="ket_qua">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="28" x="491" y="35" opacity="230" hashkey="dat">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="28" x="639" y="35" opacity="230" hashkey="tra_lai">x</label>
+								<label font="fonts/SF-UI-Text-Regular.otf" size="28" x="780" y="35" opacity="230" hashkey="nhan">x</label>
+							</layout>
+						</layout>
+					</layout>
+				</listview>
+			</layout>
+		</layout>
+
+		<layout width="match_parent" height="match_parent" align="center" type="relative" hashkey="guide_taixiu_layout" visible="false">
+			<img atlas="atlas/mini_tai_xiu.plist" frame="huong-dan.png" align="top_center_horizontal" margin_top="15" scale="0.9"/>
+			<!-- message content-->
+			<layout width="984" height="480" padding_bottom="95" align="top_center_horizontal" margin_top="73" type="relative" hashkey="guide_taixiu_content_layout">
+				<listview width="984" height="match_parent" align="left_center_vertical" margin_left="10" type="vertical">
+					<layout width="984" height="wrap_content" type="vertical">
+						<label font="fonts/SF-UI-Text-Regular.otf" size="28" align="left" width="984" padding_left="100" opacity="230" hashkey="taixiu_help_content">Đang tải dữ liệu...</label>
+					</layout>
+				</listview>
+			</layout>
+		</layout>
+
+        <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="1" margin_top="1"  touch="true" bindtouch="onclick=exit">
+            <changetexture target="this:image" src="texture/new_login/bt_close.png"/>
+        </group>
+    </layout>
+</layout>

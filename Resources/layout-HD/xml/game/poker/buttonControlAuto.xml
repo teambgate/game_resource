@@ -1,0 +1,28 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout touchdelegate="onclick" type="relative">
+	<img name="image" atlas="atlas/card_game.plist" frame="button_bacay.png" width="match_parent" height="match_parent" align="center" hashkey="image"/>
+	<layout width="match_parent" height="60" type="relative">
+		<layout width="60" height="60" type="relative">
+			<img name="checkon" atlas="atlas/card_game.plist" frame="checkbox_button_on.png" align="center" scale="1.5" visible="false"/>
+			<img name="checkoff" atlas="atlas/card_game.plist" frame="checkbox_button_off.png" align="center" scale="1.5" visible="false"/>
+		</layout>
+		<label name="label" font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="28" scale_factor="0.93333" type="nowrap" color="white" align="bottom_center_horizontal" margin_bottom="5">Fold</label>
+	</layout>
+    <touchbegan>
+        <action id="this:image">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

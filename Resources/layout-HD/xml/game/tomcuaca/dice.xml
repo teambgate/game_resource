@@ -1,0 +1,4 @@
+<layout type="absolute">
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="xucxac.png" width="62" height="62"/>
+	<img name="item" atlas="atlas/tomcuaca.plist" frame="o_ga.png" width="40" height="40" hashkey="label"/>
+</layout>

@@ -1,0 +1,165 @@
+<touchdelegates>
+        <touchdelegate name="touch_close"/>
+        <touchdelegate name="touch_thong_tin"/>
+        <touchdelegate name="touch_thong_ke"/>
+        <touchdelegate name="touch_lich_su"/>
+        <touchdelegate name="touch_doi_mat_khau"/>
+        <touchdelegate name="touch_xem_giao_dich"/>
+        <touchdelegate name="change_avatar"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+        <img src="texture/white_2x2.png" width="match_parent" height="match_parent" hashkey="shadow" color="black" opacity="150" align="center"/>
+        <layout width="1224" height="687" align="center" type="relative" cascade_opacity="true" hashkey="main_center" scale="0.9">
+                <img src="texture/user_info/board_thongtincanhan.png" align="center"/>
+                <layout width="wrap_content" height="wrap_content" type="vertical" align="top_center_horizontal" margin_top="80"  hashkey="thong_tin_ca_nhan" visible="false">
+                        <layout type="horizontal" width="wrap_content" height="wrap_content" align="center">
+                                <layout width="200" height="200" type="relative" align="bottom" cascade_opacity="true" touch="true" touchdelegate="change_avatar">
+                                        <layout width="170" height="170" align="center" type="relative" cascade_opacity="true">
+                                                <img src="texture/scene/avatar_default_big.png" clip_circle="true"  preserve_atlas="atlas/user_info.plist" preserve_frame="avatar_1.png" align="center" width="match_parent" height="match_parent" hashkey="avatar"/>
+                                        </layout>
+                                        <img width="200" height="200" atlas="atlas/user_info.plist" frame="avatar_bolderx2.png" align="center"/>
+                                        <img width="200" height="68" atlas="atlas/user_info.plist" frame="avatar_namex2.png" align="bottom_center_horizontal" margin_bottom="-15"/>
+                                        <layout align="bottom_center_horizontal"  margin_bottom="5" width="152" height="50" clip="true" type="absolute" hashkey="user_name_frame">
+                                                <label width="match_parent" x="77.5" y="0" anchor-y="0" visible="false" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8"  color="black" hashkey="user_name" type="nowrap" cascade_opacity="true">...</label>
+                                        </layout>
+                                </layout>
+                                <layout type="vertical" width="wrap_content" margin_left="60" height="wrap_content" align="bottom">
+                                        <layout width="380" height="64" type="relative" align="center">
+                                                <img width="380" height="64" atlas="atlas/user_info.plist" frame="fr_money.png" align="center"/>
+                                                <img width="65" height="64" atlas="atlas/user_info.plist" frame="icon_xubig.png" align="left_center_vertical"/>
+                                                <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="1.2" align="left_center_vertical" margin_left="70" color="white" hashkey="user_money" type="nowrap">0</label>
+                                        </layout>
+                                        <layout width="380" height="64" margin_top="20" type="relative" align="center">
+                                                <img width="380" height="64" atlas="atlas/user_info.plist" frame="fr_money.png" align="center"/>
+                                                <img width="65" height="64" atlas="atlas/user_info.plist" frame="icon_chipbig.png" align="left_center_vertical"/>
+                                                <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="1.2" align="left_center_vertical" margin_left="70" color="white" hashkey="user_chip" type="nowrap">0</label>
+                                        </layout>
+                                </layout>
+                                <layout type="relative" width="278" height="216" align="bottom" margin_left="60">
+                                        <img width="278" height="216" atlas="atlas/user_info.plist" frame="cardvip_demo.png" hashkey="user_card_vip" align="bottom_center_horizontal" margin_bottom="-45"/>
+                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="1.0" align="top_left" margin_left="62" margin_top="82" color="white" hashkey="user_id" type="nowrap">000000</label>
+                                </layout>
+                        </layout>
+                        <layout type="vertical" width="wrap_content" height="wrap_content" align="center" margin_top="60">
+                                <img atlas="atlas/user_info.plist" frame="title_mostgameplayed.png" align="center"/>
+                                <layout type="horizontal" width="wrap_content" height="wrap_content" align="center" margin_top="40" hashkey="most_play_game_layout">
+                                        <layout type="vertical" width="wrap_content" height="wrap_content" align="center" clonekey="most_play_game_1">
+                                                <img atlas="atlas/user_info.plist" frame="icon_poker_small.png" align="center" hashkey="most_played_game_icon"/>
+                                                <layout type="relative" width="110" height="44" align="center">
+                                                        <img atlas="atlas/user_info.plist" frame="fr_status2.png" align="center"/>
+                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" hashkey="most_played_game_count" font_frame="font30.png" scale_factor="0.65" align="top_center_horizontal" margin_top="12" color="black" type="nowrap">123456</label>
+                                                </layout>
+                                        </layout>
+                                        <layout type="vertical" width="wrap_content" height="wrap_content" align="center" margin_left="70" clonekey="most_play_game_2">
+                                                <img atlas="atlas/user_info.plist" frame="icon_poker_small.png" align="center" hashkey="most_played_game_icon"/>
+                                                <layout type="relative" width="110" height="44" align="center">
+                                                        <img atlas="atlas/user_info.plist" frame="fr_status2.png" align="center"/>
+                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" hashkey="most_played_game_count" font_frame="font30.png" scale_factor="0.65" align="top_center_horizontal" margin_top="12" color="black" type="nowrap">123456</label>
+                                                </layout>
+                                        </layout>
+                                </layout>
+                        </layout>
+                </layout>
+
+                <layout type="relative" margin_top="90" padding_left="224" padding_top="100" width="match_parent" height="match_parent" hashkey="thong_ke" align="top_center_horizontal" visible="false">
+                        <listview width="match_parent" height="match_parent" type="vertical" align="center">
+                                <layout height="40">
+                                </layout>
+                                <layout width="match_parent" height="wrap_content" type="vertical" hashkey="thong_ke_layout">
+                                        <layout type="vertical" width="match_parent" height="wrap_content" align="center" clonekey="thong_ke_game_item">
+                                                <layout type="relative" width="1000" height="100" align="center">
+                                                        <img align="center" atlas="atlas/user_info.plist" frame="tab_choicestatic.png"/>
+                                                        <group style="xml/new_ui/user_info_expand_button.xml" width="60" height="60" align="left_center_vertical" hashkey="expand_button" margin_left="20" touch="true">
+                                                                <changetexture target="this:image1" atlas="atlas/user_info.plist" frame="bt_open.png"/>
+                                                                <changetexture target="this:image2" atlas="atlas/user_info.plist" frame="bt_close.png"/>
+                                                        </group>
+                                                        <img align="left_center_vertical" atlas="atlas/user_info.plist" frame="icon_poker_small.png" hashkey="game_icon" margin_left="110"/>
+                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" hashkey="game_name" font_frame="font30.png" scale_factor="1.3" align="left_center_vertical" margin_left="260" color="white" type="nowrap">POKER</label>
+                                                </layout>
+                                                <layout type="relative" clip="true" width="match_parent" height="250" hashkey="thong_ke_content_layout" atlas="atlas/user_info.plist" frame="broad_viewstatic.png" align="center">
+                                                        <layout width="match_parent" padding_left="485" align="center" height="250" type="vertical" cascade_opacity="true">
+                                                                <layout width="match_parent" height="wrap_content" type="horizontal" align="center" margin_left="20" margin_top="5">
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" hashkey="game_level" cascade_opacity="true">Level 0</label>
+                                                                        <layout width="match_parent" padding_left="165" margin_left="20" height="4" align="center" type="relative" cascade_opacity="true">
+                                                                                <layout width="match_parent" height="4" anchor-x="0" anchor-y="0.5" align="left_center_vertical" background="texture/white_2x2.png" color="#2F5DAC" opacity="100">
+                                                                                </layout>
+                                                                                <layout width="match_parent" height="4" anchor-x="0" anchor-y="0.5" align="left_center_vertical" background="texture/white_2x2.png" color="orange" hashkey="game_percentage">
+                                                                                </layout>
+                                                                        </layout>
+                                                                </layout>
+                                                                <layout width="match_parent" height="40" padding_left="50" margin_left="20" margin_top="8" type="relative" cascade_opacity="true">
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="left_center_vertical" cascade_opacity="true">Thắng</label>
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="right_center_vertical" hashkey="game_win" cascade_opacity="true">0</label>
+                                                                </layout>
+                                                                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="left_center_vertical" cascade_opacity="true">Hoà</label>
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="right_center_vertical" hashkey="game_draw" cascade_opacity="true">0</label>
+                                                                </layout>
+                                                                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="left_center_vertical" cascade_opacity="true">Thua</label>
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="right_center_vertical" hashkey="game_lose" cascade_opacity="true">0</label>
+                                                                </layout>
+                                                                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="left_center_vertical" cascade_opacity="true">Thắng nhiều nhất</label>
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="right_center_vertical" hashkey="game_most_win" cascade_opacity="true">0</label>
+                                                                </layout>
+                                                                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="left_center_vertical" cascade_opacity="true">Lời lỗ</label>
+                                                                        <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.8333" type="nowrap" align="right_center_vertical" hashkey="game_loi_lo" cascade_opacity="true">0</label>
+                                                                </layout>
+                                                        </layout>
+                                                </layout>
+                                        </layout>
+                                </layout>
+                        </listview>
+                </layout>
+
+                <layout type="vertical" margin_top="110" padding_left="224" width="match_parent" height="wrap_content" hashkey="lich_su_giao_dich" align="top_center_horizontal" visible="false">
+                        <group style="xml/new_ui/user_info_fade_button.xml" width="600" height="60" align="center" touch="true" hashkey="xem_giao_dich_button" bindtouch="onclick=touch_xem_giao_dich">
+                                <changetexture target="this:image1" atlas="atlas/user_info.plist" frame="tab_naptien.png"/>
+                                <changetexture target="this:image2" atlas="atlas/user_info.plist" frame="tab_nhanthe.png"/>
+                        </group>
+                        <img atlas="atlas/user_info.plist" frame="lichsugiaodich_menutop.png" align="center" margin_top="5"/>
+                        <layout type="relative" width="944" height="436" align="center">
+                                <listview type="vertical" width="944" height="436" align="center" visible="true" hashkey="giao_dich_listview">
+                                    <layout width="match_parent" height="wrap_content" type="vertical" hashkey="giao_dich_layout">
+                                            <layout type="relative" width="944" height="66" align="center" atlas="atlas/user_info.plist" frame="choiceroom_lineA.png" clonekey="giao_dich_item">
+                                                  <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.95" type="nowrap" align="left_center_vertical" margin_left="50" cascade_opacity="true" hashkey="item_time">30/03/17 10:11</label>
+                                                  <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.95" type="nowrap" align="left_center_vertical" margin_left="340" cascade_opacity="true" hashkey="item_type">Thẻ cào</label>
+                                                  <img atlas="atlas/user_info.plist" frame="card_hope.png" align="left_bottom" margin_left="510" margin_bottom="8" hashkey="item_card" visible="false"/>
+                                                  <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.95" type="nowrap" align="left_center_vertical" margin_left="620" cascade_opacity="true" hashkey="item_detail">Thẻ moBI 200K</label>
+                                            </layout>
+                                    </layout>
+                                </listview>
+                                <listview type="vertical" width="944" height="436" align="center" visible="false" hashkey="doi_thuong_listview">
+                                    <layout width="match_parent" height="wrap_content" type="vertical" hashkey="doi_thuong_layout">
+                                            <layout type="relative" width="944" height="66" align="center" atlas="atlas/user_info.plist" frame="choiceroom_lineA.png" clonekey="giao_dich_item">
+                                                  <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.95" type="nowrap" align="left_center_vertical" margin_left="50" cascade_opacity="true" hashkey="item_time">30/03/17 10:11</label>
+                                                  <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.95" type="nowrap" align="left_center_vertical" margin_left="340" cascade_opacity="true" hashkey="item_type">Thẻ cào</label>
+                                                  <img atlas="atlas/user_info.plist" frame="card_hope.png" align="left_bottom" margin_left="510" margin_bottom="8" hashkey="item_card" visible="false"/>
+                                                  <label width="match_parent" font="atlas/user_info_font.fnt" font_atlas="atlas/user_info.plist" font_frame="font30.png" scale_factor="0.95" type="nowrap" align="left_center_vertical" margin_left="620" cascade_opacity="true" hashkey="item_detail">Thẻ moBI 200K</label>
+                                            </layout>
+                                    </layout>
+                                </listview>
+                        </layout>
+                </layout>
+
+                <group style="xml/new_ui/user_info_choice_button.xml" width="70" height="244" align="left_bottom" margin_left="-11" margin_bottom="60" touch="true" hashkey="thong_ke_button" bindtouch="onclick=touch_thong_ke">
+                </group>
+                <group style="xml/new_ui/user_info_choice_button.xml" width="70" height="244" align="left_bottom" margin_left="-11" margin_bottom="320" touch="true" hashkey="thong_tin_button" bindtouch="onclick=touch_thong_tin">
+                        <changetexture target="this:image1" atlas="atlas/user_info.plist" frame="tab_thongtin_1.png"/>
+                        <changetexture target="this:image2" atlas="atlas/user_info.plist" frame="tab_thongtin_2.png"/>
+                </group>
+                <group style="xml/new_ui/user_info_choice_button.xml" width="70" height="244" rotate="180" align="right_bottom" margin_right="-53" margin_bottom="320" touch="true" hashkey="lich_su_button" bindtouch="onclick=touch_lich_su">
+                        <changetexture target="this:image1" atlas="atlas/user_info.plist" frame="tab_LSgiaodich_1.png"/>
+                        <changetexture target="this:image2" atlas="atlas/user_info.plist" frame="tab_LSgiaodich_2.png"/>
+                </group>
+                <group style="xml/new_ui/user_info_choice_button.xml" width="70" height="244" rotate="180" align="right_bottom" margin_right="-53" margin_bottom="60" touch="true" hashkey="doi_mat_khau_button" bindtouch="onclick=touch_doi_mat_khau">
+                        <changetexture target="this:image1" atlas="atlas/user_info.plist" frame="tab_doimk_1.png"/>
+                        <changetexture target="this:image2" atlas="atlas/user_info.plist" frame="tab_doimk_2.png"/>
+                </group>
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="10.5" margin_top="10.5" touch="true" bindtouch="onclick=touch_close">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+        </layout>
+</layout>

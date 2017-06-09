@@ -1,0 +1,13 @@
+<layout width="match_parent" height="match_parent" type="relative" align="center" cascade_opacity="true">
+     <layout align="center" relative_to="loading" type="absolute">
+        <img atlas="atlas/lobby.plist" frame="rotating.png">
+            <runaction>
+                <action id="this">
+                    <repeatforever>
+                        <rotateby time="1.25" r="360"/>
+                    </repeatforever>
+                </action>
+            </runaction>
+        </img>
+    </layout>
+</layout>

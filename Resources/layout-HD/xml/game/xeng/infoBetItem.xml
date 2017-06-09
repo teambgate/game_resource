@@ -1,0 +1,3 @@
+<layout type="relative" align="center" width="wrap_content">
+	<label font="fonts/DS-DIGIB.TTF" size="30" align="center" type="nowrap" name="label">0</label>
+</layout>

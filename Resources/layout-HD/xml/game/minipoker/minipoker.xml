@@ -1,0 +1,108 @@
+<touchdelegates>
+	<touchdelegate name="close" />
+	<touchdelegate name="click_top_history" />
+	<touchdelegate name="click_help" />
+	<touchdelegate name="click_info" />
+	<touchdelegate name="click_change_bet" />
+	<touchdelegate name="click_toggle_auto" />
+	<touchdelegate name="touch_bet1" />
+	<touchdelegate name="touch_bet2" />
+	<touchdelegate name="touch_bet3" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" hashkey="root">
+	<layout width="552" height="312" type="relative" hashkey="mini_main" scale_big="1.5" scale_mini="1.0" align="center" hashkey="layout_main" scale="1.2">
+		<img atlas="atlas/minipoker.plist" frame="bg_game.png" align="center" width="wrap_content" height="wrap_content" />
+		<layout width="166" height="44" align="bottom_center_horizontal" type="relative" margin_bottom="-4">
+			<img atlas="atlas/minipoker.plist" frame="setting_board.png" align="center" width="wrap_content" height="wrap_content" />
+			<group style="xml/ui/button_style_1.xml" align="left_center_vertical" touch="true" bindtouch="onclick=click_top_history" cascade_opacity="true" margin_left="40">
+				<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="icon_cup.png" />
+			</group>
+			<!--<group style="xml/ui/button_style_1.xml" align="center" touch="true" bindtouch="onclick=click_info" cascade_opacity="true">
+				<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="icon_info.png" />
+			</group>-->
+			<group style="xml/ui/button_style_1.xml" align="right_center_vertical" touch="true" bindtouch="onclick=click_help" cascade_opacity="true" margin_right="40">
+				<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="icon_help.png" />
+			</group>
+		</layout>
+		<layout width="60" height="32" align="left_bottom" type="relative" margin_left="100" margin_bottom="20" touch="true" touchdelegate="click_change_bet" hashkey="swap_game_type" >
+			<group style="xml/ui/button_style_1.xml" align="center">
+				<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="btn_change.png" />
+			</group>
+			<!-- <img atlas="atlas/minipoker.plist" frame="btn_change.png" align="center" width="wrap_content" height="wrap_content" /> -->
+			<img atlas="atlas/minipoker.plist" frame="chip.png" align="right_center_vertical" width="wrap_content" height="wrap_content" margin_right="6" hashkey="icon_mode_free"  visible="false"/>
+			<img atlas="atlas/minipoker.plist" frame="coin.png" align="right_center_vertical" width="wrap_content" height="wrap_content" margin_right="6" hashkey="icon_mode_money"/>
+		</layout>
+		<layout width="120" height="100" align="right_bottom" type="relative" margin_right="48" margin_bottom="-10" touch="true" touchdelegate="click_toggle_auto">
+			<img atlas="atlas/minipoker.plist" frame="checkbox_off.png" align="left_center_vertical" width="wrap_content" height="wrap_content" />
+			<img atlas="atlas/minipoker.plist" frame="checkbox_on.png" align="left_center_vertical" width="wrap_content" height="wrap_content" hashkey="checkbox_auto" visible="false" />
+			<layout width="140" height="100" align="right_center_vertical" type="relative" margin_right="-10">
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" scale="0.4" color="white" align="center" width="120" hashkey="auto_spin">
+					Tự động   quay
+				</label>
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" scale="0.4" color="white" align="center" width="240" hashkey="stop_spin" visible="false">  Dừng quay</label>
+			</layout>
+		</layout>
+		<layout type="relative" width="330" height="34" align="top_center_horizontal" margin_top="64">
+			<layout width="165" height="34" type="relative" align="left_center_vertical">
+				<img atlas="atlas/minipoker.plist" frame="money_board.png" align="center" width="wrap_content" height="wrap_content" />
+				<img atlas="atlas/minipoker.plist" frame="chip.png" align="left_center_vertical" width="wrap_content" height="wrap_content" margin_left="10" hashkey="icon_free" />
+				<img atlas="atlas/minipoker.plist" frame="coin.png" align="left_center_vertical" width="wrap_content" height="wrap_content" margin_left="10" hashkey="icon_money" visible="false"/>
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" scale="0.6" color="yellow" align="left_center_vertical" anchor-x="0" margin_left="44" hashkey="lb_money" >
+					0
+				</label>
+			</layout>
+			<layout width="165" height="34" type="relative" align="right_center_vertical">
+				<img atlas="atlas/minipoker.plist" frame="money_board.png" align="center" width="wrap_content" height="wrap_content" />
+				<img atlas="atlas/minipoker.plist" frame="icon_huvang.png" align="left_center_vertical" width="wrap_content" height="wrap_content" margin_left="10" hashkey="iconhu" />
+				<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" scale="0.6" color="yellow" align="left_center_vertical" anchor-x="0" margin_left="44" hashkey="lb_jackpot">
+					0
+				</label>
+			</layout>
+		</layout>
+		<layout width="60" height="60" type="relative" align="top_left" margin_left="40" margin_top="70" touch="true" touchdelegate="touch_bet1">
+			<img atlas="atlas/minipoker.plist" frame="btn_betchoice.png" align="center" width="wrap_content" height="wrap_content" hashkey="bg_bet1" />
+			<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" scale="0.5" color="white" align="center" margin_left="-10" hashkey="bet1">
+				100
+			</label>
+		</layout>
+		<layout width="60" height="60" type="relative" align="top_left" margin_left="10" margin_top="135" touch="true" touchdelegate="touch_bet2">
+			<img atlas="atlas/minipoker.plist" frame="btn_bet.png" align="center" width="wrap_content" height="wrap_content" hashkey="bg_bet2" />
+			<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" scale="0.5" color="white" align="center" margin_left="-10" hashkey="bet2">
+				500
+			</label>
+		</layout>
+		<layout width="60" height="60" type="relative" align="top_left" margin_left="30" margin_top="200" touch="true" touchdelegate="touch_bet3">
+			<img atlas="atlas/minipoker.plist" frame="btn_bet.png" align="center" width="wrap_content" height="wrap_content" hashkey="bg_bet3" />
+			<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" scale="0.5" color="white" align="center" hashkey="bet3">
+				1K
+			</label>
+		</layout>
+		<layout width="80" height="180" type="relative" align="top_right" margin_right="0" margin_top="36" hashkey="layout_poll">
+			<layout width="60" height="88" type="relative" align="bottom_center_horizontal">
+				<img atlas="atlas/minipoker.plist" frame="pillar.png" align="left_center_vertical" width="wrap_content" height="wrap_content" />
+				<img atlas="atlas/minipoker.plist" frame="lever.png" align="left_bottom" width="wrap_content" height="wrap_content" margin_bottom="50" margin_left="-8" hashkey="poll" anchor-x=".5" anchor-y="0" />
+			</layout>
+		</layout>
+
+		<group style="xml/ui/button_style_3.xml" width="48" height="48" align="top_right" margin_top="-2" margin_right="69" touch="true" bindtouch="onclick=close" cascade_opacity="true" scale=".8">
+			<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="btn_close.png" />
+		</group>
+		<layout align="bottom_center_horizontal" margin_bottom="98" width="330" height="80" hashkey="bound">
+		</layout>
+		<group style="xml/game/minipoker/spineitem.xml" clonekey="item" visible="false">
+		</group>
+
+		<layout width="400" height="40" align="bottom_center_horizontal" type="relative" margin_bottom="40" hashkey="bound_result">
+			<img atlas="atlas/minipoker.plist" frame="txt_twopair.png" align="center" width="wrap_content" height="wrap_content" hashkey="txt_set" scale=".6" opacity="0"/>
+		</layout>
+
+		<layout width="400" height="60" align="center" hashkey="bound_win_money">
+
+		</layout>
+
+		<img atlas="atlas/minipoker.plist" frame="anhsangtron.png" align="bottom_center_horizontal" margin_bottom="66" width="wrap_content" height="wrap_content" hashkey="boad_light" visible="false"/>
+	</layout>
+	<layout width="match_parent" height="match_parent" type="relative" align="center" hashkey="tutorial_layout" visible="false">
+		<img atlas="atlas/minipoker.plist" frame="help.png" align="center" width="wrap_content" height="wrap_content" hashkey="tutorial" visible="true" scale="2" />
+	</layout>
+</layout>

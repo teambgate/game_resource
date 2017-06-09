@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ARE_YOU_SURE</key>
+	<string>Bạn có chắc chắn đổi một</string>
+	<key>WITH_PRICE</key>
+	<string>với giá</string>
+	<key>ASK</key>
+	<string>không ?</string>
+	<key>NEED_AT_LEAST</key>
+	<string>Số dư trong tài khoản cần tối thiểu</string>
+	<key>SUCCESS</key>
+	<string>Chúng tôi đã nhận được yêu cầu đổi thưởng của bạn.\nYêu cầu sẽ được duyệt và trả lời trong thời gian sớm nhất !</string>
+</dict>
+</plist>

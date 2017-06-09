@@ -1,0 +1,44 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="wrap_content" height="wrap_content" type="vertical" touch="true" touchdelegate="onclick">
+	<label font="fonts/font30.fnt" size="22" scale_factor="0.73333" color="white" type="nowrap" align="center" hashkey="bottom" margin_top="5">up</label>
+
+    <layout name="text_container" height="30" type="relative" align="center">
+		<img name="bg" atlas="atlas/choice_room.plist" frame="choice_room_state_bg.png" align="center"/>
+        <label font="fonts/font30.fnt" size="22" scale_factor="0.48" color="#36FF00" type="nowrap" align="center" hashkey="up">bottom</label>
+		<img name="image" atlas="atlas/choice_room.plist" frame="icon_muccuoc.png" align="right_center_vertical" height="15" width="wrap_content" margin_right="-57" hashkey="icon"/>
+    </layout>
+
+	<touchbegan>
+		<action id="this:text_container">
+			<scaleto time="0.1" x="0.9" y="0.9"/>
+		</action>
+	</touchbegan>	
+	<touchend>
+		<action id="this:text_container">
+			<scaleto time="0.25" x="1" y="1"/>
+		</action>
+	</touchend>
+	<touchcancel>
+		<action id="this:text_container">
+			<scaleto time="0.25" x="1" y="1"/>
+		</action>
+	</touchcancel>   
+   
+   <!--  <touchbegan>
+        <action id="this:image">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel> -->
+</layout>

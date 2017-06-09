@@ -1,0 +1,18 @@
+<touchdelegates>
+	<touchdelegate name="rate" />
+	<touchdelegate name="exit" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" touch="true" cascade_opacity="true">
+    <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="150" align="center"/>
+    <layout width="759" height="437" background="texture/board/bigbg-rate.png" align="center" type="relative" cascade_opacity="true">
+        <label font="fonts/SF-UI-Text-Medium.otf" size="30" type="nowrap" align="top_left" margin_left="300" margin_top="42" cascade_opacity="true">XẾP HẠNG TRÒ CHƠI</label>
+		<label name="content" font="fonts/SF-UI-Text-Medium.otf" size="22" align="top_left" margin_left="260" margin_top="100" max_width="450">Xếp hạng ứng dụng 5  - Viết những vật phẩm bạn muốn xuất hiện trong đổi thưởng  chúng tôi sẽ xem xét những vật phẩm nhiều người bình chọn nhất Hoặc thông báo những khó khăn bạn gặp phải khi chơi chúng tôi sẽ giúp bạn khắc phục và làm nó tốt hơn. Vì một cộng đồng lớn mạnh hãy xếp hạng 5, cảm ơn!</label>
+        <group style="xml/ui/button_style_1.xml" align="location_below_center" relative_to="content" margin_top="24.5" touch="true" bindtouch="onclick=rate" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_bacay.png"/>
+			<label font="fonts/SF-UI-Text-Medium.otf" size="25" x="75" y="31">RATE</label>
+        </group>
+		<group style="xml/ui/button_style_1.xml" align="top_right"  margin_top="29.5" margin_right="25" touch="true" bindtouch="onclick=exit" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+    </layout>
+</layout>

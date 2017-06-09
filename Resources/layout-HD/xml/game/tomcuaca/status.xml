@@ -1,0 +1,4 @@
+<layout type="relative" width="309" height="43" scale="0.85">
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="frame_trangthai.png" width="match_parent" height="match_parent" align="center"/>
+	<label font="fonts/SF-UI-Text-Regular.otf" type="nowrap" size="26" align="center" color="white" hashkey="text">_</label>
+</layout>

@@ -1,0 +1,22 @@
+<touchdelegates>
+    <touchdelegate name="touch_filter_money"/>
+</touchdelegates>
+<layout width="250" height="60" type="relative" align="center" touch="true" touchdelegate="touch_filter_money" cascade_opacity="true">
+    <img name="image" src="texture/white_2x2.png" width="250" height="60" color="#1D5083" opacity="100" align="center" visible="false"/>
+    <label font="fonts/SF-UI-Text-Regular.otf" color="#00F0FF" size="25" type="nowrap" align="center" hashkey="filter_money_item_label" cascade_opacity="true">250</label>
+    <touchbegan>
+        <action id="this:image">
+            <show/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+            <hide/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+            <hide/>
+        </action>
+    </touchcancel>
+</layout>

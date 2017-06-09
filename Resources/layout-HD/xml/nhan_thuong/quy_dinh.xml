@@ -1,0 +1,14 @@
+<touchdelegates>
+    <touchdelegate name="facebook"/>
+</touchdelegates>
+<layout type="relative" cascade_opacity="true">
+    <listview width="match_parent" height="match_parent" type="vertical" align="center" cascade_opacity="true">
+        <layout width="match_parent" height="wrap_content" type="vertical" align="center" hashkey="container" cascade_opacity="true">
+            <label font="fonts/SF-UI-Text-Regular.otf" size="28" width="match_parent" padding_left="60" align="center" margin_top="10" hashkey="content"  cascade_opacity="true">Đang tải thông tin ...</label>
+            <label font="fonts/SF-UI-Text-Regular.otf" size="28" width="match_parent" padding_left="60" align="center" margin_top="80" cascade_opacity="true">Mọi thắc mắc xin vui lòng liên hệ</label>
+            <group style="xml/ui/button_style_1.xml" align="center" scale="1.5" touch="true" bindtouch="onclick=facebook" margin_top="20" margin_bottom="100" cascade_opacity="true">
+                <changetexture target="this:image" atlas="atlas/lobby.plist" frame="icon_facebook.png"/>
+            </group>
+        </layout>
+    </listview>
+</layout>

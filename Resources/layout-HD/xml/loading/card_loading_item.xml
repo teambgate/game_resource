@@ -1,0 +1,3 @@
+<layout cascade_opacity="true">
+    <img atlas="atlas/card_game.plist" frame="card_52.png" y="36" scale="0.55"/>
+</layout>

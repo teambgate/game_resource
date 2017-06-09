@@ -1,0 +1,3 @@
+<layout width="300" height="100" type="relative" atlas="primitive/primitive.plist" frame="border_white_32x32.png" color="#000000" opacity="200" cap_left="8" cap_top="8" cap_right="8" cap_bottom="8" hashkey="container" >
+    <label font="fonts/SF-UI-Display-Regular.otf" size="24" opacity="150" margin_left="20" margin_right="20"  margin_top="20"  margin_bottom="20" hashkey="text">This is message</label>
+</layout>

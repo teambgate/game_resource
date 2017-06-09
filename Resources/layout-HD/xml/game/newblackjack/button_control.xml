@@ -1,0 +1,42 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout touchdelegate="onclick" type="relative" cascade_opacity="true">
+    <img name="image" atlas="atlas/card_game.plist" frame="button_bacay.png" width="match_parent" height="match_parent" align="center" hashkey="image"/>
+    <label name="label" font="fonts/font30.fnt" size="30" type="nowrap" color="white" align="bottom_center_horizontal" margin_bottom="25" hashkey="label"
+        content_index="0"
+        enable_opacity="255" disable_opacity="100"
+        >button</label>
+    <touchbegan>
+        <action id="this:image">
+            <scaleto time="0.1" x="0.95" y="0.95"/>
+        </action>
+		<action id="this:label">
+            <scaleto time="0.1" x="0.95" y="0.95"/>
+        </action>
+    </touchbegan>
+    <touchmove>
+        <action id="this:image">
+             <scaleto time="0.1" x="0.95" y="0.95"/>
+        </action>
+		<action id="this:label">
+             <scaleto time="0.1" x="0.95" y="0.95"/>
+        </action>
+    </touchmove>	
+    <touchend>
+        <action id="this:image">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+		<action id="this:label">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+		<action id="this:label">
+             <scaleto time="0.1" x="1" y="1"/>
+        </action>
+    </touchcancel>
+</layout>

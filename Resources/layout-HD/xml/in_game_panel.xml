@@ -1,0 +1,46 @@
+<touchdelegates>
+    <touchdelegate name="back_touch" />
+    <touchdelegate name="stand_up_touch" />
+    <touchdelegate name="leave_touch" />
+    <touchdelegate name="close_touch" />
+    <touchdelegate name="invite_touch" />
+    <touchdelegate name="password_touch" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative">
+    <layout name="info" width="wrap_content" height="wrap_content" type="vertical" align="top_left" margin_left="10" margin_top="10">
+        <layout width="wrap_content" height="wrap_content" type="horizontal">
+            <group style="xml/ui/button_style_3.xml" width="100" height="80" touch="true" bindtouch="onclick=back_touch">
+                <changetexture target="this:image" atlas="atlas/in_game_panel.plist" frame="bt_backtolobby.png"/>
+            </group>
+            <layout width="wrap_content" height="wrap_content" type="vertical" align="center" margin_left="10">
+                <label font="fonts/font30.fnt" size="24" scale_factor="0.8" width="500" type="nowrap" hashkey="title">Bàn 1 : 5</label>
+                <label font="fonts/font30.fnt" size="24" scale_factor="0.8" width="500" type="nowrap" opacity="150" hashkey="time">09:47 AM</label>
+            </layout>
+            <layout width="36" height="28.5" align="bottom" margin_left="20" type="relative">
+                <img width="match_parent" height="match_parent" atlas="atlas/in_game_panel.plist" frame="wifi_signal_3.png" align="bottom_center_horizontal" margin_bottom="10" hashkey="wifi_icon" visible="false"/>
+                <img width="match_parent" height="match_parent" atlas="atlas/in_game_panel.plist" frame="mobi_signal_3.png" align="bottom_center_horizontal" margin_bottom="10" hashkey="3g_icon" visible="false"/>
+            </layout>
+            <layout width="10"/>
+        </layout>
+        <label font="fonts/font30.fnt" size="28" scale_factor="0.93333" width="100" type="nowrap" align="center" hashkey="game_name">TÁ LẢ</label>
+    </layout>
+    <layout width="320" height="309" atlas="atlas/in_game_panel.plist" frame="back_options.png" align="location_below_left" relative_to="info" anchor-x="0" anchor-y="1" type="vertical" scale="1.0" hashkey="button_bar" target_scale="1.0" touch="true" cascade_opacity="true" weight_sum="3">
+        <group style="xml/ui/button_style_6.xml" align="center" touch="true" bindtouch="onclick=stand_up_touch" hashkey="stand_button" cascade_opacity="true" weight="1">
+            <changetexture target="this:icon" atlas="atlas/in_game_panel.plist" frame="dunglen-icon.png" keep_size="true"/>
+        </group>
+        <group style="xml/ui/button_style_6.xml" align="center" touch="true" bindtouch="onclick=leave_touch" hashkey="leave_button" cascade_opacity="true" weight="1">
+            <changetexture target="this:icon" atlas="atlas/in_game_panel.plist" frame="rakhoiban-icon.png" keep_size="true"/>
+        </group>
+        <group style="xml/ui/button_style_6.xml" align="center" touch="true" bindtouch="onclick=close_touch" hashkey="close_button" cascade_opacity="true" weight="0.8">
+            <changetexture target="this:icon" atlas="atlas/in_game_panel.plist" frame="dong-icon.png" keep_size="true"/>
+        </group>
+    </layout>
+    <group style="xml/ui/button_style_3.xml" width="80" height="80" touch="true" bindtouch="onclick=invite_touch" align="right_bottom" margin_bottom="60" margin_right="20" visible="false" hashkey="invite_button">
+        <changetexture target="this:image" atlas="atlas/in_game_panel.plist" frame="invite_button.png"/>
+    </group>
+	<!-- button lock room -->
+    <group style="xml/ui/button_style_3.xml" width="80" height="80" touch="true" bindtouch="onclick=password_touch" align="right_bottom" margin_bottom="60" margin_right="120" visible="false" hashkey="password_button">
+        <changetexture target="this:image" atlas="atlas/in_game_panel.plist" frame="lock_button.png"/>
+    </group>
+
+</layout>

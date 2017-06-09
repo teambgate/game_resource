@@ -1,0 +1,23 @@
+Game bầu tôm cua cá
+1. Giới thiệu game:
+Bầu cua tôm cá hay còn gọi là lắc bầu cua là một trò chơi mang tính cờ bạc rất phổ biến ở Việt Nam. Đây là một trò chơi thú vị, mang tính ngẫu nhiên và thường được chơi trong các dịp lễ, tết; đặc biệt là trong dịp Tết Nguyên Đán.
+2. Cách chơi
+2.1. Biểu tượng trong game:
+- Bầu – tôm –cua- cá – gà –hươu tương ứng với 6 mặt của viên xúc xắc
+
+2.2. Cách chơi game
+• Trình tự ván chơi:
+- Chọn bàn và mệnh giá chơi : chọn kiểu chơi miễn phí/ mất phí; chọn các mệnh giá cược
+- Chọn cửa và đặt cược
++ Người chơi có thể chọn nhiều cửa trong 1 ván chơi
++ Sau khi chọn các cửa đặt , người chơi cần click xác nhận  để chốt giao dịch. Sau khi gửi xác nhận, người chơi sẽ bị trừ 1 số tiền tương ứng. Người chơi có thể đặt cửa và xác nhận nhiều lần trong thời gian dặt cửa
+- Show kết quả và trả thưởng
+• Trả thưởng:
+Hệ thống mở bát, dựa vào kết quả 3 mặt của 3 xúc xắc  để phân định thắng thua.
+Người chơi đặt của có kết quả giống với mặt xúc xắc sẽ thắng:
+- Xúc xắc về 1 biểu tượng: người chơi ăn được 1 lần tổng đăt
+- Xúc xắc về 2 biểu tượng: người chơi ăn 2 lần tổng đặt
+- Xúc xắc về 3 biểu tượng: người chơi ăn 2 lần tổng đặt
+3. Chú ý:
+- Minigame bầu cua cá có thể chơi bằng cả tiền vàng (tiền thật) và tiền miễn phí(chips)
+- Minigame bầu cua cá có thể chơi cùng lúc với nhiều loại game khác.

@@ -1,0 +1,45 @@
+<touchdelegates>
+    <touchdelegate name="touchback"/>
+    <touchdelegate name="touch_item"/>
+    <touchdelegate name="mail_touch"/>
+    <touchdelegate name="help_click"/>
+    <touchdelegate name="quick_play"/>
+    <touchdelegate name="facebook_click"/>
+    <touchdelegate name="log_out_touch" />
+    <touchdelegate name="exit_touch" />
+    <touchdelegate name="close_touch" />
+	<touchdelegate name="touch_choose_coin_active"/>
+	<touchdelegate name="touch_choose_chip_active"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+    <group style="xml/game_background.xml" align="center"/>
+    <layout name="top" width="wrap_content" height="80" align="top_center_horizontal" margin_top="20" type="horizontal">
+        <group style="xml/ui/button_style_1.xml" scale="1.2" touch="true" bindtouch="onclick=touchback">
+            <changetexture target="this:image" atlas="atlas/choice_room.plist" frame="exit_button_up.png"/>
+        </group>
+        <layout width="700" height="40.6" margin_left="0" margin_top="10" type="relative">
+            <img atlas="atlas/choice_room.plist" frame="advertisment.png" width="700" height="40.6" align="center" />
+            <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" type="nowrap" color="white" align="left_center_vertical" margin_left="20">Chào mừng bạn đến chơi game</label>
+            <label font="fonts/font30.fnt" size="22" scale_factor="0.73333" type="nowrap" color="white" align="left_center_vertical" margin_left="360" hashkey="game_name">Game</label>
+        </layout>
+        <group style="xml/ui/button_style_1.xml" scale="1.5" margin_top="13.5" margin_right="40" touch="true" bindtouch="onclick=quick_play">
+            <changetexture target="this:image" atlas="atlas/choice_room.plist" frame="quik_play_game.png"/>
+        </group>
+        <group style="xml/mail_hint.xml" margin_left="0" scale="1.2" touch="true" bindtouch="onclick=mail_touch" hashkey="mail_button">
+            <changetexture target="this:image" atlas="atlas/choice_room.plist" frame="mail_button_up.png"/>
+        </group>
+        <group style="xml/ui/button_style_1.xml" margin_left="20" scale="1.2" touch="true" bindtouch="onclick=facebook_click" hashkey="facebook_button">
+            <changetexture target="this:image" atlas="atlas/choice_room.plist" frame="facebook_button.png"/>
+        </group>
+        <group style="xml/ui/button_style_1.xml" margin_left="20" scale="1.2" touch="true" bindtouch="onclick=help_click" hashkey="help_button">
+            <changetexture target="this:image" atlas="atlas/choice_room.plist" frame="help_button_up.png"/>
+        </group>
+    </layout>
+    <group style="xml/lobby_top_rich.xml" align="left_center_vertical" hashkey="top_rich_table"/>
+	
+    <group style="xml/lobbytableview_new.xml" align="top_right" margin_right="20" margin_top="160" hashkey="table" bindtouch="touch_item=touch_item;touch_quick_play=quick_play;" bindtouch="touch_choose_coin_active=touch_choose_coin_active" bindtouch="touch_choose_chip_active=touch_choose_chip_active"/>
+   
+   <group style="xml/loading/card_loading.xml" align="center" hashkey="card_loading"/>
+    <group style="xml/lobbybottombar.xml" align="bottom_center_horizontal" hashkey="lobbybottombar"/>
+    <group style="xml/back_lobby_panel.xml" align="center" hashkey="back_panel" bindtouch="log_out_touch=log_out_touch;exit_touch=exit_touch;close_touch=close_touch"/>
+</layout>

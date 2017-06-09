@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TAI_XIU_HELP_1</key>
+	<string> \nGame tài xỉu được chơi với 3 viên xúc xắc (xí ngầu), mỗi viên gồm 6 mặt (1,2,3,4,5,6) người chơi sẽ đặt cược kết quả của những viên xúc xắc (xí ngầu) sau mỗi lần quay để định thắng thua.\nHướng dẫn cách đặt cược:\nBước 1: Chọn nút Dự đoán Tài hoặc Xỉu \nBước 2: Nhập số xu dự đoán\nBước 3: Chọn nút Đồng ý để xác nhận \nBước 4: Theo dõi kết quả để biết Thắng hay Thua.\nCách tính thắng thua: Tài: >= 11 điểm; Xỉu: </string>
+	<key>TAI_XIU_HELP_2</key>
+	<string>= 10 điểm.\n \nChú ý:\n+Chỉ được đặt 1 trong 2 cửa là Tài hoặc Xỉu \n+Khi kết thúc thời gian lựa chọn đặt cửa, nếu số xu 2 bên chênh lệch, số chênh lệch sẽ được hoàn trả cho người chơi (ưu tiên người chơi dự đoán sớm hơn)\n+Người chơi dự đoán tối thiểu là 5 và tối đa là số dư tài khoản\n+Có thể chọn nút (!) để xem lịch sử giao dịch.\n </string>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+<layout width="22" height="22" type="relative">
+    <img atlas="atlas/mini_tai_xiu.plist" frame="black-icon.png" align="center" hashkey="icon"
+	frame_atlas_custom="atlas/mini_tai_xiu.plist"
+    frame_0="white-icon.png"
+	frame_1="black-icon.png"/>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NOT_ENOUGH_MONEY</key>
+	<string>Số tiền của bạn không đủ để đặt cược.</string>
+	<key>TOI_THIEU</key>
+	<string>Tối thiểu</string>
+	<key>TOI_DA</key>
+	<string>Tối đa</string>
+	<key>DAT_CUOC</key>
+	<string>Đặt cược</string>
+	<key>DAT_LAI</key>
+	<string>Đặt lại</string>
+	<key>TACH_BAI</key>
+	<string>Tách bài</string>
+	<key>DUNG</key>
+	<string>Đứng</string>
+	<key>DUNG_2</key>
+	<string>ĐỨNG</string>
+	<key>RUT_BAI</key>
+	<string>Rút bài</string>
+	<key>NHAN_DOI</key>
+	<string>Nhân đôi</string>
+	<key>NHAN_DOI_2</key>
+	<string>Nhân 2</string>
+	<key>XAC_NHAN</key>
+	<string>Xác nhận</string>
+	<key>NO</key>
+	<string>Không</string>
+	<key>YES</key>
+	<string>Có</string>
+	<key>button_temp</key>
+	<string> </string>
+</dict>
+</plist>

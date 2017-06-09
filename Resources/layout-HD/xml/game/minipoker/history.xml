@@ -1,0 +1,13 @@
+<touchdelegates>
+	<touchdelegate name="close" />
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" background="texture/white_2x2.png" color="black" opacity="150" touch="true" touchdelegate="close">
+	<!--<layout width="600" height="370" type="relative" align="center" scale="1.4">
+        	<img atlas="atlas/minipoker.plist" frame="board.png" align="center" width="wrap_content" height="wrap_content"/>            
+            <group style="xml/ui/button_style_1.xml" align="top_right" touch="true" bindtouch="onclick=close" scale=".8" margin_top="16">
+				<changetexture target="this:image" atlas="atlas/minipoker.plist" frame="x_button.png" />
+			</group>
+	</layout>-->
+		<img atlas="atlas/minipoker.plist" frame="help.png" align="center" width="wrap_content" height="wrap_content"  scale="2" />		
+
+</layout>

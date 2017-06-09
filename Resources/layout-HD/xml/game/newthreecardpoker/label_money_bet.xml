@@ -1,0 +1,4 @@
+ <layout width="wrap_content" height="wrap_content" type="relative">
+	<img atlas="atlas/blackjack.plist" frame="black-frame.png" align="center"/>
+    <label hashkey="label" font="fonts/font20.fnt" size="20" type="nowrap" color="white" align="center">5</label>
+</layout>

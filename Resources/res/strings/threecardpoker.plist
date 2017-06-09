@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BT_FOLD</key>
+	<string>Fold</string>
+	<key>BT_PLAY</key>
+	<string>Play</string>
+	<key>BT_REBET</key>
+	<string>Rebet</string>
+	<key>button_temp</key>
+	<string></string>
+	
+	<key>TEXT_FOLD</key>
+	<string>FOLD</string>
+	<key>TEXT_PLAY</key>
+	<string>PLAY</string>
+</dict>
+</plist>

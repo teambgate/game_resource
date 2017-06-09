@@ -1,0 +1,34 @@
+<layout width="457.5" height="66" type="relative">
+    <layout width="457.5" height="wrap_content" type="vertical" align="center">
+        <layout width="457.5" height="66" type="relative" atlas="atlas/doithuong.plist" frame="tab_card.png" align="center" touch="true" touchdelegate="select_filter">
+            <label font="fonts/SF-UI-Text-Regular.otf" size="28" type="nowrap" align="center" color="#1eeeff" hashkey="filter_label">...</label>
+<!--            <img atlas="atlas/doithuong.plist" frame="arrow.png" align="right_center_vertical" margin_right="20" scale="1.5"/>-->
+        </layout>
+        <layout width="457.5" height="0" type="vertical">
+            <listview width="457.5" height="300" align="center" visible="false" hashkey="listview" bounce="false">
+                <layout width="457.5" height="wrap_content" type="vertical" background="texture/white_2x2.png" color="#000000" opacity="220" hashkey="container">
+                    <layout width="457.5" height="80" type="relative" clonekey="list_item" touch="true" touchdelegate="select_item">
+                        <img name="image" opacity="0" width="457.5" height="80" atlas="atlas/doithuong.plist" frame="choicecard_select.png"/>
+                        <label font="fonts/SF-UI-Text-Regular.otf" size="28" type="nowrap" align="center" hashkey="item_label">Thẻ Viettel</label>
+                        <img src="texture/white_2x2.png" width="457.5" height="1.2" align="bottom_center_horizontal" color="white" opacity="100"/>
+                        <touchbegan>
+                            <action id="this:image">
+                                <fadeto time="0.2" to="200"/>
+                            </action>
+                        </touchbegan>
+                        <touchend>
+                            <action id="this:image">
+                                <fadeto time="0.2" to="0"/>
+                            </action>
+                        </touchend>
+                        <touchcancel>
+                            <action id="this:image">
+                                <fadeto time="0.2" to="0"/>
+                            </action>
+                        </touchcancel>
+                    </layout>
+                </layout>
+            </listview>
+        </layout>
+    </layout>
+</layout>

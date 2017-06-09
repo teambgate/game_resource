@@ -1,0 +1,25 @@
+<layout type="relative">
+    <layout atlas="atlas/lobby.plist" frame="exchange_row.png" width="match_parent" height="60" align="top_center_horizontal" type="horizontal" color="#050505">
+        <layout align="center" margin_left="150" type="relative" cascade_opacity="true">
+            <label font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" align="left_center_vertical" hashkey="menh_gia" cascade_opacity="true">Mệnh giá</label>
+        </layout>
+        <img src="texture/white_2x2.png" height="match_parent" width="3" color="#202020" opacity="100" align="center" margin_left="350" visible="false"/>
+        <layout align="center" margin_left="250" type="relative" cascade_opacity="true">
+            <label font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" align="left_center_vertical" hashkey="quy_doi" cascade_opacity="true">Tiền quy đổi</label>
+        </layout>
+    </layout>
+    <label font="fonts/SF-UI-Text-Regular.otf" size="28" align="top_center_horizontal" margin_top="200" opacity="230" type="nowrap" hashkey="loading">Đang tải dữ liệu ...</label>
+    <listview width="match_parent" height="match_parent" padding_top="58" margin_top="60" align="top_center_horizontal" type="vertical" hashkey="list_view" visible="false">
+        <layout width="match_parent" height="wrap_content" type="vertical" hashkey="container">
+            <layout width="match_parent" height="80" margin_left="0.25" atlas="atlas/lobby.plist" frame="exchange_row.png" clonekey="item" type="horizontal" cascade_opacity="true" margin_top="2.5">
+                <layout align="center" margin_left="150" type="relative" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" align="left_center_vertical" hashkey="menh_gia" cascade_opacity="true">100,000VND</label>
+                </layout>
+                <img src="texture/white_2x2.png" height="match_parent" width="3" color="#202020" opacity="100" align="center" margin_left="350" visible="false"/>
+                <layout align="center" margin_left="150" type="relative" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" type="nowrap" align="left_center_vertical" hashkey="quy_doi" cascade_opacity="true">100,000VND</label>
+                </layout>
+            </layout>
+        </layout>
+    </listview>
+</layout>

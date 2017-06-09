@@ -1,0 +1,13 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="151" height="35" type="relative" touch="true" touchdelegate="onclick">
+    <layout name="active" width="151" height="35" type="relative" hashkey="active">
+        <img name="bg" atlas="atlas/lobby.plist" frame="small-tab-left.png" align="center" width="match_parent" height="match_parent"/>
+        <img name="text" atlas="atlas/doithuong.plist" frame="doi_thuong.png" align="top_center_horizontal" margin_top="7"/>
+    </layout>
+    <layout name="inactive" width="151" height="35" type="relative" hashkey="inactive">
+        <img name="bg" atlas="atlas/lobby.plist" frame="small-tab-left.png" align="center" visible="false"  width="match_parent" height="match_parent"/>
+        <img name="text" atlas="atlas/doithuong.plist" frame="Quy_dinh.png" align="top_center_horizontal" margin_top="7"/>
+    </layout>
+</layout>

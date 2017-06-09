@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CARD</key>
+	<string>Thẻ cào</string>
+	<key>SMS</key>
+	<string>Tin nhắn</string>
+	<key>EMPTY</key>
+	<string>Không có lịch sử giao dịch !</string>
+	<key>LOADING</key>
+	<string>Đang tải dữ liệu ...</string>
+</dict>
+</plist>

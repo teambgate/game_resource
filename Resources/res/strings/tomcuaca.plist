@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>YOU_WIN</key>
+	<string>Bạn đã thắng</string>
+	<key>BET_SUCCESS</key>
+	<string>Đặt cửa thành công</string>
+	<key>START</key>
+	<string>Đang đặt cược</string>
+	<key>RESULT</key>
+	<string>Chờ kết quả</string>
+	<key>CONFIRM</key>
+	<string>Ấn xác nhận để hoàn tất</string>
+	<key>EMPTY</key>
+	<string>Bạn chưa chọn cửa</string>
+	<key>NOT_MONEY</key>
+	<string>Bạn không đủ tiền</string>
+</dict>
+</plist>

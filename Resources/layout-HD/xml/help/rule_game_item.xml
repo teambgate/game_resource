@@ -1,0 +1,23 @@
+<touchdelegates>
+    <touchdelegate name="onclick"/>
+</touchdelegates>
+<layout width="200" height="200" touchdelegate="onclick" type="relative" touch="true" cascade_opacity="true">
+    <img width="wrap_content" height="240" scale="0.75" name="image" atlas="atlas/lobbyicon.plist" frame="icon-tala.png" hashkey="image" align="top_center_horizontal" margin_top="-43"/>
+    <img width="wrap_content" height="185" name="image" atlas="atlas/new_ui.plist" frame="border_icon.png" hashkey="bg" align="top_center_horizontal" margin_top="-8"/>
+    <img width="0" height="0" name="image" atlas="atlas/lobby.plist" frame="arrowRule.png" hashkey="arrow" align="bottom_center_horizontal" margin_bottom="-50"/>
+    <touchbegan>
+        <action id="this:image">
+            <fadeto time="0.2" to="150"/>
+        </action>
+    </touchbegan>
+    <touchend>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchend>
+    <touchcancel>
+        <action id="this:image">
+            <fadeto time="0.2" to="255"/>
+        </action>
+    </touchcancel>
+</layout>

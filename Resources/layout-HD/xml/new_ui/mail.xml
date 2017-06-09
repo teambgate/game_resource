@@ -1,0 +1,91 @@
+<touchdelegates>
+    <touchdelegate name="touch_he_thong"/>
+    <touchdelegate name="touch_tin_nhan"/>
+    <touchdelegate name="touch_close"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center">
+        <img src="texture/white_2x2.png" width="match_parent" height="match_parent" hashkey="shadow" color="black" opacity="150" align="center"/>
+        <layout width="1225" height="687" align="center" type="relative" hashkey="main_center" cascade_opacity="true" scale="0.9">
+                <img src="texture/mail/board_mail.png" align="center"/>
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right"
+                        margin_right="10.5" margin_top="10.5" touch="true" bindtouch="onclick=touch_close">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+                <group style="xml/new_ui/user_info_fade_button.xml" width="300" height="60" align="left_top"
+                        margin_left="30" margin_top="110" touch="true" hashkey="button_he_thong"
+                        bindtouch="onclick=touch_he_thong">
+                        <changetexture target="this:image1" atlas="atlas/mail.plist" frame="bt_hethong_1.png"/>
+                        <changetexture target="this:image2" atlas="atlas/mail.plist" frame="bt_hethong_2.png"/>
+                </group>
+                <group style="xml/new_ui/user_info_fade_button.xml" width="300" height="60" align="left_top"
+                        margin_left="30" margin_top="180" touch="true" hashkey="button_tin_nhan"
+                        bindtouch="onclick=touch_tin_nhan">
+                        <changetexture target="this:image1" atlas="atlas/mail.plist" frame="bt_tinnhan_1.png"/>
+                        <changetexture target="this:image2" atlas="atlas/mail.plist" frame="bt_tinnhan_2.png"/>
+                </group>
+                <layout width="800" height="550" type="relative" align="top_right" margin_right="30" margin_top="110" hashkey="tin_nhan_root" visible="false">
+                        <listview width="match_parent" height="match_parent" type="vertical" align="center">
+                                <layout width="match_parent" height="wrap_content" type="vertical" align="center" hashkey="tin_nhan_layout">
+                                        <layout clip="true" width="match_parent" height="55" type="vertical" clonekey="mail_item" touch="true">
+                                                <layout atlas="atlas/mail.plist"  frame="lineB.png" hashkey="mail_title_bg" padding_bottom="-40" type="horizontal" width="match_parent" height="wrap_content" align="center">
+                                                        <img atlas="atlas/mail.plist" frame="dot.png" width="25" height="25" hashkey="red_dot" align="top" margin_left="14" margin_top="14" color="red"/>
+                                                        <layout width="400" height="wrap_content" type="vertical" align="top">
+                                                                <label width="match_parent" height="wrap_content" font="atlas/mail_font.fnt"
+                                                                        font_atlas="atlas/mail.plist" hashkey="mail_title"
+                                                                        font_frame="font30.png"
+                                                                        scale_factor="1.0"
+                                                                        size="30"
+                                                                        align="top"
+                                                                        margin_left="10"
+                                                                        margin_top="10"
+                                                                        color="white">title</label>
+                                                        </layout>
+                                                        <layout width="300" height="wrap_content" type="vertical" margin_left="30" align="top">
+                                                                <label width="match_parent" font="atlas/mail_font.fnt"
+                                                                        font_atlas="atlas/mail.plist" hashkey="mail_time"
+                                                                        font_frame="font30.png"
+                                                                        scale_factor="1.0"
+                                                                        size="30"
+                                                                        align="top"
+                                                                        margin_left="10"
+                                                                        margin_top="10"
+                                                                        color="white">22-05-2017 19:00</label>
+                                                        </layout>
+                                                        <layout width="30" height="wrap_content" type="vertical" margin_left="0" align="top">
+                                                                <img atlas="atlas/mail.plist" frame="arrow_select.png" hashkey="arrow" align="center" margin_top="20" margin_left="-10" />
+                                                        </layout>
+                                                </layout>
+                                                <layout type="vertical" atlas="atlas/mail.plist" frame="fr_noidung_tinnhan.png"
+                                                         width="match_parent" height="wrap_content"
+                                                        align="center" hashkey="mail_content_layout">
+                                                        <label width="match_parent" padding_left="20" font="atlas/mail_font.fnt"
+                                                                font_atlas="atlas/mail.plist" hashkey="mail_content"
+                                                                font_frame="font30.png"
+                                                                scale_factor="1.0"
+                                                                size="30"
+                                                                align="top"
+                                                                margin_left="10"
+                                                                margin_top="10"
+                                                                margin_bottom="10"
+                                                                color="white">content</label>
+                                                        <group style="xml/new_ui/user_info_fade_button.xml" width="243" height="90" align="center"
+                                                                margin_top="10" margin_bottom="10" touch="true" hashkey="button_napvaogame">
+                                                                <changetexture target="this:image1" atlas="atlas/mail.plist" frame="bt_napvaogame.png"/>
+                                                                <changetexture target="this:image2" atlas="atlas/mail.plist" frame="bt_napvaogame.png"/>
+                                                        </group>
+                                                </layout>
+                                        </layout>
+                                </layout>
+                        </listview>
+                </layout>
+                <layout width="800" height="550" type="relative" align="top_right" margin_right="30" margin_top="110" hashkey="tin_he_thong_root" visible="false">
+                        <listview width="match_parent" height="match_parent" type="vertical" align="center">
+                                <layout width="match_parent" height="wrap_content" type="vertical" align="center" hashkey="tin_he_thong_layout">
+
+                                </layout>
+                        </listview>
+                </layout>
+        </layout>
+        <layout width="match_parent" height="match_parent" align="center" touch="true" type="relative" hashkey="touch_prevent" visible="false">
+        </layout>
+</layout>

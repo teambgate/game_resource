@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BOC_BAI</key>
+	<string>Bốc bài</string>
+	<key>AN_BAI</key>
+	<string>Ăn bài</string>
+	<key>HA_PHOM</key>
+	<string>Hạ phỏm</string>
+	<key>XEP_BAI</key>
+	<string>Xếp bài</string>
+	<key>DANH_BAI</key>
+	<string>Đánh bài</string>
+	<key>NHAT</key>
+	<string>Nhất</string>
+	<key>NHI</key>
+	<string>Nhì</string>
+	<key>BA</key>
+	<string>Ba</string>
+	<key>BET</key>
+	<string>Bét</string>
+	<key>MOM</key>
+	<string>Móm</string>
+	<key>U</key>
+	<string>Ù</string>
+	<key>HAVE_A_SEAT</key>
+	<string>Bạn hãy ngồi xuống để bắt đầu chơi game</string>
+	<key>FULL</key>
+	<string>Bàn chơi đã đầy !</string>
+	<key>CHUA_CHON_PHOM</key>
+	<string>Bạn chưa chọn phỏm để hạ !</string>
+</dict>
+</plist>

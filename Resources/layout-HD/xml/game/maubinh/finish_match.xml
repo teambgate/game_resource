@@ -1,0 +1,5 @@
+
+<layout width="match_parent" height="match_parent" type="relative" align="center" >
+<img atlas="atlas/card_game.plist" frame="border_white_32x32.png" width="match_parent" height="match_parent" align="center" opacity="200" color="#000000" cap_top="10" cap_left="10" cap_right="10" cap_bottom="10" />   
+
+</layout>

@@ -1,0 +1,58 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+    <touchdelegate name="mail_exit"/>
+    <touchdelegate name="mail_item_touch"/>
+    <touchdelegate name="mail_nap_tien_touch"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" touch="true" background="texture/white_2x2.png" color="black" opacity="150">
+    <layout width="858" height="526.5" align="center" background="texture/board/exchange_board.png" type="relative">
+        <!-- button to show admin message -->
+        <img atlas="atlas/ui.plist" frame="tin-nhan-icon.png" margin_left="110" margin_top="-30" scale="1.25"/>
+        <layout type="relative" width="500" height="72.5" align="top_left" margin_top="29" margin_left="310" scale="0.85">
+            <img atlas="atlas/lobby.plist" frame="small-tab-bg.png" align="center" width="505" height="69"/>
+            <group name="tinhethong" style="xml/ui/active_button.xml" width="240" margin_left="10" height="42.5" touch="true" align="left_center_vertical" hashkey="he_thong_button" >
+                <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="small-tab-left.png"/>
+                <layout align="center" type="relative">
+                    <img atlas="atlas/ui.plist" frame="tin_he_thong.png" align="center" scale="1.3"/>
+                </layout>
+            </group>
+            <!-- button to show user message -->
+            <group style="xml/ui/active_button.xml" width="240" margin_right="10" height="42.5" touch="true" align="right_center_vertical" hashkey="tin_nhan_button">
+                <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="small-tab-right.png"/>
+                <layout align="center" type="relative">
+                    <img atlas="atlas/ui.plist" frame="tin_nhan.png" align="bottom_center_horizontal" scale="1.45" margin_bottom="-10"/>
+                </layout>
+            </group>
+        </layout>
+        <!-- label to show no message-->
+        <label font="fonts/SF-UI-Text-Medium.otf" size="30" type="nowrap" width="100" align="center" color="#f2f2f2" opacity="150" hashkey="nomail">Không có thư</label>
+        <!-- list view to show messages-->
+        <listview width="match_parent" height="match_parent" padding_left="50" padding_bottom="130" align="top_center_horizontal" margin_top="110" type="vertical" visible="false" hashkey="mail_listview">
+            <layout width="match_parent" height="wrap_content" type="vertical" hashkey="mail_list">
+                <layout width="match_parent" height="100" type="relative" background="texture/white_2x2.png" color="#0f0f0f" opacity="150" touch="true" touchdelegate="mail_item_touch" clonekey="mail_item">
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="left_center_vertical" margin_left="20" width="100" opacity="230" type="nowrap" max_character="35" hashkey="mail_title">Tiêu đề</label>
+                    <label font="fonts/SF-UI-Text-Regular.otf" size="30" align="right_center_vertical" margin_right="10" width="100" opacity="230" type="nowrap" hashkey="mail_time">time</label>
+                </layout>
+            </layout>
+        </listview>
+        <!-- message content-->
+        <layout width="match_parent" height="match_parent" padding_left="50" padding_bottom="113" align="top_center_horizontal" margin_top="109" type="relative" hashkey="mail_content_layout" visible="false">
+            <listview width="match_parent" height="match_parent" align="center" type="vertical">
+                <layout width="match_parent" height="wrap_content" type="vertical">
+                    <label font="fonts/font35.fnt" size="35" align="left" margin_left="20" width="match_parent" padding_left="100" opacity="230" hashkey="mail_content">content</label>
+                </layout>
+            </listview>
+            <group style="xml/ui/button_style_1.xml" align="top_right" margin_top="24" margin_right="3" scale="1.5" touch="true" bindtouch="onclick=mail_exit">
+                <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+            </group>
+            <group style="xml/ui/button_style_1.xml" align="right_bottom" margin_bottom="80" margin_right="80" scale="1.5" touch="true" bindtouch="onclick=mail_nap_tien_touch" hashkey="mail_nap_tien_button" visible="false">
+                <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_addcoins.png"/>
+            </group>
+        </layout>
+        <group style="xml/ui/button_style_1.xml" align="top_right"  margin_top="25.5" margin_right="2" touch="true" bindtouch="onclick=exit">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+    </layout>
+    <layout width="match_parent" height="match_parent" align="center" touch="true" visible="false" hashkey="touch_prevent">
+    </layout>
+</layout>

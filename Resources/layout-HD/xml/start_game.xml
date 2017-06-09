@@ -1,0 +1,11 @@
+<touchdelegates>
+    <touchdelegate name="start_click"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" align="center" type="relative">
+    <group style="xml/ui/button_style_3.xml" width="243" height="90" scale="0.8" align="center" hashkey="start_button" touch="true" bindtouch="onclick=start_click">
+        <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_start_up.png"/>
+    </group>
+    <layout align="center" type="absolute" visible="false">
+                <img atlas="atlas/ui.plist" frame="watting_text.png" scale="0.9" hashkey="text" visible="false"/>
+    </layout>
+</layout>

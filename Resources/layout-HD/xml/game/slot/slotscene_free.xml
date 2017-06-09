@@ -1,0 +1,345 @@
+<touchdelegates>
+    <touchdelegate name="playtouch"/>
+    <touchdelegate name="autotouch"/>
+   <!-- <touchdelegate name="add_bet"/>
+    <touchdelegate name="sub_bet"/>
+    <touchdelegate name="add_line"/>
+    <touchdelegate name="sub_line"/>-->
+	<touchdelegate name="history"/>
+	<touchdelegate name="close_history"/>
+    <touchdelegate name="max_bet"/>
+    <touchdelegate name="touch_line"/>
+    <touchdelegate name="info"/>
+    <touchdelegate name="closeInfo"/>
+    <touchdelegate name="exit"/>
+    <touchdelegate name="clearAll"/>
+    <touchdelegate name="clickbox"/>
+    <touchdelegate name="changeType"/>
+    <touchdelegate name="closeBonus"/>
+    <touchdelegate name="touch_line_list"/>
+    <touchdelegate name="touch_bet"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" background="texture/white_2x2.png" color="black" opacity="150" type="relative" align="center" touch="true">
+<group style="xml/slot_machine_choice_room_background.xml" align="center"/>
+    <layout width="1140" height="692" resolution="showall" type="relative" align="center">
+		<layout type="absolute" align="center" hashkey="game_center">
+			<img src="texture/scene/board-slotmachine-mini.png"/>
+                        <img src="texture/slot_machine/tit_slots_free.png" y="315"/>
+			<group style="xml/game/slot/slotItem.xml" visible="false" clonekey="item"/>
+			<group style="xml/game/slot/numberLine.xml" name="1" x="-485" y="25" hashkey="num1" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="2" x="-485" y="160" hashkey="num2" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="3" x="-485" y="-150" hashkey="num3" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="4" x="-485" y="-15" hashkey="num4" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="5" x="-485" y="65" hashkey="num5" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="6" x="-485" y="200" hashkey="num6" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="7" x="-485" y="-110" hashkey="num7" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="8" x="-485" y="120" hashkey="num8" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="9" x="-485" y="-190" hashkey="num9" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="10" x="-485" y="-55" hashkey="num10" touch="true" touchdelegate="touch_line">
+			</group>
+
+			<group style="xml/game/slot/numberLine.xml" name="13" x="485" y="25" hashkey="num13" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="12" x="485" y="160" hashkey="num12" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="11" x="485" y="-150" hashkey="num11" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="17" x="485" y="-15" hashkey="num17" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="14" x="485" y="65" hashkey="num14" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="16" x="485" y="200" hashkey="num16" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="15" x="485" y="-110" hashkey="num15" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="19" x="485" y="120" hashkey="num19" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="20" x="485" y="-190" hashkey="num20" touch="true" touchdelegate="touch_line">
+			</group>
+			<group style="xml/game/slot/numberLine.xml" name="18" x="485" y="-55" hashkey="num18" touch="true" touchdelegate="touch_line">
+			</group>
+			<layout clonekey="board" width="895" height="435" y="5"></layout>
+			<layout hashkey="board-light" width="925" height="485" x="-2" y="5" atlas="atlas/slot.plist" frame="anhsang.png" cap_left="40" cap_top="40" cap_right="40" cap_bottom="40"></layout>
+			<group style="xml/game/slot/button.xml" scale="1." width="99" height="99" x="480" y="-275" touch="true" hashkey="button_play" bindtouch="onclick=playtouch">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_spin1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_spin2.png"/>
+			</group>
+			<group style="xml/game/slot/button.xml" scale="1." width="150" height="100" x="340" y="-275" touch="true" hashkey="button_auto" bindtouch="onclick=autotouch">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_autospin1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_autospin2.png"/>
+			</group>
+
+			<label font="fonts/DS-DIGIB.TTF" size="30" anchor-x="1" color="#46ff00" scale="1" visible="true" type="nowrap" hashkey="bet" x="-90" y="-145" visible="false">0</label>
+			<!--<group style="xml/game/slot/button.xml" scale="1." x="-110" y="-200" touch="true" hashkey="add_bet" bindtouch="onclick=add_bet">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_next1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_next2.png"/>
+			</group>
+			<group style="xml/game/slot/button.xml" scale="1." x="-175" y="-200" touch="true" hashkey="sub_bet" bindtouch="onclick=sub_bet">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_prev1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_prev2.png"/>
+			</group>-->
+
+			<label font="fonts/DS-DIGIB.TTF" size="30" anchor-x="1" color="#46ff00" visible="true" type="nowrap" hashkey="line" x="-225" y="-145" visible="false">0</label>
+			<!--<group style="xml/game/slot/button.xml" scale="1." x="-190" y="-200" touch="true" hashkey="add_line" bindtouch="onclick=add_line">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_plus1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_plus2.png"/>
+			</group>
+
+			<group style="xml/game/slot/button.xml" scale="1." x="-255" y="-200" touch="true" hashkey="sub_line" bindtouch="onclick=sub_line">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_minu1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_minu2.png"/>
+			</group>-->
+
+			<group style="xml/game/slot/button.xml" scale="1." x="530" y="260" touch="true" hashkey="exit" bindtouch="onclick=exit">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_exit1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_exit2.png"/>
+			</group>
+
+			<group style="xml/game/slot/button.xml" scale="1." x="-430" y="-275" touch="true" hashkey="clearAll" bindtouch="onclick=clearAll">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_clearall1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_clearall2.png"/>
+			</group>
+
+			<label font="fonts/yellow_font.fnt" scale="1" anchor-x="1" visible="true" type="nowrap" hashkey="last_win" x="250" y="-250">0</label>
+			<label font="fonts/yellow_font.fnt" scale="1" anchor-x="1" visible="true" type="nowrap" hashkey="total_bet" x="250" y="-300">0</label>
+
+			<group style="xml/game/slot/button.xml" scale="1." x="-110" y="-275" touch="true" hashkey="max_bet" bindtouch="onclick=max_bet">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_maxlines1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_maxlines2.png"/>
+			</group>
+
+			<group style="xml/game/slot/button.xml" scale="1." x="470" y="260" touch="true" hashkey="info" bindtouch="onclick=info">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_infor1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_infor2.png"/>
+			</group>
+			<label font="fonts/coin_font.fnt" x="0" y="-120" local_z="5" type="nowrap" visible="false" hashkey="lbwin">0</label>
+			<label font="fonts/coin_font.fnt" scale="1.25" x="0" y="80" local_z="5" type="nowrap" visible="false" hashkey="lbBonus">0</label>
+			<img atlas="atlas/slot.plist" frame="autospin.png" x="0" y="205" hashkey="text_autospin" local_z="5"/>
+			<layout atlas="atlas/slot.plist" frame="freespin.png" cascade_opacity="true" width="264" height="43" x="0" y="-197" hashkey="icon_freespins" local_z="5">
+				<label font="fonts/MyriadPro-BoldCond.otf" size="35" color="yellow" cascade_opacity="true" anchor-x="0" type="nowrap" hashkey="lbfreespine" x="198" y="15" local_z="5">0</label>
+			</layout>
+			<img atlas="atlas/slot.plist" frame="text_freespins.png" x="0" y="50" hashkey="text_freespins" local_z="5"/>
+
+			<img atlas="atlas/slot.plist" frame="effect.png" scale="2" x="0" y="100" hashkey="light" visible="false" local_z="6"/>
+			<img atlas="atlas/slot.plist" frame="text_win.png" x="0" y="100" hashkey="text_win" local_z="6"/>
+			<img atlas="atlas/slot.plist" frame="text_bigwin.png" x="0" y="100" hashkey="text_bigwin" local_z="6"/>
+			<img atlas="atlas/slot.plist" frame="text_superwin.png" x="0" y="100" hashkey="text_superwin" local_z="6"/>
+			<img atlas="atlas/slot.plist" frame="text_megawin.png" x="0" y="100" hashkey="text_megawin" local_z="6"/>
+			<layout hashkey="notifreespine" cascade_opacity="true" local_z="6" align="center">
+				<img atlas="atlas/slot.plist" frame="text_freespinss.png" align="center"/>
+				<label cascade_opacity="true" font="fonts/font_freespin.fnt" scale="1" x="-200" y="-5" type="nowrap" hashkey="lbnotispine">0</label>
+			</layout>
+			<layout atlas="atlas/slot.plist" frame="paytable_frame.png" width="900" height="600" type="relative" cascade_opacity="true" hashkey="bonusboard" local_z="10">
+				<img atlas="atlas/slot.plist" frame="text_bonusgame.png" align="top_center_horizontal" margin_top="35"/>
+				<group cascade_opacity="true" style="xml/game/slot/button.xml" scale="0.75" align="top_right" margin_top="5" margin_right="5" touch="true" hashkey="closeBonus" bindtouch="onclick=closeBonus">
+					<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_exit1.png"/>
+					<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_exit2.png"/>
+				</group>
+				<layout width="900" height="600" cascade_opacity="true" align="center" hashkey="content_bonus">
+					<group style="xml/game/slot/bonusItem.xml" cascade_opacity="true" scale="0.75" clonekey="boxbonus" touch="true" touchdelegate="clickbox"/>
+					<img atlas="atlas/slot.plist" frame="hop-key.png" scale="0.6" clonekey="key" x="100" y="480"/>
+				</layout>
+
+				<img atlas="atlas/slot.plist" frame="dong-chip.png" hashkey="chip_bonus" align="top_right" margin_top="100" margin_right="80"/>
+				<img atlas="atlas/slot.plist" frame="icon_coin.png" hashkey="coin_bonus" scale="0.6" align="top_right" margin_top="70" margin_right="50"/>
+				<label font="fonts/yellow_font.fnt" scale="1" anchor-x="1" color="#612F0A" align="top_right" margin_top="110" margin_right="130" type="nowrap" hashkey="total_money_bonus">0</label>
+			</layout>
+
+			<layout width="900" height="600" atlas="atlas/slot.plist" frame="paytable_frame.png" hashkey="infoboard" local_z="10" type="relative">
+				<pageview width="850" height="match_parent" align="center" hashkey="pageview" threshold="10">
+					<layout width="match_parent" height="match_parent" anchor-x="0" anchor-y="0" hashkey="payline" type="relative">
+						<img atlas="atlas/slot.plist" frame="paytable_content_payline.png" scale="1" align="bottom_center_horizontal" margin_bottom="150"/>
+						<img atlas="atlas/slot.plist" frame="txt_dongdatcuoc.png" align="top_center_horizontal" margin_top="50"/>
+					</layout>
+
+					<layout width="match_parent" height="match_parent" anchor-x="0" anchor-y="0" hashkey="payitem1">
+						<img atlas="atlas/slot.plist" frame="txt_bangthuong.png" x="450" y="530"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="225" y="150" hashkey="it4"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="450" y="150" hashkey="it5"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="675" y="150" hashkey="it6"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="225" y="350" hashkey="it1"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="450" y="350" hashkey="it2"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="675" y="350" hashkey="it3"/>
+					</layout>
+
+					<layout width="match_parent" height="match_parent" anchor-x="0" anchor-y="0" hashkey="payitem2">
+						<img atlas="atlas/slot.plist" frame="txt_bangthuong.png" x="450" y="530"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="225" y="150" hashkey="it10"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="450" y="150" hashkey="it11"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="675" y="150" hashkey="it12"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="225" y="350" hashkey="it7"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="450" y="350" hashkey="it8"/>
+						<img atlas="atlas/slot.plist" frame="paytable_frame1.png" scale="1.2" x="675" y="350" hashkey="it9"/>
+					</layout>
+					<layout width="match_parent" height="match_parent" anchor-x="0" anchor-y="0" hashkey="payline" type="relative">
+						<img atlas="atlas/slot.plist" frame="tutorial.png" scale="1" align="bottom_center_horizontal" margin_bottom="70"/>
+						<img atlas="atlas/slot.plist" frame="txt_luatchoi.png" align="top_center_horizontal" margin_top="40"/>
+					</layout>
+				</pageview>
+				<group style="xml/game/slot/button.xml" align="top_right" margin_top="5" margin_right="5" scale="0.75" touch="true" hashkey="closeInfo" bindtouch="onclick=closeInfo">
+					<changetexture target="this:image" atlas="atlas/slot.plist" frame="bt_exit1.png"/>
+					<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="bt_exit2.png"/>
+				</group>
+				<layout width="match_parent" height="match_parent" align="center" type="absolute">
+					<img atlas="atlas/slot.plist" frame="paytable_dot2.png" x="390" y="50" hashkey="pageon"/>
+					<img atlas="atlas/slot.plist" frame="paytable_dot1.png" x="430" y="50" hashkey="pageoff1"/>
+					<img atlas="atlas/slot.plist" frame="paytable_dot1.png" x="470" y="50" hashkey="pageoff2"/>
+					<img atlas="atlas/slot.plist" frame="paytable_dot1.png" x="510" y="50" hashkey="pageoff3"/>
+				</layout>
+				<layout clonekey="infoItem" x="100" y="50" visible="false">
+					<group style="xml/game/slot/slotItem.xml" x="-65" y="20" scale="0.5" name="item" hashkey="itemtype"/>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="0" y="45" local_z="5" type="nowrap" hashkey="number1">5</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#4e2210" x="30" y="45" local_z="5" type="nowrap" hashkey="win1">0</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="0" y="18" local_z="5" type="nowrap" hashkey="number2">4</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#4e2210" x="30" y="18" local_z="5" type="nowrap" hashkey="win2">0</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="0" y="-9" local_z="5" type="nowrap" hashkey="number3">3</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#4e2210" x="30" y="-9" local_z="5" type="nowrap" hashkey="win3">0</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="0" y="-35" local_z="5" type="nowrap" hashkey="number4">2</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#4e2210" x="30" y="-35" local_z="5" type="nowrap" hashkey="win4">0</label>
+				</layout>
+				<layout clonekey="infoItem2" x="100" y="50" visible="false">
+					<group style="xml/game/slot/slotItem.xml" x="-80" y="20" scale="0.4" name="item" hashkey="itemtype"/>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="-50" y="45" local_z="5" type="nowrap" hashkey="number1">5</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="22" color="#4e2210" x="-40" y="45" anchor-x="0" local_z="5" type="nowrap" hashkey="win1">0</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="-50" y="18" local_z="5" type="nowrap" hashkey="number2">4</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="22" color="#4e2210" x="-40" y="18" anchor-x="0" local_z="5" type="nowrap" hashkey="win2">0</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="-50" y="-9" local_z="5" type="nowrap" hashkey="number3">3</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="22" color="#4e2210" x="-40" y="-9" anchor-x="0" local_z="5" type="nowrap" hashkey="win3">0</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="24" color="#e81610" x="-50" y="-35" local_z="5" type="nowrap" hashkey="number4">2</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="22" color="#4e2210" x="-40" y="-35" anchor-x="0" local_z="5" type="nowrap" hashkey="win4">0</label>
+				</layout>
+				<layout clonekey="infoItemBig" visible="false">
+					<group style="xml/game/slot/slotItem.xml" x="20" y="70" scale="0.4" name="item" hashkey="itemtype"/>
+					<label font="fonts/MyriadPro-BoldCond.otf" color="#4e2210" size="19" x="110" y="60" local_z="5" type="wrap" width="120" hashkey="description">0</label>
+				</layout>
+
+			</layout>
+			<layout hashkey="effect_nohu" visible="false" y="70" local_z="6">
+				<img atlas="atlas/slot.plist" hashkey="bigstar" frame="bigstar.png" x="0" y="-30"/>
+				<layout hashkey="basao">
+					<img atlas="atlas/slot.plist" hashkey="phai" frame="3saobay.png" x="177.5"/>
+					<img atlas="atlas/slot.plist" hashkey="trai" frame="3saobay.png" x="-177.5" flip_x="true"/>
+				</layout>
+				<img atlas="atlas/slot.plist" hashkey="text" frame="textNoHu.png" x="0"/>
+				<img atlas="atlas/slot.plist" hashkey="sao1" frame="midstar.png" x="-300" y="80"/>
+				<img atlas="atlas/slot.plist" hashkey="sao2" frame="midstar.png" x="-330" y="-100"/>
+				<img atlas="atlas/slot.plist" hashkey="sao3" frame="midstar.png" x="280" y="100"/>
+				<img atlas="atlas/slot.plist" hashkey="sao4" frame="midstar.png" x="300" y="-80"/>
+
+				<img atlas="atlas/slot.plist" hashkey="small1" frame="smallstar.png" x="-170" y="70"/>
+				<img atlas="atlas/slot.plist" hashkey="small2" frame="smallstar.png" x="-80" y="0"/>
+				<img atlas="atlas/slot.plist" hashkey="small3" frame="smallstar.png" x="-200" y="-60"/>
+				<img atlas="atlas/slot.plist" hashkey="small4" frame="smallstar.png" x="80" y="0"/>
+				<img atlas="atlas/slot.plist" hashkey="small5" frame="smallstar.png" x="170" y="40"/>
+				<img atlas="atlas/slot.plist" hashkey="small6" frame="smallstar.png" x="160" y="40"/>
+
+			</layout>
+			<layout width="240" height="38" x="-270" y="-253" type="relative">
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc.png" align="center"/>
+				<layout width="159" height="38" align="center" type="relative" clip="true">
+					<pageview width="80" height="match_parent" align="center" type="horizontal" hashkey="list_bet" threshold="5" clip="false">
+						<layout anchor-x="0" anchor-y="0" width="58" height="match_parent" type="relative" clonekey="bet_element">
+							<label font="fonts/yellow_font.fnt" scale="0.8" align="center" type="nowrap" name="bet" hashkey="bet">100</label>
+						</layout>
+					</pageview>
+				</layout>
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc-bong.png" align="center"/>
+			</layout>
+                        <img src="texture/slot_machine/fr_lines_bets.png" x="-503" y="-275"/>
+			<!--<layout width="240" height="38" x="-270" y="-293" type="relative">
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc.png" align="center"/>
+				<layout width="160" height="38" align="center" type="relative" clip="true">
+					<pageview align="center"  width="58" height="match_parent" type="horizontal" hashkey="list_line" threshold="5" clip="false">
+							<layout anchor-x="0" anchor-y="0" width="58" height="match_parent" type="relative" clonekey="line_element">
+								<label font="fonts/yellow_font.fnt" color="GREEN" scale="0.8" align="center" type="nowrap" name="line">100</label>
+							</layout>
+					</pageview>
+				</layout>
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc-bong.png" align="center"/>
+			</layout>
+			<layout width="240" height="38" x="-270" y="-250" type="relative">
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc.png" align="center"/>
+				<listview width="159" height="match_parent" align="center" type="horizontal" hashkey="list_bet">
+					<layout width="wrap_content" height="match_parent" hashkey="list_bet_container" type="horizontal">
+						<layout anchor-x="0" anchor-y="0" width="58" height="match_parent" type="relative" clonekey="bet_element">
+							<label font="fonts/yellow_font.fnt" scale="0.8" align="center" type="nowrap" name="bet" hashkey="bet">100</label>
+						</layout>
+					</layout>
+				</listview>
+				<layout width="160" height="38" align="center" type="relative" touch="false" touchdelegate="touch_line_list">
+				</layout>
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc-bong.png" align="center"/>
+			</layout>-->
+			<layout width="240" height="38" x="-270" y="-300" type="relative">
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc.png" align="center"/>
+				<listview align="center"  width="159" height="match_parent" type="horizontal" hashkey="list_line">
+					<layout width="wrap_content" height="match_parent" hashkey="list_line_container" type="horizontal">
+						<layout anchor-x="0" anchor-y="0" width="58" height="match_parent" type="relative" clonekey="line_element">
+							<label font="fonts/yellow_font.fnt" color="GREEN" scale="0.8" align="center" type="nowrap" name="line">100</label>
+						</layout>
+					</layout>
+				</listview>
+				<layout width="160" height="38" align="center" type="relative" touch="false" touchdelegate="touch_bet">
+				</layout>
+				<img atlas="atlas/slot.plist" frame="khung-chon-tien-cuoc-bong.png" align="center"/>
+			</layout>
+
+			<group style="xml/game/slot/button.xml" scale="1" x="-500" y="262" visible="false" hashkey="typeMoney" bindtouch="onclick=changeType">
+				<changetexture target="this:image" atlas="atlas/slot.plist" frame="change-money-1.png"/>
+				<changetexture target="this:image_began" atlas="atlas/slot.plist" frame="change-money-2.png"/>
+			</group>
+			<layout x="-350" y="262">
+				<img atlas="atlas/slot.plist" frame="khung-tien.png" scale_x="0.9"/>
+				<img atlas="atlas/slot.plist" frame="icon_coin.png" hashkey="coinReal" x="-80" scale="0.6"/>
+				<img atlas="atlas/slot.plist" frame="dong-chip.png" hashkey="coinFree" visible="false" x="-80" scale="1"/>
+				<label font="fonts/yellow_font.fnt" scale="1" anchor-x="1" x="80" type="nowrap" hashkey="lbMoneyFree">100</label> <!-- color="#FECD0B" -->
+				<label font="fonts/yellow_font.fnt" scale="1" color="#FECD0B" anchor-x="1" x="80" type="nowrap" hashkey="lbMoney">100</label>
+			</layout>
+			<layout x="-125" y="262">
+				<img atlas="atlas/slot.plist" frame="khung-tien.png" scale_x="0.7" x="-25"/>
+				<img atlas="atlas/slot.plist" frame="hu-nho.png" x="-90"/>
+				<label font="fonts/yellow_font.fnt" scale="0.9" anchor-x="1" x="50" type="nowrap" hashkey="moneyjackpot1">100</label>
+				<layout hashkey="winjp1" visible="false">
+					<img atlas="atlas/slot.plist" frame="board-trung-thuong.png" scale_x="1"/>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="34" color="#b42a0f" anchor-x="0" x="-90" y="12" type="nowrap" name="nohu_name">name</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="20" color="#b42a0f" anchor-x="0" x="-60" y="-20" type="nowrap" name="nohutext">no hu</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="34" color="#b42a0f" anchor-x="0" x="-15" y="-20" type="nowrap" name="nohu_money">1.000.000</label>
+				</layout>
+			</layout>
+			<layout x="45" y="262">
+				<img atlas="atlas/slot.plist" frame="khung-tien.png" scale_x="0.9"/>
+				<img atlas="atlas/slot.plist" frame="hu-vua.png" x="-80"/>
+				<label font="fonts/yellow_font.fnt" scale="1" anchor-x="1" x="80" type="nowrap" hashkey="moneyjackpot2">100</label>
+				<layout hashkey="winjp2" visible="false">
+					<img atlas="atlas/slot.plist" frame="board-trung-thuong.png" scale_x="1"/>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="34" color="#b42a0f" anchor-x="0" x="-90" y="12" type="nowrap" name="nohu_name">name</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="20" color="#b42a0f" anchor-x="0" x="-60" y="-20" type="nowrap" name="nohutext">no hu</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="34" color="#b42a0f" anchor-x="0" x="-15" y="-20" type="nowrap" name="nohu_money">1.000.000</label>
+				</layout>
+			</layout>
+			<layout x="265" y="262">
+				<img atlas="atlas/slot.plist" frame="khung-tien.png" scale_x="0.9"/>
+				<img atlas="atlas/slot.plist" frame="hu-to.png" x="-80"/>
+				<label font="fonts/yellow_font.fnt" scale="1.1" anchor-x="1" x="80" type="nowrap" hashkey="moneyjackpot3">100</label>
+				<layout hashkey="winjp3" visible="false">
+					<img atlas="atlas/slot.plist" frame="board-trung-thuong.png" scale_x="1"/>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="34" color="#b42a0f" anchor-x="0" x="-90" y="12" type="nowrap" name="nohu_name">name</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="20" color="#b42a0f" anchor-x="0" x="-60" y="-20" type="nowrap" name="nohutext">no hu</label>
+					<label font="fonts/MyriadPro-BoldCond.otf" size="34" color="#b42a0f" anchor-x="0" x="-15" y="-20" type="nowrap" name="nohu_money">1.000.000</label>
+				</layout>
+			</layout>
+			<group style="xml/game/slot/history_button.xml" x="410" y="259" scale="1" touch="true" hashkey="history_button" bindtouch="onclick=history" visible="true">
+			</group>
+			<group style="xml/game/slot/lich_su_no_hu.xml" local_z="1000" hashkey="lich_su_no_hu" bindtouch="exit=close_history" visible="false" touch="true"/>
+		</layout>
+	</layout>
+</layout>

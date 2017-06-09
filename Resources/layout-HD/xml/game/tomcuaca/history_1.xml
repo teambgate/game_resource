@@ -1,0 +1,35 @@
+<layout type="relative" width="166" height="232" >
+	<img name="bg" atlas="atlas/tomcuaca.plist" frame="frame_a.png" width="match_parent" height="match_parent" align="center"/>
+	<layout type="absolute" align="center">
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="-43" y="86" hashkey="value_0">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="0" y="86" hashkey="value_1">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="43" y="86" hashkey="value_2">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="-43" y="43" hashkey="value_3">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="0" y="43" hashkey="value_4">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="43" y="43" hashkey="value_5">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="-43" y="0" hashkey="value_6">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="0" y="0" hashkey="value_7">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="43" y="0" hashkey="value_8">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="-43" y="-43" hashkey="value_9">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="0" y="-43" hashkey="value_10">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="43" y="-43" hashkey="value_11">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="-43" y="-86" hashkey="value_12">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="0" y="-86" hashkey="value_13">
+		</group>
+		<group style="xml/game/tomcuaca/history_1_item.xml" x="43" y="-86" hashkey="value_14">
+		</group>
+	</layout>
+</layout>

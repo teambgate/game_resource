@@ -1,0 +1,83 @@
+<touchdelegates>
+    <touchdelegate name="exit"/>
+    <touchdelegate name="mail"/>
+    <touchdelegate name="top_rich"/>
+    <touchdelegate name="trade"/>
+    <touchdelegate name="change_password"/>
+    <touchdelegate name="change_avatar"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" touch="true" cascade_opacity="true">
+    <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="150" align="center"/>
+    <layout width="977.6" height="557.7" background="texture/board/user_info_back.png" align="center" type="relative" cascade_opacity="true">
+        <img atlas="atlas/ui.plist" frame="thong-tin-nguoi-choi-icon.png" align="top_left" margin_left="90" margin_top="-30" scale="1.2"/>
+        <label font="fonts/SF-UI-Text-Medium.otf" size="30" type="nowrap" align="top_center_horizontal" margin_top="45" cascade_opacity="true">Thông tin người chơi</label>
+        <layout width="wrap_content" height="wrap_content" type="horizontal" margin_left="70" margin_top="120" align="top_left" cascade_opacity="true">
+            <layout width="110" height="110" type="relative" cascade_opacity="true" touch="true" touchdelegate="change_avatar" hashkey="avatar_container">
+                <layout width="100" height="100" clip_atlas="atlas/user.plist" clip_frame="avatar_background_bound.png" clip="true" clip_width="95" clip_height="95" clip_alpha="0.5"  align="center" type="relative" cascade_opacity="true">
+                    <img atlas="atlas/user.plist" frame="avatar_default.png" align="center" width="100" height="wrap_content" hashkey="avatar"/>
+                </layout>
+                <img width="110" height="110" atlas="atlas/user.plist" frame="avatar_bound.png" align="center"/>
+                <img atlas="atlas/ui.plist" frame="setting_ava.png" align="top_right" scale="1" margin_right="-5" margin_top="-5" hashkey="setting_ava"/>
+            </layout>
+            <layout width="wrap_content" height="wrap_content" type="vertical" align="center" margin_left="20" cascade_opacity="true">
+                <label font="fonts/SF-UI-Text-Semibold.otf" size="25" type="nowrap" hashkey="user_name" max_characters="12" cascade_opacity="true">user name</label>
+                <label font="fonts/SF-UI-Text-Regular.otf" size="25" type="nowrap" hashkey="user_id" cascade_opacity="true">(ID : ...)</label>
+                <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" color="yellow" hashkey="user_money" cascade_opacity="true">...</label>
+            </layout>
+        </layout>
+        <group style="xml/ui/button_style_5.xml" align="left_bottom" width="80" height="115" touch="true" margin_left="100" margin_bottom="180" hashkey="top_dai_gia_button" bindtouch="onclick=top_rich" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="top_daigia.png"/>
+            <label font="fonts/SF-UI-Text-Medium.otf" size="23" type="nowrap" align="bottom_center_horizontal" cascade_opacity="true">Top đại gia</label>
+        </group>
+        <group style="xml/ui/button_style_5.xml" align="left_bottom" width="80" height="115" touch="true" margin_left="100" margin_bottom="50" hashkey="history_button" bindtouch="onclick=trade" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="icon_history_deal.png"/>
+            <label font="fonts/SF-UI-Text-Medium.otf" size="23" type="nowrap" align="bottom_center_horizontal" cascade_opacity="true">Lịch sử giao dịch</label>
+        </group>
+        <group style="xml/ui/button_style_5.xml" align="left_bottom" width="80" height="115" touch="true" margin_left="285" margin_bottom="180" hashkey="mail_button" bindtouch="onclick=mail" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="mail.png"/>
+            <label font="fonts/SF-UI-Text-Medium.otf" size="23" type="nowrap" align="bottom_center_horizontal" cascade_opacity="true">Hộp thư</label>
+        </group>
+        <group style="xml/ui/button_style_5.xml" align="left_bottom" width="80" height="115" touch="true" margin_left="285" margin_bottom="50" hashkey="password_button" bindtouch="onclick=change_password" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="icon_change_password.png"/>
+            <label font="fonts/SF-UI-Text-Medium.otf" size="23" type="nowrap" align="bottom_center_horizontal" cascade_opacity="true">Đổi mật khẩu</label>
+        </group>
+        <pageview width="508" height="match_parent" padding_top="160" type="horizontal" align="top_right" margin_top="110" margin_right="40" hashkey="game_info" visible="false" threshold="80" cascade_opacity="true">
+            <layout width="match_parent" height="match_parent" type="vertical" anchor-x="0" anchor-y="0" clonekey="game_info_item" cascade_opacity="true">
+                <layout width="wrap_content" height="wrap_content" type="horizontal" cascade_opacity="true">
+                    <img atlas="atlas/lobbyicon.plist" scale="0.75" height="140" width="wrap_content" frame="icon-tala.png" hashkey="game_icon"/>
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="28" type="nowrap" align="center" margin_left="10" hashkey="game_name" cascade_opacity="true">TÁ LẢ</label>
+                </layout>
+                <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" margin_left="20" hashkey="game_level" cascade_opacity="true">Level 0</label>
+                <layout width="match_parent" padding_left="50" height="4" margin_left="20" margin_top="10" type="relative" cascade_opacity="true">
+                    <layout width="match_parent" height="4" anchor-x="0" anchor-y="0.5" align="left_center_vertical" background="texture/white_2x2.png" color="#2F5DAC" opacity="100">
+                    </layout>
+                    <layout width="match_parent" height="4" anchor-x="0" anchor-y="0.5" align="left_center_vertical" background="texture/white_2x2.png" color="orange" hashkey="game_percentage">
+                    </layout>
+                </layout>
+                <layout width="match_parent" height="40" padding_left="50" margin_left="20" margin_top="10" type="relative" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" cascade_opacity="true">Thắng</label>
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="right_center_vertical" hashkey="game_win" cascade_opacity="true">0</label>
+                </layout>
+                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" cascade_opacity="true">Hoà</label>
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="right_center_vertical" hashkey="game_draw" cascade_opacity="true">0</label>
+                </layout>
+                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" cascade_opacity="true">Thua</label>
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="right_center_vertical" hashkey="game_lose" cascade_opacity="true">0</label>
+                </layout>
+                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" cascade_opacity="true">Thắng nhiều nhất</label>
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="right_center_vertical" hashkey="game_most_win" cascade_opacity="true">0</label>
+                </layout>
+                <layout width="match_parent" height="40" padding_left="50" margin_left="20" type="relative" cascade_opacity="true">
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="left_center_vertical" cascade_opacity="true">Lời lỗ</label>
+                    <label font="fonts/SF-UI-Text-Medium.otf" size="25" type="nowrap" align="right_center_vertical" hashkey="game_loi_lo" cascade_opacity="true">0</label>
+                </layout>
+            </layout>
+        </pageview>
+        <group style="xml/ui/button_style_1.xml" align="top_right"  margin_top="24.5" margin_right="2" touch="true" bindtouch="onclick=exit" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/lobby.plist" frame="close_board.png"/>
+        </group>
+    </layout>
+</layout>

@@ -1,0 +1,15 @@
+<layout type="horizontal" width="544" height="26">
+	<layout width="118" height="match_parent" type="relative">
+		<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".4" color="yellow" hashkey="item_name">Jackpot</label>
+	</layout>
+	<layout width="125" height="match_parent" type="relative" />
+	<layout width="85" height="match_parent" type="relative">
+		<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".4" color="yellow" hashkey="item_val1">Nổ hũ</label>
+	</layout>
+	<layout width="96" height="match_parent" type="relative">
+		<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".4" color="yellow" hashkey="item_val2">Nổ hũ</label>
+	</layout>
+	<layout width="114" height="match_parent" type="relative">
+		<label font="atlas/card_game_font.fnt" font_atlas="atlas/card_game.plist" font_frame="font30.png" size="30" align="center" scale_factor=".4" color="yellow" hashkey="item_val3">Nổ hũ</label>
+	</layout>
+</layout>

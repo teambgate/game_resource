@@ -1,0 +1,26 @@
+<touchdelegates>
+    <touchdelegate name="touch_close"/>
+    <touchdelegate name="ok"/>
+</touchdelegates>
+<layout type="relative" width="match_parent" height="match_parent" background="texture/white_32x32.png" color="black" opacity="150" touch="true">
+        <layout width="1224" height="687" type="relative" align="center" scale="0.9">
+                <img src="texture/new_ui/board_luatchoi.png" align="center"/>
+                <img atlas="atlas/new_ui.plist" frame="txt_gopy.png" align="top_center_horizontal" margin_top="20"/>
+                <group style="xml/ui/button_style_3.xml" width="79" height="79" align="top_right" margin_right="10.5" margin_top="10.5" touch="true" bindtouch="onclick=touch_close">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_close2.png"/>
+                </group>
+                <layout width="1220" height="588" align="top_center_horizontal" margin_top="89" type="vertical">
+                    <layout name="username" width="match_parent" margin_top="10" padding_left="20" height="60" align="center" type="relative">
+                        <img src="texture/new_ui/textbox_chude.png" width="match_parent" height="match_parent" align="center"/>
+                        <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Chủ đề" placeholdercolor="#afafaf" hashkey="title" inputflag="sentence" inputmode="singleline"/>
+                    </layout>
+                    <layout name="username" width="match_parent" padding_left="20" margin_top="10" height="match_parent" padding_top="160" align="center" type="relative">
+                        <img src="texture/new_ui/textbox_noidung.png" width="match_parent" height="match_parent" align="center"/>
+                        <textfield name="box" width="match_parent" height="match_parent" padding_top="20" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Nội dung" placeholdercolor="#afafaf" hashkey="content" inputflag="sentence" inputmode="any"/>
+                    </layout>
+                    <group style="xml/ui/button_style_3.xml" width="243" heigh="90" align="center" margin_top="43" scale="0.9" touch="true" bindtouch="onclick=ok">
+                        <changetexture target="this:image" atlas="atlas/new_ui.plist" frame="bt_dongy.png"/>
+                    </group>
+                </layout>
+        </layout>
+</layout>

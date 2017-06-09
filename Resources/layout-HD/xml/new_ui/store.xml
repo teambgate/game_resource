@@ -1,0 +1,131 @@
+<touchdelegates>
+    <touchdelegate name="touch_close"/>
+    <touchdelegate name="touch_the_cao"/>
+    <touchdelegate name="touch_iap"/>
+    <touchdelegate name="touch_ti_gia"/>
+
+    <touchdelegate name="touch_viettel"/>
+    <touchdelegate name="touch_mobi"/>
+    <touchdelegate name="touch_vina"/>
+    <touchdelegate name="touch_hope"/>
+    <touchdelegate name="touch_gift_code"/>
+
+    <touchdelegate name="touch_nap_the"/>
+</touchdelegates>
+<layout width="match_parent" height="match_parent" type="relative" align="center" touch="true">
+        <img src="texture/white_2x2.png" width="match_parent" height="match_parent" hashkey="shadow" color="black" opacity="150" align="center"/>
+        <layout width="1310" height="730" align="center" type="relative" cascade_opacity="true" hashkey="main_center" scale="0.9">
+                <img src="texture/store/board_cuahang.png" align="center"/>
+                <img src="texture/white_2x2.png" width="1150" height="4" color="green" align="top_center_horizontal" margin_top="230"/>
+                <group style="xml/ui/button_style_3.xml" width="75.5" height="75.5" align="top_right" margin_right="56.5" margin_top="2" touch="true" bindtouch="onclick=touch_close">
+                        <changetexture target="this:image" atlas="atlas/store.plist" frame="bt_close2.png"/>
+                </group>
+                <layout type="horizontal" width="wrap_content" height="wrap_content" align="top_center_horizontal" margin_top="131">
+                        <group style="xml/new_ui/user_info_fade_button.xml" width="250" height="100" align="center" touch="true" hashkey="button_the_cao" bindtouch="onclick=touch_the_cao">
+                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="tab_select.png"/>
+                                <changetexture target="this:image2" atlas="atlas/store.plist" frame="tab_unselect.png"/>
+                                <img name="text1" atlas="atlas/store.plist" frame="txt_thecao.png" align="center" visible="false"/>
+                                <img name="text2" atlas="atlas/store.plist" frame="txt_thecao.png" align="bottom_center_horizontal" margin_bottom="5" visible="true"/>
+                        </group>
+                        <group style="xml/new_ui/user_info_fade_button.xml" width="250" height="100" align="center" touch="true" hashkey="button_iap" bindtouch="onclick=touch_iap">
+                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="tab_select.png"/>
+                                <changetexture target="this:image2" atlas="atlas/store.plist" frame="tab_unselect.png"/>
+                                <img name="text1" atlas="atlas/store.plist" frame="txt_iap.png" align="center" visible="false"/>
+                                <img name="text2" atlas="atlas/store.plist" frame="txt_iap.png" align="bottom_center_horizontal" margin_bottom="5" visible="true"/>
+                        </group>
+                        <group style="xml/new_ui/user_info_fade_button.xml" width="250" height="100" align="center" touch="true" hashkey="button_ti_gia" bindtouch="onclick=touch_ti_gia">
+                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="tab_select.png"/>
+                                <changetexture target="this:image2" atlas="atlas/store.plist" frame="tab_unselect.png"/>
+                                <img name="text1" atlas="atlas/store.plist" frame="txt_tigia.png" align="center" visible="false"/>
+                                <img name="text2" atlas="atlas/store.plist" frame="txt_tigia.png" align="bottom_center_horizontal" margin_bottom="5" visible="true"/>
+                        </group>
+                </layout>
+                <layout type="horizontal" width="wrap_content" height="wrap_content" align="top_center_horizontal" margin_top="250" hashkey="content_the_cao" visible="true">
+                        <layout type="vertical" width="wrap_content" height="wrap_content" align="top">
+                                <label width="300" align="center" type="nowrap" font="atlas/store_font.fnt" font_atlas="atlas/store.plist" font_frame="font30.png" scale_factor="1.0" cascade_opacity="true">Chọn loại thẻ</label>
+                                <listview type="vertical" width="424" height="320" align="center">
+                                        <layout type="vertical" width="424" height="wrap_content" align="center">
+                                                <layout type="horizontal" width="424" height="wrap_content" align="center">
+                                                        <group style="xml/new_ui/store_card_button.xml" width="212" height="132" align="center" hashkey="card_viettel" bindtouch="onclick=touch_viettel" touch="true">
+                                                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="card_viettel_big.png"/>
+                                                        </group>
+                                                        <group style="xml/new_ui/store_card_button.xml" width="212" height="132" align="center" hashkey="card_vina" bindtouch="onclick=touch_vina" touch="true">
+                                                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="card_vina_big.png"/>
+                                                        </group>
+                                                </layout>
+                                                <layout type="horizontal" width="424" height="wrap_content" align="center">
+                                                        <group style="xml/new_ui/store_card_button.xml" width="212" height="132" align="center" hashkey="card_mobi" bindtouch="onclick=touch_mobi" touch="true">
+                                                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="card_mobi_big.png"/>
+                                                        </group>
+                                                        <group style="xml/new_ui/store_card_button.xml" width="212" height="132" align="center" hashkey="card_hope" bindtouch="onclick=touch_hope" touch="true">
+                                                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="card_hope_big.png"/>
+                                                        </group>
+                                                </layout>
+                                                <layout type="horizontal" width="424" height="wrap_content" align="center">
+                                                        <group style="xml/new_ui/store_card_button.xml" width="212" height="132" align="center" hashkey="card_gift_code" bindtouch="onclick=touch_gift_code" touch="true">
+                                                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="card_giftcode.png"/>
+                                                        </group>
+                                                </layout>
+                                        </layout>
+                                </listview>
+                        </layout>
+                        <img atlas="atlas/store.plist" frame="next_progress_cyan.png" align="center" margin_left="20"/>
+                        <layout type="relative" width="350" height="350" align="bottom" margin_left="20">
+                                <layout type="vertical" width="wrap_content" height="wrap_content" align="center" hashkey="normal_card_box" visible="true">
+                                        <label width="300" align="center" type="nowrap" font="atlas/store_font.fnt" font_atlas="atlas/store.plist" font_frame="font30.png" scale_factor="0.8333" cascade_opacity="true">Nhập mã số thẻ và seri</label>
+                                        <layout name="password" width="350" height="66" align="center" margin_top="30" type="relative">
+                                                <img atlas="atlas/store.plist" frame="textbox_nhapthe.png" width="match_parent" height="match_parent" align="center"/>
+                                                <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Nhập mã thẻ" placeholdercolor="#f2f2f2" hashkey="ma_the" inputflag="sentence" inputmode="singleline"/>
+                                        </layout>
+                                        <layout name="password" width="350" height="66" align="center" margin_top="50" margin_bottom="120" type="relative">
+                                                <img atlas="atlas/store.plist" frame="textbox_nhapthe.png" width="match_parent" height="match_parent" align="center"/>
+                                                <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Nhập mã seri" placeholdercolor="#f2f2f2" hashkey="seri_code" inputflag="sentence" inputmode="singleline"/>
+                                        </layout>
+                                </layout>
+                                <layout type="vertical" width="wrap_content" height="wrap_content" align="bottom_center_horizontal" margin_bottom="180" hashkey="gift_code_box" visible="false">
+                                        <label width="300" align="center" type="nowrap" font="atlas/store_font.fnt" font_atlas="atlas/store.plist" font_frame="font30.png" scale_factor="0.8333" cascade_opacity="true">Nhập mã giftcode</label>
+                                        <layout width="350" height="66" align="center" margin_top="30" type="relative">
+                                                <img atlas="atlas/store.plist" frame="textbox_nhapthe.png" width="match_parent" height="match_parent" align="center"/>
+                                                <textfield name="box" width="match_parent" height="42" padding_left="20" align="center" color="#fafafa" touch="true" fontsize="32" fontcolor="#ffffff" placeholder="Nhập mã" placeholdercolor="#f2f2f2" hashkey="ma_giftcode" inputflag="sentence" inputmode="singleline"/>
+                                        </layout>
+                                </layout>
+                        </layout>
+                        <img atlas="atlas/store.plist" frame="next_progress_gray.png" align="center" margin_left="20"/>
+                        <group style="xml/new_ui/user_info_fade_button.xml" width="210" height="210" align="center" touch="true" bindtouch="onclick=touch_nap_the" margin_left="20">
+                                <changetexture target="this:image1" atlas="atlas/store.plist" frame="bt_napthe.png"/>
+                        </group>
+                </layout>
+                <layout type="vertical" width="wrap_content" height="wrap_content" align="top_center_horizontal" margin_top="234" hashkey="content_ti_gia" visible="false">
+                        <img atlas="atlas/store.plist" frame="menhgia_tienquydoi.png" align="center"/>
+                        <listview type="vertical" width="944" height="330">
+                                <layout type="vertical" width="944" height="wrap_content" align="center" hashkey="ti_gia_layout">
+                                        <layout width="944" height="66" type="relative" align="center" clonekey="ti_gia_item">
+                                                <img atlas="atlas/store.plist" frame="choice_room_tab_normal.png" width="870" align="center"/>
+                                                <label hashkey="menh_gia" width="300" align="left_center_vertical" margin_left="200" type="nowrap" font="atlas/store_font.fnt" font_atlas="atlas/store.plist" font_frame="font30.png" scale_factor="1.0" cascade_opacity="true">10.000</label>
+                                                <label hashkey="tien_quy_doi" width="300" align="left_center_vertical" margin_left="635" type="nowrap" font="atlas/store_font.fnt" font_atlas="atlas/store.plist" font_frame="font30.png" scale_factor="1.0" cascade_opacity="true">10.000</label>
+                                        </layout>
+                                        <layout width="944" height="66" type="relative" align="center" clonekey="ti_gia_item2">
+                                                <img atlas="atlas/store.plist" frame="choice_room_tab_select.png" width="870" align="center"/>
+                                                <label hashkey="menh_gia" width="300" align="left_center_vertical" margin_left="200" type="nowrap" font="atlas/store_font.fnt" font_atlas="atlas/store.plist" font_frame="font30.png" scale_factor="1.0" cascade_opacity="true">10.000</label>
+                                                <label hashkey="tien_quy_doi" width="300" align="left_center_vertical" margin_left="635" type="nowrap" font="atlas/store_font.fnt" font_atlas="atlas/store.plist" font_frame="font30.png" scale_factor="1.0" cascade_opacity="true">10.000</label>
+                                        </layout>
+                                </layout>
+                        </listview>
+                </layout>
+                <layout type="relative" cascade_opacity="true" width="1000" height="500" align="top_center_horizontal" margin_top="234" hashkey="content_iap" visible="false">
+                    <listview width="match_parent" height="match_parent" type="vertical" align="center" cascade_opacity="true">
+                        <layout width="wrap_content" height="wrap_content" type="horizontal" align="center" hashkey="iap_container" cascade_opacity="true">
+                            <layout width="wrap_content" height="wrap_content" type="vertical" margin_top="30" margin_left="25" margin_right="25" clonekey="iap_col" cascade_opacity="true">
+                                <group style="xml/payment/card_collection_item.xml" margin_bottom="40" align="center" clonekey="iap_item">
+                                    <changetexture target="this:container:image" atlas="atlas/lobby.plist" frame="card_iap.png" />
+                                    <changetext target="this:label">1,000,000</changetext>
+                                </group>
+                            </layout>
+                        </layout>
+                    </listview>
+                </layout>
+                <img atlas="atlas/store.plist" frame="banner_quangcaoVIP.png" align="bottom_center_horizontal" margin_bottom="25"/>
+        </layout>
+        <layout width="match_parent" height="match_parent" align="center" hashkey="touch_prevent" touch="true" visible="false">
+        </layout>
+</layout>

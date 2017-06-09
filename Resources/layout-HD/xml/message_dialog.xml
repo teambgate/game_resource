@@ -1,0 +1,22 @@
+<touchdelegates>
+    <touchdelegate name="ok"/>
+</touchdelegates>
+<layout opacity="0" width="match_parent" height="match_parent" type="relative" touch="true" cascade_opacity="true">
+    <runaction>
+        <action id="this">
+            <sequence>
+                <delay time="0.05" />
+                <fadein time="0.15"/>
+            </sequence>
+        </action>
+    </runaction>
+    <img src="texture/white_2x2.png" width="match_parent" height="match_parent" color="black" opacity="150" align="center"/>
+    <layout width="567" height="378" align="center" background="texture/board/dialog_big.png" type="relative" cascade_opacity="true">
+        <layout width="match_parent" padding_left="100" height="250" align="top_center_horizontal" margin_top="20" type="relative" cascade_opacity="true">
+            <label width="match_parent" font="fonts/SF-UI-Text-Regular.otf" size="30" align="center" hashkey="content" cascade_opacity="true">Game bị mất kết nối, vui lòng kiểm tra kết nối mạng hoặc liên hệ CSKH để biết thêm chi tiết </label>
+        </layout>
+        <group style="xml/ui/button_style_1.xml" align="bottom_center_horizontal" margin_bottom="45" scale="1.1" touch="true" bindtouch="onclick=ok" cascade_opacity="true">
+            <changetexture target="this:image" atlas="atlas/ui.plist" frame="button_ok_up.png"/>
+        </group>
+    </layout>
+</layout>
